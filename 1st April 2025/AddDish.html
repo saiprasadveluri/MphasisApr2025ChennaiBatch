@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h2>Add New Dish:</h2>
+    <form method="post">
+        <table>
+            <tr>
+                <td>
+                    Dish Id:
+                </td>
+                <td>
+                    <input type="number" min="1" step="1" id="mid" name="mid" />
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Dish Name:
+                </td>
+                <td>
+                    <input type="text" id="dname" name="dname" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Dish Type:
+                </td>
+                <td>
+                    <input type="radio" id="dt1" name="dtype" /> VEG
+                    <input type="radio" id="dt2" name="dtype" /> NON-VEG
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Price
+                </td>
+                <td>
+                    <input type="number" id="dprice" name="dprice" min="10" step="1" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <input type="submit" value="Add New Dish" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
