@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h2>Search Dish:</h2>
+    <hr />
+    <form method="post">
+        <table>
+            <label>Food Preferences:</label>
+            <label><input type="radio" name="Veg" value="Option1" /> Veg</label>
+            <label><input type="radio" name="Non Veg" value="Option1" /> Non Veg</label>
+            <br />
+            <label>Price Range:</label>
+            <label><input type="checkbox" name="Option" value="Option 1" />0-100</label>
+            <label><input type="checkbox" name="Option" value="Option 2" />100-300</label>
+            <label><input type="checkbox" name="Option" value="Option 3" />300-500</label>
+            <label><input type="checkbox" name="Option" value="Option 4" />500-1000</label><br/>
+            <label>Dish type:</label>
+            <select id="rdish" name="rdish">
+                <option value="Rice">Rice</option>
+                <option value="Chapathi">Chapathi</option>
+                <option value="Biryani">Biryani</option>
+            </select>
+        </table>
+        <input type="submit" value="Filter" />
+    </form>
+    <hr />
+    <h3>Available Items:</h3>
+    <table width="80%">
+        <tr>
+            <th>
+                Restuarant name
+            </th>
+            <th>
+                DishName
+            </th>
+            <th>
+                Price
+            </th>
+
+            <th>
+                Quantity
+            </th>
+
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="SelectItem" value="A2B" />A2B
+            </td>
+            <td>
+                Dosa
+            </td>
+            <td>
+                50
+            </td>
+            <td>
+                2
+            </td>
+            <td>
+                <select id="rloc" name="rloc">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <a href="CartItems.html">Add to cart</a>
+</body>
