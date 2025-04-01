@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>EDIT Restraunt</h3>
+
+    <form method="post" action="infosaved.html">
+        <table>
+            <tr>
+                <td>
+                    <label>RID: </label>
+                </td>
+                <td>
+                    <input type="number" name="rid" id="rid" min="1" step="1" required/> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>NAME: </label>
+         
+                </td>
+                <td>
+                    <input type="text" name="rname" id="rname" required/> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>OWNER: </label>
+        
+                </td>
+                <td>
+                    <input type="text" name="rowner" id="rowner" required/> 
+        
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Contact: </label>
+        
+                </td>
+                <td>
+                    <input type="email" name="remail" id="remail" required/> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Location: </label>
+        
+                </td>
+                <td>
+                    <select id="rlocation">
+                        <option value="HYD">HYDERABAD</option>
+                        <option value="BLR">BANGLORE</option>
+                        <option value="CHN">CHENNAI</option>
+                    </select> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>MIN VALUE: </label>
+                </td>
+                <td>
+                    <input type="number" name="rmin" id="rmin" min="200" required/> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td>
+                    <input type="submit" value="EDIT Restraunt">
+                </td>
+            </tr>
+            
+        </table>
+        
+        
+    </form>
+</body>
+</html>
