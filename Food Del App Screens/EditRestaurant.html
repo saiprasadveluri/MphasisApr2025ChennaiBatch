@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h3>Edit Restaurant</h3>
+    <a href="ViewRestaurants.html">View Restaurants</a>
+    <hr />
+    <form method="post" action="SaveRestaurant.html">
+        <table>
+            <tr>
+                <td>
+                    <label>RID: </label>
+                </td>
+                <td>
+                    <label>1</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Name: </label>
+                </td>
+                <td>
+                    <input type="text" id="rname" name="rname" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Owner: </label>
+                </td>
+                <td>
+                    <input type="text" id="rowner" name="rowner" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Contact: </label>
+                </td>
+                <td>
+                    <input type="email" id="remail" name="remail" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Location </label>
+                </td>
+                <td>
+                    <select id="rlocation" name="rlocation">
+                        <option value="CHN">Chennai</option>
+                        <option value="HYD">Hyderabad</option>
+                        <option value="BLR">Bangalore</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Min Value </label>
+                </td>
+                <td>
+                    <input type="number" id="rmin" name="rmin" min="200" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <input type="submit" value="Edit Restaurant" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
