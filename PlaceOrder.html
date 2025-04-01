@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Place Order</title>
+</head>
+<body>
+    <h2>Place Your Order</h2>
+    <hr/>
+    <form method="post">
+        <table>
+            <tr>
+                <td><label>Select Restaurant:</label></td>
+                <td>
+                    <select id="restaurant" name="restaurant" required>
+                        <option value="A2B">A2B</option>
+                        <option value="Paradise">Paradise</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Select Item:</label></td>
+                <td>
+                    <select id="foodItem" name="foodItem" required>
+                        <option value="Chicken Biryani">Chicken Biryani</option>
+                        <option value="Masala Dosa">Masala Dosa</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Quantity:</label></td>
+                <td><input type="number" id="quantity" name="quantity" min="1" required /></td>
+            </tr>
+            <tr>
+                <td><label>Customer Name:</label></td>
+                <td><input type="text" id="customerName" name="customerName" required /></td>
+            </tr>
+            <tr>
+                <td><label>Contact:</label></td>
+                <td><input type="tel" id="contact" name="contact" required /></td>
+            </tr>
+            <tr>
+                <td><label>Delivery Address:</label></td>
+                <td><textarea id="address" name="address" required></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Place Order" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
