@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2> Your Preferance of Food <h2>
+<form>
+<label>Choose your preferance:</label>
+<select name = "food" id ="food" >
+<optgroup label = "Veg">
+<option value="tomato rice">tomato rice</option>
+<option value="lemon rice">lemon rice</option>
+</optgroup>
+<optgroup label =" Non- Veg">
+<option value="Briyani">Briyani</option>
+<option value="Chicken fried rice">Chicken fried rice</option>
+</optgroup>
+</optgroup>
+<optgroup label ="Chinease">
+<option value="Noodles">Noodles</option>
+<option value="Momos">Momos</option>
+</optgroup>
+</select>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<input type="submit" value ="Submit">
+</form>
+</body></html>
+
+
