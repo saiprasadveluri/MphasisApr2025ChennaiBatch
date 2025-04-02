@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard</title>
+</head>
+<body>
+    <button>Logout</button>
+    <h2>User Dashboard</h2>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Owner</th>
+            <th>Actions</th>
+        </tr>
+        <tr>
+            <td>Mayuri</td>
+            <td>HYD</td>
+            <td>2</td>
+            <td>
+                <a href="#orderSection"><button>Order Food</button></a>
+            </td>
+        </tr>
+    </table>
+    
+    <div id="orderSection">
+        <h3>Place Your Order</h3>
+        <form action="#orderConfirmation">
+            <table border="1">
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </tr>
+                <tr>
+                    <td>Masala Dosa</td>
+                    <td>100.45</td>
+                    <td><input type="number" name="masala_dosa" value="0" min="0"></td>
+                </tr>
+                <tr>
+                    <td>Podi Idli</td>
+                    <td>75</td>
+                    <td><input type="number" name="podi_idli" value="0" min="0"></td>
+                </tr>
+                <tr>
+                    <td>Biryani</td>
+                    <td>175</td>
+                    <td><input type="number" name="biryani" value="0" min="0"></td>
+                </tr>
+                <tr>
+                    <td>Plain Dosa</td>
+                    <td>27</td>
+                    <td><input type="number" name="plain_dosa" value="0" min="0"></td>
+                </tr>
+            </table>
+            <br>
+            
+        </form>
+    
+    
+  
+        </table>
+        <a href="order_confirmation.html" > <button>Order Food</button></a>
+        <!-- <div id="orderConfirmation"> -->
+   
+</body>
+</html>
