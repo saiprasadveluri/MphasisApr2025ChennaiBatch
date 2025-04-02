@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Filter Room</h2>
+    <hr />
+    <a href="RoomDetails.html">Room Details</a>
+    <hr />
+    <form method="post">
+        <label>Seating Capacity</label>
+        <input type="number" required min="100" step="10" />
+        <br />
+        <hr />
+        <label>Room Type:</label>
+        <select id="roomfilter" name="roomfilter">
+            <option value="1">Trainign Room</option>
+            <option value="2">Meeting Room</option>
+            <option value="3">Conference</option>
+        </select>
+        <input type="submit" value="Filter" />
+    </form>
+    <hr />
+    <label>Select Location:</label>
+    <select id="roomfilter" name="roomfilter">
+        <option value="chn">Chennai</option>
+        <option value="hyd">Hyderabad</option>
+    </select>
+    <input type="submit" value="Filter" />
+    <hr />
+    <h3>Available Roomss:</h3>
+    <table width="80%">
+        <tr>
+            <th>
+                RoomId
+            </th>
+            <th>
+                Room Title
+            </th>
+            <th>
+                Room Type
+            </th>
+            <th>
+                Seating Capacity
+            </th>
+            <th>
+                Availability Status
+            </th>
+            <th>
+                Location
+            </th>
+        </tr>
+        <tr>
+            <td>
+                001
+            </td>
+            <td>
+                Emerald
+            </td>
+            <td>
+                Training Room
+            </td>
+            <td>
+                100
+            </td>
+            <td>
+                Available
+            </td>
+            <td>
+                Chennai
+            </td>
+        </tr>
+        <tr>
+            <td>
+                002
+            </td>
+            <td>
+                Silver
+            </td>
+            <td>
+                Conference
+            </td>
+            <td>
+                150
+            </td>
+            <td>
+                Available
+            </td>
+            <td>
+                Hyderabad
+            </td>
+        </tr>
+
+    </table>
+</body>
+</html>
