@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Add Room</title>
+</head>
+<body>
+    <h3>Add New Room</h3>
+    <a href="Meeting Room Management.html">Back to Room</a>
+    <hr />
+    <form method="post">
+        <label> Room id: <input type="number" name="rid" id="rid" min="251" max="253"</label>
+        <br />
+        <label>
+            Room Type:
+            <select name="room_type">
+                <option>Training room</option>
+                <option>Meeting room</option>
+                <option>Conference room</option>
+            </select>
+        </label>
+        <br />
+        <label>
+            Seating Capacity: <input type="number" min="1" name="sname" />
+        </label>
+        <br />
+        <label>
+            Price Per Hour: <input type="number" min="100" name="pname" />
+        </label>
+        <br />
+        <label>Locations:
+        <select name="locations">
+            <option>1 floor</option>
+            <option>2 floor</option>
+            <option>3 floor</option></select></label>
+        <br/>
+        <input type="submit" value="Add room" />
+    </form>
+ 
+
+</body>
+</html>
