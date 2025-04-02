@@ -1,0 +1,53 @@
+<html>
+    <h3>Adding a Room</h3>
+    <a href="MeetingAdmin.html">MeetingAdmin</a>
+    <form method="post">
+        <table width="25%">
+            <tr>
+                <td>Room id
+                </td>
+                <td><input type="number"required/></td>
+            </tr>
+            <tr>
+                <td>Room Title</td>
+                <td><input type="text"required/></td>
+            </tr>
+            <tr>
+                <td>Room Type</td>
+                <td>
+                    <select>
+                        <option type="text" value="Training Room">Training Room</option>
+                        <option type="text" value="Conference Room">Conference Room</option>
+                        <option type="text" value="Meeting Room">Meeting Room</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Seating Capacity</td>
+                <td><input type="number"/></td>
+            </tr>
+            <tr>
+                <td>AvailabilityStatus</td>
+                <td><select>
+                    <option type="text" value="Available">Available</option>
+                    <option type="text" value="NotAvailable">NotAvailable</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>
+                    Location
+                </td>
+                <td>
+                <select>
+                <option type="text" value="Chennai">Chennai</option>
+                <option type="text" value="Hyderabad">Hyderabad</option>
+                <option type="text" value="Banglore">Banglore</option>
+                </select>
+                </td>
+            </tr>
+            <tr>
+            <td><input type="submit" value="AddRoom"/></td>
+            </tr>
+        </table>
+    </form>
+</html>
