@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu - A2B</title>
+</head>
+<body>
+
+   
+    <h2>Menu List For Restaurant: </h2>
+
+    <div>
+        <label for="Filter">Search Dish:</label>
+        <input type="text" id="Filter" placeholder="Enter dish name...">
+        
+        <label for="typeFilter">Select Type:</label>
+        <select id="typeFilter">
+            <option value="sab">All</option>
+            <option value="VEG wala">Veg</option>
+            <option value="NON-VEG wala ">Non-Veg</option>
+        </select>
+        
+        <button>Filter</button>
+    </div>
+
+    <table>
+        <tr>
+            <th>S.no</th>
+            <th>Dish </th>
+            <th>Dish Type</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Masala Dosa</td>
+            <td>VEG</td>
+            <td>70</td>
+            <td>
+                <a href="EditDish.html">Edit</a> |
+                <a href="DeleteDish.html">Del</a>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Biryani</td>
+            <td>NON-VEG</td>
+            <td>20</td>
+            <td>
+                <a href="EditDish.html">Edit</a> |
+                <a href="DeleteDish.html">Del</a>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
