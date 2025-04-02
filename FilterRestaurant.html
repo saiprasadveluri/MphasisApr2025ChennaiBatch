@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h2>Search Food Items:</h2>
+    <hr />
+    <form method="post">
+        <label>Food Preference:</label>
+        <label><input type="radio" name="Veg" value="Option 1"> Veg</label>
+        <label><input type="radio" name="Veg" value="Option 1"> Non-Veg</label><br />
+        <label>Price range:</label>
+        <label><input type="checkbox" name="option" value="Option 1"> 0-100</label>
+        <label><input type="checkbox" name="option" value="Option 1"> 100-250</label>
+        <label><input type="checkbox" name="option" value="Option 1"> 0-500</label>
+        <label><input type="checkbox" name="option" value="Option 1"> 500-1000</label><br />
+        <label>Dish Type::</label>
+        <select id="rloc" name="rloc">
+            <option value="Rice">Rice</option>
+            <option value="Sta">Starters</option>
+            <option value="Tif">Tiffin</option>
+        </select>
+
+        <input type="submit" value="Filter" />
+    </form>
+    <hr />
+    <h3>Available Items:</h3>
+    <table width="80%" border="1">
+        <tr>
+            <th>
+                Restaurant Name
+            </th>
+            <th>
+                Item Name
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Quantity
+            </th>
+
+
+
+        </tr>
+        <tr>
+
+            <td>
+                <input type="checkbox" name="selectItem" value="A2B-Dosa">
+                A2B
+            </td>
+            <td>
+                Dosa
+            </td>
+            <td>
+                80
+            </td>
+            <td>
+                <select id="rloc" name="rloc">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </td>
+
+        </tr>
+    </table>
+    <a href="">Add to Cart</a>
+</body>
+</html>
