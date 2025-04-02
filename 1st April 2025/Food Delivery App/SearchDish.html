@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Search Dish</h2>
+    <a href="ManageMenu.html">Menu</a>
+    <form method="post"  action="ConfirmOrder.html">
+        <table>
+            <tr>
+                <td>Dish Type:</td>
+                <td>
+                    <select name="dtype" id="dtype">
+                        <option value="1">North Indian</option>
+                        <option value="2">South Indian</option>
+                        <option value="3">Jain</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Dish Name:
+                </td>
+                <Td>
+                    <select name="dname" id="dname">
+                        <option value="1">Masala Dosa</option>
+                        <option value="2">Biriyani</option>
+                        <option value="3">Tandoori Chicken</option>
+                    </select>
+                </Td>
+            </tr>
+            <tr>
+                <td>Restaurant:</td>
+                <td>
+                    <select name="rname" id="rname">
+                        <option value="1">A2B</option>
+                        <option value="2">Saravana Bhavan</option>
+                        <option value="3">Murugan Idly</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Quantity:</td>
+                <td>
+                    <input type="number" name="quantity" id="quantity" min="1" max="10" value="1">
+                </td>
+            </tr>
+            <tr>
+                <Td></Td>
+                <td>
+                    <input type="submit" value='Order'>
+                </td>
+            </tr>
+        </table>
+
+
+    </form>
+    
+</body>
+</html>

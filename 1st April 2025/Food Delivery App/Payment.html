@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Payment</h2>
+    <form method="post" action="OrderPlaced.html">
+        <table>
+            <tr>
+                <td>
+                    Payment Method:
+                </td>
+                <td>
+                    <select name="payment" id="payment">
+                        <option value="1">Credit Card</option>
+                        <option value="2">Debit Card</option>
+                        <option value="3">Net Banking</option>
+                        <option value="4">UPI</option>
+                        <option value="5">Cash on Delivery</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value='Place Order'>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
