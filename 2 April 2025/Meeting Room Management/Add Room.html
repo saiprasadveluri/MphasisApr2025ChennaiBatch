@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Meeting Room Management</title>
+</head>
+<body>
+    <h2>Add Room</h2>
+    <br />
+    <hr />
+    
+    <form>
+        <table width="60%" border="1">
+            <tr>
+                <td>Room Number </td>
+                <td><input type="number" placeholder="Room Number" required</td>
+            </tr>
+            <tr>
+                <td>Room Title </td>
+                <td><input type="text" placeholder="Room Name" required</td>
+            </tr>
+            <tr>
+                <td>Room Type</td>
+                <td>
+                    <select name="RoomType" id="RoomType">
+                        <option value="1">Conference Hall</option>
+                        <option value="2">Lab</option>
+                        <option value="3">Training hall</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Seating Capacity</td>
+                <td><input type="number" placeholder="Seating capacity" required</td>
+            </tr>
+            <tr>
+                <td>Availability</td>
+                <td>
+                    <select name="Availability" id="Availability">
+                        <option value="1">Available</option>
+                        <option value="2">Not Available</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Location</td>
+                <td><input type="text" placeholder="Location" required</td>
+            </tr>
+
+
+            <tr>
+            </tr>
+
+
+        </table>
+        <br />
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+
+            <td><input type="submit" value="Add Room Details"</td>
+        </tr>
+    </form>
+
+</body>
+</html>
