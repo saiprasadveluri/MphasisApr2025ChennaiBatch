@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Add New Room</h4>
+    <hr>
+    <button><a href="FrontDesk.html">View Rooms</a></button>
+    <form method="post">
+        <table>
+            <tr>
+                <td>
+                    Room IDL:
+                </td>
+                <td><input type="number" name="rid" id="rid" required></td>
+            </tr>
+            <tr>
+                <td>
+                    Room Title:
+                </td>
+                <td><input type="text" name="rtit" id="rtit" required></td>
+            </tr>
+            <tr>
+                <td>
+                    Room type:
+                </td>
+                <td><select name="rtypr" id="rtype">
+                    <option value="1">Meeting Room</option>
+                    <option value="2">Training Room</option>
+                    <option value="3    ">ConferenceRoom</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>
+                    Seating Capacity:
+                </td>
+                <td><input type="number" name="rid" id="rid" required min="10" max="150"></td>
+            </tr>
+            <tr>
+                <td>
+                    Availability:
+                </td>
+                <td> <input type="radio" id="avl" name="avl">YES
+                    <input type="radio" id="avl" name="avl">NO
+                 </td>
+            </tr>
+            <tr>
+                <td>
+                    Location:
+                </td>
+                <td><input type="text" name="rtit" id="rtit" required></td>
+            </tr>
+        </table>
+        <input type="submit" value="Add"/>
+    </form>
+</body>
+</html>
