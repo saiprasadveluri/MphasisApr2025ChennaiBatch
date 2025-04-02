@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Search rooms</h2> 
+    <hr/> 
+    <form method="post"> 
+        <label >Room Id</label>
+        <input type="number">
+        <br>
+        <label>Seating Capacity</label> 
+        <input type="number">
+        <br>
+        <label >Room Type</label>
+        <select name="type" id="type">
+                <option value="1">conference</option>
+                <option value="2">meeting</option>
+                <option value="3">training</option>
+            </select>
+            <br>
+            <label >Location</label>
+        <select name="loc" id="loc">
+                <option value="1">CHENNAI</option>
+                <option value="2">HYDERABAD</option>
+                <option value="3">BANGLORE</option>
+            </select>
+<br>
+
+        <input type="submit" value="Filter" /> 
+        <hr>
+        <table>
+            <tr>
+                <th>RoomId</th>
+                <th>Roomtitle</th>
+                <th>RoomType</th>
+                <th>Seatingcapacity</th>
+                <th>AvailabilityStatus</th>
+                <th>Location</th>
+            </tr>
+            <tr>
+                <td>101</td>
+                <td>Lotus</td>
+                <td>Training room</td>
+                <td>34</td>
+                <td>open</td>
+                <td>Chennai</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Ruby</td>
+                <td>Conference room</td>
+                <td>25</td>
+                <td>open</td>
+                <td>Hyderabad</td>
+            </tr>
+</body>
+</html>

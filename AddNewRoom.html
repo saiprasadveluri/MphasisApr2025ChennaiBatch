@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Add New Room</h3>
+    <hr/>
+    <a href="RoomDetails.html">Room Details</a>
+     <form method="post">
+    <table>
+        <tr>
+            <td>
+               Room Id
+            </td>
+            <td>
+                <input type="number" min="1" step="1" id="mid" name="mid"required/> 
+             </td>
+        </tr>
+        <tr>
+            <td>
+               Room Title
+            </td>
+            <td>
+                <input type="text" id="rtitle" name="rtitle" required>
+             </td>
+        </tr>
+        <tr>
+            <td>
+               Room Type
+            </td>
+             <td>
+                <select id="rtype" name="rtype">
+                    <option value="Training Room">Training Room</option>
+                    <option value="Meeting Room">Meeting Room</option>
+                    <option value="Conference Room">Conference Room</option>
+                </select>
+            </td>
+             <tr>
+                <td>
+                    Seating Capacity
+                </td>
+                <td>
+                    <input type="number" min="1" step="1" id="mid" name="mid"/> 
+                </td>
+
+        </tr>
+                
+            <td> 
+
+                Availability status : 
+
+            </td> 
+            <td> 
+
+                <input type="text" id="rstatus" name="rstatus">
+            </td> 
+
+        </tr> 
+
+        <tr> 
+
+            <td> 
+
+                loaction : 
+
+            </td> 
+
+            <td> 
+
+                <input type="text" id="iname" name="iname" /> 
+
+            </td> 
+
+        </tr> 
+
+        <td> 
+
+            <input type="submit" value="Add new room" /> 
+
+        </td> 
+
+
+    </table>
+     </form> 
+</body>
+</html>
