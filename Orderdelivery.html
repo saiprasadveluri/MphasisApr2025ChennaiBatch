@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Update Order Status</title>
+</head>
+<body>
+    <h2>Update Order Delivery Status</h2>
+    <hr/>
+    <form method="post">
+        <table>
+            <tr>
+                <td><label>Restaurant:</label></td>
+                <td>A2B</td>
+            </tr>
+            <tr>
+                <td><label>Food Item:</label></td>
+                <td>Chicken Biryani</td>
+            </tr>
+            <tr>
+                <td><label>Quantity:</label></td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td><label>Customer Name:</label></td>
+                <td>sudha</td>
+            </tr>
+            <tr>
+                <td><label>Contact:</label></td>
+                <td>987677</td>
+            </tr>
+            <tr>
+                <td><label>Delivery Address:</label></td>
+                <td>Chen</td>
+            </tr>
+            <tr>
+                <td><label>Delivery Status:</label></td>
+                <td>
+                    <select id="orderStatus" name="orderStatus">
+                        <option value="Pending">Pending</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Out for Delivery">Out for Delivery</option>
+                        <option value="DELIVERED">DELIVERED</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Update Status" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
