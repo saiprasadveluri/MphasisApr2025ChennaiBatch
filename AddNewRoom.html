@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddNewRoom</title>
+</head>
+<body>
+    <h2>AddNewRoom</h2>
+    <br>
+    <hr>
+    <form method="post">
+        <label>RoomId</label>
+        <input type="number">
+        <br>
+        <label>RoomTitle</label>
+        <input type="text">
+        <br>
+        RoomType:<select name="type" id="type">
+            <option value="1">Training Room</option>
+            <option value="2">meeting room</option>
+            <option value="3">Conference room</option>
+        </select>
+        <br>
+        <label >Seating cap</label>
+        <input type="number">
+        <br>
+        <label >AvailabilityStatus: </label>Open
+        
+        <br>
+        Location: <select name="loc" id="loc">
+            <option value="1">Hyd</option>
+            <option value="2">CHN</option>
+            <option value="3">Blr</option>
+            </select>
+            <br><br>
+            <br>
+            <input type="submit" value="addRoom">
+
+    </form>
+</body>
+</html>
