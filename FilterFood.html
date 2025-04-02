@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>FilterFood</title>
+</head>
+<body>
+
+    <h2>Filter Food Items</h2>
+
+    <!-- Dropdown for Food Preferences -->
+    <label for="foodtype">Select Food Type:</label>
+    
+    <select id="foodtype">
+        <option value="all">All</option>
+        <option value="vegetarian">Vegetarian</option>
+        <option value="non-vegetarian">Non-Vegetarian</option>
+    </select>
+    
+
+    <table >
+        <thead>
+            <tr>
+                <th>Restaurant</th>
+                <th>FoodItem</th>
+                <th>Order</th>
+            </tr>
+        </thead>
+      
+        <tbody>
+            <tr>
+                <td>RR Biriyani</td>
+                <td>
+                    <select id="FoodItem">
+                        <option value="foodname">Biriyani</option>
+                        <option value="foodname">FishFinger</option>
+                        <option value="foodname">Crispychicken</option>
+                    </select>
+                </td>
+               
+                <td><a href="order.html"><button>Order Now</button></a></td>
+            </tr>
+            <br>
+
+            <tr>
+                <td>HariBhavan</td>
+                <td>
+                    <select id="FoodItem">
+                        <option value="foodname">Dosai</option>
+                        <option value="foodname">Idly</option>
+                        <option value="foodname">Pongal</option>
+                    </select>
+                </td>
+                <td><a href="order.html"><button>Order Now</button></a></td>
+            </tr>
+
+            <tr>
+                <td>Annapoorna</td>
+                <td>
+                    <select id="FoodItem">
+                        <option value="foodname">Sambharvadai</option>
+                        <option value="foodname">Coffee</option>
+                        <option value="foodname">CurdRice</option>
+                    </select>
+                </td>
+                <td><a href="order.html"><button>Order Now</button></a></td>
+            </tr>
+
+            <tr>
+                <td>Dominoz</td>
+                <td>
+                    <select id="FoodItem">
+                        <option value="foodname">Pizza</option>
+                        <option value="foodname">Burger</option>
+                        <option value="foodname">PopcornChicken</option>
+                    </select>
+                </td>
+                <td><a href="order.html"><button>Order Now</button></a></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</body>
+</html>
