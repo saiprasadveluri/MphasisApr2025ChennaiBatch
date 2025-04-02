@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset ="utf-8" />
+        <title>Payment Method</title>
+    </head>
+    <body align="center">
+        <h1>Payment Method</h1>
+        <label>Debit Card</label>
+        <input type="text" id="DebitcardNo" minlength="16" maxlength="16" placeholder="xxxx-xxxx-xxxx-xxxx">
+        <button>Pay</button>
+        <br>
+        <h4>or</h4>
+        <br>
+        <label>Credit Card</label>
+        <input type="text" id="CreditcardNo" minlength="16" maxlength="16" placeholder="xxxx-xxxx-xxxx-xxxx">
+        <button>Pay</button>
+        <br>
+        <h4>or</h4>
+        <br>
+        <select>
+            <option Value="1">UPI</option>
+            <option Value="2">Mobile Banking</option>
+            <option Value="3">Online Wallets</option>
+        </select>
+        <button>Pay</button>
+        <br>
+        <h4>or</h4>
+        <br>
+        <input type="radio" id="COD" name="Cashondelivery">
+        <label>Cash on delivery</label>
+        <br>
+
+        <br>
+        <form method="post" action="Order Status.html">
+            <label>Place your order</label>
+            <button>Confirm</button>
+        </form>
+
+    </body>
+</html>
