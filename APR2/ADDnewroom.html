@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        Add New Room
+    </h3><hr>
+
+    <button><a href="index.html">VIEW ROOMS</a></button>
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <label>ROOM ID</label>
+                </td>
+                <td>
+                    <input type="number" name="rid" id="rid" min="1" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Room Title</label>
+                </td>
+                <td>
+                    <input type="text" name="rtit" id="rtit"  required>
+                </td>
+                <tr>
+                    <td>
+                        <label>ROOM TYPE</label>
+                    </td>
+                    <td>
+                        <select name="room" id="room">
+                            <option value="MR">Meeting Room</option>
+                            <option value="Traning">Traning Room</option>
+                            <option value="CF">CONFERENCE Room</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Seating Capacity</label>
+                    </td>
+                    <td>
+                        <input type="number" name="rid" id="rid" min="20"  max="100" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>ROOM Availability</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="radio" id="radio">YES
+                        <input type="radio" name="radio" id="radio">NO
+                    </td>
+                    <tr>
+                        <td>
+                            <label>Location</label>
+                        </td>
+                        <td>
+                            <input type="text"  required>
+                        </td>
+                    </tr>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>
+                    <td>
+                        <input type="submit" value="ADD" onclick="alert('ROOM ADDED!');">
+                    </td>
+                </tr>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
