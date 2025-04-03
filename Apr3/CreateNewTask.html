@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css">
+    <title></title>
+</head>
+<body>
+    <h3> New Task</h3>
+    <hr />
+    <button>
+    <a href="ManageTasks.html">Manage Tasks</a></button>
+    <form method="post">
+        <table>
+            <tr>
+                <td>Task Id: <input type="number" min="1" id="tid" name="tid" /></tr></td>
+            
+            
+            <tr>
+                <td>Title: <input type="text" id="tt" name="tt"/></tr></td>
+            
+            
+            <tr><td>Description: <textarea id="tdesc" name="tdesc" rows="4">
+            </textarea></td></tr>
+            
+            
+            <tr><td>Start date: <input type="date" id="stdate" name="stdate"/></td></tr>
+            
+            <tr><td>End date: <input type="date" id="enddate" name="enddate" /></td></tr>
+            
+            <tr><td>Duration: <input type="number" min="1" step="1" name="tdu" id="tdu"/></td></tr>
+            
+        
+            <tr><td>Assignd To:
+                <select id="tassindto" name="tassignedto">
+                    <option value="1">Mary</option>
+                    <option value="2">John</option>
+                </select></td></tr>
+            
+            
+            <tr><td>Status:
+                <select id="tstatus" name="tsatus">
+                    <option value="1">OPEN</option>
+                    <option value="2">ON-HOLD</option>
+                </select></td></tr>
+            
+            
+            <tr><td><input type="submit" value="Add Task"/></td></tr>
+            
+        </table>
+    </form>
+    
+</body>
+</html>

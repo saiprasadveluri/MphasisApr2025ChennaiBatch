@@ -1,0 +1,66 @@
+.mainHead{
+    text-align: center;
+    font-size: 30px;
+    color: red;
+}
+
+
+body{
+    background-color: aqua;
+    align-items: center;
+    text-align: center;
+}
+
+input,label,select{
+    width: 150px;
+    height: 40px;
+    padding: 10px 10px;
+    color: rgb(255, 34, 255);
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: rgb(118, 255, 255);
+    justify-content: center;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form,table{
+    background-color: aliceblue;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 30px;
+    border-radius: 8px;
+    border-color: blue;
+    border-width: 2px;
+}
+
+h3{
+    font-size: 40px;
+    align-items: center;
+    text-align: center;
+    color: brown;
+}
+
+th{
+    background-color: grey;
+}
+
+
+    button{
+        width: auto;
+        padding: 5px 8px;
+        border-radius: 10px;
+        margin: 10px 10px;
+    }
+    button:hover{
+        
+        cursor: pointer;
+    }
+
+    form{
+        font-size: 20px;
+    }
