@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>  
+    <link rel="stylesheet" href="site.css"/>
+</head>
+<body>    
+    <h3 style="color:red;background-color:yellow">My Data Collection</h3>
+    <hr />
+    <h4>User Data</h4>
+
+    <p id="info">
+        Need to collect
+        <span style="color:green">User data.</span>
+    </p>
+    <div>
+        <div>
+            <p>
+                The fields : email, Password, role are mandatory
+            </p>
+            <ul>
+                <li>
+                    Item 1
+                </li>
+                <li>
+                    Item 2
+                </li>
+                <li>
+                    Item 3
+                </li>
+            </ul>
+            <ol>
+                <li>
+                    Item 1
+                </li>
+                <li>
+                    Item 2
+                </li>
+                <li>
+                    Item 3
+                </li>
+            </ol>
+        </div>
+    </div>    
+
+    <form method="post">
+        <input type="email" id="uemail" name="uemail" required placeholder="Email" class="req" />
+        <br />
+        <input type="password" id="upwd" name="upwd" required placeholder="password" class="req" />
+        <br />
+        <input type="text" id="nickname" name="nickname" placeholder="name" />
+        <br />
+        <input type="text" id="urole" name="urole" required placeholder="role string" class="req"/>
+        <br />
+        <button type="submit" id="subBtn" name="subBtn">Send Data</button>
+    </form>
+
+    <p class="errorInfo">
+        Error Info:
+    </p>
+
+    <table class="tbl">
+        <thead>
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Location
+                </th>
+                <th>
+                    Role
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    Ram
+                </td>
+                <td>
+                    HYD
+                </td>
+                <td>
+                    Admin
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    2
+                </td>
+                <td>
+                    Shyam
+                </td>
+                <td>
+                    CHN
+                </td>
+                <td>
+                    User
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

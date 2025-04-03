@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        @media only print
+        {
+            table{
+                font-size:30px;
+                color:green;
+            }
+        }
+
+        @media (orientation:landscape)
+        {
+            table {
+                font-size: 30px;
+                color: red;
+            }
+        }
+        th {
+            background-color: black;
+            color: white;
+            border: solid;            
+        }
+        td {
+            border-bottom: solid;
+            border-width: 1px;
+            margin:3px;
+            padding:20px;
+            text-align:center;
+            
+        }
+        tr:hover{
+            background-color:gray;
+        }
+        table{
+            border-collapse:collapse;
+            font-size:20px;
+            
+        }
+        .mylink{
+            text-decoration:none;
+        }
+            .mylink:visited{
+                color:inherit;
+            }
+            .linkButton {
+                border: none;
+                text-decoration: none;
+                background-color: inherit;
+                font-size: 20px;
+            }
+        .linkButton:hover {
+            text-decoration:underline;
+            cursor:pointer;
+
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: red; padding-top: 30px; padding-bottom: 50px;border-bottom-width:10px;border-style:solid;border-color:aquamarine;margin:50px;">
+        Content 1
+    </div>
+    <div style="background-color: blue; border-width: 10px; border-style:dotted; border-color: aquamarine; margin: 50px; ">
+        Content 2
+    </div>
+    <form>
+        <table style="width:100%">
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Role
+                </th>
+                <th>
+                    Actions
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    Mary
+                </td>
+                <td>
+                    Admin
+                </td>
+                <td>
+                    <a href="" class="mylink">Edit</a> || <a href="" class="mylink">Details</a>
+                    ||<button type="submit" class="linkButton">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    2
+                </td>
+                <td>
+                    Ram
+                </td>
+                <td>
+                    User
+                </td>
+                <td>
+                    <a href="" class="mylink">Edit</a> || <a href="" class="mylink">Details</a>
+                    ||<button type="submit" class="linkButton">Delete</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
