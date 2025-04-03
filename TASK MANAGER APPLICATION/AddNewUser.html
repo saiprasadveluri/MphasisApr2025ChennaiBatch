@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New User</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the shared CSS file -->
+</head>
+<body>
+    <nav>
+        <a href="AssignMembers.html">Assign Members</a>
+        <a href="ManageTasks.html">Manage Tasks</a>
+        <a href="CreateNewTask.html">New Task</a>
+        <a href="ViewComments.html">Comments</a>
+        <a href="PMDashboard.html">PM Dashboard</a>
+        <a href="AdminDashboard.html">Admin Dashboard</a>
+    </nav>
+
+    <h3>Add New User</h3>
+    <form method="post" action="AdminDashboard.html">
+        <table>
+            <tr>
+                <td>User Email:</td>
+                <td><input type="email" required id="uemail" name="uemail" placeholder="Enter email" /></td>
+            </tr>
+            <tr>
+                <td>User Password:</td>
+                <td><input type="password" required id="upwd" name="upwd" placeholder="Enter password" /></td>
+            </tr>
+            <tr>
+                <td>Display Name:</td>
+                <td><input type="text" required id="udname" name="udname" placeholder="Enter display name" /></td>
+            </tr>
+            <tr>
+                <td>User Role:</td>
+                <td>
+                    <select id="urole" name="urole" required>
+                        <option value="PM">Project Manager</option>
+                        <option value="DEV">Developer</option>
+                        <option value="QA">Quality Analyst</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Add User" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

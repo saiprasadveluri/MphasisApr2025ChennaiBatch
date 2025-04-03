@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Task</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="AssignMembers.html">Assign Members</a>
+        <a href="ManageTasks.html">Manage Tasks</a>
+        <a href="CreateNewTask.html">New Task</a>
+        <a href="ViewComments.html">Comments</a>
+        <a href="PMDashboard.html">PM Dashboard</a>
+    </nav>
+    <h3>Create New Task</h3>
+    <form method="post">
+        Task Id: <input type="number" id="tid" name="tid" />
+        <br />
+        Title: <input type="text" id="tt" name="tt" />
+        <br />
+        Description: <textarea id="tdesc" name="tdesc"></textarea>
+        <br />
+        Start Date: <input type="date" id="stdate" name="stdate" />
+        <br />
+        End Date: <input type="date" id="enddate" name="enddate" />
+        <br />
+        Duration: <input type="number" id="tdu" name="tdu" />
+        <br />
+        Assigned To:
+        <select id="tassignedto" name="tassignedto">
+            <option value="Mary">Mary</option>
+            <option value="John">John</option>
+        </select>
+        <br />
+        Status:
+        <select id="tstatus" name="tstatus">
+            <option value="OPEN">OPEN</option>
+            <option value="ON-HOLD">ON-HOLD</option>
+        </select>
+        <br />
+        <input type="submit" value="Add Task" />
+    </form>
+</body>
+</html>

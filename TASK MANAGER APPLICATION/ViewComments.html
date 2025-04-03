@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="AssignMembers.html">Assign Members</a>
+        <a href="ManageTasks.html">Manage Tasks</a>
+        <a href="CreateNewTask.html">New Task</a>
+        <a href="ViewComments.html">Comments</a>
+        <a href="PMDashboard.html">PM Dashboard</a>
+    </nav>
+    <h3>Comments</h3>
+    <div>
+        <table>
+            <tr>
+                <td>Commented By:</td>
+                <td>Mary</td>
+                <td>Date:</td>
+                <td>02-04-2025</td>
+            </tr>
+            <tr>
+                <td colspan="4"><textarea readonly rows="4" cols="60">More explanation required....</textarea></td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td>Commented By:</td>
+                <td>John</td>
+                <td>Date:</td>
+                <td>03-04-2025</td>
+            </tr>
+            <tr>
+                <td colspan="4"><textarea readonly rows="4" cols="60">Arranged conf call with client</textarea></td>
+            </tr>
+        </table>
+    </div>
+    <hr />
+    <h3>New Comment</h3>
+    <form method="post">
+        Comment Description: <textarea id="cmtDesc" name="cmtDesc" required rows="4"></textarea><br />
+        <input type="submit" value="Add New Comment" />
+    </form>
+</body>
+</html>
