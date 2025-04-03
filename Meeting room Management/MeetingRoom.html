@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Rooms Management</title>
+</head>
+<body>
+    <h1>Meeting Rooms Management</h1>
+    <hr>
+    <div>
+        <form method="post">
+            <table>
+                <tr>
+                    <td><label>Capacity:</label></td>
+                    <td><input type="number" name="sname" id="sname" placeholder="No. of People"></td>
+                </tr>
+                <tr>
+                    <td><label>Type of room:</label></td>
+                    <td>
+                        <select id="typeofroom">
+                            <option value="1">Training</option>
+                            <option value="2">Meeting Room</option>
+                            <option value="3">Conference</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="location">Location:</label></td>
+                    <td>
+                        <select id="location">
+                            <option value="1">Chennai</option>
+                            <option value="2">Hyderabad</option>
+                            <option value="3">Pune</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Date:</label></td>
+                    <td><input type="date" id="date"></td>
+                </tr>
+                <tr><td><a href="ListOfRoom.html">Search</a></td></tr>
+                <!-- <tr><td><input type="submit" value="search"></td></tr> -->
+            </table>
+        </form>
+    </div>
+   
+    
+</body>
+</html>

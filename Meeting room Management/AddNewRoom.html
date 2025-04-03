@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Room</title>
+</head>
+<body>
+    <form method="post" action="AddedSucc.html">
+        <table>
+            <tr>
+                <td><label>Room Name:</label></td>
+                <td><input type="text" name="sname" id="sname" placeholder="Name"></td>
+            </tr>
+            <tr>
+                <td><label>Capacity:</label></td>
+                <td><input type="number" name="sname" id="sname" placeholder="No. of People"></td>
+            </tr>
+            <tr>
+                <td><label>Type of room:</label></td>
+                <td>
+                    <select id="typeofroom">
+                        <option value="1">Training</option>
+                        <option value="2">Meeting Room</option>
+                        <option value="3">Conference</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="location">Location:</label></td>
+                <td>
+                    <select id="location">
+                        <option value="1">Chennai</option>
+                        <option value="2">Hyderabad</option>
+                        <option value="3">Pune</option>
+                    </select>
+                </td>
+            </tr>
+            <!-- <tr>
+                <td><label>Date:</label></td>
+                <td><input type="date" id="date"></td>
+            </tr> -->
+            <tr><td><input type="submit" value="Add Room"></td></tr>
+        </table>
+    </form>
+</body>
+</html>
