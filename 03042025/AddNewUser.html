@@ -1,0 +1,85 @@
+﻿﻿
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <h2 class="mainheading">Add New User</h2>
+    <hr />
+    <div class="anr">
+        <a href="AdminDashboard.html">Admin Dashboard</a>
+    </div>
+    <hr />
+    <div>
+        <form>
+            <table class="content" width="100%">
+                <tr>
+                    <td>
+                        Username
+                    </td>
+                    <td>
+                        <input type="text" name="uname" id="uname" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        User Email
+                    </td>
+                    <td>
+                        <input type="email" name="uemail" id="uemail" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Display Name
+                    </td>
+                    <td>
+                        <input type="text" name="udname" id="udname" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password
+                    </td>
+                    <td>
+                        <input type="password" name="upwd" id="upwd" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        User Role
+                    </td>
+                    <td>
+                        <select>
+                            <option>Site Admin</option>
+                            <option>Project Manager</option>
+                            <option>Developer</option>
+                            <option>QA</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <input type="submit" value="Add New" />
+                        <input type="reset" value="Reset Form" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div>
+        <h5>Error List:</h5>
+        <ul>
+            <li>Email should be unique</li>
+            <li>Password must be 6 or more characterslength</li>
+            <li>Role info is required</li>
+        </ul>
+    </div>
+</body>
+</html>
