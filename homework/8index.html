@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Food - A2B</title>
+</head>
+<body>
+
+    <h2> Your Order</h2>
+
+    <form action="OrderConfirmation.html" method="POST">
+        <label>Dish:</label>
+        <select name="dish">
+            <option value="Masala Dosa">Masala Dosa - 70</option>
+            <option value="Biryani">Biryani -5</option>
+        </select>
+
+        <label>Qty:</label>
+        <input type="number" name="quantity" min="1" value="1">
+
+        <label>Name:</label>
+        <input type="text" name="customerName" required>
+
+        <label>Contact:</label>
+        <input type="tel" name="contact" required>
+
+        <button type="submit">Order Now</button>
+    </form>
+
+</body>
+</html>
