@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+    <h3 class="mainHeading"> New Task</h3>
+    <hr>
+    <a href="ManageTask.html">Manage Task</a>
+    <hr>
+    <div class="inp">
+
+   
+    <form method="post">
+        Task ID: <input type="number" min="1" id="tid" name="tid"/>
+        <br>
+        Title: <input type="text" id="tt" name="tt"/>
+        <br>
+        Description: <textarea id="tdesc" name="tdesc" rows="4"></textarea>
+        <br>\
+        Start Date: <input type="date" id="sdate" name="sdate"/>
+        <br>
+        End Date: <input type="date" id="edate" name="edate"/>
+        <br>
+
+        Duration: <input type="number" min="1" step="1" name="tdu" id="tdu"/>
+        <br>
+        Assigned to:
+        <select id="tassignto" name="tassignto">
+            <option value="1">Mary</option>
+            <option value="2">John</option>
+            </select>
+        <br>
+        Status: 
+        <select id="status" name="tstatus">
+            <option value="1">OPEN</option>
+            <option value="2">ON-HOLD</option>
+        </select>
+        <br>
+
+        <input type="submit" value="Add Task">
+    </form>
+</div>
+   
+</body>
+</html>

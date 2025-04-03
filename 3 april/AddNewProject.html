@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+    <a href="AdminDashboard.html">Dashboard</a>
+    <h3 class="mainHeading"> Add New aProject </h3>
+    <hr/>
+    <form method="post" action="AdminDashboard.html">
+        <table class="inputTable">
+            <tr>
+                <td>
+                    Project id:
+                </td>
+                <td>
+                    <input type="number" id="pid" name="pid" min="1">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                     Title:
+                </td>
+                <td>
+                    <input type="text" id="ptitle" name="ptitle" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                     Start Date:
+                </td>
+                <td>
+                    <input type="date" id="sdate" name="sdate" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    End Date:
+                </td>
+                <td>
+                    <input type="date" id="edate" name="edate" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Duration:
+                </td>
+                <td>
+                    <input type="number" id="drn" name="drn" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    PM Name:
+                </td>
+                <td>
+                    <input type="Text" id="pid" name="pid" required>
+                </td>
+            </tr>
+        </table>
+        <input type="submit">
+    </form>
+
+</body>
+</html>

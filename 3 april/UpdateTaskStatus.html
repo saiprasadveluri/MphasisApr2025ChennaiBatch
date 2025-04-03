@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+    <h3 class="mainHeading">Update Task Status</h3>
+    <hr>
+    <form class="updt" method="post">
+        <Label> Task Title:</Label> DBCreation
+        <br>
+        Task Description: <textarea readonly>Description about the DBCreation....</textarea>
+        <br>
+        New Status: <select id="tstatus" name="tstatus">
+            <option value="1">In Progress</option>
+            <option value="2">Ressolved</option>
+            <option value="3">Open</option>
+        </select>
+        <br>
+        Select QA: <select id="selQA" name="selQA">
+            <option value="1">John</option>
+            <option value="2">Walter</option>
+            <option value="3">Rao</option>
+        </select>
+        <br>
+        <br>
+
+        <pre>
+            <input type="submit" value="Update Status"/>
+    </pre>
+
+
+    </form>
+</body>
+</html>
