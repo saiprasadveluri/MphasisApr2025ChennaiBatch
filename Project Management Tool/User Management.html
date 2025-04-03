@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset ="utf-8" />
+        <title>User Management</title>
+    </head>
+    <body>
+        <h1 align="center">User Management</h1>
+        <h2>Create a user</h2>
+        <form method="post" action="Admin Page.html">
+            <lable>Select the role for the user:</lable>
+            <select>
+                <option value="0">Select</option>
+                <option value="1">Project Manager</option>
+                <option value="2">Developer</option>
+                <option value="3">QA</option>
+            </select>
+            <br>
+
+            <br>
+            <label>Create Username</label>
+            <input type="email" required id="UserID" placeholder="xyz@gmail.com">
+            <br>
+
+            <br>
+            <label>Create Password</label>
+            <input type="password" id="Password" minlength="8" placeholder="Please enter the password" required>
+            <br>
+             
+            <br>
+            <label>Confirm Password</label>
+            <input type="password" id="Password"  minlength="8" placeholder="Confirm the password" required>
+            <br>
+            <br>
+            <button>Create</button>
+        </form>
+        <br>
+
+        <h2>Edit User</h2>
+        <form method="post" action="Admin Page.html">
+            <label>Select the user</label>
+            <select>
+                <option value="0">--select--</option>
+                <option value="1">Rohith</option>
+                <option value="2">manoteja</option>
+                <option value="3">Mohith</option>
+                <option value="4">Ravi</option>
+            </select>
+            <br>
+
+            <br>
+            <label>Change Role</label>
+            <select>
+                <option value="0">--select--</option>
+                <option value="1">Project manager</option>
+                <option value="2">Developer</option>
+                <option value="3">QA</option>
+            </select>
+            <br>
+
+            <br>
+            <label>Change the assigned project</label>
+            <select>
+                <option value="0">--select--</option>
+                <option value="1">Food Delivery Application</option>
+                <option value="2">Bank Application</option>
+                <option value="3">Healthcare Management Application</option>
+            </select>
+            <br>
+
+            <br>
+            <button>Confirm</button>
+        </form>
+    </body>
+</html>
