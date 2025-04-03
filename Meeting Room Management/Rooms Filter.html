@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>Rooms Filter</title>
+        <style>
+            h1{
+                background-color: burlywood;
+            }
+            table{
+                background-color: rgb(241, 173, 95);
+            }
+            button:hover{
+                background-color: cornflowerblue;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body align="center">
+        <h1>Room Filters</h1>
+        <form method="post" action="Meeting Room Dashboard.html">
+            <table align="center" width="40%">
+                <tr>
+                    <td>Seating capacity</td>
+                    <td>
+                        <select align="left">
+                            <option>--select--</option>
+                            <option>0-50</option>
+                            <option>51-100</option>
+                            <option>101-150</option>
+                            <option>151-200</option>
+                            <option>201-300</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Type of room</td>
+                    <td>
+                        <input type="checkbox" id="rtype1">
+                        <label>Training Room</label>
+
+                        
+                        <input type="checkbox" id="rtype2">
+                        <label>Conference hall</label>
+
+                        
+                        <input type="checkbox" id="rtype3">
+                        <label>Auditorium</label>
+
+                        
+                        <input type="checkbox" id="rtype4">
+                        <label>Meeting room</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>
+                        <select>
+                            <option>--select--</option>
+                            <option>Hyderabad</option>
+                            <option>Chennai</option>
+                            <option>Banglore</option>
+                            <option>Mumbai</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Availability</td>
+                    <td>
+                        <label>From</label>
+                        <input type="date" id="checkin">
+
+                        <label>to</label>
+                        <input type="date" id="checkout">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button>Confirm</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

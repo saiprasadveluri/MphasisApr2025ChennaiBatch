@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>Meeting Room</title>
+        <style>
+            
+            tbody tr:hover{
+                background-color: dimgray;
+            }
+            button:hover{
+                background-color: cornflowerblue;
+                cursor: pointer;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1 align="center" style="color:darkslategrey ; background-color: burlywood">Meeting Room Dashboard</h1>
+        <form>
+            <input type="search" id="search" placeholder="Search rooms">
+            <button>search</button>
+        </form>
+        <br>
+
+        <a href="Rooms Filter.html"><button>Filters</button></a>
+        <h2>Rooms List</h2>
+        <table style="background-color:rgb(243, 235, 223)" width="100%" border="1">
+            <thead style="background-color: rgb(27, 86, 173);color: rgb(253, 253, 253);">
+                <tr>
+                    <th>Room ID</th>
+                    <th>Room Type</th>
+                    <th>Building Name</th>
+                    <th>Floor No</th>
+                    <th>Seating capacity</th>
+                    <th>Location</th>
+                    <th>Availability</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody align="center">
+                <tr>
+                    <td>100</td>
+                    <td>Training Room</td>
+                    <td>Tower 1-B</td>
+                    <td>4</td>
+                    <td>60</td>
+                    <td>Chennai</td>
+                    <td>yes</td>
+                    <td>
+                        <form method="post" action="Payment Page.html">
+                            <label>from</label>
+                            <input type="date" id="checkin">
+                            <label>to</label>
+                            <input type="date" id="checkout">
+                            <button>book room</button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>303</td>
+                    <td>Conference Hall</td>
+                    <td>Block 8</td>
+                    <td>7</td>
+                    <td>15</td>
+                    <td>Chennai</td>
+                    <td>yes</td>
+                    <td>
+                        <form method="post" action="Payment Page.html">
+                            <label>from</label>
+                            <input type="date" id="checkin">
+                            <label>to</label>
+                            <input type="date" id="checkout">
+                            <button>book room</button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>160</td>
+                    <td>Auditorium</td>
+                    <td>Tower 1-c</td>
+                    <td>1</td>
+                    <td>300</td>
+                    <td>Hyderabad</td>
+                    <td>yes</td>
+                    <td>
+                        <form method="post" action="Payment Page.html">
+                            <label>from</label>
+                            <input type="date" id="checkin">
+                            <label>to</label>
+                            <input type="date" id="checkout">
+                            <button>book room</button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>154</td>
+                    <td>Training Room</td>
+                    <td>Tower 1-A</td>
+                    <td>6</td>
+                    <td>60</td>
+                    <td>Banglore</td>
+                    <td>yes</td>
+                    <td>
+                        <form method="post" action="Payment Page.html">
+                            <label>from</label>
+                            <input type="date" id="checkin">
+                            <label>to</label>
+                            <input type="date" id="checkout">
+                            <button>book room</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </body>
+</html>        
