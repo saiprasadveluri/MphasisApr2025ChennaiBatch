@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <h3>Add New Room</h3>
+    <hr /> <a href="RoomDetails.html">Room Details</a>
+    <hr />
+    <form method="post">
+        <table>
+            <tr>
+                <td> Room Title: </td>
+                <td> <input type="text" id="rttl" name="rttl" required /> </td>
+            </tr>
+            <tr>
+                <td> Room Type: </td>
+                <td> <select>
+                        <option>Training Room</option>
+                        <option>Meeting Room</option>
+                        <option>Conference</option>
+                    </select> </td>
+            </tr>
+            <tr>
+                <td> Seating Capacity: </td>
+                <td> <input type="number" id="rnum" name="rnum" required /> </td>
+            </tr>
+            <tr>
+                <td> Availability Status: </td>
+                <td> <select>
+                        <option>Available</option>
+                        <option>Unavailable</option>
+                    </select> </td>
+            </tr>
+            <tr>
+                <td> Location: </td>
+                <td> <input type="text" id="rloc" name="rloc" required /> </td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td> <input type="submit" value="Add New" /> </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
