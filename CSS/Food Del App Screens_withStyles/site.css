@@ -1,0 +1,130 @@
+﻿.mainHeading{
+    font-size:xx-large;
+    color:red;
+    font-weight:bold;
+    text-align:center;
+}
+
+.sideHeading {
+    font-size: x-large;
+    font-weight: bold;
+    background-color:dimgray;
+    color:white;
+}
+
+.topNavDiv {
+    text-align: right;
+    padding-right: 40px;
+    padding-top: 20px;
+    background-color:darkslategray;
+    height: 45px;
+    vertical-align: central;
+}
+
+.topNavLink{
+    color:white;
+    font-size:large;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+
+
+.mainTable{
+    background-color:lightblue;
+    font-size:medium;
+    border:none;
+    width:100%;
+    border-collapse:collapse;
+}
+
+.mainTable th{
+    background-color:darkblue;
+    color:white;
+    font-size:large;
+}
+
+.mainTable td{
+    font-size:large;
+    font-family:Garamond;
+    padding-top:10px;
+    font-weight:bold;
+    text-align:center;
+    border-bottom:solid;
+    border-bottom-width:2px;
+    cursor:pointer;
+}
+
+.mainTable tr:hover{
+    background-color:darkgray;
+}
+
+.actionLink {
+    color: black;
+    font-size: large;
+    text-decoration: none;
+}
+
+.scrollDiv {
+    height: 250px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+
+.broadHr{
+    color:darkgreen;
+    border-width:2px;
+}
+
+input{
+    width:75%;
+    height:30px;
+}
+
+    input[type=radio],input[type=checkbox] {
+        width: 15%;
+        height:20px;
+    }
+    select {
+        width: 75%;
+        padding: 0px;
+        height: 30px;
+    }
+label{
+    width: 100%;
+    text-align: right;
+}
+
+.inpTable {
+    background-color: lightblue;
+    font-size: medium;
+    border:solid;
+    width: 100%;
+    border-radius:40px;
+    margin-top:30px;
+}
+
+.inpTable tr{
+    height:45px;
+}
+
+.inpTable td
+{
+    text-align:center;
+}
+
+input[type=submit] {
+    background-color: darkblue;
+    width: 75%;
+    color: white;
+    font-weight: bold;
+}
+
+img{
+    width:50%;    
+}
+
+span{
+    font-size:50px;
+    text-shadow:red 3px 3px;
+}
