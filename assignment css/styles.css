@@ -1,0 +1,65 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+/* Form Styling */
+.form-container {
+    background: white;
+    width: 300px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 5px gray;
+    border-radius: 5px;
+}
+
+input, select, textarea {
+    width: 90%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+    margin-top: 20px;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 5px;
+    background: #28a745;
+    color: white;
+    border-radius: 5px;
+}
+
+.nav-buttons a:hover {
+    background: #218838;
+}
+
+
+

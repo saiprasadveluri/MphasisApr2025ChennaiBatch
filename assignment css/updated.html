@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form-containe{
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+ h3{
+    color:rgb(245, 238, 234);
+    background-color: rgb(42, 155, 165);
+    text-align:center;
+    border-radius:2px ;
+    
+ }
+    </style>
+   <link rel="stylesheet" href="update.css">
+</head>
+
+<body>
+    <h3>Update Task</h3>
+    
+    
+        <form class="form-containe">
+            <input type="text" placeholder="Task ID" required>
+            <select required>
+                <option value="">Status</option>
+                <option value="Open">Open</option>
+                <option value="In-Progress">In-Progress</option>
+                <option value="Resolved">Resolved</option>
+            </select>
+            <button type="submit">Update</button>
+        </form>
+    
+</body>
+</html>
