@@ -1,0 +1,23 @@
+.ca{
+    color: darkblue;
+    font-family:'Lucida Sans';
+        font-size: medium;
+        border-style:dashed;
+        width: 100%;
+        margin-top:30px;
+        text-align:center;
+        background-color:rgb(159, 206, 248);
+}
+td{
+    color: maroon;
+    font-family:cursive;
+}
+h2{
+    color:rgb(187, 7, 133)
+}
+.la{
+    color: rgba(242, 42, 42, 0.859);
+    font-style: italic;
+    font-weight: bold;
+    font-size: medium;
+}

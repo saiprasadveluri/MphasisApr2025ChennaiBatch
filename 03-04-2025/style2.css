@@ -1,0 +1,41 @@
+.ca1{
+    color: darkblue;
+    font-family:'Lucida Sans';
+        font-size: medium;
+        border-style:dashed;
+        margin-top:30px;
+        text-align:center;
+        background-color: rgb(159, 206, 248);
+        width:60%;
+    
+}
+h2{
+    color:rgb(187, 7, 133)
+}
+.ul{
+    color:red
+}
+input{
+    color: rgb(25, 3, 58);
+}
+.ca1 tr{
+    height:45px;
+}         
+.ca1 td
+{
+    text-align:center;
+}           
+input[type=submit]  {
+    background-color: darkblue;
+    width: 75%;
+    color: white;
+    font-weight: bold;
+}
+input{
+    width:75%;
+    height:30px;
+}
+input[type=checkbox] {
+    width: 15%;
+    height:20px;
+}

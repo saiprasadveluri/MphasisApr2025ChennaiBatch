@@ -1,0 +1,56 @@
+<html>
+    <title>
+        ADDNEWUSERS
+    </title>
+    <link rel="stylesheet" href="style2.css">
+    <body>
+        <h2>NEW USER </h2>
+        <table class="ca1">
+            <form method="post">
+            <tr>
+                <td>
+                    NAME
+                </td>
+                <td>
+                    <input type="text" name="nn" id="nn" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ROLE
+                </td>
+                <td>
+                    <input type="text" name="nr" id="nr" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    E MAIL
+                </td>
+                <td>
+                    <input type="email" name="ne" id="ne" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="REGISTER">
+                </td>
+                <td>
+                    <input type="reset" value="RESET">
+                </td>
+            </tr>
+        </form>
+        </table>
+        <label style="color: red;">
+            ERROR LIST
+        </label>
+        <ul class="ul">
+            <li>
+                emp id should be unique
+            </li>
+            <li>
+                Password should contain more than 6 characters
+            </li>
+        </ul>
+    </body>
+</html>
