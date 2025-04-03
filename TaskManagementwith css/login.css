@@ -1,0 +1,45 @@
+h2 {
+    color: blue;
+    background-color: beige;
+    text-align: center;
+    font-size: x-large;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.tbl {
+    background-color: lightblue;
+    width: 90%;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+}
+
+.tbl tr {
+    height: 45px;
+}
+
+.tbl td {
+    padding: 10px;
+    align-items: center;
+    
+}
+
+.tbl label {
+    font-weight: bold;
+    color:olive;
+    width: 30%;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.tbl input {
+    width: 65%;
+    padding: 8px;
+    font-size: medium;
+    border: 1px;
+    color: blue;
+    border-radius: 5px;
+}

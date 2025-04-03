@@ -1,0 +1,51 @@
+.iTable {
+    background-color:lightblue;
+    font-size: medium;
+    border:solid;
+}
+.iTable th{
+    height:45px;
+    background-color:beige
+}         
+.iTable tr{
+    height:45px;
+    background-color:gray;
+}         
+.iTable td
+{
+    text-align:center;
+    background-color:gray;
+}           
+input[type=submit]  {
+    background-color: darkblue;
+    width: 75%;
+    color: white;
+    font-weight: bold;
+}
+input[type=reset]  {
+        background-color:red;
+        width: 75%;
+        color: white;
+        font-weight: bold;
+}
+input{
+    width:75%;
+    height:30px;
+}
+input[type=checkbox] {
+    width: 15%;
+    height:20px;
+}
+.topNavDiv {
+    text-align: right;
+    padding-right: 40px;
+    padding-top: 5px;
+    background-color:pink;
+    height: 20px;
+    vertical-align: central;
+}
+select {
+    width: 85%;
+    padding: 0px;
+    height: 30px;
+}
