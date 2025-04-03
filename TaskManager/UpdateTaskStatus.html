@@ -1,0 +1,29 @@
+!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <h3 class="head">Update Task Status</h3>
+    <hr />
+    <form method="post" class="content">
+        <label>ask TitTle:</label> DbCreation
+        <br />
+        Task Description: <textarea readonly>Description about the DbCreation...</textarea>
+        <br />
+        New Status: <select id="tstatus" name="tstatus">
+            <option value="1">In Progress</option>
+            <option value="2">Resolved</option>
+            <option value="3">Open</option>
+        </select>
+        <br />
+        <input type="submit" value="Update Status" />
+    </form>
+</body>
+
+</html>

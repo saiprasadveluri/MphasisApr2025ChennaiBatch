@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <h3 class="head">Add New Project</h3>
+    <hr />
+    <div class="anr">
+        <a href="AdminDashboard.html">Admin dashboard</a>
+
+    </div>
+    <hr />
+    <table class="content" width="100%">
+        <tr>
+            <td>
+                Project Id
+            </td>
+            <td>
+                <input type="number" id="pid" name="pid" min="1" required />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Title
+            </td>
+            <td>
+                <input type="text" id="pttl" name="pttl" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Start Date
+            </td>
+            <td>
+                <input type="date" id="psdate" name="psdate" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                End Date
+            </td>
+            <td>
+                <input type="date" id="psdate" name="psdate" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Duration
+            </td>
+            <td>
+                <input type="number" id="pd" name="pd" min="10" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                PM Name
+            </td>
+            <td>
+                <select id="selpm" name="selpm">
+                    <option value="1">Ravi</option>
+                    <option value="2">PM2</option>
+                    <option value="3">PM3</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <input type="submit" value="Add New" />
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
