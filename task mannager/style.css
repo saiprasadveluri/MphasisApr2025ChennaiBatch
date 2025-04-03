@@ -1,0 +1,77 @@
+.tab{
+    color: darkblue;
+    font-family:'Lucida Sans';
+        font-size: medium;
+        border-style:solid;
+        width: 100%;
+        margin-top:30px;
+        text-align:center;
+        background-color:aqua;
+}
+td{
+    color: maroon;
+    font-family:cursive;
+}
+h2{
+    color:pink;
+}
+#id{
+    color: blue;
+    font-size: large
+}
+.nav{
+    color: rgba(242, 42, 42, 0.859);
+    font-style: italic;
+    font-weight: bold;
+    font-size: medium;
+}
+.tbl{
+    color: darkblue;
+        font-size: medium;
+        border-style:solid;
+        margin-top:30px;
+        text-align:center;
+        background-color:lightblue;
+        width:60%;
+    
+}
+h2{
+    color:black;
+    text-align: center;
+}
+.ul{
+    color:red
+}
+input{
+    color: black;
+}
+.tbl{
+    margin: auto;
+}
+.tbl tr{
+    height:45px;
+}         
+.tbl td
+{
+    text-align:center;
+}           
+input[type=submit] {
+    background-color: darkblue;
+    width: 35%;
+    color: beige;
+    font-weight: bold;
+    margin: 10px auto; 
+    display: block;  
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+input{
+    width:75%;
+    height:30px;
+}
+
+
