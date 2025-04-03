@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Reserve Room</title>
+</head>
+<body>
+    <h1>Reserve Room</h1>
+    <a href="Meeting Room Management.html">Back to Room</a>
+    <hr />
+    <form>
+        <label>Room Title:</label><input type="text" name="rname" /> <br />
+        <label>Room Type:</label>
+        <select name="room_type">
+            <option>Training room</option>
+            <option>Meeting room</option>
+            <option>Conference room</option>
+        </select>
+        <br />
+        <label>Seating Capacity: </label> <input type="number" name="cname" /><br />
+        <label>Price: </label> <input type="text" name="pname" /><br />
+        <label>
+            Locations:
+            <select name="locations">
+                <option>1 floor</option>
+                <option>2 floor</option>
+                <option>3 floor</option>
+            </select>
+        </label>
+        <br />
+        <label>Reservation Date: </label> <input type="date" name="dname" /><br />
+        <input type="submit" value="Book" />
+    </form>
+</body>
+</html>
