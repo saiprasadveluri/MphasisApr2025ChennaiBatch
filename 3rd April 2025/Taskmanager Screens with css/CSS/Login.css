@@ -1,0 +1,56 @@
+/* Centering the login form */
+.login-div {
+    width: 40%;
+    max-width: 400px;
+    margin: 100px auto; /* Centers the form */
+    padding: 20px;
+    background-color: #f8f8f8; /* Light background for contrast */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-align: center;
+}
+
+/* Styling the heading */
+h3 {
+    color: red;
+    font-size: xx-large;
+    margin-bottom: 15px;
+}
+
+/* Styling form elements */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Submit button */
+input[type="submit"] {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    margin-top: 15px;
+}
+
+input[type="submit"]:hover {
+    background-color: darkred;
+}

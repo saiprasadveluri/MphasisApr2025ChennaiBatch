@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="AddNewProject.css">
+</head>
+<body>
+    <h3>Add New Project</h3>
+    <hr/>
+    <a href="Admindashboard.html">Dashboard</a>
+    <form method="post">
+        <table>
+            <tr>
+                <td>
+                    Project Id:
+                </td>
+                <td>
+                    <input type="number" id="pid" name="pid" min="1" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Title
+                </td>
+                <td>
+                    <input type="text" id="pttl" name="pttle" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Start Date:
+                </td>
+                <td>
+                    <input type="date" name="psdate" id="psdate" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Endt Date:
+                </td>
+                <td>
+                    <input type="date" name="pedate" id="pedate" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Duration:
+                </td>
+                <td>
+                    <input type="number" id="pd" name="pd" min="10" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    PM Name:
+                </td>
+                <td>
+                    <select id="selPm" name="selPm">
+                        <option value="1">Ravi</option>
+                        <option value="2">PM2</option>
+                        <option value="3">PM3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <input type="submit" value="Add New" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

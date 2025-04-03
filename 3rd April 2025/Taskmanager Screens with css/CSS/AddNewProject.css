@@ -1,0 +1,65 @@
+h3 {
+    color: red;
+    text-align: center;
+    font-size: xx-large;
+    margin-bottom: 10px;
+}
+
+a {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    color: blue;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Centering and styling the form */
+form {
+    width: 50%;
+    max-width: 500px;
+    margin: 40px auto; /* Centers the form */
+    padding: 20px;
+    background-color: #f8f8f8; /* Light background for contrast */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    text-align: left;
+}
+
+/* Styling table */
+table {
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+}
+
+/* Styling input fields */
+input, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Submit button */
+input[type="submit"] {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+}
+
+input[type="submit"]:hover {
+    background-color: darkred;
+}

@@ -1,0 +1,44 @@
+h3 {
+    color: red;
+    text-align: center;
+    font-size: xx-large;
+}
+
+div{
+    background-color: black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+div a{
+    color: white;
+}
+
+#pmem{
+    margin-top: 10px;
+    padding: 10px 70px 10px 70px;
+    margin-bottom: 10px;
+}
+
+input[type=submit]{
+    padding: 10px;
+}
+
+table,td,th{
+    border:2px solid black;
+    border-collapse: collapse;
+}
+
+td,th{
+    padding: 2px 2px 2px 2px;
+}
+
+td{
+    text-align: center;
+}
+th{
+    color:red;
+    background-color: yellow;
+}
