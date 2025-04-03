@@ -1,0 +1,31 @@
+<html>
+    <h3 style="text-align:center;background-color:rebeccapurple;border-color: black;height:20" >NewTask</h3>
+    <div class="topNavDiv">  
+    <a href="ManageTask.html"class="topNavDiv" >ManageTask</a></div>
+        <link rel="stylesheet" href="Site.css"/>
+    <form method="post" class="iTable">
+        Taskid:<input type="number"min="2" required/>
+        <br>
+        TaskTiltle:<input type="text" required/>
+        <br>
+        Description:<textarea colspan="5" rows="3"></textarea> 
+        <br>
+        Startdate:<input type="date" required/>
+        <br>
+        Enddate:<input type="date" required/>
+        <br>
+        Duration:<input type="number" min="1"/>
+        <br>
+        Assigned To:<select>
+            <option value="ram">ram</option>
+            <option value="lasya">lasya</option>
+        </select>
+        <br>
+        Status:<select>
+            <option value="Open">Open</option>
+            <option value="Close">Close</option>
+        </select>
+        <br>
+        <input type="submit" value="AddTask"/>
+    </form>
+</html>
