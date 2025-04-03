@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset ="utf-8" />
+        <title>Project Manager Dashboard</title>
+        <link rel="stylesheet" href="Site.css" />
+    </head>
+    <body>
+        <h1 align="center">Project Manager Dashboard</h1>
+        <h2>Personal Details</h2>
+        <table width="20%">
+            <tr>
+                <td><b>Name</b></td>
+                <td>Pranav</td>
+            </tr>
+            <tr>
+                <td><b>Username</b></td>
+                <td>pranav@gmail.com</td>
+            </tr>
+            <tr>
+                <td><b>Role</b></td>
+                <td>Project Manager</td>
+            </tr>
+            <tr>
+                <td><b>Contact</b></td>
+                <td>21321312</td>
+            </tr>
+        </table>
+        
+        <h2>Assigned Projects</h2>
+        <table width="80%" border="1">
+            <thead>
+                <tr>
+                    <th>Name of the project</th>
+                    <th>Status</th>
+                    <th>Start Date</th>
+                    <th>Project Deadline</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody align="center">
+                <tr>
+                    <td>Food Delivery Application</td>
+                    <td>Development</td>
+                    <td>24-02-2025</td>
+                    <td>30-07-2025</td>
+                    <td>
+                        <select>
+                            <option>--select--</option>
+                            <option>update status</option>
+                            <option>check for bugs</option>
+                            <option>raise queries</option>
+                            <option>Submit for deployment</option>
+                        </select>
+                        <a href=""><button>Confirm</button></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+
+        <h2>Team info</h2>
+        <table width="80%" border="=1">
+            <thead>
+                <tr>
+                    <th>Team Member</th>
+                    <th>Working Modules</th>
+                    <th>Assigned Project</th>
+                    <th>Module Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody align="center">
+                <tr>
+                    <td>Rohith</td>
+                    <td>Frontend</td>
+                    <td>Food Delivery Application</td>
+                    <td>in process</td>
+                    <td>
+                        <select>
+                            <option>--select--</option>
+                            <option>Request for bug fixes</option>
+                            <option>Rquest for updation</option>
+                            <option>Permit for testing</option>
+                        </select>
+                        <a href=""><button>confirm</button></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Manoteja</td>
+                    <td>UI Design</td>
+                    <td>Food Delivery Application</td>
+                    <td>completed</td>
+                    <td>
+                        <select>
+                            <option>--select--</option>
+                            <option>Request for bug fixes</option>
+                            <option>Rquest for updation</option>
+                            <option>Permit for testing</option>
+                        </select>
+                        <a href=""><button>confirm</button></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Teja</td>
+                    <td>Backend</td>
+                    <td>Food Delivery Application</td>
+                    <td>yet to start</td>
+                    <td>
+                        <select>
+                            <option>--select--</option>
+                            <option>Request for bug fixes</option>
+                            <option>Rquest for updation</option>
+                            <option>Permit for testing</option>
+                        </select>
+                        <a href=""><button>confirm</button></a>
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Task creation</h2>
+        <form id="taskcreate" method="post" action="">
+            <label>Task type</label>
+            <select>
+                <option>--select--</option>
+                <option>bug fix</option>
+                <option>testing</option>
+                <option>Database Management</option>
+            </select>
+            <br>
+            
+            <label>Assign to </label>
+            <select>
+                <option>--select--</option>
+                <option>Rohith</option>
+                <option>Manoteja</option>
+                <option>Teja</option>
+            </select>
+            <br>
+
+            <label>Set the deadline</label>
+            <input type="date" id="deadline">
+            <br>
+
+            <button>Assign</button>
+        </form>
+        <h2>Chat:</h2>
+        <form id="Discussions">
+            <label>Please select the Employee name</label>
+            <select>
+                <option value="0">--Select--</option>
+                <option value="1">Everyone</option>
+                <option value="2">Rohit</option>
+                <option value="3">Manoteja</option>
+                <option value="4">Teja</option>
+            </select>
+            <br>
+            <textarea name="Message" id="Msg" placeholder="Message here"></textarea>
+            <br>
+            <button>Message</button>
+        </form>
+    </body>
+</html>

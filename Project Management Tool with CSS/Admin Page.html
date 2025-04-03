@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset ="utf-8" />
+        <title>Admin Page</title>
+        <link rel="stylesheet" href="Site.css" />
+    </head>
+    <body>
+        <h1 align="center">Admin Dashboard</h1>
+        <form id="createnew" method="post" action="User Management.html">
+            <label>Create new user</label>
+            <button>Create</button>
+        </form>
+        <h3>Users List</h3>
+        <table id="table1" width="80%" border="1">
+            <thead>
+                <tr>
+                    <th>Name of the user</th>
+                    <th>Username</th>
+                    <th>Role</th>
+                    <th>Action</th>
+                    <th>Manage</th>
+                </tr>
+            </thead>
+            <tbody align="center">
+                <tr>
+                    <td>Pranav</td>
+                    <td>Pranav@gmail.com</td>
+                    <td>Project Manager</td>
+                    <td>
+                        <form method="post" action="">
+                            <select>
+                                <option value="0">Select</option>
+                                <option value="1">Assign project</option>
+                                <option value="2">Assign tasks</option>
+                                <option value="3">Withdraw from project</option>
+                            </select>
+                            <button>confirm</button>
+                        </form>
+                    </td>
+                    <td>
+                        <a href="User Management.html"><button>Edit User</button></a>
+                        <button>Delete user</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sarath</td>
+                    <td>Sarath@gmail.com</td>
+                    <td>Project Manager</td>
+                    <td>
+                        <form method="post" action="">
+                            <select>
+                                <option value="0">Select</option>
+                                <option value="1">Assign project</option>
+                                <option value="2">Assign tasks</option>
+                                <option value="3">Withdraw from project</option>
+                            </select>
+                            <button>confirm</button>
+                        </form>
+                    </td>
+                    <td>
+                        <a href="User Management.html"><button>Edit User</button></a>
+                        <button>Delete user</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rohit</td>
+                    <td>Rohit@gmail.com</td>
+                    <td>Developer</td>
+                    <td>
+                        <form method="post" action="">
+                            <select>
+                                <option value="0">Select</option>
+                                <option value="1">Assign project</option>
+                                <option value="2">Assign tasks</option>
+                                <option value="3">Withdraw from project</option>
+                            </select>
+                            <button>confirm</button>
+                        </form>
+                    </td>
+                    <td>
+                        <a href="User Management.html"><button>Edit User</button></a>
+                        <button>Delete user</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Manoteja</td>
+                    <td>Manoteja@gmail.com</td>
+                    <td>Developer</td>
+                    <td>
+                        <form method="post" action="">
+                            <select>
+                                <option value="0">Select</option>
+                                <option value="1">Assign project</option>
+                                <option value="2">Assign tasks</option>
+                                <option value="3">Withdraw from project</option>
+                            </select>
+                            <button>confirm</button>
+                        </form>
+                    </td>
+                    <td>
+                        <a href="User Management.html"><button>Edit User</button></a>
+                        <button>Delete user</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nithin</td>
+                    <td>Nithin@gmail.com</td>
+                    <td>Project Manager</td>
+                    <td>
+                        <form method="post" action="">
+                            <select>
+                                <option value="0">Select</option>
+                                <option value="1">Assign project</option>
+                                <option value="2">Assign tasks</option>
+                                <option value="3">Withdraw from project</option>
+                            </select>
+                            <button>confirm</button>
+                        </form>
+                    </td>
+                    <td>
+                        <a href="User Management.html"><button>Edit User</button></a>
+                        <button>Delete user</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+
+        <form method="post" id="cnprj" action="Project creation and management.html">
+            <label>Create new Project</label>
+            <button>Create</button>
+        </form>
+        <h3>Project list</h3>
+        <table id="table2" width="100%" border="1">
+            <thead>
+                <tr>
+                    <th>Name of the project</th>
+                    <th>Project manager</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                    <th>Start date</th>
+                    <th>Project Deadline</th>
+                </tr>
+            </thead>
+            <tbody align="center">
+                <tr>
+                    <td>Food Delivery Application</td>
+                    <td>Pranav</td>
+                    <td>Development</td>
+                    <td>
+                        <form method="post" action="">
+                            <select>
+                                <option value="0">Select</option>
+                                <option value="1">Check for Bugs</option>
+                                <option value="2">Add a Member for project</option>
+                                <option value="3">Request for Updation</option>
+                                <option value="4">Change project manager</option>
+                                <option value="5">Extend the Project Deadline</option>
+                            </select>
+                            <button>confirm</button>
+                        </form>
+                    </td>
+                    <td>24-02-2025</td>
+                    <td>30-07-2025</td>
+                </tr>
+                <tr>
+                    <td>Banking Application</td>
+                    <td>Nithin</td>
+                    <td>Designing</td>
+                    <td>
+                        <form method="post" action="">
+                            <select>
+                                <option value="0">Select</option>
+                                <option value="1">Check for Bugs</option>
+                                <option value="2">Add a Member for project</option>
+                                <option value="3">Request for Updation</option>
+                                <option value="4">Change project manager</option>
+                                <option value="5">Extend the Project Deadline</option>
+                            </select>
+                            <button>confirm</button>
+                        </form>
+                    </td>
+                    <td>14-04-2025</td>
+                    <td>30-09-2025</td>
+                </tr>
+                <tr>
+                    <td>Healthcare Management Application</td>
+                    <td>Sarath</td>
+                    <td>Testing</td>
+                    <td>
+                        <form method="post" action="">
+                            <select>
+                                <option value="0">Select</option>
+                                <option value="1">Check for Bugs</option>
+                                <option value="2">Add a Member for project</option>
+                                <option value="3">Request for Updation</option>
+                                <option value="4">Change project manager</option>
+                                <option value="5">Extend the Project Deadline</option>
+                            </select>
+                            <button>confirm</button>
+                        </form>
+                    </td>
+                    <td>07-08-2024</td>
+                    <td>16-05-2025</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Discussions:</h2>
+        <form id="Discussions">
+            <label>Please select the project name</label>
+            <select>
+                <option value="0">--Select--</option>
+                <option value="1">Food Delivery Application</option>
+                <option value="2">Bankimg Application</option>
+                <option value="3">Healthcare Management Application</option>
+            </select>
+            <br>
+            <textarea name="comments" id="comments" placeholder="Comment here"></textarea>
+            <br>
+            <button>Submit</button>
+        </form>
+    </body>
+</html>
