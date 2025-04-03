@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Task Manager</title>
+</head>
+<body>
+    <h1>Login to Task Manager</h1>
+    <select>
+        <option>Admin</option>
+        <option>User</option>
+        <option>Developer</option>
+        <option>QA</option>
+    </select>
+    <form method="post" action="admin.html">
+        <table>
+            <tr>
+                <td>
+                    <label>UserName: </label>
+                    <input type="email" name="uemail" id="uemail" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Password: </label>
+                    <input type="password" name="upwd" id="upwd" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="AdminPage" id="AdminPage" />
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
