@@ -1,0 +1,46 @@
+<html>
+    <h3 style="text-align:center;background-color: gray;border-color: black">New User</h3>
+    <body>
+        <link rel="stylesheet" href="Site.css"/>
+        <div class="topNavDiv">
+        <a href ="Admin.html"class="topNavDiv">Admin Page</a>
+    </div>
+        <form method="post">
+            <table class="iTable" width="100%">
+                <tr>
+                    <td>Emp id</td>
+                    <td><input type="number" required placeholder="enter the emp id"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" required placeholder="enter the password"/></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" required placeholder="enter the name"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Role</td>
+                    <td>
+                    <select>
+                        <option value="PM">PM</option>
+                        <option value="Dev">Dev</option>
+                        <option value="QA">QA</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr><td><input type="submit" value="AddNew"/></td>
+                    <td><input type="reset" value="Reset"></td>
+                </tr>
+            </table>
+        </form>
+        <hr style="border-width:5;border-color: brown;">
+        ErrorList:
+        <ul>
+            <li>emp id should be unique</li>
+            <li>Password should consists more than 6 characters</li>
+        </ul>
+        </body>
+</html>

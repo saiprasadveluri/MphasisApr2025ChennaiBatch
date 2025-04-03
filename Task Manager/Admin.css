@@ -1,0 +1,33 @@
+h3, h4 {
+    text-align: center;
+    background:silver ;
+    padding: 10px;
+    margin: 10px ;
+}
+.nav{
+    font-size: 18px;
+    color: red;
+    text-decoration: none;
+    margin: 10px;
+    display: inline-block;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.tbl {
+    width: 80%;
+    border-collapse: collapse;
+    background: lightblue;
+    margin: 20px auto;
+    text-align: center;
+}
+
+
+
+.tbl th {
+    background: blue;
+    color: white;
+}
