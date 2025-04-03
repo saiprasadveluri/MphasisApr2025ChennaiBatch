@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Project</title>
+</head>
+<body>
+    <h2>Create Project</h2>
+    <form method="post" action="ProjectCreated.html">
+        <table>
+            <tr>
+                <td><label>ProjectId: </label></td>
+                <td>
+                    <input type="number" id="pid" name="pid" min="1" required />
+                </td>
+            </tr>
+            <tr>
+                <td><label>Project Name: </label></td>
+                <td>
+                    <input type="text" id="pname" name="pname" required />
+                </td>
+            </tr>
+            <tr>
+                <td><label>Project Manager Name: </label></td>
+                <td>
+                    <input type="text" id="pmname" name="pmname" required />
+                </td>
+            </tr>
+            <tr>
+                <td><label>Project Manager ID:</label></td>
+                <td>
+                    <input type="number" id="pmid" name="pmid" required />
+                </td>
+            </tr>
+            <tr>
+                <td><label>Start Date:</label></td>
+                <td>
+                    <input type="date" id="sdate" name="sdate" required />
+                </td>
+            </tr>
+            <tr>
+                <td><label>End Date:</label></td>
+                <td>
+                    <input type="date" id="edate" name="edate" required />
+                </td>
+            </tr>
+            <tr>
+                <td><label>Duration(in hrs)</label></td>
+                <td>
+                    <input type="number" id="pdur" name="pdur" required />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Create Project" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

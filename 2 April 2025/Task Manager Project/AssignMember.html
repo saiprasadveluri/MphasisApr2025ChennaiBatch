@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assign Member</title>
+</head>
+<body>
+    <h2>Assign Members</h2>
+    <a href="PMDashboard.html">PM Dashboard</a>
+    <br />
+    <a href="CreateNewTask.html">Create New Task</a>
+
+    <hr />
+    <form method="post">
+        <select name="pmem" id="pmem">
+            <option value="1">Shakthi Aditya</option>
+            <option value="2">Shamshuddin</option>
+        </select>
+        <br />
+        <input type="submit" value="Assign Member" />
+    </form>
+    <br />
+
+    <h3>Existing Project Members</h3>
+    <table width="80%">
+        <thead>
+            <tr>
+                <th>MemID</th>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Shakthi Aditya</td>
+                <td>Developer</td>
+                <td>
+                    <a href="RemoveMember.html">Remove</a>
+                </td>
+            </tr>
+        </thead>
+    </table>
+</body>
+</html>

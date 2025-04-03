@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update task status</title>
+</head>
+<body>
+    <h3>Update Task Status: </h3>
+    <hr/>
+    <form method="post">
+        <label>Task Title: </label> DB Creation
+        <br />
+        Task Description: <textarea readonly>Description about DB Creation..</textarea>
+        <br />
+        New Status:
+        <select id="tstatus" name="tstatus">
+            <option value="1">In Progress</option>
+            <option value="2">Resolved</option>
+            <option value="3">Open</option>
+        </select>
+        <br />
+        <input type="submit" value="Update Status" />
+        <input type="button" value="Assign to QA" />
+    </form>
+</body>
+</html>

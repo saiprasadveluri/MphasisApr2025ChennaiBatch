@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create New Task</title>
+</head>
+<body>
+    <h3> New Task</h3>
+    <hr />
+    <a href="ManageTasks.html">Manage Tasks</a>
+    <form method="post">
+        Task Id: <input type="number" min="1" id="tid" name="tid" />
+        <br />
+        Title: <input type="text" id="tt" name="tt" />
+        <br />
+        Description: <textarea id="tdesc" name="tdesc" rows="4" placeholder="Description"></textarea>
+        <br />
+        Start Date: <input type="date" name="sdate" id="sdate" />
+        <br />
+        End Date: <input type="date" name="edate" id="edate" />
+        <br />
+        Duration: <input type="number" name="tdur" id="tdur" />
+        <br />
+        Assigned To:
+        <select id="tassignedto" name="tassignedto">
+            <option value="1">Shakthi</option>
+            <option value="2">Shamshuddin</option>
+        </select>
+        <br />
+        Status:
+        <select id="tstatus" name="tstatus">
+            <option value="1">OPEN</option>
+            <option value="2">ON-HOLD</option>
+        </select>
+        <br />
+        <input type="submit" value="Add Task" />
+
+    </form>
+</body>
+</html>
