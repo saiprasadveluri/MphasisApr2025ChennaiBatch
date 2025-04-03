@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create User</title>
+</head>
+<body>
+    <h2>User Creation</h2>
+    <form method="post" action="UserCreated.html">
+        <table>
+            <tr>
+                <td><label>User Id: </label></td>
+                <td>
+                    <input type="number" id="uid" name="uid" min="1" step="1" required />
+                </td>
+            </tr>
+            <tr>
+                <td><label>User Name: </label></td>
+                <td>
+                    <input type="text" id="uname" name="uname" />
+                </td>
+            </tr>
+            <tr>
+                <td><label>User Role:</label></td>
+                <td>
+                    <select>
+                        <option>Site Admin</option>
+                        <option>Project Manager</option>
+                        <option>Developer</option>
+                        <option>QA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Contact :</label></td>
+                <td>
+                    <input type="email" id="ucontact" name="ucontact" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Create User" />
+                    <input type="reset" value="Reset Form"
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
