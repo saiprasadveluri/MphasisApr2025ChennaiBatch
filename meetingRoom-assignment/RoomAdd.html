@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New Room</title>
+</head>
+<body>
+    <table border="1" width="60%" align="center" cellpadding="10">
+        <tr>
+            <th colspan="2"><h1>Add a New Room</h1></th>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <form>
+                    <table border="0" cellpadding="10">
+                        <tr>
+                            <td><label>Room ID:</label></td>
+                            <td><input type="text" name="room_id"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Room Type:</label></td>
+                            <td>
+                                <select name="room_type">
+                                    <option>Meeting Room</option>
+                                    <option>Conference Room</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Seating Capacity:</label></td>
+                            <td><input type="number" name="seating_capacity"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Location:</label></td>
+                            <td><input type="text" name="location"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Availability Status:</label></td>
+                            <td>
+                                <select name="availability_status">
+                                    <option>Available</option>
+                                    <option>Reserved</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center"><button type="submit">
+                                <a href="./listRoom.html">Add Room</a>
+                            </button></td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
