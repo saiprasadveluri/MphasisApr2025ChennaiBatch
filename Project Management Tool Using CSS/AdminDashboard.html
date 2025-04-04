@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Admin DashBoard</title>
+    <link rel="stylesheet" href="Css1.css" />
+</head>
+<body align="center">
+    <h1 align="">Admin DashBoard</h1>
+    <form>
+        <label>Create New User</label>
+        <br>
+
+        <br>
+        <table align="center" >
+            <tr>
+                <th>
+                    <input type="text" placeholder="userid">
+                </th>
+                <th>
+                    <input type="text" placeholder="username">
+                </th>
+                <th>
+                    <input type="text" placeholder="project status">
+                </th>
+                <th>
+                    <select name="Assign a Role" >
+                        <option value="0">Role</option>
+                        <option value="1">Project Manager</option>
+                        <option value="2">Developer</option>
+                        <option value="3">QA</option>
+                    </select>
+                </th>
+            </tr>
+        </table>
+        <br>
+
+        <br>
+    </form>
+    <a href="UserManagement.html"><button>Create</button></a>
+    <br>
+
+    <br>
+
+    <br>
+    <form>
+        <b>User Details</b>
+        <br>
+
+        <br>
+        <table align="center" width="80%" border="2">
+        <THEad>
+            <tr>
+                <th>
+                    UserID
+                </th>
+                <th>
+                   UserName
+                </th>
+                <th>
+                    Role
+                </th>
+                <th>
+                    Project Status
+                </th>
+                <th>
+                    Manage User
+                </th>
+            </tr>
+        </THEad>
+        <TBody>
+            <tr>
+                <td>
+                    360
+                </td>
+                <td>
+                    Rajeev
+                </td>
+                <td>
+                    Developer
+                </td>
+                <td>
+                    <select name="Assign a Role" >
+                        <option value="0">ON the Bench</option>
+                        <option value="1">Project Assigned</option>
+                        <option value="2">Ready to takeup</option>
+                    </select>
+                </td>
+                <td>
+                    <a href="UserManagement.html"><button>Edit</button></a> |
+                <button>Remove</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    369
+                </td>
+                <td>
+                    Prem Kumar
+                </td>
+                <td>
+                    QA
+                </td>
+                <td>
+                    <select name="Assign a Role" >
+                        <option value="0">ON the Bench</option>
+                        <option value="1">Project Assigned</option>
+                        <option value="2">Ready to takeup</option>
+                    </select>
+                </td>
+                <td>
+                    <a href="UserManagement.html"><button>Edit</button></a> |
+                <button>Remove</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    367
+                </td>
+                <td>
+                    Shamshuddin
+                </td>
+                <td>
+                    Project Manager
+                </td>
+                <td>
+                    <select name="Assign a Role" >
+                        <option value="0">ON the Bench</option>
+                        <option value="1">Project Assigned</option>
+                        <option value="2">Ready to takeup</option>
+                    </select>
+                </td>
+                <td>
+                    <a href="UserManagement.html"><button>Edit</button></a> |
+                <button>Remove</button>
+                </td>
+            </tr>
+        </TBody>
+        </table>
+        <br>
+
+        <br>
+        <button>Update</button>
+    </form>
+    <br>
+
+    <br>
+
+    <br>
+    <form>
+        <b>Projects list</b>
+        <br>
+
+        <br>
+        <table align="center" width="80%" border="2">
+        <thead>
+            <tr>
+                <th>
+                    Project Name
+                </th>
+                <th>
+                    UserID
+                </th>
+                <th>
+                    UserName
+                </th>
+                <th>
+                    Start Date
+                </th>
+                <th>
+                    End Date
+                </th>
+                <th>
+                    Project Status
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Credit Card Fraud
+                </td>
+                <td>
+                    360
+                </td>
+                <td>
+                    Rajeev
+                </td>
+                <td>
+                    02-08-2024
+                </td>
+                <td>
+                    04-10-2024
+                </td>
+                <td>
+                    Completed
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Spam SMS Detection
+                </td>
+                <td>
+                    369
+                </td>
+                <td>
+                    Prem Kumar
+                </td>
+                <td>
+                    12-03-2025
+                </td>
+                <td>
+                    -
+                </td>
+                <td>
+                    In Progress
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Food Delivery App
+                </td>
+                <td>
+                    367
+                </td>
+                <td>
+                    Shamshuddin
+                </td>
+                <td>
+                    01-04-2025
+                </td>
+                <td>
+                    -
+                </td>
+                <td>
+                    Just Assigned
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </form>
+    <BR>
+    
+    </BR>
+    <label>Create New Project</label>
+    <a href="ProjectCreation.html"><button>Create</button></a>
+</body>
+</html>

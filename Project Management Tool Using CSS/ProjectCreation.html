@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset ="utf-8" />
+        <title>Create New project</title>
+        <link rel="stylesheet" href="Css1.css" />
+    </head>
+    <body align="center">
+        <h1 align="center">Create New project</h1>
+        <form id="cproject" method="post" action="AdminDashboard.html">
+            <lable>Name of the Project</lable>
+            <input type="text" required placeholder="Project Name">
+            <br>
+
+            <br>
+            <label>Select Manager</label>
+            <input type="text" required placeholder="Manager Name">
+            <br>
+
+            <br>
+            <label>Select Role</label>
+            <select>
+                <option value="0">--select--</option>
+                <option value="1">Project Manager</option>
+                <option value="2">Developer</option>
+                <option value="3">QA</option>
+            </select>
+            <br>
+            
+            <br>
+            <label>Project Description</label>
+            <input type="text"  placeholder="Description" required>
+           
+        </form>
+        <a href="AdminDashboard.html"><button>Create</button></a>
+    </body>
+</html>

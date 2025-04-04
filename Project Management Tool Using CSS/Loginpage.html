@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset ="utf-8" />
+        <title>login Page</title>
+        <link rel="stylesheet" href="Css1.css" />
+    </head>
+    <body align="center">
+        <h1>Login Page</h1>
+        <form id="loginform" method="post" action="AdminDashboard.html">
+            <label>Select the type of the user:</label>
+            <select>
+                <option value="0">Select</option>
+                <option value="1">Site Admin</option>
+                <option value="2">Project Manager</option>
+                <option value="3">Developer</option>
+                <option value="4">QA</option>
+            </select>
+            <br>
+
+            <br>
+            <label>Username</label>
+            <input type="email" required id="UserID" placeholder="xyz@gmail.com">
+            <br>
+
+            <br>
+            <label>Password</label>
+            <input type="password" id="Password" minlength="8" placeholder="Please enter the password" required>
+            <br>
+             
+            <br>
+            <button>Login</button>
+            <br>
+
+            <br>
+            <form method="post" action="">
+                <a href="">Forget Password</a>
+            </form>
+            
+        </form>
+        <label>Create a New User</label>
+        <a href="UserManagement.html"><button>Create</button></a>
+
+    </body>
+</html>

@@ -1,0 +1,119 @@
+h1{
+    background-color: bisque;
+    color: brown;
+}
+#createnew{
+    background-color: rgb(203, 164, 80);
+    width: 20%;
+    color: white;
+    padding-left: 40px;
+}
+button:hover{
+    background-color: cornflowerblue;
+    cursor: pointer;
+
+}
+tbody tr:hover{
+    background-color: dimgray;
+}
+select{
+    cursor: pointer;
+}
+
+table thead{
+    background-color:brown;
+    color: bisque;
+}
+table tbody{
+    background-color: bisque;
+}
+
+#cnprj{
+    background-color: rgb(203, 164, 80);
+    width: 20%;
+    color: white;
+    padding-left: 40px;
+}
+
+h3{
+    background-color: bisque;
+    width: 9%;
+    color: brown;
+}
+
+h2{
+    background-color: bisque;
+    width: 13%;
+    color: brown;
+}
+
+#Discussions{
+    background-color: rgba(255, 229, 136, 0.505);
+    width: 25%;
+}
+
+#Discussions2{
+    background-color: rgba(255, 229, 136, 0.505);
+    width: 35%;
+}
+
+#loginform{
+    background-color: rgb(194, 220, 255) ;
+    border-style: solid;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-bottom: 2%;
+    margin-top: 3%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#cnuser{
+    background-color: rgb(194, 220, 255);
+    width: 25%;
+    color: rgb(0, 0, 0);
+    padding-left: 40px;
+    padding-top: 20px;
+    margin-bottom: 25px;
+}
+
+#eduser{
+    background-color: rgb(194, 220, 255);
+    width: 25%;
+    color: rgb(0, 0, 0);
+    padding-left: 40px;
+    padding-top: 20px;
+    margin-bottom: 25px;
+}
+
+#taskcreate{
+    background-color: rgb(203, 164, 80);
+    width: 30%;
+    color: white;
+    padding-left: 40px;
+}
+h4 label{
+    font-size:x-large;
+    background-color: bisque;
+    color: brown;
+}
+
+#cproject{
+    background-color: rgb(194, 220, 255) ;
+    border-style: solid;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-bottom: 2%;
+    margin-top: 3%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+#center{
+    background-color: bisque;
+    font-size: 120%;
+    color: brown;
+}
+#about{
+    font-size: 100%;
+    color: brown;
+}
