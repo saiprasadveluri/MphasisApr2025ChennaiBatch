@@ -1,0 +1,48 @@
+h2{
+    font-size: larger;
+    background-color: grey;
+    text-align: center;
+    color:red;
+    font-weight:bold;
+    height: 45px;
+}
+.tbl {
+    background-color: lightblue;
+    width: 90%;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+}
+
+.tr {
+    height: 45px;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+.tbl label {
+    font-weight: bold;
+    color:olive;
+    width: 30%;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.tbl input {
+    width: 65%;
+    padding: 8px;
+    font-size: medium;
+    border: 1px;
+    color: blue;
+    border-radius: 5px;
+    text-align: center;
+    margin: 50px;
+
+}
+body {
+    background-color: cadetblue;
+    text-align: center;
+}
+
