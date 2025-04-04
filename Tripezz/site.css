@@ -1,0 +1,69 @@
+#amodule1{
+    display:flex;
+    height: 50px;
+    font-size: medium;
+    background-color:cadetblue;
+    flex-direction: row;
+    justify-content: start;
+    align-items:center;
+    border-radius: 10px;
+
+}
+body{
+    background-color: bisque;
+}
+.taskbar{
+    height: 40px;
+    margin-top: 5%;
+    padding: 0px 50px;
+    margin-bottom: 5%;
+    background-color: cadetblue;
+    color: white;
+    border-color: white;
+    font-size: medium;
+}
+
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(71, 121, 121);
+}
+
+p{
+    background-color: rgb(219, 209, 195);
+    color: rgb(16, 30, 31);
+}
+
+#amodule2{
+    display:flex;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-left: 45%;
+    margin-right: 45%;
+    font-size: Large;
+    background-color:cadetblue;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+
+}
+
+.mngusers{
+    border-radius: 10px;
+    background-color:cadetblue;
+    margin-right: 30%;
+    color: white;
+    margin-left: 30%;
+    display: flex;
+    justify-content: center;
+}
+#amodule3{
+    height: 40px;
+    background-color: cadetblue;
+    color: white;
+    border-color: white;
+    font-size: medium;
+    margin-right: 97%;
+    border-radius: 10px;
+}
