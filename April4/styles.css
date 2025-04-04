@@ -1,0 +1,54 @@
+
+body{
+    background-color: aqua;
+    align-items: center;
+    text-align: center;
+}
+
+input,label,select{
+    width: 150px;
+    height: 40px;
+    padding: 10px 10px;
+    color: rgb(255, 34, 255);
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: rgb(118, 255, 255);
+    justify-content: center;
+}
+
+
+h3{
+    font-size: 40px;
+    align-items: center;
+    text-align: center;
+    color: brown;
+}
+
+button{
+    margin-top: 5px;
+    margin-left: 15px;
+    background-color: rgb(22, 19, 182);
+    padding: 10px 10px;
+    border-radius: 8px;
+    border: 0;
+    color: red;
+}
+button:hover{
+    background-color: rgb(159, 255, 255);
+    cursor: pointer;
+}
+.center{
+    background-color: rgb(163, 255, 255);
+    padding: 20px 20px;
+    margin-left: 30%;
+    width: 40%;
+    
+}
+
+
+@media screen and (max-width: 600px){
+    .center{
+        width: 80%;
+        margin-left: 5%;
+    }
+}
