@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Vehicle Allocation</h1>
+    <form method="post" action="Listing.html">
+        <table>
+            <tr>
+                <td><label>Vehicle No.</label></td>
+                <td><input type="text" id=Vheicle</td>
+            </tr>
+            <tr>
+                <td><label>Vehicle Type</label></td>
+                <td>
+                    <select name="seating-options" id="seating-options">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="sleeper">Sleeper</option>
+                        <option value="seater">Seater</option>
+                        <option value="semi-sleeper">Semi Sleeper</option>
+                    </select>
+            </td>
+            </tr>
+            <tr>
+                <td><label>PickUp Location</label></td>
+                <td><input type="text" id=pick</td>
+            </tr>
+            <tr>
+                <td><label>Drop Location</label></td>
+                <td><input type="text" id=ndno name=ndno</td>
+            </tr>
+            <tr>
+                <td><label>New Driver Name</label></td>
+                <td><input type="text" id=ndnno name=ndnno</td>
+            </tr>
+            <tr>
+                <td><label>Phone No.</label></td>
+                <td><input type="number" id=npno name=npno</td>
+            </tr>
+            <tr>
+                <td><label>Departure Date.</label></td>
+                <td><input type="date" id=npno name=npno</td>
+            </tr>
+            <tr>
+                <td><label>Time of Departure</label></td>
+                <td><input type="time" id=npno name=npno</td>
+            </tr>
+            <tr>
+                <td><input type="submit" name=sub id=sub value="Allocate"</td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

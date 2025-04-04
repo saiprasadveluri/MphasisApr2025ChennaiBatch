@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Search</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Searching Vehicles</h1>
+    <form method="post" action="ServiceList.html">
+        <table>
+            <tr>
+        <td><label>Departure City</label></td>
+        <td><input type="search" id="did"></td>
+    </tr>
+    
+    <tr>
+        <td><label>Arrival City</label></td>
+        <td><input type="search" id="aid"></td>
+    </tr>
+    <tr>
+        <td><label>Vehicle Type</label></td>
+        <td>
+            <select name="seating-options" id="seating-options">
+                <option value="" disabled selected>Select an option</option>
+                <option value="sleeper">Sleeper</option>
+                <option value="seater">Seater</option>
+                <option value="semi-sleeper">Semi Sleeper</option>
+            </select>
+    </td>
+    </tr>
+    <tr>
+        <td><label>Date</label></td>
+        <td><input type="date" id="aid"></td>
+    </tr>
+    <tr>
+        <td><input type="submit" id="subid"></td>
+    </tr>
+    </table>
+    </form>
+    
+</body>
+</html>
