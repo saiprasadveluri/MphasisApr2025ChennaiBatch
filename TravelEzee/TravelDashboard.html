@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="travelstyles.css">
+    </head>
+    <body>
+        <h2>Travel Dashboard</h2>
+        <hr/>
+        <form method="post">
+            <table width="50%">
+                <tr>
+                    <th>Service Name</th>
+                    <th>From City</th>
+                    <th>To City</th>
+                    <th>Service Type</th>
+                    <th>Vehicle Type</th>
+                </tr>
+                <tr>
+                    <td>
+                        <select id="sname">
+                            <option value="1">chn-tpt</option>
+                            <option value="2">tpt-hyd</option>
+                            <option value="3">hyd-bang</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="fcity">
+                            <option value="1">Chennai</option>
+                            <option value="2">Tirupati</option>
+                            <option value="3">Hyderabad</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="tcity">
+                            <option value="1">Tirupati</option>
+                            <option value="2">Hyderabad</option>
+                            <option value="3">Bangalore</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="stype">
+                            <option value="1">NonStop</option>
+                            <option value="2">Stop</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="vtype">
+                            <option value="1">Luxury</option>
+                            <option value="2">Semi-Sleeper</option>
+                            <option value="3">Express</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <br/>
+            <input type="submit" value="Search Buses">
+        </form>
+        <hr/>
+        <table width="100%">
+            <h2>List of Buses</h2>
+            <thead>
+                <tr>
+                    <th>Service Name</th>
+                    <th>From City</th>
+                    <th>To City</th>
+                    <th>Service Type</th>
+                    <th>Vehicle Type</th>
+                    <th>Available Seats</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>hyd-bang</td>
+                    <td>Hyderabad</td>
+                    <td>Bangalore</td>
+                    <td>NonStop</td>
+                    <td>Express</td>
+                    <td>14</td>
+                    <td>1000</td>
+                    <td><a href="BookTicket.html">Edit and BookTicket</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
