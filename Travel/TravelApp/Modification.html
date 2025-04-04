@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modification Of Vehicle</title>
+</head>
+<body>
+    <H1>Modification Of Vehicles</H1>
+    <form method="post" action="AdminDashboard.html">
+        <table>
+            <tr>
+                <td><label>Vehicle No.</label></td>
+                <td><input type="text" id=vnno name=vnno</td>
+            </tr>
+            <tr>
+                <td><label>Vehicle Type</label></td>
+                <td>
+                    <select name="seating-options" id="seating-options">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="sleeper">Sleeper</option>
+                        <option value="seater">Seater</option>
+                        <option value="semi-sleeper">Semi Sleeper</option>
+                    </select>
+            </td>
+            </tr>
+            <tr>
+                <td><label>New PickUp Location</label></td>
+                <td><input type="text" id=nlno name=nlno</td>
+            </tr>
+            <tr>
+                <td><label>New Drop Location</label></td>
+                <td><input type="text" id=ndno name=ndno</td>
+            </tr>
+            <tr>
+                <td><label>New Driver Name</label></td>
+                <td><input type="text" id=ndnno name=ndnno</td>
+            </tr>
+            <tr>
+                <td><label>Phone No.</label></td>
+                <td><input type="number" id=npno name=npno</td>
+            </tr>
+            <tr>
+                <td><input type="submit" name=sub id=sub value="Modify Vehicle"</td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
