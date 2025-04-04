@@ -1,0 +1,25 @@
+
+    
+        th{background-color: rgb(247, 250, 83);}
+        #submit1 {
+        color: white;
+            background-color: rgb(22, 109, 240);}
+            h1{background-color: rgb(22, 109, 240);color:aliceblue; padding:20px 0;font-style: oblique}
+
+
+
+
+            .form-container {
+                width: 300px;
+                margin: auto; /* Centers the form horizontally */
+                padding: 20px;
+                border: 2px solid #000; /* Black border */
+                border-radius: 10px; /* Rounded corners */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+                text-align: left; /* Align text inside the form */
+                background-color: #f9f9f9; /* Light background color */
+            }
+
+            label{color:blue}
+    
+            
