@@ -1,0 +1,102 @@
+.head {
+    display: flex;
+}
+
+.main {
+    color: red;
+    text-align: center;
+}
+
+.anr {
+    text-align: right;
+    background-color: aquamarine;
+    padding: 10px 5px 10px 0px;
+}
+
+
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.tablehead {
+    background-color: blue;
+}
+
+.tablebody {
+    background-color: green;
+    text-align: center;
+}
+
+.content {
+    margin-top: 20px;
+    background-color: skyblue;
+    padding: 30px 500px;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+
+.input {
+    width: 100%;
+}
+
+.subbtn {
+    width: 100%;
+    background-color: rebeccapurple;
+    border: 1px solid blue;
+    padding: 3px 0px;
+    color: white
+}
+
+.locdd {
+    width: 100%
+}
+
+.logincont {
+    background-color: lightsteelblue;
+    margin-left: 40%;
+    margin-right: 42%;
+    margin-top: 150px;
+    padding: 10px 20px 40px 30px;
+    border-radius: 5px;
+    border: 2px solid black
+}
+
+.loginbg {
+    background-color: cadetblue
+}
+
+.sa {
+    margin-left: 50px;
+    background-color: violet;
+    margin-right: 933px;
+    padding: 5px;
+}
+
+.seat {
+    margin-bottom: 15px
+}
+
+.bookbtn {
+    margin-left: 50px;
+    margin-top: 30px
+}
+
+.contents {
+    margin-top: 20px;
+    background-color: gray;
+    padding: 10px 55px 10px 10px;
+    border-radius: 15px;
+    border: 2px solid rebeccapurple;
+    margin-right: 90px;
+}
+
+.

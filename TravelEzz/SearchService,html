@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Sevice Search</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <h2>Search Service </h2>
+    <hr />
+    <a href="AvailableService.html">Available Services</a>
+    <hr />
+    <form method="post">
+        <label>From Location :</label>
+        <select>
+            <option value="chn">Chennai</option>
+            <option value="hyd">Hyderabad</option>
+            <option value="hyd">Bangalore</option>
+        </select>
+        <label class="tl">To Location :</label>
+        <select>
+            <option value="hyd">Hyderabad</option>
+            <option value="hyd">Bangalore</option>
+            <option value="chn">Chennai</option>
+        </select>
+        <label class="tl">Journey Date</label>
+        <input type="date" />
+        <input type="submit" value="Search" class="flbtn" />
+        <hr />
+    </form>
+    <h3>Available Services:</h3>
+    <table width="100%" class="table">
+        <thead class="tablehead">
+            <tr>
+                <th>
+                    Service Name
+                </th>
+                <th>
+                    From City
+                </th>
+                <th>
+                    To City
+                </th>
+                <th>
+                    Service Type
+                </th>
+                <th>
+                    Vehicle Type
+                </th>
+            </tr>
+        </thead>
+        <tbody class="tablebody">
+            <tr>
+                <td>
+                    1HYD-chn
+
+
+                </td>
+                <td>
+                    hyd
+                </td>
+                <td>
+                    chennai
+                </td>
+                <td>
+                    Nonstop
+                </td>
+                <td>
+                    Express
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    12-HYD-ban
+                </td>
+                <td>
+                    Hyderabad
+                </td>
+                <td>
+                    bangalore
+                </td>
+                <td>
+                    Nonstop
+                </td>
+                <td>
+                    Deluxe
+                </td>
+
+            </tr>
+        </tbody>
+
+    </table>
+</body>
+
+</html>
