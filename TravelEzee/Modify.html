@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify Service - TravelEzee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Modify Service Details</h2>
+
+    <form action="SaveChanges.html" method="post">
+        <div class="row">
+            <label for="pickup">Pickup Location:</label>
+            <select id="pickup" name="pickup" required>
+                <option value="Chennai">Chennai</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Pune">Pune</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <label for="drop">Drop Location:</label>
+            <select id="drop" name="drop" required>
+                <option value="Rajahmundry">Rajahmundry</option>
+                <option value="Kochi">Kochi</option>
+                <option value="Madurai">Madurai</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Mumbai">Mumbai</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <label for="vehicle">Vehicle Type:</label>
+            <select id="vehicle" name="vehicle" required>
+                <option value="Luxury">Luxury</option>
+                <option value="Express">Express</option>
+                <option value="Ordinary">Ordinary</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <label for="arrival">Arrival Time:</label>
+            <input type="time" id="arrival" name="arrival" >
+        </div>
+
+        <div class="row">
+            <label for="departure">Departure Time:</label>
+            <input type="time" id="departure" name="departure" >
+        </div>
+
+        <button>Save Changes</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Book Ticket</h2>
+    <hr>
+    <a href="Admin.html">DashBoard</a>
+    <br>
+    <br>
+    <form method="post">
+        <label>Service Name</label>
+        <select name="Sn" id="Sn">
+            <option value="1">CHN-HYD</option>
+            <option value="2">Pune-RAJ</option>
+            <option value="3">BGL-MUM</option>
+            <option value="4">Kl-Pune</option>
+            <option value="5">HYD-MAD</option>
+        </select>
+        <div class="row">
+            <label>From City:</label>
+            <select name="city" id="city">
+                <option value="1">Chennai</option>
+                <option value="2">Hyderabad</option>
+                <option value="3">Banglore</option>
+                <option value="4">kerala</option>
+                <option value="5">pune</option>
+            </select>
+    
+            <label>To City:</label>
+            <select name="city" id="city">
+                <option value="1">Rajahmundry</option>
+                <option value="2">kochi</option>
+                <option value="3">Madhurai</option>
+                <option value="4">Hyderabad</option>
+                <option value="5">Mumbai</option>
+            </select>
+        </div>
+    
+        <label>Service Type:</label>
+        <select name="st" id="st">
+            <option value="1">Non stop</option>
+            <option value="2">Ordinary</option>
+        </select>
+    
+        <label>Vehicle Type</label>
+        <select name="svt" id="svt">
+            <option value="1">Luxury</option>
+            <option value="2">Express</option>
+        </select>
+    
+        <label>Number of Passengers:</label>
+        <input type="number">
+    
+        <br><br>
+        <h4>Choose Seats</h4>
+        <div class="seat"> 
+            <label><input type="checkbox" name="cb" value="1">1</label>
+            <label><input type="checkbox" name="cb" value="2">2</label>
+            <label><input type="checkbox" name="cb" value="3">3</label>
+            <label><input type="checkbox" name="cb" value="4">4</label>
+            <label><input type="checkbox" name="cb" value="5">5</label>
+            <label><input type="checkbox" name="cb" value="6">6</label>
+            <label><input type="checkbox" name="cb" value="7">7</label>
+            <label><input type="checkbox" name="cb" value="8">8</label>
+            <label><input type="checkbox" name="cb" value="9">9</label>
+            <label><input type="checkbox" name="cb" value="10">10</label>
+            <label><input type="checkbox" name="cb" value="11">11</label>
+            <label><input type="checkbox" name="cb" value="12">12</label>
+        </div>
+        <br>
+        <br>
+        
+    
+       <a href="Confirm.html" style="background-color:white;text-align: center;">Confirm</a>
+    </form>
+    
+</body>
+</html>
