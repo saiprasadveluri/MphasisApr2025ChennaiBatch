@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin - Travel Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Admin Panel - Travel Management</h1>
+    
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="places.html">Manage Places</a>
+      <a href="services.html">Manage Services</a>
+  
+    </nav>
+
+    <!-- Create Travel -->
+    <section class="card">
+      <h2>Create New Travel Plan</h2>
+      <form>
+        <input type="text" placeholder="Destination Name" required />
+        <input type="text" placeholder="Travel Description" required />
+        <input type="date" required />
+        <input type="text" placeholder="Cost (e.g., $500)" required />
+        <button type="submit">Create Travel</button>
+      </form>
+    </section>
+
+    <!-- Modify/Delete Travel -->
+    <section class="card">
+      <h2>Modify / Delete Existing Travel Plans</h2>
+      <div class="travel-list">
+        <!-- Each travel card -->
+        <div class="travel-item">
+          <p><strong>Destination:</strong> Vadaplani</p>
+          <p><strong>Date:</strong> 2025-05-10</p>
+          <p><strong>Cost:</strong> $500</p>
+          <div class="actions">
+            <a href="#" class="edit-btn">Modify</a>
+            <a href="#" class="delete-btn">Delete</a>
+          </div>
+        </div>
+
+        <div class="travel-item">
+          <p><strong>Destination:</strong> DLF</p>
+          <p><strong>Date:</strong> 2025-06-15</p>
+          <p><strong>Cost:</strong> $700</p>
+          <div class="actions">
+            <a href="#" class="edit-btn">Modify</a>
+            <a href="#" class="delete-btn">Delete</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
