@@ -1,0 +1,22 @@
+body{
+    background-color: rgb(234, 194, 222);
+    
+th{
+    background-color: rgb(0,138,210);
+} 
+    
+td{
+    background-color: rgb(225, 147, 53);
+}
+h2{
+    background-color: blue;
+}
+input[type="submit"]
+{
+    background-color: aqua;
+    font-size: large;
+    
+}
+
+
+    

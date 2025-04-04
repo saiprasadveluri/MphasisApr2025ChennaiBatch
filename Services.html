@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="travelstyle.css">
+    </head>
+    <body>
+        <h2 align="center">Manage Services</h2>
+        <form method="post">
+            <table border="2px solid black" width="100%">
+                <tr>
+                    <th></th>
+                    <th>Service Name</th>
+                    <th>From City</th>
+                    <th>To City</th>
+                    <th>Service Type</th>
+                    <th>Vehicle Type</th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>
+                        <select id="sname">
+                            <option value="1">chn-hyd</option>
+                            <option value="2">wrgl-vzg</option>
+                            <option value="3">vwd-bang</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="fcity">
+                            <option value="1">Chennai</option>
+                            <option value="2">warangal</option>
+                            <option value="3">vijayawada</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="tcity">
+                            <option value="1">Hyderabad</option>
+                            <option value="2">vizag</option>
+                            <option value="3">Bangalore</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="stype">
+                            <option value="1">NonStop</option>
+                            <option value="2">Stop</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="vtype">
+                            <option value="1">Luxury</option>
+                            <option value="2">Semi-Sleeper</option>
+                            <option value="3">Express</option>
+                            <option value="4">Non Ac</option>
+                            <option value="5">Ac</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <br/>
+            <input type="submit" value="Delete">
+        </form>
+    </body>
+</html>
