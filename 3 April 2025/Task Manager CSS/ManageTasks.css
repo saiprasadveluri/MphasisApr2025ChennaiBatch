@@ -1,0 +1,30 @@
+h3{
+    color:red;
+    text-align: center;
+    font-size: xx-large;
+
+}
+.links{
+    background-color: black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.newtask, .pmdash{
+    color:white;
+}
+table,td,th{
+    border:2px solid black;
+    border-collapse: collapse;
+}
+
+td,th{
+    padding: 2px 2px 2px 2px;
+}
+
+td{
+    text-align: center;
+}
+th{
+    color:red;
+    background-color: yellow;
+}

@@ -1,0 +1,22 @@
+h3{
+    color:red;
+    text-align: center;
+    font-size: xx-large;
+
+}
+table,td,th{
+    border:2px solid black;
+    border-collapse: collapse;
+}
+
+td,th{
+    padding: 2px 2px 2px 2px;
+}
+
+td{
+    text-align: center;
+}
+th{
+    color:red;
+    background-color: yellow;
+}

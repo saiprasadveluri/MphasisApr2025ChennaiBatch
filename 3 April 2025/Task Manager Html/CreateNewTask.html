@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="CreateNewTask.css">
+</head>
+<body>
+    <h3> New Task</h3>
+    <hr />
+    <div class="menu">
+        <a class="managetasklink"href="ManageTasks.html">Manage Tasks</a>
+    </div>
+    
+    <div>
+        <form method="post">
+            <table>
+                <tr>
+                    <td>Task Id: </td>
+                    <td>
+                        <input type="number" min="1" id="tid" name="tid" />
+                    </td>
+                </tr>
+                <tr>
+                    <td> Title: </td>
+                    <td>
+                        <input type="text" id="tt" name="tt"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Description: </td>
+                    <td>
+                        <textarea id="tdesc" name="tdesc" rows="4"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Start date: </td>
+                    <td>
+                        <input type="date" id="stdate" name="stdate"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>End date: </td>
+                    <td>
+                        <input type="date" id="enddate" name="enddate" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Duration: </td>
+                    <td>
+                        <input type="number" min="1" step="1" name="tdu" id="tdu"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Assigned To:</td>
+                    <td>
+                        <select id="tassindto" name="tassignedto">
+                            <option value="1">Mary</option>
+                            <option value="2">John</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Status:</td>
+                    <td>
+                        <select id="tstatus" name="tsatus">
+                            <option value="1">OPEN</option>
+                            <option value="2">ON-HOLD</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Add Task"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+</body>
+</html>
