@@ -1,0 +1,82 @@
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .fullpage {
+      display: flex;
+      flex-direction: column;
+      background-color: lightgray;
+      height: 100%;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .header, .footer {
+      background-color: gray;
+      border: 1px solid lightgray;
+      padding: 10px;
+      height: 10%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    h1{
+        text-shadow: 4px 4px black;
+    }
+
+    .content {
+       background-color: gray;
+       border: 1px solid lightgray;
+       padding: 10px;
+       height: 80%;
+       display: flex;
+       flex-direction: column; /* ← stack nav + table vertically */
+        gap: 20px; /* optional: space between nav and table */
+        color: white;
+}
+
+    
+
+    .nav {
+      display: flex;
+      gap: 20px; /* space between items */
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: white;
+      padding: 8px 16px;
+     
+
+     
+     
+      
+    }
+
+    .nav a:hover {
+      background-color: #222;
+     
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        color: black;
+}   
+
+th, td {
+         border: 1px solid #ccc;
+         padding: 8px;
+        text-align: left;
+}
+  
