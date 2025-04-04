@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Vehicles - TravelEzee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <a href="ManageUsers.html">Manage Users</a>
+    <a href="ManageService.html">Manage Service</a>
+    <a href="ManageHops.html">Manage Hops</a>
+    <a href="ManageVehicles.html">Manage Vehicles</a>
+    <a href="">Trip</a>
+    </div>
+
+    <h1>Manage Vehicles</h1>
+
+    <!-- Vehicles Table -->
+    <table border="1" width="100%">
+        <tr>
+            <th>Vehicle ID</th>
+            <th>Vehicle Number</th>
+            <th>Type</th>
+            <th>Capacity</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>AP 06 1234</td>
+            <td>Bus</td>
+            <td>50</td>
+            <td>Active</td>
+            <td>
+                <button>Edit</button>
+                <button>Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>AP 07 5678</td>
+            <td>Van</td>
+            <td>15</td>
+            <td>Inactive</td>
+            <td>
+                <button>Edit</button>
+                <button>Delete</button>
+            </td>
+        </tr>
+    </table>
+
+    
+    <h2>Add/Edit Vehicle</h2>
+    <form>
+        <label for="vehicleId" style="display: inline-block; width: 150px;">Vehicle ID:</label>
+        <input type="text" id="vehicleId" name="vehicleId" placeholder="Enter Vehicle ID"><br><br>
+
+        <label for="vehicleNumber" style="display: inline-block; width: 150px;">Vehicle Number:</label>
+        <input type="text" id="vehicleNumber" name="vehicleNumber" placeholder="Enter Vehicle Number"><br><br>
+
+        <label for="type" style="display: inline-block; width: 150px;">Type:</label>
+        <select id="type" name="type">
+            <option value="" disabled selected>Select Type</option>
+            <option value="Bus">Bus</option>
+            <option value="Van">Van</option>
+            <option value="Car">Car</option>
+        </select><br><br>
+
+        <label for="capacity" style="display: inline-block; width: 150px;">Capacity:</label>
+        <input type="number" id="capacity" name="capacity" placeholder="Enter Capacity"><br><br>
+
+        <label for="status" style="display: inline-block; width: 150px;">Status:</label>
+        <select id="status" name="status">
+            <option value="" disabled selected>Select Status</option>
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+        </select><br><br>
+
+        <button type="submit">Save</button>
+        
+    </form>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Services - TravelEzee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <a href="ManageUsers.html">Manage Users</a>
+        <a href="ManageService.html">Manage Service</a>
+        <a href="ManageHops.html">Manage Hops</a>
+        <a href="ManageVehicles.html">Manage Vehicles</a>
+        <a href="">Trip</a>
+    </div>
+
+    <h1>Manage Services</h1>
+
+    <!-- Service Table -->
+    <table border="1" width="100%">
+        <tr>
+            <th>Service ID</th>
+            <th>Service Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Luxury Bus Service</td>
+            <td>Comfortable travel with premium amenities</td>
+            <td>$100</td>
+            <td>
+                <button>Edit</button>
+                <button>Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Standard Bus Service</td>
+            <td>Affordable travel with basic amenities</td>
+            <td>$50</td>
+            <td>
+                <button>Edit</button>
+                <button>Delete</button>
+            </td>
+        </tr>
+    </table>
+
+   
+    
+    <form>
+        <h2 align="center">Add Service</h2>
+        <hr
+        <label for="serviceId">Service ID:</label>
+        <input type="text" id="serviceId" name="serviceId" placeholder="Enter Service ID"><br><br>
+
+        <label for="serviceName">Service Name:</label>
+        <input type="text" id="serviceName" name="serviceName" placeholder="Enter Service Name"><br><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" placeholder="Enter Description"></textarea><br><br>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" placeholder="Enter Price"><br><br>
+
+        <button type="submit">Add</button>
+        
+    </form>
+</body>
+</html>

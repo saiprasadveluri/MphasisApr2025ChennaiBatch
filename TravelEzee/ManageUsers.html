@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="ManageUsers.html">Manage Users</a>
+        <a href="ManageService.html">Manage Service</a>
+        <a href="ManageHops.html">Manage Hops</a>
+        <a href="ManageVehicles.html">Manage Vehicles</a>
+        <a href="">Trip</a>
+    </div>
+    <h2 align="center">Current Users</h2>
+    <table border="1" width="100%">
+        <tr>
+            <th>User ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td>john.doe@example.com</td>
+            <td>Admin</td>
+            <td>
+                <button>Edit</button>
+                <button>Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Jane Smith</td>
+            <td>jane.smith@example.com</td>
+            <td>User</td>
+            <td>
+                <button>Edit</button>
+                <button>Delete</button>
+            </td>
+        </tr>
+    </table>
+    
+    <form>
+        <h2 align="center">Add User</h2>
+        <label for="userId">User ID:</label>
+        <input type="text" id="userId" name="userId" placeholder="Enter User ID"><br><br>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter Name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter Email"><br><br>
+
+        <label for="role">Role:</label>
+        <select id="role" name="role">
+            <option value="Admin">Admin</option>
+            <option value="User">User</option>
+        </select><br><br>
+
+        <button type="submit">Add</button>
+        
+    </form>
+</body>
+</html>

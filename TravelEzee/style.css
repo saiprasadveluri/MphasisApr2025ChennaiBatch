@@ -1,0 +1,44 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    
+    
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+form{
+    border:1px solid black;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 10px;
+    background-color: rgb(173, 232, 247);
+
+}
+body {
+    background-color: #77d3eb;
+}
+th{
+    background-color:rgb(236, 236, 63)
+}
+td{
+    background-color: white;
+}
+ tr:hover {
+    background-color: #e60c0c; /* Highlight row on hover */
+}
+button{
+    background-color: rgb(236, 236, 63);
+    border-radius: 5px;
+}
