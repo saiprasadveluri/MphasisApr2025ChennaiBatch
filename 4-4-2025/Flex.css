@@ -1,0 +1,84 @@
+body{
+    background-color: aqua;
+}
+.main{
+    display:flex;
+    background-color: gray;
+    height:1000;
+    flex-direction:column;
+    align-items:start;
+    justify-content:start;
+    flex-wrap:wrap;
+    align-content: center;
+    width:"100%"
+}
+.hmain{
+    background-color: rgb(182, 182, 65);
+    height:200px;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    align-content: center;
+    justify-content: center;
+    font-family:Times New Roman;
+    font-size:40px
+}
+.mmain{
+    background-color: rgb(117, 20, 20);
+    height: 500px;
+    width:100%;
+    display:flex;
+}
+.fmain{
+    background-color: rgb(231, 220, 245);
+    height: 200px;
+    width:100%;
+    display:flex;
+}
+.lmain{
+    background-color: rgb(59, 113, 158);
+    height: 500px;
+    width:25%;
+    display:flex;
+}
+.cmain{
+    background-color: rgb(21, 172, 81);
+    height: 500px;
+    width:75%;
+    display:flex;
+    align-content: justify;
+}
+.iTable {
+    background-color: rgb(168, 151, 163);
+    font-size: medium;
+    border:solid;
+    width: 100%;
+    margin-top:100px;
+    height:60px
+}
+.iTable tr{
+    height:45px;
+}         
+.iTable td
+{
+    text-align:center;
+}           
+input[type=submit]  {
+    background-color: darkblue;
+    width: 45%;
+    color: white;
+    font-weight: bold;
+    
+}
+input{
+    width:100%;
+    height:30px;
+}
+input[type=checkbox] {
+    width:15%;
+    height:20px;
+}
+.dcontent{
+    justify-content: center;
+    align-content: center;
+}

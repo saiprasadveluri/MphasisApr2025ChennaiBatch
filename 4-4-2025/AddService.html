@@ -1,0 +1,64 @@
+<html>
+    <h3>
+        Add Service
+    </h3>
+    <link rel="stylesheet" href="Ticket.css"/>
+    <div class="Navi">
+        <a href="Admin.html">Admin</a>
+    </div>
+    <br>
+    <form method="post">
+        <table width="100%" class="ticket">
+            <tr>
+                <td>Service Type
+                </td>
+                <td><input type="text"required/></td>
+            </tr>
+            <tr>
+                <td>From City</td>
+                <td>
+                    <select>
+                        <option type="text" value="Chennai">Chennai</option>
+                        <option type="text" value="Hyderabad">Hyderabad</option>
+                        <option type="text" value="Banglore">Banglore</option>
+                        <option type="text" value="Tirupati">Tirupati</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>To City</td>
+                <td>
+                    <select>
+                        <option type="text" value="Chennai">Chennai</option>
+                        <option type="text" value="Hyderabad">Hyderabad</option>
+                        <option type="text" value="Banglore">Banglore</option>
+                        <option type="text" value="Tirupati">Tirupati</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Service Type</td>
+                <td><select>
+                    <option type="text" value="Nonstop">Nonstop</option>
+                    <option type="text" value="Stop">Stop</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Vehicle Type</td>
+                <td>
+                    <select>
+                        <option type="text" value="Sleeper">Sleeper</option>
+                        <option type="text" value="Express">Express</option>
+                        <option type="text" value="Luxury">Luxury</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Base Fare
+                </td>
+                <td><input type="number"required/></td>
+            </tr>
+        </table>
+    </form>
+    <input colspan="2" width="20%" id="info" type="submit" value="AddService"/>
+</html>
