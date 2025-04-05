@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="Styles1.css" />
+</head>
+<body>
+    <h2>Create New Service</h2>
+    <hr />
+    <div class="Service">
+        <form method="post" class="Cservice">
+            <table class="servicetable">
+                <tr>
+                    <td>
+                        <label>Vehicle Number</label>
+                    </td>
+                    <td>
+                        <input type="text" id="Vnum" name="Vnum" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Date</label>
+                    </td>
+                    <td>
+                        <input type="date" id="Edate" name="Edate" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Driver Name</label>
+                    </td>
+                    <td>
+                        <input type="text" id="Vname" name="Vname" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Driver Contact</label>
+                    </td>
+                    <td>
+                        <input type="text" id="Cno" name="Cno" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>PickUp Point</label>
+                    </td>
+                    <td>
+                        <select name="Pipoint" id="Pipoint" class="ppoint">
+                            <option value="1">Chennai</option>
+                            <option value="2">Bangalore</option>
+                            <option value="3">Hyderabad</option>
+                            <option value="4">Kerala</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Drop Point</label>
+                    </td>
+                    <td>
+                        <select name="Drpoint" id="Drpoint" class="dpoint">
+                            <option value="1">Chennai</option>
+                            <option value="2">Bangalore</option>
+                            <option value="3">Hyderabad</option>
+                            <option value="4">Kerala</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Service Type</label>
+                    </td>
+                    <td>
+                        <select name="Setype" id="Setype" class="stype">
+                            <option value="1">Non-Stop</option>
+                            <option value="2">Express</option>
+                            <option value="3">Superfast</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Vehicle Type</label>
+                    </td>
+                    <td>
+                        <select name="Vetype" id="Vetype" class="vtype">
+                            <option value="1">AC-Seater</option>
+                            <option value="2">Non AC</option>
+                            <option value="3">AC-Sleeper</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" class="Esub" value="Submit" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

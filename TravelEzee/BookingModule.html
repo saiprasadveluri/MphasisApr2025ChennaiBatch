@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="Styles1.css" />
+</head>
+<body>
+    <h2>Booking Module</h2>
+    <hr />
+    <div class="Service">
+        <form method="post" action="Seating.html">
+            <table class="Booking">
+
+                <tr>
+                    <td>
+                        <label>Date</label>
+                    </td>
+                    <td>
+                        <input type="date" id="Edate" name="Edate" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>From</label>
+                    </td>
+                    <td>
+                        <select name="Ppoint" id="Ppoint">
+                            <option value="1">Chennai</option>
+                            <option value="2">Bangalore</option>
+                            <option value="3">Hyderabad</option>
+                            <option value="4">Kerala</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>To</label>
+                    </td>
+                    <td>
+                        <select name="Dpoint" id="Dpoint">
+                            <option value="1">Chennai</option>
+                            <option value="2">Bangalore</option>
+                            <option value="3">Hyderabad</option>
+                            <option value="4">Kerala</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>PickUp Point</label>
+                    </td>
+                    <td>
+                        <select name="Ppoint" id="Ppoint">
+                            <option value="1">Koyambedu</option>
+                            <option value="2">Porur</option>
+                            <option value="3">Electronic City</option>
+                            <option value="4">Attibelle</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Drop Point</label>
+                    </td>
+                    <td>
+                        <select name="Dpoint" id="Dpoint">
+                            <option value="1">Koyambedu</option>
+                            <option value="2">Porur</option>
+                            <option value="3">Electronic City</option>
+                            <option value="4">Attibelle</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Vehicle Type</label>
+                    </td>
+                    <td>
+                        <select name="Vtype" id="Vtype">
+                            <option value="1">AC-Seater</option>
+                            <option value="2">Non AC</option>
+                            <option value="3">AC-Sleeper</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" class="Esub" id="esub" name="esub" value="Search" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
