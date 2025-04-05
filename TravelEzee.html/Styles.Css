@@ -1,0 +1,120 @@
+.sony{
+    display:flex;
+    justify-content:space-around;
+    font-family:x-large;
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: pink;
+    padding: 20px;
+    color: blue;
+}
+
+h2 {
+    text-align: center;
+    color: green;
+    font-size: 30px;
+}
+
+form {
+    background-color: beige;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    margin: car;
+}
+select, input {
+    padding: 8px;
+    width: 100%; 
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #8B4513; 
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+    width: 40%;
+    text-align: right;
+    padding-right: 10px;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 30px;
+    background-color: black;
+    color: yellow;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: powderblue;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: purple;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid gray;
+}
+
+th {
+    background-color: brown;
+    color: burlywood;
+    font-weight: bold;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    background: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.sag{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 300px;
+    margin-top: 10px;
+}
+
+.sag label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 18px;
+    width: auto;
+}
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
