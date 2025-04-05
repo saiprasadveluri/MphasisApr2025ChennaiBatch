@@ -1,0 +1,88 @@
+#moduleA{
+    display: flex;
+    height: 50px;
+    background-color: rgb(80, 32, 102);
+    font-size: large;
+    flex-direction: row;
+    justify-content:left;
+    align-items: center;
+}
+#div1{
+    font-size: medium;
+    margin-inline: 10px;
+    color: rgb(180, 83, 124) ;
+    background-color: rgb(80, 32, 102);
+    margin:60px 450px;
+    border-radius: 2%;
+    display: flex;
+    justify-content: center;
+    
+}
+#searchbar{
+    margin-left: 10%;
+    padding-top: 1px;
+    padding-bottom: 200px;
+    justify-content: last baseline;
+}
+span.ex1{
+    white-space: 30px;
+    align-items: right;
+    color: white;
+}
+.taskbar{
+    padding: 14px 96px ;
+    
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(80, 32, 102);
+    color: rgb(180, 83, 124);
+    font-size: medium;
+}
+h1{
+    color: rgb(180, 83, 124) ;
+}
+form{
+    background-color: rgb(80, 32, 102);
+}
+#div2{
+    font-size: xx-large;
+    color: rgb(180, 83, 124) ;
+    
+}
+.mngtable{
+    background-color:rgb(80, 32, 102);
+    margin-right: 24%;
+    margin-left: 24%;
+    color: rgb(180, 83, 124);
+    display: flex;
+    justify-content: center;
+    padding-inline: 10px ;
+
+}
+button:hover{
+    cursor: pointer;
+    background-color: rgb(150, 77, 184);
+    color: aliceblue;
+}
+#moduleA2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(80, 32, 102);
+    color: rgb(180, 83, 124);
+    font-size: xx-large;
+    margin-right: 24%;
+    margin-left: 24%;
+    height: 50px;
+}
+#moduleA3{
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(80, 32, 102);
+    color: rgb(180, 83, 124);
+    font-size: xx-large;
+    margin-right: 30%;
+    margin-left: 35%;
+    height: 50px;
+}

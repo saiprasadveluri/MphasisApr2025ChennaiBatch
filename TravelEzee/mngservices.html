@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>Rapido</title>
+        <link rel="stylesheet" href="Ezee.css">
+    </head>
+    <body>
+         <div id="moduleA">
+            <a href="Adminmodule.html"><button class="taskbar">Home</button></a>
+            <a href="mngusers.html"><button class="taskbar">Manage Users</button></a>
+            <a href="mngservices.html"><button class="taskbar">Manage Services</button></a>
+            <a href="mnghops.html"><button class="taskbar">Manage Maps</button></a>
+            
+            <a href="trip.html"><button class="taskbar">Trip</button></a>
+         </div>
+         <br>
+
+         <br>
+         <div id="moduleA2">Manage Services</div>
+         <form class="mngtable" method="post" action="">
+            <table class="table">
+                <tr>
+                    <td>Select the type of Service</td>
+                    <td>
+                        <select>
+                            <option>--select--</option>
+                            <option>Delivery</option>
+                            <option>Ride</option>
+                            <option>Rentals</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select the type of vehicle</td>
+                    <td>
+                        <select>
+                            <option>--select--</option>
+                            <option>Car</option>
+                            <option>Van</option>
+                            <option>Auto</option>
+                            <option>Bike</option>
+                            <option>Minibus</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Vehical No</td>
+                    <td>
+                        <input type="text" id="VehiNO" required placeholder="Enter the vehicle no">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Booking dates</td>
+                    <td>
+                        <label>from</label>
+                        <input type="date" id="from" required>
+                        <label>to</label>
+                        <input type="date" id="to" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>From</td>
+                    <td>
+                        <select>
+                            <option>--select--</option>
+                            <option>Hyderabad</option>
+                            <option>Banglore</option>
+                            <option>Chennai</option>
+                            <option>Mumbai</option>
+                        </select>
+                    </td>   
+                    
+                </tr>
+                <tr>
+                    <td>to</td>
+                    <td>
+                        <select>
+                            <option>--select--</option>
+                            <option>Hyderabad</option>
+                            <option>Banglore</option>
+                            <option>Chennai</option>
+                            <option>Mumbai</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button style="border-radius: 10px;">Confirm</button>
+                    </td>
+                </tr>
+
+            </table>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>Rapido</title>
+        <link rel="stylesheet" href="Ezee.css">
+    </head>
+    <body>
+         <div id="moduleA">
+            <a href="Adminmodule.html"><button class="taskbar">Home</button></a>
+            <a href="mngusers.html"><button class="taskbar">Manage Users</button></a>
+            <a href="mngservices.html"><button class="taskbar">Manage Services</button></a>
+            <a href="mnghops.html"><button class="taskbar">Manage Maps</button></a>
+          
+            <a href="trip.html"><button class="taskbar">Trip</button></a>
+         </div>
+         <br>
+
+         <br>
+         <form class="mngtable" method="post" action="">
+            <table class="table">
+                <tr>
+                    <td>Type of Users</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="1">--select--</option>
+                            <option value="1">Drivers</option>
+                            <option value="1">Owners</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>New User</td>
+                    <td>
+                        <input type="text" placeholder="Enter Username">
+                </tr>
+                <tr>
+                    <td>password</td>
+                    <td>
+                        <input type="password" placeholder="Enter Password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>confirm password</td>
+                    <td>
+                        <input type="password" placeholder="Confirm Password">
+                    </td>
+                </tr>
+               
+                <tr>
+                    <td></td>
+                    <td>
+                        <button style="border-radius: 10px;">Create</button>
+                    </td>
+                </tr>
+
+            </table>
+         </form>
+    </body>
+</html>
