@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Create New Service</h2>
+    <hr>
+    <form class=createserviceform method="post">
+        <table class="createservicetable">
+            <tr>
+                <td>
+                    <label>Vehicle Number</label>
+                </td>
+                <td>
+                    <input type="text" class="vno" id="vno">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>From</label>
+                </td>
+                <td>
+                    <input type="text" class="fromp" id="fromp">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>To</label>
+                </td>
+                <td>
+                    <input type="text" class="top" id="top">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Pickup Point</label>
+                </td>
+                <td>
+                    <select name="ppoint" id="ppoint" class="ppoint">
+                        <option value="1">Porur</option>
+                        <option value="2">Koyambedu</option>
+                        <option value="3">Charminar</option>
+                        <option value="4">Shanti Nagar</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Drop Point</label>
+                </td>
+                <td>
+                    <select name="dpoint" id="dpoint" class="dpoint">
+                        <option value="1">Durgam Cheruvu</option>
+                        <option value="2">Hitech City</option>
+                        <option value="3">Kukatpally</option>
+                        <option value="4">Gandhipuram</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Date</label>
+                </td>
+                <td>
+                    <input type="date" class="traveldate" id="traveldate">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Vehicle Type</label>
+                </td>
+                <td>
+                    <select name="vtype" id="vtype" class="vtype">
+                        <option value="1">Sleeper</option>
+                        <option value="2">Semi Sleeper</option>
+                        <option value="3">Non AC</option>
+                        <option value="4">Seater</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Driver Name</label>
+                </td>
+                <td>
+                    <input type="text" class="dname" id="dname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Driver Contact</label>
+                </td>
+                <td>
+                    <input type="number" class="dnumber" id="dnumber">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Seat Availability</label>
+                </td>
+                <td>
+                    <input type="number" class="seatavail" id="seatavail" min="1" step="1"> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td>
+                    <input type="submit" class="submitservice" id="submitservice" value="Create">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>
