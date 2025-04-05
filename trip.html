@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /* .header{
+           color:rgb(8, 8, 8);
+           background-color: rgb(211, 231, 164);
+           
+        } */
+
+        .table{
+            border: 1px solid black;
+
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="table">
+       
+        <tr>
+            <th>
+               
+                <a href="manager.html"> Manager user</a>
+            </th>|
+            <th>
+                
+                <a href="Service.html"> Manager Service</a>
+            </th>|
+            <th>
+                
+                <a href="hops.html"> Manager hops</a>
+            </th>|
+            <th>
+                
+                <a href="Vehicle.html"> Manage vehicle</a>
+            </th>|
+            <th>
+                
+                <a href="trip.html"> Trip details</a>
+            </th>
+
+
+        </tr>
+
+
+    </div>
+
+
+    <form>
+        <label for="Source">Source:</label>
+        <select id="Source" name="Source" >
+        <option value="0">south india </option>
+        <option value="1">North india</option>
+        <option value="2">West india</option>
+        <option value="3">east asia </option>|
+        </select><br>
+            
+            
+         
+
+        <label for="Dest">Destination: </label>
+        <select id="Dest" name="Dest">
+        <option value="0">south india </option>
+        <option value="1">north india</option>
+        <option value="2">west india</option>
+        <option value="3">east inida</option>|
+       </select><br>
+       <label for="Detail">Journey date: </label>
+       <input type="date" id="date" name="date"> <br>
+       <input type="button" oneclick="alert('location search')">Search</button>
+    </form>
+
+    <table>
+    <thead>
+        <tr>
+            <th>
+                location/from:
+            </th><br>
+            <th>
+                location/To:
+            </th><br>
+            <th>
+                From Date:
+            </th><br>
+            <th>
+                To which date:
+            </th><br>
+            <th>
+                Status
+            </th><br>
+            <th>
+                Payment
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+  
+        <tr>
+            <td>
+                <select id="location" name="location" >
+                    <option value="north indian">north indian </option>
+                    <option value="south indian">south indian </option>
+                    <option value="west indian">west indian </option>
+                    <option value=" east indian">east indian </option>
+
+
+                  
+
+
+                </select>
+            </td>
+            <td>
+                <select id="loc" name="loc" >
+                    <option value="north indian">north indian </option>
+                    <option value="south indian">south indian </option>
+                    <option value="west indian">west indian </option>
+                    <option value=" east indian">east indian </option>
+
+
+            </td>
+            <td>
+                <label for="Date">Date </label>
+                <input type="date" id="date" name="date"> <br>
+                 <input type="button">Booked</button>
+                 </label>
+            </td>
+            <td>
+                <label for="Date">Date </label>
+                <input type="date" id="date" name="date"> <br>
+                 <input type="button">Booked</button>
+                 </label>
+
+            </td>
+            <td>
+                <select id="state" name="state" >
+                <option value="Confirm">Confirm </option>
+                <option value="Update">Update </option>
+                <option value="Delete"> Delete</option>
+                <option value=" Cancel"> Cancel </option>
+            </td>
+
+        <td>
+            <select id="loc" name="loc" >
+                <option value="online">online </option>
+                <option value="Cash">Cash </option>
+                
+
+        </td>
+        </tr>
+    </tbody>
+
+    </table>
+    
+    
+</body>
+</html>

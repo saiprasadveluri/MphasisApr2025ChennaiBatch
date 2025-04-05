@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .header{
+           color:rgb(8, 8, 8);
+           background-color: rgb(211, 231, 164);
+           
+        }
+    </style>
+
+</head>
+<link rel="stylesheet" href="./style.css">
+<body>
+
+    <h1
+    style="background-color:rgb(109, 146, 182); text-align: center;">User 
+</h1>
+<div class="header">
+   
+    <tr>
+        <th>
+           
+            <a href="manager.html"> Manager user</a>
+        </th>|
+        <th>
+            
+            <a href="Service.html"> Manager Service</a>
+        </th>|
+        <th>
+            
+            <a href="hops.html"> Manager hops</a>
+        </th>|
+        <th>
+            
+            <a href="Vehicle.html"> Manage vehicle</a>
+        </th>|
+        <th>
+            
+            <a href="trip.html"> Trip details</a>
+        </th>
+
+
+    </tr>
+
+
+</div>
+
+
+    <form>
+       <div class="container">
+        <label for="Snumber">Service Number: </label>
+        <input type="number" id="Snumber" name="snumber"  placeholder="123-45-678"><br>
+        <label for="city">Hop city: </label>
+        <input type="text" id="number" name="number"  placeholder="Choose location"><br>
+        <label for="loc">Distance from source: </label>
+        <input type="number" id="loc" name="loc" placeholder="0"><br>
+
+        <label for="tim">Arrival Time: </label>
+        <select id="tim" name="tim">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>|
+       </select>
+      
+        <select id="dim" name="dim">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>|
+        </select>
+        <br>
+
+        
+
+
+        <!-- <label for="Arr">Arrival time: </label>
+        <input type="text" id="Arr" name="Arr" placeholder="time"><br> -->
+        <!-- <label for="dep">Departure Time: </label>
+        <input type="text" id="dep" name="dep" placeholder="time"><br> -->
+
+        <label for="tim">Depture time: </label>
+        <select id="tim" name="tim">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>|
+           </select>
+    
+            <select id="dim" name="dim">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>|
+            </select><br>
+
+            
+            
+            <button type="button" onclick="alert('information is stored')">Add!</button><br>
+
+            <label for="box"> </label>
+            <input type="text" id="box" name="box"></input>
+            <button type="buton" onclick="alert('finised form')">Finish </button>
+            <button type="buton" onclick="alert('delete')">delete selected </button>
+
+            
+
+
+ 
+
+
+
+       
+
+       </div>
+    </form>
+</body>
+</html>
