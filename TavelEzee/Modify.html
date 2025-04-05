@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify Service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<a href="Admin.html">Admin Dashboard</a>
+<body>
+
+    <h2>Modify Service Details</h2>
+
+    <form action="SaveChanges.html" method="post">
+        <div class="row">
+            <label for="pickup">Pickup Location:</label>
+            <select id="pickup" name="pickup" required>
+                <option value="CHN">Chennai</option>
+                <option value="HyD">Hyderabad</option>
+                <option value="BGLR">Banglore</option>
+                <option value="RJMY">Rajamandry</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <label for="drop">Drop Location:</label>
+            <select id="drop" name="drop" required>
+                <option value="MBNR">Mahabubnagar</option>
+               <option value="MDK">Medak</option>
+               <option value="NGD">Nalgonda</option>
+               <option value="ADB">Adilabad</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <label for="vehicle">Vehicle Type:</label>
+            <select id="vehicle" name="vehicle" required>
+                <option value="Deluxe">Deluxe</option>
+                <option value="Premium with Ac">Express</option>
+                <option value="Ordinary">Ordinary</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <label for="arrival">Arrival Time:</label>
+            <input type="time" id="arrival" name="arrival" >
+        </div>
+
+        <div class="row">
+            <label for="departure">Departure Time:</label>
+            <input type="time" id="departure" name="departure" >
+        </div>
+
+        <button>Save Changes</button>
+    </form>
+
+</body>
+</html>

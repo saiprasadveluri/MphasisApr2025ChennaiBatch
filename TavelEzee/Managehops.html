@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<a href="Admin.html">Admin Dashboard</a>
+<body>
+    <h3>Enter Details</h3>
+   <form method="post">
+    <label>Source</label>
+    <select id="sname" name="sname">
+        <option value="CHN">Chennai</option>
+        <option value="HyD">Hyderabad</option>
+        <option value="BGLR">Banglore</option>
+        <option value="RJMY">Rajamandry</option>
+    </select>
+    <br/>
+    <label>Destination</label>
+    <select id="dname" name="dname">
+        <option value="CHN">Chennai</option>
+        <option value="HyD">Hyderabad</option>
+        <option value="BGLR">Banglore</option>
+        <option value="RJMY">Rajamandry</option>
+    </select>
+    <br/>
+    <label>Journey Date</label>
+    <input type="date">
+    </br>
+</form>
+<button type="button">Search</button>
+<hr/>
+<table>
+    <tr>
+        <th>From</th>
+        <th>To</th>
+        <th>Service</th>
+        <th>Vehicle Type</th>
+        <th>Distance</th>
+        <th>FromCityArriveltime</th>
+        <th>FromCityDeparturetime</th>
+        <th>TocityArrivaltime</th>
+        <th>ToCityDeparturetime</th>
+        <th> </th>
+        <th> </th>
+        </tr>
+        <tr>
+            <td>Chennai</td>
+            <td>Hydrabad</td>
+            <td>Service</td>
+            <td>Deluxe</td>
+            <td>300Km</td>
+            <td>05-04-2025</br>
+                8:00PM</td>
+            <td>05-04-2025</br>
+                 8:30PM</td>
+            <td>06-04-2025</br>
+                    8:30AM</td>
+            <td>05-04-2025</br>
+                    8:30AM</td>
+       
+            <td><a href="Bookingticket.html">Book</a></td>
+        </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<a href="Admin.html">Admin Dashoard</a>
+<body>
+    <h3>Enter Details</h3>
+  <form method="post" >
+   <label>Service Number</label>
+   <select id="snumber" name="snumber" required>
+       <option value="1">2124-CHN-RJMY</option>
+       <option value="2">2125-CHN-HYD</option>
+       <option value="3">2126-BGLR-HYD</option>
+       <option value="4">2127-RJMY-CHN</option>
+       <option value="5">2128-HYD-CHN</option>
+       <option value="6">2129-HYD-BGLR</option>
+   </select>
+   <br/>
+   <label>Hop City</label>
+   <select id="sname" name="sname">
+       <option value="CHN">Chennai</option>
+       <option value="HyD">Hyderabad</option>
+       <option value="BGLR">Banglore</option>
+       <option value="RJMY">Rajamandry</option>
+   </select>
+   <br/>
+   <label>Distance from source</label>
+   <input type="number" id="sdistance" name="sdistance" min="1">
+   <br/>
+   <label>Arrival Time</label>
+   <input type="time">
+   <br/>
+   <label>Departure Time</label>
+   <input type="time">
+</br>
+   <button type="button">Submit</button>
+
+
+  </form> 
+</body>
+</html>
