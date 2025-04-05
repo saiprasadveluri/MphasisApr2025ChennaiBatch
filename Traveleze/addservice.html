@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<a href="admin.html">admin</a>
+<link rel="stylesheet" href="style.css">
+<body>
+    <form method="post">
+        <table>
+            <tr>
+                <td>
+                    Service Name :
+                </td>
+                <td>
+                    <input type="text" id="itext" name="itext" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    From city :
+                </td>
+                <td>
+                <select id="From city" name="fromcity" required>
+                    <option value="">select your place</option>
+                    <option value="chennai">chennai</option>
+                    <option value="hyd">Hyderabad</option>
+                    <option value="tpt">Tirupati</option>
+                    <option value="vizag">vizag</option>
+                    </select>
+                    </td>
+            </tr>
+            <tr>
+                <td>
+                    To city:
+                </td>
+                <td>
+                    <select id="To city" name="Tocity" required>
+                        <option value="">select your place</option>
+                        <option value="chennai">chennai</option>
+                        <option value="hyd">Hyderabad</option>
+                        <option value="tpt">Tirupati</option>
+                        <option value="vizag">vizag</option>
+                        </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Service Type :
+                </td>
+                <td>
+                    <select id="stype" name="stype" required >
+                        <option value="Nonstop">Nonstop</option>
+                        <option value="ordinary">ordinary</option>
+                    </select>
+                </td>
+            </tr>
+            </td>
+            <tr>
+                <td>
+                    Vehicle Type :
+                </td>
+                <td>
+                    <select id="vtype" name="vtype" required >
+                        <option value="semisleeper">semi sleeper</option>
+                        <option value="sleeper">sleeper</option>
+                        <option value="seater">seater</option>
+                    </select>
+                </td>
+            </tr>
+            </td>
+            <tr>
+                <td>
+                    <input type="submit" value="Add Service">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

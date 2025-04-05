@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(107, 196, 138);
+}
+h3{
+    display: flex;
+    background-color: aquamarine;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    justify-content: center;
+}
+table{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    background-color: rgb(89, 34, 156);
+    margin: 2px;
+    width:100%;
+}
+input[type=submit]{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    background-color: rgb(105, 37, 89);
+    margin: 5px;
+    width:100%;
+}
+

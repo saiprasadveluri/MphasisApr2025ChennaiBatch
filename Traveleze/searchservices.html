@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="booking.html">Booking service</a>
+    <link rel="stylesheet" href="style.css">
+    <h3>Search services</h3>
+    <form method="post">
+        <table>
+                <tr> 
+                    <td>
+                          Source :
+                    </td>
+                    <td>
+                        <select id="Source" name="isource" required>
+                            <option value="">select your place</option>
+                            <option value="chennai">chennai</option>
+                            <option value="hyd">Hyderabad</option>
+                            <option value="tpt">Tirupati</option>
+                            <option value="vizag">vizag</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Destination :
+                    </td>
+                    <td>
+                        <select id="Destination" name="iDestination" required>
+                            <option value="">select your place</option>
+                            <option value="chennai">chennai</option>
+                            <option value="hyd">Hyderabad</option>
+                            <option value="tpt">Tirupati</option>
+                            <option value="vizag">vizag</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Journey Date :
+                    </td>
+                    <td>
+                        <input type="date" id="idate" name="idate"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="search" />
+                    </td>
+                </tr>
+        </table>
+        <table border="2">
+            <tr>
+                <th>
+                    from
+                </th>
+                <th> To</th>
+                <th>service</th>
+                <th>vehicle type</th>
+                <th>Distance</th>
+                <th>FromcityArrtime</th>
+                <th>Fromcity Deptime</th>
+                <th>Tocity Arrtime</th>
+                <th>Tocitydeptime</th>
+                <th>     </th>
+            </tr>
+            <tr>
+                <td>
+                    chennai
+                </td>
+                <td> Tpt</td>
+                <td>NOnstop</td>
+                <td>Express</td>
+                <td>780</td>
+                <td>13:48:51</td>
+                <td>13:48:51</td>
+                <td>13:50:51</td>
+                <td>16:48:51</td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

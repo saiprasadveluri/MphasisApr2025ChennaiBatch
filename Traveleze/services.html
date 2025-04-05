@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="addservice.html">Add service</a>
+   <h2> services</h2>
+   <form method="post">
+    <table>
+        <tr>
+            <td>
+                <label for="from city">From city</label>
+            </td>
+            <td>
+                <select id="from city" name="fromcity" required>
+                    <option value="">select city</option>
+                    <option value="chennai">chennai</option>
+                    <option value="hyd">Hyderabad</option>
+                    <option value="tpt">Tirupati</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="to city">To city</label>
+            </td>
+            <td>
+                <select id="to city" name="tocity" required>
+                    <option value=" ">select city</option>
+                    <option value="chennai">chennai</option>
+                    <option value="hyd">Hyderabad</option>
+                    <option value="tpt">Tirupati</option>
+                </select>
+            </td>
+        </tr>
+        <td>
+           Arrival time :
+        </td>
+        <tr>
+        <td>
+            <input type="time" id="itime" name="iname" />
+        </td>
+        </tr>
+        <tr>
+            <td>
+                cost :
+            </td>
+            <td>
+                <input type="number" id="inumber" name="inumber"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                No.of seats :
+            </td>
+            <td>
+                <input type="number" id="unum" name="unum" min="1"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Seat numbers:
+            </td>
+            <td>
+                <input type="number" id="jnum" name="jnum" min="1"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="confirm">
+            </td>
+        </tr>
+    </table>
+   </form>
+</body>
+</html>
