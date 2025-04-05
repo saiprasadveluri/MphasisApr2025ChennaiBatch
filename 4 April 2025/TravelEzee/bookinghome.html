@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraveleZee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>TraveleZee</h1>
+    <h2>Booking Module</h2>
+    <hr>
+    <form method="post" action="seatingarrangements.html">
+        <table class="bookingservicetable">
+            <tr>
+                <td>
+                    <label>From</label>
+                </td>
+                <td>
+                    <input type="text" class="fromp" id="fromp">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>To</label>
+                </td>
+                <td>
+                    <input type="text" class="top" id="top">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Pickup Point</label>
+                </td>
+                <td>
+                    <select name="ppoint" id="ppoint" class="ppoint">
+                        <option value="1">Koyambedu</option>
+                        <option value="2">Kilambakkam</option>
+                        <option value="3">Charminar</option>
+                        <option value="4">Electronic City</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Drop Point</label>
+                </td>
+                <td>
+                    <select name="dpoint" id="dpoint" class="dpoint">
+                        <option value="1">Koramangala</option>
+                        <option value="2">Gandhipuram</option>
+                        <option value="3">Hitech City</option>
+                        <option value="4">Banashankari</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Date</label>
+                </td>
+                <td>
+                    <input type="date" class="traveldate" id="traveldate">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Vehicle Type</label>
+                </td>
+                <td>
+                    <select name="vtype" id="vtype" class="vtype">
+                        <option value="1">AC Sleeper</option>
+                        <option value="2">AC Semi Sleeper</option>
+                        <option value="3">AC Seater</option>
+                        <option value="4">NON AC Sleeper</option>
+                        <option value="5">NON AC Semi Sleeper</option>
+                        <option value="6">NON AC Seater</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <input type="submit" class="submitservice" id="submitservice" value="Search">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>
