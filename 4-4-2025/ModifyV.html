@@ -5,8 +5,11 @@
         </h3>
     <link rel="stylesheet" href="Ticket.css">
     </head>
+    <div class="Navi">
+        <a href="ADMIN.HTML" class="li">Admin</a></div><br>
     <body>
-          <table class="ticket" width="100%">
+        <div class="ticket">
+            <table  width="100%">
                     <tr>
                         <td >
                             SERVICE NAME
@@ -20,12 +23,16 @@
                             VEHICLE TYPE
                         </td>
                         <td>
-                            <input type="text" width="100%" height="50%">
+                            <select>
+                                <option type="text" value="Sleeper">Sleeper</option>
+                                <option type="text" value="Express">Express</option>
+                                <option type="text" value="Luxury">Luxury</option>
+                            </select>
                         </td>
                     </tr>
                 </table>
+                </div>
                 <br>
-        <div class="Navi">
-        <a href="ADMIN.HTML" class="li">Admin</a></div>
+                <input type="submit" value="Modify"/>
     </body>
 </html>

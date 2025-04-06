@@ -1,18 +1,26 @@
 .ticket{
-    border:3px;
     height:20%;
-    border-style:solid;
+    border-style:dashed;
+    border:5px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    align-items: stretch;
+    width: 100%;
 }
 .ticket th{
     background-color: rgb(159, 166, 230);
-    border-style:dashed;
-    border:2px;
+    border-style:solid;
+    border:3px;
+    
 }
 .ticket tr{
     background-color: rgb(247, 236, 245);
     border:2px;
     border-style:solid;
     width:100%;
+    
+   
 }
 .ticket td{
     background-color: rgb(236, 230, 240);
@@ -40,7 +48,7 @@ select{
 }
 input[type=submit]  {
     background-color: rgb(46, 46, 213);
-    width: 75%;
+    width: 15%;
     color: white;
     font-weight: bold;
 }
@@ -52,3 +60,13 @@ input[type=checkbox] {
     width: 15%;
     height:20px;
 }
+@media all and (max-width: 800px) {
+    .ticket{
+      justify-content: space-around;
+    }
+  }
+@media all and (max-width: 600px) {
+    .ticket{
+      flex-flow: column wrap;
+      padding: 0;
+    }
