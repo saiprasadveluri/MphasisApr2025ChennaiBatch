@@ -1,0 +1,108 @@
+.tl {
+    margin-left:60px;
+}
+
+.head {
+    display:flex;
+}
+
+.heading {
+    color: blue;
+    text-align: center;
+}
+
+.login {
+    text-align: right;
+    background-color: aqua;
+    padding: 10px 5px 10px 0px;
+}
+
+
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.tb{
+    margin-top: 30px;
+}
+
+.tle {
+    background-color: rgb(216, 228, 232);
+}
+
+.tbl {
+    background-color: aqua;
+    text-align: center;
+}
+
+.book{
+    margin-top: 20px;
+    background-color: aquamarine;
+    padding: 40px 600px;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+.input {
+    width: 100%;
+}
+
+.subbtn {
+    width: 100%;
+    background-color: rgb(4, 184, 204);
+    border: 1px solid blue;
+    padding: 3px 0px;
+    color: rgb(255, 255, 255)
+}
+
+.locdd {
+    width: 100%
+}
+
+.logincont {
+    background-color: lightsteelblue;
+    margin-left: 40%;
+    margin-right: 42%;
+    margin-top: 150px;
+    padding: 10px 20px 40px 30px;
+    border-radius: 5px;
+    border: 2px solid black
+}
+
+.loginbg {
+    background-color: rgb(8, 103, 106)
+}
+
+.sa {
+    margin-left: 50px;
+    background-color: aqua;
+    margin-right: 933px;
+    padding: 5px;
+}
+
+.seat {
+    margin-bottom:25px
+}
+
+.bookbtn {
+    margin-left:50px;
+    margin-top:30px
+}
+
+.book {
+    margin-top: 20px;
+    background-color: lightskyblue;
+    padding: 10px 55px 10px 10px;
+    border-radius: 15px;
+    border: 2px solid grey;
+    margin-right: 127px;
+}
+
+.td {
+    font-weight:bold;
+}
