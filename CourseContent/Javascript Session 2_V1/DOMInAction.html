@@ -1,0 +1,165 @@
+﻿<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+            
+            var EmployeeArr=[
+            {
+                id : "001",
+                name:"Sai",
+                dept:"DEV"
+            },
+            {
+                id : "002",
+                name:"Durga",
+                dept:"QA"
+                }
+        ];
+
+        function ValidateId() {
+            var eid = document.getElementById('empId').value;
+            
+            if (eid == undefined || eid.length == 0) {
+                document.getElementById('hid_empId').style = 'display:true';
+                return;
+            }
+            else {
+                document.getElementById('hid_empId').style = 'display:none';
+            }
+        }
+        function UpdateData() {
+            var eid = document.getElementById('empId').value;
+            if (eid == undefined || eid.length == 0) {
+                document.getElementById('hid_empId').style = 'display:true';
+                return;
+            }
+            
+            var ename = document.getElementById('empName').value;
+            var edept = document.getElementById('empDept').value;
+            EmployeeArr.push({ id: eid, name: ename, dept: edept });            
+        }
+        function ShowData() {
+           
+            var tblNode = document.getElementById('tblDynamic');
+           
+            tblNode.innerHTML = '';
+            EmployeeArr.map(obj => {
+                var trNew = document.createElement("TR");
+                trNew.id = obj.id;
+                //Column for each Property
+                var tdId = document.createElement("TD");
+                var IdText = document.createTextNode(obj.id);
+                tdId.appendChild(IdText);
+                var tdName = document.createElement("TD");
+                var nameText = document.createTextNode(obj.name);
+                tdName.appendChild(nameText);
+                var tdDept = document.createElement("TD");
+                var deptText = document.createTextNode(obj.dept);
+                tdDept.appendChild(deptText);
+                var tdAction = document.createElement("TD");
+                tdAction.innerHTML = "<button onclick=DeleteRow('" + trNew.id + "')> Delete</button>";
+                
+                //Add the columns to new row
+                trNew.appendChild(tdId);
+                trNew.appendChild(tdName);
+                trNew.appendChild(tdDept);
+                trNew.appendChild(tdAction);
+
+                //Add the Row to Table
+                tblNode.appendChild(trNew)
+            });
+
+            
+        }
+        function DeleteRow(rid) {
+            alert(rid)
+            var indx = EmployeeArr.findIndex(id => rid == id);
+            EmployeeArr.splice(indx, 1);
+            ShowData();
+        }
+        function TestDom1() {
+            divNodes = document.getElementsByTagName("div");
+            alert(divNodes.length);
+            var secondDiv = divNodes[1];//Access the second Div
+            alert(secondDiv.nodeName)
+            alert(secondDiv.innerHTML)
+            secondDiv.innerText = "Modified Text";
+        }
+
+        function GetPText() {
+            divNodes = document.getElementsByTagName("div");
+            var secondDiv = divNodes[1];
+            alert(secondDiv.childNodes[0]);
+            alert(secondDiv.childNodes[0].childNodes[0].nodeValue);
+        }
+
+        function GetDivAttribute() {
+            divNodes = document.getElementsByTagName("div");
+            var firstDiv = divNodes[0];
+            //alert(firstDiv.attributes.length);
+            //for (attr of firstDiv.attributes)
+            //{
+            //    alert(attr.nodeName);
+            //}
+            var newCol = prompt('Enter New Color', 'black');
+            if (newCol!=undefined)
+                firstDiv.style = 'background-Color:' + newCol;
+        }
+
+        function GetDivById() {
+            var divNode = document.getElementById('fdiv');
+            alert(divNode.attributes.length);
+        }
+
+        function GetPById() {
+            var pNode = document.getElementById('txtP');
+            alert(pNode.childNodes.length);
+            alert(pNode.childNodes[0].nodeValue);
+        }
+        function AddNewElement() {
+            var pelm = document.createElement("P");
+            var txtElm = document.createTextNode("My New Text");
+            pelm.appendChild(txtElm);
+            var txtP2Node = document.getElementById('txtP2');
+            var parentDiv=document.getElementById('sdiv')
+            parentDiv.insertBefore(pelm, txtP2Node);           
+        }
+        function ShowTable() {
+            var tblNode = document.getElementById('tblDynamic');
+            var TrNew = document.createElement("TR");
+            var TdNew = document.createElement("TD");
+            var tdText = document.createTextNode("MyText");
+            TdNew.appendChild(tdText);
+            TrNew.appendChild(TdNew);
+            tblNode.appendChild(TrNew);
+        }
+
+    </script>
+</head>
+<body>
+    <div style="background-color:red" id="fdiv">
+        <div>
+            <input type="text" id="empId"  onkeyup="ValidateId()" onchange="ValidateId()" />
+            <label id="hid_empId" style="display:none">Please Enter Employee Id</label>
+        </div>
+        <div>
+            <input type="text" id="empName" />
+        </div>
+        <div>
+            <input type="text" id="empDept" />
+        </div>
+
+        <div>
+            <button onclick=" UpdateData(); ShowData();">Update Table</button>
+        </div>
+    </div>
+    <table id="tblDynamic" style="width:100%">
+    </table>
+    <div id="sdiv">
+        <p id="txtP">My Text</p>
+        <p id="txtP2">My Text</p>
+    </div>
+    <button onclick="ShowData()">Show Data</button>
+</body>
+</html>
