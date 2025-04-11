@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <form method="post" action="/signup" id="create_account">
+        <fieldset id="signup">
+            <legend>Create New Account</legend>
+            <ol>
+                <li>
+                    <label for="first_name">First Name</label><br />
+                    <input type="text" name="first_name" id="first_name" placeholder="'John'" autofocus />
+                </li>
+                <li>
+                    <label for="last_name">Last Name</label><br />
+                    <input type="text" name="last_name" id="last_name" placeholder="'Smith'" />
+                </li>
+                <li>
+                    <label for="email">Email</label><br />
+                    <input type="email" name="email" id="email" placeholder="user@example.com" />
+                </li>
+                <li>
+                    <label for="password">Password</label><br />
+                    <input type="password" name="password" id="password" placeholder="8-10 characters" />
+                </li>
+                <li>
+                    <label for="password_confirmation">Password Confirmation</label><br />
+                    <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Type your password again" />
+                </li>
+                <li>
+                    <input type="submit" value="Sign Up" />
+                </li>
+
+            </ol>
+        </fieldset>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div>
+        <form method="post">
+            <fieldset id="signup">
+                <ol>
+                    <li>
+                        <label for="first_name">First Name</label>
+                        <input type="text" name="first_name" id="first_name" placeholder="'John'" autofocus="true" required class="ip1" />
+                    </li>
+                    <li>
+                        <label for="last_name">Last Name</label>
+                        <input type="text" name="last_name" id="last_name" placeholder="'Smith'" required class="ip2" />
+                    </li>
+                    <li>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="user@example.com" required class="ip3" />
+                    </li>
+                    <li>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" value="" autocomplete="off" placeholder="8-10 characters" pattern="^(?=,{8,})(?=.*[a-z))(?=.*[A-Z)(?=.*[\d])(?=.*[\W]).*$" title="Password must be 8 or more characters with at least one number, an uppercase letter, and one special character" class="ip1" required />
+                    </li>
+                    <li>
+                        <label for="password_confirmation">Password Confirmation</label>
+                        <input type="password" name="password_confirmation" id="password_confirmation" value="" autocomplete="off" placeholder="Type your password again" pattern="^(?=,{8,})(?=.*[a-z))(?=.*[A-Z)(?=.*[\d])(?=.*[\W]).*$" title="Password must be 8 or more characters with at least one number, an uppercase letter, and one special character" class="ip2" required />
+                    </li>
+
+                    <li>
+                        <input type="submit" value="Sign Up" class="ip4" />
+                    </li>
+
+                </ol>
+            </fieldset>
+
+        </form>
+    </div>
+</body>
+</html>

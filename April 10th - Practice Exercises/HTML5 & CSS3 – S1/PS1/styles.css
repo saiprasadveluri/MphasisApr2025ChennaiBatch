@@ -1,0 +1,47 @@
+body {
+    font-size:18px;
+    font-family:sans-serif
+    
+}
+
+
+.nav {
+    margin-left:20px
+}
+
+.content {
+    display:flex
+}
+
+.main{
+    display:flex;   
+}
+
+.right {
+    width: 56%;
+    margin-left: 100px;
+    margin-right: 85px;
+}
+
+.para1 {
+    padding-right: 277px;
+}
+
+.quote {
+    margin-right: 12px;
+    width: 100%;
+}
+
+.para2 {
+    margin-top:20px
+}
+
+.cr {
+    text-align:center
+}
+
+.cr1 {
+    text-align: center;
+    margin-top:15px
+}
+
