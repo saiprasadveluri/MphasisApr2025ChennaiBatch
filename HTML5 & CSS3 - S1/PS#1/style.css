@@ -1,0 +1,41 @@
+.container{
+    display:flex;
+}
+
+.box {
+    margin: 20px;
+    margin-left: 0px;
+    padding: 20px; 
+    width: 75%;
+    height: 380px;
+     }
+.subbox{ margin: 20px;
+    padding: 0px; 
+    margin-left:0px ;
+    padding-bottom:0px ;
+    width: 75%;
+    height: 150px;
+    
+
+}
+.subbox2{ margin: 20px;
+    padding: 35px; 
+    padding-bottom: 0px;
+    margin-left:0px ;
+    margin-bottom: 0px;
+    width: 25%;
+    height: 110px;
+   
+
+}
+    
+        
+    
+    
+.box2 {
+margin: 20px;
+padding: 20px;
+width: 25%;
+height: 380px;
+
+}

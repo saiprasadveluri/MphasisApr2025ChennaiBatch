@@ -1,0 +1,16 @@
+input[required]:invalid, input[pattern]:invalid{
+    border-color: #A5340B;;
+}
+input[required]:valid, input[pattern]:valid{
+    border-color:#0B9900;
+}
+li{
+    list-style: none; 
+    
+}
+label{
+    display: inline-block; 
+    width: 100px; 
+    margin-bottom: 20px;
+    
+}

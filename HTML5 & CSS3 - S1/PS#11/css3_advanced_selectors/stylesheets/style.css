@@ -1,0 +1,9 @@
+table{
+    border-collapse: collapse;
+    width:600px;
+}
+th,td{border:none;}
+th{
+    background-color: #000;
+    color:#fff;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            list-style: none;
+            
+        }
+        label{
+            display: inline-block; 
+            width: 100px; 
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+    <li>
+        <label for="password">Password</label>
+        <input id="password" type="password" name="password" value="" autocomplete="off" placeholder="8-10 characters" required pattern ="^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[\W]).*$" 
+title="Password must be 8 or more characters with at least one number, an uppercase letter, and one special character ">
+        
+    </li>
+    <li>
+        <label for="password_confirmation">Password Confirmation</label>
+        <input id="password_confirmation" type="password" name="password_confirmation" value="" autocomplete="off" required placeholder="Type yout password again" pattern ="^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[\W]).*$" 
+title="Password confirmation must be 8 or more characters with at least one number, an uppercase letter, and one special character ">
+        
+    </li>
+    <button>Sign Up</button>
+    </form>
+</body>
+</html>
