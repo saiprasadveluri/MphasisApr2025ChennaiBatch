@@ -1,0 +1,11 @@
+Firstly, run this command to globally install json-server
+
+1. npm install -g json-server
+
+Move to your local folder(like 'myapp') and run this command
+
+2. npm install json-server
+
+Open a new Terminal in the same folder
+
+3. npx json-server --watch db.json --port 3004

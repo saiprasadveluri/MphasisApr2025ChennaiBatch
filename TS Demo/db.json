@@ -1,0 +1,199 @@
+{
+  "userInfo": [
+    {
+      "id": "1",
+      "name": "Sai",
+      "role": "Admin",
+      "location": "HYD",
+      "email": "admin@admin.com",
+      "password": "admin"
+    },
+    {
+      "id": "2",
+      "name": "Ravi",
+      "role": "Owner",
+      "location": "HYD",
+      "email": "ravi@ravi.com",
+      "password": "123456"
+    },
+    {
+      "id": "3",
+      "name": "John",
+      "role": "Owner",
+      "location": "HYD",
+      "email": "john@john.com",
+      "password": "123456"
+    },
+    {
+      "id": "4",
+      "name": "Ram",
+      "role": "Owner",
+      "location": "CHN",
+      "email": "ram@ram.com",
+      "password": "123456"
+    },
+    {
+      "id": "5",
+      "name": "Mary",
+      "role": "User",
+      "location": "HYD",
+      "email": "mary@mary.com",
+      "password": "123456"
+    }
+  ],
+  "restaurantInfo": [
+    {
+      "id": "1",
+      "name": "A2B",
+      "location": "CHN",
+      "owner": 2
+    },
+    {
+      "id": "2",
+      "name": "Mayuri",
+      "location": "HYD",
+      "owner": 2
+    },
+    {
+      "id": "68b8",
+      "name": "HighwayInn",
+      "location": "CHN",
+      "owner": 1
+    },
+    {
+      "id": "be06",
+      "name": "RR",
+      "location": "BLR",
+      "owner": 2
+    },
+    {
+      "id": "7ed4",
+      "name": "RRR",
+      "location": "CHENNAI",
+      "owner": 1
+    }
+  ],
+  "menu": [
+    {
+      "id": "1",
+      "rid": "1",
+      "dishname": "Dosa",
+      "dishtype": "VEG",
+      "price": 75.45
+    },
+    {
+      "id": "2",
+      "rid": "1",
+      "dishname": "Idli",
+      "dishtype": "VEG",
+      "price": 25
+    },
+    {
+      "id": "3",
+      "rid": "1",
+      "dishname": "Fried Rice",
+      "dishtype": "NON-VEG",
+      "price": 145.25
+    },
+    {
+      "id": "4",
+      "rid": "2",
+      "dishname": "Masla Dosa",
+      "dishtype": "VEG",
+      "price": 100.45
+    },
+    {
+      "id": "5",
+      "rid": "2",
+      "dishname": "Podi Idli",
+      "dishtype": "VEG",
+      "price": 75
+    },
+    {
+      "id": "6",
+      "rid": "2",
+      "dishname": "Biriyani",
+      "dishtype": "NON-VEG",
+      "price": 175
+    },
+    {
+      "id": "07fb",
+      "dishname": "Dahi Vada",
+      "dishtype": "VEG",
+      "price": 76,
+      "rid": "1"
+    },
+    {
+      "id": "ab6f",
+      "dishname": "SN Thali",
+      "dishtype": "JAIN",
+      "price": 225.5,
+      "rid": "1"
+    },
+    {
+      "id": "d7a4",
+      "dishname": "GChk",
+      "dishtype": "NON-VEG",
+      "price": 189.75,
+      "rid": "1"
+    },
+    {
+      "id": "0ad6",
+      "dishname": "Plain Dosa",
+      "dishtype": "VEG",
+      "price": 27,
+      "rid": "2"
+    },
+    {
+      "id": "45db",
+      "dishname": "Curd Rice",
+      "dishtype": "VEG",
+      "price": 120,
+      "rid": "1"
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "uid": "5",
+      "rid": "1"
+    },
+    {
+      "id": "2",
+      "uid": "6",
+      "rid": "2"
+    }
+  ],
+  "orderline": [
+    {
+      "id": "1",
+      "oid": "1",
+      "mid": "1",
+      "qty": 4
+    },
+    {
+      "id": "2",
+      "oid": "1",
+      "mid": "2",
+      "qty": 2
+    },
+    {
+      "id": "3",
+      "oid": "1",
+      "mid": "3",
+      "qty": 1
+    },
+    {
+      "id": "1",
+      "oid": "2",
+      "mid": "1",
+      "qty": 2
+    },
+    {
+      "id": "2",
+      "oid": "1",
+      "mid": "2",
+      "qty": 3
+    }
+  ]
+}
