@@ -1,0 +1,23 @@
+<div class="addVisStyle">
+   <form>
+    <div class="form-group">
+        <label class="form-control">Visitor Id:</label>
+        <input type="text" name="visId" [(ngModel)]="visId" class="form-control" placeholder="Enter Visitor Id"/>
+    </div>
+        <div class="form-group">
+            <label class="form-control">Visitor Name:</label>
+            <input type="text" name="visName" class="form-control" (keyup)="OnUserKeyUp()" [(ngModel)]="visName"/>
+            <label>No Of chars Left: </label>{{numChars}}            
+        </div>
+        <div class="form-group">
+            <label class="form-control">Host Name:</label>
+            <input type="text" name="visHost" [(ngModel)]="visHost" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary form-control" (click)="OnVisitorAdd()">Save Visitor Data</button>
+        </div>
+   </form>
+   <div>
+    <span>Number of Visitors: {{visitorData.length}}</span>
+   </div>
+</div>

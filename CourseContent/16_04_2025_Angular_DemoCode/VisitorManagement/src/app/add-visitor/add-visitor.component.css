@@ -1,0 +1,11 @@
+.addVisStyle{
+    background-color:chartreuse;
+    height:300px;
+    padding-top:20px;
+    padding-left:20px;
+    
+}
+
+.addVisStyle div{
+    padding-bottom:3px;
+}
