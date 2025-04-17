@@ -1,0 +1,20 @@
+<div *ngIf="showDiv==true">
+    Here is my Text...
+</div>
+<button (click)="onClick()">Click me!</button>
+<!-- <div *ngFor="let item of INDCricket;let index=index">
+    {{index}} - {{item}}
+     
+</div> -->
+<ol>
+    <li  *ngFor="let i of INDCricket; let ind=index">
+        <span>{{i}}<button class="btn btn-link" (click)="RemoveItem(ind)">X</button></span></li>
+ </ol>
+ <form>
+    <input type="text" name="cricName" [(ngModel)]="newCricName" />
+    <br>
+    <button (click)="AddNewEntry()">Add New Entry</button>
+    <div *ngIf="textDiv">
+        Name Already Exists
+    </div> 
+</form>
