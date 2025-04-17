@@ -1,0 +1,16 @@
+.addvStyle{
+    background-color: blueviolet;
+    height: 46vh;
+    margin: 0;
+    padding: 0;
+}
+.form-group{
+    background-color: aqua;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    button{
+        margin: 10px;
+        padding: 10px;
+    }
+}

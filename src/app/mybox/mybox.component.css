@@ -1,0 +1,20 @@
+.v1Style{
+    background-color: antiquewhite;
+    height: 600px;
+}
+.row{
+    /* background-color: rgb(172, 97, 0); */
+    height: 500px;
+}
+#row1{
+    background-color: aqua;
+    padding: 20px;
+}
+#row2{
+    background-color: beige;
+    padding: 20px;
+    
+}
+table{
+    border: 2px solid black;
+}
