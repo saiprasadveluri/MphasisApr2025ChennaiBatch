@@ -1,0 +1,15 @@
+C:\Users\Pranav Reddy\source\repos\FoodDeliveryApp\FoodDeliveryApp\bin\Debug\FoodDeliveryApp.exe.config
+C:\Users\Pranav Reddy\source\repos\FoodDeliveryApp\FoodDeliveryApp\bin\Debug\FoodDeliveryApp.exe
+C:\Users\Pranav Reddy\source\repos\FoodDeliveryApp\FoodDeliveryApp\bin\Debug\FoodDeliveryApp.pdb
+C:\Users\Pranav Reddy\source\repos\FoodDeliveryApp\FoodDeliveryApp\obj\Debug\FoodDeliveryApp.csproj.AssemblyReference.cache
+C:\Users\Pranav Reddy\source\repos\FoodDeliveryApp\FoodDeliveryApp\obj\Debug\FoodDeliveryApp.Forms.AddMenuItemForm.resources
+C:\Users\Pranav Reddy\source\repos\FoodDeliveryApp\FoodDeliveryApp\obj\Debug\FoodDeliveryApp.Forms.LoginForm.resources
+C:\Users\Pranav Reddy\source\repos\FoodDeliveryApp\FoodDeliveryApp\obj\Debug\FoodDeliveryApp.Forms.RegistrationForm.resources
+C:\Users\Pranav Reddy\source\repos\FoodDeliveryApp\FoodDeliveryApp\obj\Debug\FoodDeliveryApp.Forms.RestaurantSearchForm.resources
+C:\Users\Pranav Reddy\source\repos\FoodDeliveryApp\FoodDeliveryApp\obj\Debug\FoodDeliveryApp.csproj.GenerateResource.cache
+C:\Users\Pranav Reddy\source\repos\FoodDeliveryApp\FoodDeliveryApp\obj\Debug\FoodDeliveryApp.csproj.CoreCompileInputs.cache
+C:\Users\Pranav Reddy\source\repos\FoodDeliveryApp\FoodDeliveryApp\obj\Debug\FoodDeliveryApp.exe
+C:\Users\Pranav Reddy\source\repos\FoodDeliveryApp\FoodDeliveryApp\obj\Debug\FoodDeliveryApp.pdb
+C:\Users\Pranav Reddy\source\repos\FoodDeliveryApp\FoodDeliveryApp\obj\Debug\FoodDeliveryApp.Forms.AdminDashboard.resources
+C:\Users\Pranav Reddy\source\repos\FoodDeliveryApp\FoodDeliveryApp\obj\Debug\FoodDeliveryApp.Forms.CustomerDashboard.resources
+C:\Users\Pranav Reddy\source\repos\FoodDeliveryApp\FoodDeliveryApp\obj\Debug\FoodDeliveryApp.Forms.OwnerDashboard.resources
