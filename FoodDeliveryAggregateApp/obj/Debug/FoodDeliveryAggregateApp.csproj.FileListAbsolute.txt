@@ -1,0 +1,15 @@
+C:\Users\kandagatla.sahithi\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.csproj.AssemblyReference.cache
+C:\Users\kandagatla.sahithi\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.Form1.resources
+C:\Users\kandagatla.sahithi\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.Properties.Resources.resources
+C:\Users\kandagatla.sahithi\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.csproj.GenerateResource.cache
+C:\Users\kandagatla.sahithi\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.csproj.CoreCompileInputs.cache
+C:\Users\kandagatla.sahithi\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\bin\Debug\FoodDeliveryAggregateApp.exe.config
+C:\Users\kandagatla.sahithi\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\bin\Debug\FoodDeliveryAggregateApp.exe
+C:\Users\kandagatla.sahithi\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\bin\Debug\FoodDeliveryAggregateApp.pdb
+C:\Users\kandagatla.sahithi\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.exe
+C:\Users\kandagatla.sahithi\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.pdb
+C:\Users\kandagatla.sahithi\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.AddRestaurant.resources
+C:\Users\kandagatla.sahithi\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.AddUser.resources
+C:\Users\kandagatla.sahithi\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.AdminDashBoard.resources
+C:\Users\kandagatla.sahithi\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.AddLocation.resources
+C:\Users\kandagatla.sahithi\FoodDeliveryAggregateApp\FoodDeliveryAggregateApp\obj\Debug\FoodDeliveryAggregateApp.CustomerDashboard.resources
