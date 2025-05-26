@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodDelForms", "FoodDelForms\FoodDelForms.csproj", "{C9E42A4C-DB8C-4A97-8DD7-76D29F234440}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9E42A4C-DB8C-4A97-8DD7-76D29F234440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9E42A4C-DB8C-4A97-8DD7-76D29F234440}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9E42A4C-DB8C-4A97-8DD7-76D29F234440}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9E42A4C-DB8C-4A97-8DD7-76D29F234440}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2335BBD9-4C20-4043-8615-8427F86EE0D6}
+	EndGlobalSection
+EndGlobal
