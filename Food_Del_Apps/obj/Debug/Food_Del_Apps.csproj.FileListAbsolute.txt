@@ -1,0 +1,14 @@
+C:\Users\gandlapenta.rajeev\source\repos\Food_Del_Apps\Food_Del_Apps\obj\Debug\Food_Del_Apps.csproj.AssemblyReference.cache
+C:\Users\gandlapenta.rajeev\source\repos\Food_Del_Apps\Food_Del_Apps\obj\Debug\Food_Del_Apps.AddMenuItemForm.resources
+C:\Users\gandlapenta.rajeev\source\repos\Food_Del_Apps\Food_Del_Apps\obj\Debug\Food_Del_Apps.AddRestaurantForm.resources
+C:\Users\gandlapenta.rajeev\source\repos\Food_Del_Apps\Food_Del_Apps\obj\Debug\Food_Del_Apps.LoginForms.resources
+C:\Users\gandlapenta.rajeev\source\repos\Food_Del_Apps\Food_Del_Apps\obj\Debug\Food_Del_Apps.MainDashboardForm.resources
+C:\Users\gandlapenta.rajeev\source\repos\Food_Del_Apps\Food_Del_Apps\obj\Debug\Food_Del_Apps.MenuManagementForm.resources
+C:\Users\gandlapenta.rajeev\source\repos\Food_Del_Apps\Food_Del_Apps\obj\Debug\Food_Del_Apps.OrderForm.resources
+C:\Users\gandlapenta.rajeev\source\repos\Food_Del_Apps\Food_Del_Apps\obj\Debug\Food_Del_Apps.Properties.Resources.resources
+C:\Users\gandlapenta.rajeev\source\repos\Food_Del_Apps\Food_Del_Apps\obj\Debug\Food_Del_Apps.RegisterFormcs.resources
+C:\Users\gandlapenta.rajeev\source\repos\Food_Del_Apps\Food_Del_Apps\obj\Debug\Food_Del_Apps.RestaurantManagementForm.resources
+C:\Users\gandlapenta.rajeev\source\repos\Food_Del_Apps\Food_Del_Apps\obj\Debug\Food_Del_Apps.RestaurantOrdersForm.resources
+C:\Users\gandlapenta.rajeev\source\repos\Food_Del_Apps\Food_Del_Apps\obj\Debug\Food_Del_Apps.RestaurantSearchForm.resources
+C:\Users\gandlapenta.rajeev\source\repos\Food_Del_Apps\Food_Del_Apps\obj\Debug\Food_Del_Apps.csproj.GenerateResource.cache
+C:\Users\gandlapenta.rajeev\source\repos\Food_Del_Apps\Food_Del_Apps\obj\Debug\Food_Del_Apps.csproj.CoreCompileInputs.cache

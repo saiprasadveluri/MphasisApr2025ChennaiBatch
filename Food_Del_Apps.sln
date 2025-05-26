@@ -5,6 +5,12 @@ VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Food_Del_Apps", "Food_Del_Apps\Food_Del_Apps.csproj", "{B06BD075-ABCD-48A6-8596-93CF14FF2741}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRestaurantApp.Core", "MyRestaurantApp.Core\MyRestaurantApp.Core.csproj", "{7A890218-D918-4DEF-8B95-92269D07ED1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRestaurantApp.DataAccess", "MyRestaurantApp.DataAccess\MyRestaurantApp.DataAccess.csproj", "{4097D324-7462-4F9D-82E9-833F39FA485A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRestaurantApp.Services", "MyRestaurantApp.Services\MyRestaurantApp.Services.csproj", "{2B3C35F0-A3C1-4CF4-94D2-92B924E29525}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{B06BD075-ABCD-48A6-8596-93CF14FF2741}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B06BD075-ABCD-48A6-8596-93CF14FF2741}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B06BD075-ABCD-48A6-8596-93CF14FF2741}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A890218-D918-4DEF-8B95-92269D07ED1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A890218-D918-4DEF-8B95-92269D07ED1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A890218-D918-4DEF-8B95-92269D07ED1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A890218-D918-4DEF-8B95-92269D07ED1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4097D324-7462-4F9D-82E9-833F39FA485A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4097D324-7462-4F9D-82E9-833F39FA485A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4097D324-7462-4F9D-82E9-833F39FA485A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4097D324-7462-4F9D-82E9-833F39FA485A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B3C35F0-A3C1-4CF4-94D2-92B924E29525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B3C35F0-A3C1-4CF4-94D2-92B924E29525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B3C35F0-A3C1-4CF4-94D2-92B924E29525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B3C35F0-A3C1-4CF4-94D2-92B924E29525}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

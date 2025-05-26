@@ -1,0 +1,2 @@
+C:\Users\gandlapenta.rajeev\source\repos\Food_Del_Apps\MyRestaurantApp.Core\obj\Debug\MyRestaurantApp.Core.csproj.AssemblyReference.cache
+C:\Users\gandlapenta.rajeev\source\repos\Food_Del_Apps\MyRestaurantApp.Core\obj\Debug\MyRestaurantApp.Core.csproj.CoreCompileInputs.cache
