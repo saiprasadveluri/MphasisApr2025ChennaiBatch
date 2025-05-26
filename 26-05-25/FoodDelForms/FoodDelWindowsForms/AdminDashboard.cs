@@ -57,15 +57,15 @@ namespace FoodDelForms
         {
             Owner uinfo = new Owner()
             {
-                DisplayName = "charpitha",
-                Email = "abc@a.com",
+                DisplayName = "vamsi",
+                Email = "vamsi@.com",
                 Password = "123456"
             };
             DataProvider.Instance.AddUser(uinfo);
 
             Location location = new Location()
             {
-                LocationName = "CHENNAI"
+                LocationName = "hyd"
             };
             DataProvider.Instance.AddLocation(location);
             Restaurant restaurant = new Restaurant("A2B", uinfo, location);
