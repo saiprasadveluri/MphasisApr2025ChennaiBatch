@@ -1,0 +1,17 @@
+C:\Users\gandlapenta.rajeev\Desktop\.NET\26.05.2025\Food_App\Food_App\bin\Debug\Food_App.exe.config
+C:\Users\gandlapenta.rajeev\Desktop\.NET\26.05.2025\Food_App\Food_App\bin\Debug\Food_App.exe
+C:\Users\gandlapenta.rajeev\Desktop\.NET\26.05.2025\Food_App\Food_App\bin\Debug\Food_App.pdb
+C:\Users\gandlapenta.rajeev\Desktop\.NET\26.05.2025\Food_App\Food_App\obj\Debug\Food_App.csproj.AssemblyReference.cache
+C:\Users\gandlapenta.rajeev\Desktop\.NET\26.05.2025\Food_App\Food_App\obj\Debug\Food_App.Add_Edit_Restaurant.resources
+C:\Users\gandlapenta.rajeev\Desktop\.NET\26.05.2025\Food_App\Food_App\obj\Debug\Food_App.Entity.Add_Edit_Menu_Item.resources
+C:\Users\gandlapenta.rajeev\Desktop\.NET\26.05.2025\Food_App\Food_App\obj\Debug\Food_App.AdminDashboard.resources
+C:\Users\gandlapenta.rajeev\Desktop\.NET\26.05.2025\Food_App\Food_App\obj\Debug\Food_App.Card_Summary.resources
+C:\Users\gandlapenta.rajeev\Desktop\.NET\26.05.2025\Food_App\Food_App\obj\Debug\Food_App.CustomerDashboard.resources
+C:\Users\gandlapenta.rajeev\Desktop\.NET\26.05.2025\Food_App\Food_App\obj\Debug\Food_App.Login_Form.resources
+C:\Users\gandlapenta.rajeev\Desktop\.NET\26.05.2025\Food_App\Food_App\obj\Debug\Food_App.Order_History.resources
+C:\Users\gandlapenta.rajeev\Desktop\.NET\26.05.2025\Food_App\Food_App\obj\Debug\Food_App.OwnerDashboard.resources
+C:\Users\gandlapenta.rajeev\Desktop\.NET\26.05.2025\Food_App\Food_App\obj\Debug\Food_App.Properties.Resources.resources
+C:\Users\gandlapenta.rajeev\Desktop\.NET\26.05.2025\Food_App\Food_App\obj\Debug\Food_App.csproj.GenerateResource.cache
+C:\Users\gandlapenta.rajeev\Desktop\.NET\26.05.2025\Food_App\Food_App\obj\Debug\Food_App.csproj.CoreCompileInputs.cache
+C:\Users\gandlapenta.rajeev\Desktop\.NET\26.05.2025\Food_App\Food_App\obj\Debug\Food_App.exe
+C:\Users\gandlapenta.rajeev\Desktop\.NET\26.05.2025\Food_App\Food_App\obj\Debug\Food_App.pdb
