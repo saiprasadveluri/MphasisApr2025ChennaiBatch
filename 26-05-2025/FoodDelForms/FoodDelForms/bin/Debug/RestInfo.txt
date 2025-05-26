@@ -1,0 +1,1 @@
+[{"RestId":0,"RestName":"A2B","MenuList":[],"RestOwner":{"DisplayName":"charpitha","Location":null,"Email":"abc@a.com","Password":"123456","Role":null},"RLocation":{"LocationId":0,"LocationName":"CHENNAI"}},{"RestId":2,"RestName":"kelaan","MenuList":[],"RestOwner":null,"RLocation":null},{"RestId":4,"RestName":"jolly","MenuList":[],"RestOwner":null,"RLocation":null}]
