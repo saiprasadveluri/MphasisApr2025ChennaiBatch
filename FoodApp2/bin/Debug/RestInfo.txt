@@ -1,0 +1,1 @@
+[{"RestaurantName":"rest1","MenuList":[],"RestOwner":null,"RestLocation":null},{"RestaurantName":"rest2","MenuList":[],"RestOwner":null,"RestLocation":null},{"RestaurantName":"5","MenuList":[],"RestOwner":null,"RestLocation":null}]
