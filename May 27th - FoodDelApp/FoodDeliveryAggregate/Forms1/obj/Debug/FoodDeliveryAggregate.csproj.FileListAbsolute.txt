@@ -1,0 +1,15 @@
+C:\Users\nagaram.trinay\source\repos\Forms1\Forms1\bin\Debug\Forms1.exe.config
+C:\Users\nagaram.trinay\source\repos\Forms1\Forms1\bin\Debug\Forms1.exe
+C:\Users\nagaram.trinay\source\repos\Forms1\Forms1\bin\Debug\Forms1.pdb
+C:\Users\nagaram.trinay\source\repos\Forms1\Forms1\obj\Debug\FoodDeliveryAggregate.csproj.AssemblyReference.cache
+C:\Users\nagaram.trinay\source\repos\Forms1\Forms1\obj\Debug\Forms1.signin.resources
+C:\Users\nagaram.trinay\source\repos\Forms1\Forms1\obj\Debug\Forms1.Login.resources
+C:\Users\nagaram.trinay\source\repos\Forms1\Forms1\obj\Debug\Forms1.Properties.Resources.resources
+C:\Users\nagaram.trinay\source\repos\Forms1\Forms1\obj\Debug\FoodDeliveryAggregate.csproj.GenerateResource.cache
+C:\Users\nagaram.trinay\source\repos\Forms1\Forms1\obj\Debug\FoodDeliveryAggregate.csproj.CoreCompileInputs.cache
+C:\Users\nagaram.trinay\source\repos\Forms1\Forms1\obj\Debug\Forms1.exe
+C:\Users\nagaram.trinay\source\repos\Forms1\Forms1\obj\Debug\Forms1.pdb
+C:\Users\nagaram.trinay\source\repos\Forms1\Forms1\obj\Debug\Forms1.AdminDashboard.resources
+C:\Users\nagaram.trinay\source\repos\Forms1\Forms1\obj\Debug\Forms1.AddNewRest.resources
+C:\Users\nagaram.trinay\source\repos\Forms1\Forms1\obj\Debug\Forms1.OwnerDashboard.resources
+C:\Users\nagaram.trinay\source\repos\Forms1\Forms1\obj\Debug\Forms1.UserDashboard.resources
