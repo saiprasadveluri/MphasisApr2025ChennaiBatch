@@ -1,0 +1,14 @@
+C:\Users\chunchu.soumya\source\repos\TravelEFWin1\TravelEFWin1DataAccess\bin\Debug\net9.0\TravelEFWin1DataAccess.deps.json
+C:\Users\chunchu.soumya\source\repos\TravelEFWin1\TravelEFWin1DataAccess\bin\Debug\net9.0\TravelEFWin1DataAccess.runtimeconfig.json
+C:\Users\chunchu.soumya\source\repos\TravelEFWin1\TravelEFWin1DataAccess\bin\Debug\net9.0\TravelEFWin1DataAccess.dll
+C:\Users\chunchu.soumya\source\repos\TravelEFWin1\TravelEFWin1DataAccess\bin\Debug\net9.0\TravelEFWin1DataAccess.pdb
+C:\Users\chunchu.soumya\source\repos\TravelEFWin1\TravelEFWin1DataAccess\obj\Debug\net9.0\TravelEFWin1DataAccess.csproj.AssemblyReference.cache
+C:\Users\chunchu.soumya\source\repos\TravelEFWin1\TravelEFWin1DataAccess\obj\Debug\net9.0\TravelEFWin1DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chunchu.soumya\source\repos\TravelEFWin1\TravelEFWin1DataAccess\obj\Debug\net9.0\TravelEFWin1DataAccess.AssemblyInfoInputs.cache
+C:\Users\chunchu.soumya\source\repos\TravelEFWin1\TravelEFWin1DataAccess\obj\Debug\net9.0\TravelEFWin1DataAccess.AssemblyInfo.cs
+C:\Users\chunchu.soumya\source\repos\TravelEFWin1\TravelEFWin1DataAccess\obj\Debug\net9.0\TravelEFWin1DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\chunchu.soumya\source\repos\TravelEFWin1\TravelEFWin1DataAccess\obj\Debug\net9.0\TravelEFWin1DataAccess.dll
+C:\Users\chunchu.soumya\source\repos\TravelEFWin1\TravelEFWin1DataAccess\obj\Debug\net9.0\refint\TravelEFWin1DataAccess.dll
+C:\Users\chunchu.soumya\source\repos\TravelEFWin1\TravelEFWin1DataAccess\obj\Debug\net9.0\TravelEFWin1DataAccess.pdb
+C:\Users\chunchu.soumya\source\repos\TravelEFWin1\TravelEFWin1DataAccess\obj\Debug\net9.0\TravelEFWin1DataAccess.genruntimeconfig.cache
+C:\Users\chunchu.soumya\source\repos\TravelEFWin1\TravelEFWin1DataAccess\obj\Debug\net9.0\ref\TravelEFWin1DataAccess.dll
