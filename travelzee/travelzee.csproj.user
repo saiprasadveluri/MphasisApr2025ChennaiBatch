@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="formDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="location.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LocationDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Service.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="serviceDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="serviceSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ServiceSerach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Servive Type.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
