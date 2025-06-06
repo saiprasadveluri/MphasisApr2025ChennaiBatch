@@ -1,0 +1,14 @@
+C:\Users\sagarika.katkam\Documents\Advance C#\TravelEzeeWindowFormsApp\TravelEzeeWinUI\TravelEzeeeeee1\bin\Debug\net9.0\TravelEzeeeeee1.deps.json
+C:\Users\sagarika.katkam\Documents\Advance C#\TravelEzeeWindowFormsApp\TravelEzeeWinUI\TravelEzeeeeee1\bin\Debug\net9.0\TravelEzeeeeee1.runtimeconfig.json
+C:\Users\sagarika.katkam\Documents\Advance C#\TravelEzeeWindowFormsApp\TravelEzeeWinUI\TravelEzeeeeee1\bin\Debug\net9.0\TravelEzeeeeee1.dll
+C:\Users\sagarika.katkam\Documents\Advance C#\TravelEzeeWindowFormsApp\TravelEzeeWinUI\TravelEzeeeeee1\bin\Debug\net9.0\TravelEzeeeeee1.pdb
+C:\Users\sagarika.katkam\Documents\Advance C#\TravelEzeeWindowFormsApp\TravelEzeeWinUI\TravelEzeeeeee1\obj\Debug\net9.0\TravelEzeeeeee1.csproj.AssemblyReference.cache
+C:\Users\sagarika.katkam\Documents\Advance C#\TravelEzeeWindowFormsApp\TravelEzeeWinUI\TravelEzeeeeee1\obj\Debug\net9.0\TravelEzeeeeee1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sagarika.katkam\Documents\Advance C#\TravelEzeeWindowFormsApp\TravelEzeeWinUI\TravelEzeeeeee1\obj\Debug\net9.0\TravelEzeeeeee1.AssemblyInfoInputs.cache
+C:\Users\sagarika.katkam\Documents\Advance C#\TravelEzeeWindowFormsApp\TravelEzeeWinUI\TravelEzeeeeee1\obj\Debug\net9.0\TravelEzeeeeee1.AssemblyInfo.cs
+C:\Users\sagarika.katkam\Documents\Advance C#\TravelEzeeWindowFormsApp\TravelEzeeWinUI\TravelEzeeeeee1\obj\Debug\net9.0\TravelEzeeeeee1.csproj.CoreCompileInputs.cache
+C:\Users\sagarika.katkam\Documents\Advance C#\TravelEzeeWindowFormsApp\TravelEzeeWinUI\TravelEzeeeeee1\obj\Debug\net9.0\TravelEzeeeeee1.dll
+C:\Users\sagarika.katkam\Documents\Advance C#\TravelEzeeWindowFormsApp\TravelEzeeWinUI\TravelEzeeeeee1\obj\Debug\net9.0\refint\TravelEzeeeeee1.dll
+C:\Users\sagarika.katkam\Documents\Advance C#\TravelEzeeWindowFormsApp\TravelEzeeWinUI\TravelEzeeeeee1\obj\Debug\net9.0\TravelEzeeeeee1.pdb
+C:\Users\sagarika.katkam\Documents\Advance C#\TravelEzeeWindowFormsApp\TravelEzeeWinUI\TravelEzeeeeee1\obj\Debug\net9.0\TravelEzeeeeee1.genruntimeconfig.cache
+C:\Users\sagarika.katkam\Documents\Advance C#\TravelEzeeWindowFormsApp\TravelEzeeWinUI\TravelEzeeeeee1\obj\Debug\net9.0\ref\TravelEzeeeeee1.dll
