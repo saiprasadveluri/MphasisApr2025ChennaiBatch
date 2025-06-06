@@ -1,0 +1,14 @@
+C:\Users\revalla.kumar\source\repos\TravelEezeWinApplication\TravelEezeDataAccessLayer\bin\Debug\net8.0\TravelEezeDataAccessLayer.deps.json
+C:\Users\revalla.kumar\source\repos\TravelEezeWinApplication\TravelEezeDataAccessLayer\bin\Debug\net8.0\TravelEezeDataAccessLayer.runtimeconfig.json
+C:\Users\revalla.kumar\source\repos\TravelEezeWinApplication\TravelEezeDataAccessLayer\bin\Debug\net8.0\TravelEezeDataAccessLayer.dll
+C:\Users\revalla.kumar\source\repos\TravelEezeWinApplication\TravelEezeDataAccessLayer\bin\Debug\net8.0\TravelEezeDataAccessLayer.pdb
+C:\Users\revalla.kumar\source\repos\TravelEezeWinApplication\TravelEezeDataAccessLayer\obj\Debug\net8.0\TravelEezeDataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\revalla.kumar\source\repos\TravelEezeWinApplication\TravelEezeDataAccessLayer\obj\Debug\net8.0\TravelEezeDataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\revalla.kumar\source\repos\TravelEezeWinApplication\TravelEezeDataAccessLayer\obj\Debug\net8.0\TravelEezeDataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\revalla.kumar\source\repos\TravelEezeWinApplication\TravelEezeDataAccessLayer\obj\Debug\net8.0\TravelEezeDataAccessLayer.AssemblyInfo.cs
+C:\Users\revalla.kumar\source\repos\TravelEezeWinApplication\TravelEezeDataAccessLayer\obj\Debug\net8.0\TravelEezeDataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\revalla.kumar\source\repos\TravelEezeWinApplication\TravelEezeDataAccessLayer\obj\Debug\net8.0\TravelEezeDataAccessLayer.dll
+C:\Users\revalla.kumar\source\repos\TravelEezeWinApplication\TravelEezeDataAccessLayer\obj\Debug\net8.0\refint\TravelEezeDataAccessLayer.dll
+C:\Users\revalla.kumar\source\repos\TravelEezeWinApplication\TravelEezeDataAccessLayer\obj\Debug\net8.0\TravelEezeDataAccessLayer.pdb
+C:\Users\revalla.kumar\source\repos\TravelEezeWinApplication\TravelEezeDataAccessLayer\obj\Debug\net8.0\TravelEezeDataAccessLayer.genruntimeconfig.cache
+C:\Users\revalla.kumar\source\repos\TravelEezeWinApplication\TravelEezeDataAccessLayer\obj\Debug\net8.0\ref\TravelEezeDataAccessLayer.dll
