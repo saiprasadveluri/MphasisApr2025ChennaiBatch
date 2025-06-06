@@ -1,0 +1,14 @@
+C:\Users\shrinidhi.saravanan\Desktop\myfirstproj\TravelEzeeApplication\TravelEzeeDataAccessLayer\bin\Debug\net8.0\TravelEzeeDataAccessLayer.deps.json
+C:\Users\shrinidhi.saravanan\Desktop\myfirstproj\TravelEzeeApplication\TravelEzeeDataAccessLayer\bin\Debug\net8.0\TravelEzeeDataAccessLayer.runtimeconfig.json
+C:\Users\shrinidhi.saravanan\Desktop\myfirstproj\TravelEzeeApplication\TravelEzeeDataAccessLayer\bin\Debug\net8.0\TravelEzeeDataAccessLayer.dll
+C:\Users\shrinidhi.saravanan\Desktop\myfirstproj\TravelEzeeApplication\TravelEzeeDataAccessLayer\bin\Debug\net8.0\TravelEzeeDataAccessLayer.pdb
+C:\Users\shrinidhi.saravanan\Desktop\myfirstproj\TravelEzeeApplication\TravelEzeeDataAccessLayer\obj\Debug\net8.0\TravelEzeeDataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\shrinidhi.saravanan\Desktop\myfirstproj\TravelEzeeApplication\TravelEzeeDataAccessLayer\obj\Debug\net8.0\TravelEzeeDataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shrinidhi.saravanan\Desktop\myfirstproj\TravelEzeeApplication\TravelEzeeDataAccessLayer\obj\Debug\net8.0\TravelEzeeDataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\shrinidhi.saravanan\Desktop\myfirstproj\TravelEzeeApplication\TravelEzeeDataAccessLayer\obj\Debug\net8.0\TravelEzeeDataAccessLayer.AssemblyInfo.cs
+C:\Users\shrinidhi.saravanan\Desktop\myfirstproj\TravelEzeeApplication\TravelEzeeDataAccessLayer\obj\Debug\net8.0\TravelEzeeDataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\shrinidhi.saravanan\Desktop\myfirstproj\TravelEzeeApplication\TravelEzeeDataAccessLayer\obj\Debug\net8.0\TravelEzeeDataAccessLayer.dll
+C:\Users\shrinidhi.saravanan\Desktop\myfirstproj\TravelEzeeApplication\TravelEzeeDataAccessLayer\obj\Debug\net8.0\refint\TravelEzeeDataAccessLayer.dll
+C:\Users\shrinidhi.saravanan\Desktop\myfirstproj\TravelEzeeApplication\TravelEzeeDataAccessLayer\obj\Debug\net8.0\TravelEzeeDataAccessLayer.pdb
+C:\Users\shrinidhi.saravanan\Desktop\myfirstproj\TravelEzeeApplication\TravelEzeeDataAccessLayer\obj\Debug\net8.0\TravelEzeeDataAccessLayer.genruntimeconfig.cache
+C:\Users\shrinidhi.saravanan\Desktop\myfirstproj\TravelEzeeApplication\TravelEzeeDataAccessLayer\obj\Debug\net8.0\ref\TravelEzeeDataAccessLayer.dll
