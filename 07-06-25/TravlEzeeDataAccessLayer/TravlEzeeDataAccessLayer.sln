@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravlEzeeDataAccessLayer", "TravlEzeeDataAccessLayer\TravlEzeeDataAccessLayer.csproj", "{3519C391-326D-4D15-A958-2CB3D6A4F4BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3519C391-326D-4D15-A958-2CB3D6A4F4BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3519C391-326D-4D15-A958-2CB3D6A4F4BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3519C391-326D-4D15-A958-2CB3D6A4F4BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3519C391-326D-4D15-A958-2CB3D6A4F4BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AB070CED-22BA-42D1-A8C9-5F40A5299340}
+	EndGlobalSection
+EndGlobal

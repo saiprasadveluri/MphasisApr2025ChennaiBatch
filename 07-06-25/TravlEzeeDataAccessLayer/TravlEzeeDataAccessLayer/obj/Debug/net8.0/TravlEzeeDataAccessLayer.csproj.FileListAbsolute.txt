@@ -1,0 +1,14 @@
+C:\Users\damerla.krishna\C#\TravlEzeeDataAccessLayer\TravlEzeeDataAccessLayer\obj\Debug\net8.0\TravlEzeeDataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\damerla.krishna\C#\TravlEzeeDataAccessLayer\TravlEzeeDataAccessLayer\obj\Debug\net8.0\TravlEzeeDataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\damerla.krishna\C#\TravlEzeeDataAccessLayer\TravlEzeeDataAccessLayer\obj\Debug\net8.0\TravlEzeeDataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\damerla.krishna\C#\TravlEzeeDataAccessLayer\TravlEzeeDataAccessLayer\obj\Debug\net8.0\TravlEzeeDataAccessLayer.AssemblyInfo.cs
+C:\Users\damerla.krishna\C#\TravlEzeeDataAccessLayer\TravlEzeeDataAccessLayer\obj\Debug\net8.0\TravlEzeeDataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\damerla.krishna\C#\TravlEzeeDataAccessLayer\TravlEzeeDataAccessLayer\bin\Debug\net8.0\TravlEzeeDataAccessLayer.deps.json
+C:\Users\damerla.krishna\C#\TravlEzeeDataAccessLayer\TravlEzeeDataAccessLayer\bin\Debug\net8.0\TravlEzeeDataAccessLayer.runtimeconfig.json
+C:\Users\damerla.krishna\C#\TravlEzeeDataAccessLayer\TravlEzeeDataAccessLayer\bin\Debug\net8.0\TravlEzeeDataAccessLayer.dll
+C:\Users\damerla.krishna\C#\TravlEzeeDataAccessLayer\TravlEzeeDataAccessLayer\bin\Debug\net8.0\TravlEzeeDataAccessLayer.pdb
+C:\Users\damerla.krishna\C#\TravlEzeeDataAccessLayer\TravlEzeeDataAccessLayer\obj\Debug\net8.0\TravlEzeeDataAccessLayer.dll
+C:\Users\damerla.krishna\C#\TravlEzeeDataAccessLayer\TravlEzeeDataAccessLayer\obj\Debug\net8.0\refint\TravlEzeeDataAccessLayer.dll
+C:\Users\damerla.krishna\C#\TravlEzeeDataAccessLayer\TravlEzeeDataAccessLayer\obj\Debug\net8.0\TravlEzeeDataAccessLayer.pdb
+C:\Users\damerla.krishna\C#\TravlEzeeDataAccessLayer\TravlEzeeDataAccessLayer\obj\Debug\net8.0\TravlEzeeDataAccessLayer.genruntimeconfig.cache
+C:\Users\damerla.krishna\C#\TravlEzeeDataAccessLayer\TravlEzeeDataAccessLayer\obj\Debug\net8.0\ref\TravlEzeeDataAccessLayer.dll
