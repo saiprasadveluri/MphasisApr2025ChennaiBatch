@@ -1,0 +1,14 @@
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\TravelEzzCoreConsole2\TravelEzeeDataAccessLayer\obj\Debug\net9.0\TravelEzeeDataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\TravelEzzCoreConsole2\TravelEzeeDataAccessLayer\obj\Debug\net9.0\TravelEzeeDataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\TravelEzzCoreConsole2\TravelEzeeDataAccessLayer\obj\Debug\net9.0\TravelEzeeDataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\TravelEzzCoreConsole2\TravelEzeeDataAccessLayer\obj\Debug\net9.0\TravelEzeeDataAccessLayer.AssemblyInfo.cs
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\TravelEzzCoreConsole2\TravelEzeeDataAccessLayer\obj\Debug\net9.0\TravelEzeeDataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\TravelEzzCoreConsole2\TravelEzeeDataAccessLayer\bin\Debug\net9.0\TravelEzeeDataAccessLayer.deps.json
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\TravelEzzCoreConsole2\TravelEzeeDataAccessLayer\bin\Debug\net9.0\TravelEzeeDataAccessLayer.runtimeconfig.json
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\TravelEzzCoreConsole2\TravelEzeeDataAccessLayer\bin\Debug\net9.0\TravelEzeeDataAccessLayer.dll
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\TravelEzzCoreConsole2\TravelEzeeDataAccessLayer\bin\Debug\net9.0\TravelEzeeDataAccessLayer.pdb
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\TravelEzzCoreConsole2\TravelEzeeDataAccessLayer\obj\Debug\net9.0\TravelEzeeDataAccessLayer.dll
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\TravelEzzCoreConsole2\TravelEzeeDataAccessLayer\obj\Debug\net9.0\refint\TravelEzeeDataAccessLayer.dll
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\TravelEzzCoreConsole2\TravelEzeeDataAccessLayer\obj\Debug\net9.0\TravelEzeeDataAccessLayer.pdb
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\TravelEzzCoreConsole2\TravelEzeeDataAccessLayer\obj\Debug\net9.0\TravelEzeeDataAccessLayer.genruntimeconfig.cache
+C:\Users\nasina.nikhila\Desktop\Myfirstdotnetfile\TravelEzzCoreConsole2\TravelEzeeDataAccessLayer\obj\Debug\net9.0\ref\TravelEzeeDataAccessLayer.dll
