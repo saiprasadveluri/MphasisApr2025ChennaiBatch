@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelFormsEF", "TravelFormsEF\TravelFormsEF.csproj", "{AF564BE6-17B3-46D8-993D-319BFD7E9F15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelezeeDataAccessLayer", "TravelezeeDataAccessLayer\TravelezeeDataAccessLayer.csproj", "{5C43F6E9-4904-43B8-B82A-944C60B884A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF564BE6-17B3-46D8-993D-319BFD7E9F15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF564BE6-17B3-46D8-993D-319BFD7E9F15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF564BE6-17B3-46D8-993D-319BFD7E9F15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF564BE6-17B3-46D8-993D-319BFD7E9F15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C43F6E9-4904-43B8-B82A-944C60B884A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C43F6E9-4904-43B8-B82A-944C60B884A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C43F6E9-4904-43B8-B82A-944C60B884A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C43F6E9-4904-43B8-B82A-944C60B884A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3EC63CF4-0C88-4505-A97F-219CCF384EB8}
+	EndGlobalSection
+EndGlobal
