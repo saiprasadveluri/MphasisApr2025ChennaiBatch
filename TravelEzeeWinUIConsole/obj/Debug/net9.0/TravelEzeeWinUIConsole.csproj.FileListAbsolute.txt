@@ -1,0 +1,14 @@
+C:\Users\athivarapu.reddy\source\repos\TravelEzeeWinUI\TravelEzeeWinUIConsole\obj\Debug\net9.0\TravelEzeeWinUIConsole.csproj.AssemblyReference.cache
+C:\Users\athivarapu.reddy\source\repos\TravelEzeeWinUI\TravelEzeeWinUIConsole\obj\Debug\net9.0\TravelEzeeWinUIConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\athivarapu.reddy\source\repos\TravelEzeeWinUI\TravelEzeeWinUIConsole\obj\Debug\net9.0\TravelEzeeWinUIConsole.AssemblyInfoInputs.cache
+C:\Users\athivarapu.reddy\source\repos\TravelEzeeWinUI\TravelEzeeWinUIConsole\obj\Debug\net9.0\TravelEzeeWinUIConsole.AssemblyInfo.cs
+C:\Users\athivarapu.reddy\source\repos\TravelEzeeWinUI\TravelEzeeWinUIConsole\obj\Debug\net9.0\TravelEzeeWinUIConsole.csproj.CoreCompileInputs.cache
+C:\Users\athivarapu.reddy\source\repos\TravelEzeeWinUI\TravelEzeeWinUIConsole\bin\Debug\net9.0\TravelEzeeWinUIConsole.deps.json
+C:\Users\athivarapu.reddy\source\repos\TravelEzeeWinUI\TravelEzeeWinUIConsole\bin\Debug\net9.0\TravelEzeeWinUIConsole.runtimeconfig.json
+C:\Users\athivarapu.reddy\source\repos\TravelEzeeWinUI\TravelEzeeWinUIConsole\bin\Debug\net9.0\TravelEzeeWinUIConsole.dll
+C:\Users\athivarapu.reddy\source\repos\TravelEzeeWinUI\TravelEzeeWinUIConsole\bin\Debug\net9.0\TravelEzeeWinUIConsole.pdb
+C:\Users\athivarapu.reddy\source\repos\TravelEzeeWinUI\TravelEzeeWinUIConsole\obj\Debug\net9.0\TravelEzeeWinUIConsole.dll
+C:\Users\athivarapu.reddy\source\repos\TravelEzeeWinUI\TravelEzeeWinUIConsole\obj\Debug\net9.0\refint\TravelEzeeWinUIConsole.dll
+C:\Users\athivarapu.reddy\source\repos\TravelEzeeWinUI\TravelEzeeWinUIConsole\obj\Debug\net9.0\TravelEzeeWinUIConsole.pdb
+C:\Users\athivarapu.reddy\source\repos\TravelEzeeWinUI\TravelEzeeWinUIConsole\obj\Debug\net9.0\TravelEzeeWinUIConsole.genruntimeconfig.cache
+C:\Users\athivarapu.reddy\source\repos\TravelEzeeWinUI\TravelEzeeWinUIConsole\obj\Debug\net9.0\ref\TravelEzeeWinUIConsole.dll

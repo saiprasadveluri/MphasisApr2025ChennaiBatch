@@ -1,0 +1,100 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\athivarapu.reddy\\source\\repos\\TravelEzeeWinUI\\TravelEzeeWinUIConsole\\TravelEzeeWinUIConsole.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\athivarapu.reddy\\source\\repos\\TravelEzeeWinUI\\TravelEzeeWinUIConsole\\TravelEzeeWinUIConsole.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\athivarapu.reddy\\source\\repos\\TravelEzeeWinUI\\TravelEzeeWinUIConsole\\TravelEzeeWinUIConsole.csproj",
+        "projectName": "TravelEzeeWinUIConsole",
+        "projectPath": "C:\\Users\\athivarapu.reddy\\source\\repos\\TravelEzeeWinUI\\TravelEzeeWinUIConsole\\TravelEzeeWinUIConsole.csproj",
+        "packagesPath": "C:\\Users\\athivarapu.reddy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\athivarapu.reddy\\source\\repos\\TravelEzeeWinUI\\TravelEzeeWinUIConsole\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\athivarapu.reddy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Entityframeworkcore": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.Entityframeworkcore.design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.Entityframeworkcore.proxies": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.Entityframeworkcore.sqlserver": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.Entityframeworkcore.tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
