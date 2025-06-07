@@ -35,6 +35,8 @@
             label1 = new Label();
             label2 = new Label();
             serviceTypeGrid = new DataGridView();
+            contextMenuStrip3 = new ContextMenuStrip(components);
+            deleteServiceTypeToolStripMenuItem = new ToolStripMenuItem();
             NameMenu = new MenuStrip();
             adminActionsToolStripMenuItem = new ToolStripMenuItem();
             addLocationsToolStripMenuItem = new ToolStripMenuItem();
@@ -44,11 +46,16 @@
             bookTicketToolStripMenuItem = new ToolStripMenuItem();
             label3 = new Label();
             SevicesGrid = new DataGridView();
+            contextMenuStrip2 = new ContextMenuStrip(components);
+            deleteServiceToolStripMenuItem = new ToolStripMenuItem();
+            editLocationToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)LocationGrid).BeginInit();
             contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)serviceTypeGrid).BeginInit();
+            contextMenuStrip3.SuspendLayout();
             NameMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)SevicesGrid).BeginInit();
+            contextMenuStrip2.SuspendLayout();
             SuspendLayout();
             // 
             // LocationGrid
@@ -62,14 +69,14 @@
             // 
             // contextMenuStrip1
             // 
-            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { deleteLocationToolStripMenuItem });
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { deleteLocationToolStripMenuItem, editLocationToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(157, 26);
+            contextMenuStrip1.Size = new Size(181, 70);
             // 
             // deleteLocationToolStripMenuItem
             // 
             deleteLocationToolStripMenuItem.Name = "deleteLocationToolStripMenuItem";
-            deleteLocationToolStripMenuItem.Size = new Size(156, 22);
+            deleteLocationToolStripMenuItem.Size = new Size(180, 22);
             deleteLocationToolStripMenuItem.Text = "Delete Location";
             deleteLocationToolStripMenuItem.Click += deleteLocationToolStripMenuItem_Click_1;
             // 
@@ -96,10 +103,24 @@
             // serviceTypeGrid
             // 
             serviceTypeGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            serviceTypeGrid.ContextMenuStrip = contextMenuStrip3;
             serviceTypeGrid.Location = new Point(12, 203);
             serviceTypeGrid.Name = "serviceTypeGrid";
             serviceTypeGrid.Size = new Size(340, 103);
             serviceTypeGrid.TabIndex = 3;
+            // 
+            // contextMenuStrip3
+            // 
+            contextMenuStrip3.Items.AddRange(new ToolStripItem[] { deleteServiceTypeToolStripMenuItem });
+            contextMenuStrip3.Name = "contextMenuStrip3";
+            contextMenuStrip3.Size = new Size(172, 26);
+            // 
+            // deleteServiceTypeToolStripMenuItem
+            // 
+            deleteServiceTypeToolStripMenuItem.Name = "deleteServiceTypeToolStripMenuItem";
+            deleteServiceTypeToolStripMenuItem.Size = new Size(171, 22);
+            deleteServiceTypeToolStripMenuItem.Text = "Delete ServiceType";
+            deleteServiceTypeToolStripMenuItem.Click += deleteServiceTypeToolStripMenuItem_Click;
             // 
             // NameMenu
             // 
@@ -164,6 +185,7 @@
             // SevicesGrid
             // 
             SevicesGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            SevicesGrid.ContextMenuStrip = contextMenuStrip2;
             SevicesGrid.Location = new Point(372, 50);
             SevicesGrid.MultiSelect = false;
             SevicesGrid.Name = "SevicesGrid";
@@ -171,6 +193,26 @@
             SevicesGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             SevicesGrid.Size = new Size(398, 106);
             SevicesGrid.TabIndex = 6;
+            // 
+            // contextMenuStrip2
+            // 
+            contextMenuStrip2.Items.AddRange(new ToolStripItem[] { deleteServiceToolStripMenuItem });
+            contextMenuStrip2.Name = "contextMenuStrip2";
+            contextMenuStrip2.Size = new Size(148, 26);
+            // 
+            // deleteServiceToolStripMenuItem
+            // 
+            deleteServiceToolStripMenuItem.Name = "deleteServiceToolStripMenuItem";
+            deleteServiceToolStripMenuItem.Size = new Size(147, 22);
+            deleteServiceToolStripMenuItem.Text = "Delete Service";
+            deleteServiceToolStripMenuItem.Click += deleteServiceToolStripMenuItem_Click;
+            // 
+            // editLocationToolStripMenuItem
+            // 
+            editLocationToolStripMenuItem.Name = "editLocationToolStripMenuItem";
+            editLocationToolStripMenuItem.Size = new Size(180, 22);
+            editLocationToolStripMenuItem.Text = "Edit Location";
+            editLocationToolStripMenuItem.Click += editLocationToolStripMenuItem_Click;
             // 
             // Form1
             // 
@@ -191,9 +233,11 @@
             ((System.ComponentModel.ISupportInitialize)LocationGrid).EndInit();
             contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)serviceTypeGrid).EndInit();
+            contextMenuStrip3.ResumeLayout(false);
             NameMenu.ResumeLayout(false);
             NameMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)SevicesGrid).EndInit();
+            contextMenuStrip2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -215,5 +259,10 @@
         private ToolStripMenuItem addNewServiceToolStripMenuItem;
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem deleteLocationToolStripMenuItem;
+        private ContextMenuStrip contextMenuStrip2;
+        private ToolStripMenuItem deleteServiceToolStripMenuItem;
+        private ContextMenuStrip contextMenuStrip3;
+        private ToolStripMenuItem deleteServiceTypeToolStripMenuItem;
+        private ToolStripMenuItem editLocationToolStripMenuItem;
     }
 }

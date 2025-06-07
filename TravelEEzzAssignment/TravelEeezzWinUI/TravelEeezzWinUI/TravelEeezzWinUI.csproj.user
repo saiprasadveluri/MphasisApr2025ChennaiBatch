@@ -7,6 +7,9 @@
     <Compile Update="AddNewServiceType.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="EditLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

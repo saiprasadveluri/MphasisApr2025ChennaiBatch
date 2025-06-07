@@ -107,14 +107,41 @@ public class DataAccess
     }
     public bool DeleteLocation(long LocationId)
     {
-        var ServiceList = context.Services.Where(location => location.SourceLocId == LocationId || location.DestLocId == LocationId);
+        var ServiceList = context.Services.Where(location => location.SourceLocId == LocationId ||location.DestLocId == LocationId);
         context.Services.RemoveRange(ServiceList);
         var LocList=context.Locations.FirstOrDefault(loc=>loc.LocationId == LocationId);
         context.Locations.Remove(LocList);
         int delete=context.SaveChanges();
         return delete > 0;
     }
-  
+    public bool DeleteService(long serviceId)
+    {
+        
+        var SrvList = context.Services.FirstOrDefault(srv => srv.ServiceId==serviceId);
+        context.Services.Remove(SrvList);
+        int delete = context.SaveChanges();
+        return delete > 0;
+
+    }
+    public bool DeleteServiceType(long ServiceTypeId)
+    {
+        var SrvTypeList = context.ServiceTypes.FirstOrDefault(serTypeId => serTypeId.STypeId == ServiceTypeId);
+        context.ServiceTypes.Remove(SrvTypeList);
+        int delete = context.SaveChanges();
+        return delete > 0;
+    }
+    public bool EditLocation(long LocationId,string LocationName)
+    {
+        Location curLoc=context.Locations.FirstOrDefault(location=>location.LocationId == LocationId);
+        if(curLoc!=null)
+        {
+            curLoc.LocationName=LocationName;
+
+        }
+        int Result=context.SaveChanges();
+        return Result > 0;
+    }
+
 
 
 }
