@@ -1,0 +1,14 @@
+C:\Users\bysanivenkata.s\.NET TRAINING\C#\TravelezeeDataAccessLayer\TravelezeeDataAccessLayer\bin\Debug\net8.0\TravelezeeDataAccessLayer.deps.json
+C:\Users\bysanivenkata.s\.NET TRAINING\C#\TravelezeeDataAccessLayer\TravelezeeDataAccessLayer\bin\Debug\net8.0\TravelezeeDataAccessLayer.runtimeconfig.json
+C:\Users\bysanivenkata.s\.NET TRAINING\C#\TravelezeeDataAccessLayer\TravelezeeDataAccessLayer\bin\Debug\net8.0\TravelezeeDataAccessLayer.dll
+C:\Users\bysanivenkata.s\.NET TRAINING\C#\TravelezeeDataAccessLayer\TravelezeeDataAccessLayer\bin\Debug\net8.0\TravelezeeDataAccessLayer.pdb
+C:\Users\bysanivenkata.s\.NET TRAINING\C#\TravelezeeDataAccessLayer\TravelezeeDataAccessLayer\obj\Debug\net8.0\TravelezeeDataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\bysanivenkata.s\.NET TRAINING\C#\TravelezeeDataAccessLayer\TravelezeeDataAccessLayer\obj\Debug\net8.0\TravelezeeDataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bysanivenkata.s\.NET TRAINING\C#\TravelezeeDataAccessLayer\TravelezeeDataAccessLayer\obj\Debug\net8.0\TravelezeeDataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\bysanivenkata.s\.NET TRAINING\C#\TravelezeeDataAccessLayer\TravelezeeDataAccessLayer\obj\Debug\net8.0\TravelezeeDataAccessLayer.AssemblyInfo.cs
+C:\Users\bysanivenkata.s\.NET TRAINING\C#\TravelezeeDataAccessLayer\TravelezeeDataAccessLayer\obj\Debug\net8.0\TravelezeeDataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\bysanivenkata.s\.NET TRAINING\C#\TravelezeeDataAccessLayer\TravelezeeDataAccessLayer\obj\Debug\net8.0\TravelezeeDataAccessLayer.dll
+C:\Users\bysanivenkata.s\.NET TRAINING\C#\TravelezeeDataAccessLayer\TravelezeeDataAccessLayer\obj\Debug\net8.0\refint\TravelezeeDataAccessLayer.dll
+C:\Users\bysanivenkata.s\.NET TRAINING\C#\TravelezeeDataAccessLayer\TravelezeeDataAccessLayer\obj\Debug\net8.0\TravelezeeDataAccessLayer.pdb
+C:\Users\bysanivenkata.s\.NET TRAINING\C#\TravelezeeDataAccessLayer\TravelezeeDataAccessLayer\obj\Debug\net8.0\TravelezeeDataAccessLayer.genruntimeconfig.cache
+C:\Users\bysanivenkata.s\.NET TRAINING\C#\TravelezeeDataAccessLayer\TravelezeeDataAccessLayer\obj\Debug\net8.0\ref\TravelezeeDataAccessLayer.dll
