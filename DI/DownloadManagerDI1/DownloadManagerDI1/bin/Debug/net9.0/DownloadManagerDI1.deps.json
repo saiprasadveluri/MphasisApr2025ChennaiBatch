@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "DownloadManagerDI1/1.0.0": {
+        "runtime": {
+          "DownloadManagerDI1.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DownloadManagerDI1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

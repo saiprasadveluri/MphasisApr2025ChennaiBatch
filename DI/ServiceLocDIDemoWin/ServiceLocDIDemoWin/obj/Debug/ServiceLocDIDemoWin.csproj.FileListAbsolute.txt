@@ -1,0 +1,13 @@
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\ServiceLocDIDemoWin\ServiceLocDIDemoWin\obj\Debug\ServiceLocDIDemoWin.csproj.AssemblyReference.cache
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\ServiceLocDIDemoWin\ServiceLocDIDemoWin\obj\Debug\ServiceLocDIDemoWin.Form1.resources
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\ServiceLocDIDemoWin\ServiceLocDIDemoWin\obj\Debug\ServiceLocDIDemoWin.Properties.Resources.resources
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\ServiceLocDIDemoWin\ServiceLocDIDemoWin\obj\Debug\ServiceLocDIDemoWin.csproj.GenerateResource.cache
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\ServiceLocDIDemoWin\ServiceLocDIDemoWin\obj\Debug\ServiceLocDIDemoWin.csproj.CoreCompileInputs.cache
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\ServiceLocDIDemoWin\ServiceLocDIDemoWin\bin\Debug\ServiceLocDIDemoWin.exe.config
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\ServiceLocDIDemoWin\ServiceLocDIDemoWin\bin\Debug\ServiceLocDIDemoWin.exe
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\ServiceLocDIDemoWin\ServiceLocDIDemoWin\bin\Debug\ServiceLocDIDemoWin.pdb
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\ServiceLocDIDemoWin\ServiceLocDIDemoWin\obj\Debug\ServiceLocDIDemoWin.exe
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\ServiceLocDIDemoWin\ServiceLocDIDemoWin\obj\Debug\ServiceLocDIDemoWin.pdb
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\ServiceLocDIDemoWin\ServiceLocDIDemoWin\bin\Debug\Ninject.dll
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\ServiceLocDIDemoWin\ServiceLocDIDemoWin\bin\Debug\Ninject.xml
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\ServiceLocDIDemoWin\ServiceLocDIDemoWin\obj\Debug\ServiceL.C47DF415.Up2Date

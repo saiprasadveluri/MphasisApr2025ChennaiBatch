@@ -1,0 +1,15 @@
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\DownloadManagerDI1\DownloadManagerDI1\bin\Debug\net9.0\DownloadManagerDI1.exe
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\DownloadManagerDI1\DownloadManagerDI1\bin\Debug\net9.0\DownloadManagerDI1.deps.json
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\DownloadManagerDI1\DownloadManagerDI1\bin\Debug\net9.0\DownloadManagerDI1.runtimeconfig.json
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\DownloadManagerDI1\DownloadManagerDI1\bin\Debug\net9.0\DownloadManagerDI1.dll
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\DownloadManagerDI1\DownloadManagerDI1\bin\Debug\net9.0\DownloadManagerDI1.pdb
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\DownloadManagerDI1\DownloadManagerDI1\obj\Debug\net9.0\DownloadManagerDI1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\DownloadManagerDI1\DownloadManagerDI1\obj\Debug\net9.0\DownloadManagerDI1.AssemblyInfoInputs.cache
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\DownloadManagerDI1\DownloadManagerDI1\obj\Debug\net9.0\DownloadManagerDI1.AssemblyInfo.cs
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\DownloadManagerDI1\DownloadManagerDI1\obj\Debug\net9.0\DownloadManagerDI1.csproj.CoreCompileInputs.cache
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\DownloadManagerDI1\DownloadManagerDI1\obj\Debug\net9.0\DownloadManagerDI1.sourcelink.json
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\DownloadManagerDI1\DownloadManagerDI1\obj\Debug\net9.0\DownloadManagerDI1.dll
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\DownloadManagerDI1\DownloadManagerDI1\obj\Debug\net9.0\refint\DownloadManagerDI1.dll
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\DownloadManagerDI1\DownloadManagerDI1\obj\Debug\net9.0\DownloadManagerDI1.pdb
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\DownloadManagerDI1\DownloadManagerDI1\obj\Debug\net9.0\DownloadManagerDI1.genruntimeconfig.cache
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\DI\DownloadManagerDI1\DownloadManagerDI1\obj\Debug\net9.0\ref\DownloadManagerDI1.dll
