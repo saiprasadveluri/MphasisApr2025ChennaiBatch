@@ -1,0 +1,7 @@
+C:\Users\athivarapu.reddy\source\repos\BlogAppWeb1\BlogAppWeb1\bin\BlogAppWeb1.dll.config
+C:\Users\athivarapu.reddy\source\repos\BlogAppWeb1\BlogAppWeb1\bin\BlogAppWeb1.dll
+C:\Users\athivarapu.reddy\source\repos\BlogAppWeb1\BlogAppWeb1\bin\BlogAppWeb1.pdb
+C:\Users\athivarapu.reddy\source\repos\BlogAppWeb1\BlogAppWeb1\obj\Debug\BlogAppWeb1.csproj.AssemblyReference.cache
+C:\Users\athivarapu.reddy\source\repos\BlogAppWeb1\BlogAppWeb1\obj\Debug\BlogAppWeb1.csproj.CoreCompileInputs.cache
+C:\Users\athivarapu.reddy\source\repos\BlogAppWeb1\BlogAppWeb1\obj\Debug\BlogAppWeb1.dll
+C:\Users\athivarapu.reddy\source\repos\BlogAppWeb1\BlogAppWeb1\obj\Debug\BlogAppWeb1.pdb
