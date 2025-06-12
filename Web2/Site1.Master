@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Web2.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="display:flex;flex-direction:column">
+            <div style="width:100%;height:100px;background-color:aqua">Header</div>
+            <div style="width:100%;height:500px;display:flex;flex-direction:row">
+                <div style="width:20%;height:500px;background-color:cornflowerblue">
+                    <table>
+                        <tr>
+                            <td>
+                                <a href="AddBlog.aspx">Add Blog</a>
+                        </td>
+                        <tr>
+                            <td>
+                                <a href="ViewBlog.aspx">View Blog</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="AddComment.aspx">Add Comments</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="ViewComments.aspx">View Comments</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="width:80%;height:500px;background-color:darkkhaki">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+          
+             <div style="display:flex;flex-direction:column">
+            <div style="width:100%;height:50px;background-color:honeydew">Footer
+
+          
+        </div>
+            
+       
+        
+    </form>
+</body>
+</html>

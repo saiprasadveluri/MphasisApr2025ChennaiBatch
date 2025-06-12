@@ -1,0 +1,7 @@
+C:\Users\thavishala.c\Desktop\ASP.NET\12-06-2025\Web2\Web2\bin\Web2.dll.config
+C:\Users\thavishala.c\Desktop\ASP.NET\12-06-2025\Web2\Web2\bin\Web2.dll
+C:\Users\thavishala.c\Desktop\ASP.NET\12-06-2025\Web2\Web2\bin\Web2.pdb
+C:\Users\thavishala.c\Desktop\ASP.NET\12-06-2025\Web2\Web2\obj\Debug\Web2.csproj.AssemblyReference.cache
+C:\Users\thavishala.c\Desktop\ASP.NET\12-06-2025\Web2\Web2\obj\Debug\Web2.csproj.CoreCompileInputs.cache
+C:\Users\thavishala.c\Desktop\ASP.NET\12-06-2025\Web2\Web2\obj\Debug\Web2.dll
+C:\Users\thavishala.c\Desktop\ASP.NET\12-06-2025\Web2\Web2\obj\Debug\Web2.pdb
