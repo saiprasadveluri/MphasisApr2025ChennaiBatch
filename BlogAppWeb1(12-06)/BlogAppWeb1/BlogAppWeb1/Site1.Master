@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs"  
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+                <div style="display:flex;flex-direction:column">
+            <div style="width:100%;height:100px;background-color:lightpink">
+                <span color="white">Header-logo here</span>
+
+            </div>
+            <div style="width:100%;height:500px; display:flex;flex-direction:row">
+                <div style="width:20%;height:500px;background-color:gray">
+                    <table>
+                        <tr>
+                            <td>
+                                <a href ="ViewBlogpost.aspx">View BlogPosts</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href ="AddBlogpost.aspx">Add BlogPosts</a>
+                            </td>
+                        </tr>
+                    </table>
+              
+                </div>
+                <div style="width:80%;background-color:magenta">
+                    <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                    </div>
+                  </div>
+                </div>
+                <div style="width:100%;height:50px;background-color:aquamarine">
+
+                </div>
+            <div>
+                </div>
+            
+        </div>
+    </form>
+</body>
+</html>
+
+       
