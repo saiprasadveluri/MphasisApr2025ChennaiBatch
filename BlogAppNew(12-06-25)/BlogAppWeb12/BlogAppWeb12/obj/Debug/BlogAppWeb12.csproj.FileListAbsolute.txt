@@ -1,0 +1,7 @@
+C:\Users\mittapally.sravani\source\repos\BlogAppWeb12\BlogAppWeb12\bin\BlogAppWeb12.dll.config
+C:\Users\mittapally.sravani\source\repos\BlogAppWeb12\BlogAppWeb12\bin\BlogAppWeb12.dll
+C:\Users\mittapally.sravani\source\repos\BlogAppWeb12\BlogAppWeb12\bin\BlogAppWeb12.pdb
+C:\Users\mittapally.sravani\source\repos\BlogAppWeb12\BlogAppWeb12\obj\Debug\BlogAppWeb12.csproj.AssemblyReference.cache
+C:\Users\mittapally.sravani\source\repos\BlogAppWeb12\BlogAppWeb12\obj\Debug\BlogAppWeb12.csproj.CoreCompileInputs.cache
+C:\Users\mittapally.sravani\source\repos\BlogAppWeb12\BlogAppWeb12\obj\Debug\BlogAppWeb12.dll
+C:\Users\mittapally.sravani\source\repos\BlogAppWeb12\BlogAppWeb12\obj\Debug\BlogAppWeb12.pdb
