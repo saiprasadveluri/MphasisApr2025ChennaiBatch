@@ -1,0 +1,7 @@
+C:\Users\chirakala.kaushik\.NET TRAINING\C#\BlogAppWeb2\BlogAppWeb2\bin\BlogAppWeb2.dll.config
+C:\Users\chirakala.kaushik\.NET TRAINING\C#\BlogAppWeb2\BlogAppWeb2\bin\BlogAppWeb2.dll
+C:\Users\chirakala.kaushik\.NET TRAINING\C#\BlogAppWeb2\BlogAppWeb2\bin\BlogAppWeb2.pdb
+C:\Users\chirakala.kaushik\.NET TRAINING\C#\BlogAppWeb2\BlogAppWeb2\obj\Debug\BlogAppWeb2.csproj.AssemblyReference.cache
+C:\Users\chirakala.kaushik\.NET TRAINING\C#\BlogAppWeb2\BlogAppWeb2\obj\Debug\BlogAppWeb2.csproj.CoreCompileInputs.cache
+C:\Users\chirakala.kaushik\.NET TRAINING\C#\BlogAppWeb2\BlogAppWeb2\obj\Debug\BlogAppWeb2.dll
+C:\Users\chirakala.kaushik\.NET TRAINING\C#\BlogAppWeb2\BlogAppWeb2\obj\Debug\BlogAppWeb2.pdb
