@@ -1,0 +1,7 @@
+C:\Users\rishi.ranjan\Desktop\C#\BlogAppWeb\BlogAppWeb\obj\Debug\BlogAppWeb.csproj.AssemblyReference.cache
+C:\Users\rishi.ranjan\Desktop\C#\BlogAppWeb\BlogAppWeb\obj\Debug\BlogAppWeb.csproj.CoreCompileInputs.cache
+C:\Users\rishi.ranjan\Desktop\C#\BlogAppWeb\BlogAppWeb\bin\BlogAppWeb.dll.config
+C:\Users\rishi.ranjan\Desktop\C#\BlogAppWeb\BlogAppWeb\bin\BlogAppWeb.dll
+C:\Users\rishi.ranjan\Desktop\C#\BlogAppWeb\BlogAppWeb\bin\BlogAppWeb.pdb
+C:\Users\rishi.ranjan\Desktop\C#\BlogAppWeb\BlogAppWeb\obj\Debug\BlogAppWeb.dll
+C:\Users\rishi.ranjan\Desktop\C#\BlogAppWeb\BlogAppWeb\obj\Debug\BlogAppWeb.pdb
