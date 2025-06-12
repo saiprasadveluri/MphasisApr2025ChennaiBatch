@@ -1,0 +1,7 @@
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\ASPNET\BlagAppWeb1\BlagAppWeb1\bin\BlagAppWeb1.dll.config
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\ASPNET\BlagAppWeb1\BlagAppWeb1\bin\BlagAppWeb1.dll
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\ASPNET\BlagAppWeb1\BlagAppWeb1\bin\BlagAppWeb1.pdb
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\ASPNET\BlagAppWeb1\BlagAppWeb1\obj\Debug\BlagAppWeb1.csproj.AssemblyReference.cache
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\ASPNET\BlagAppWeb1\BlagAppWeb1\obj\Debug\BlagAppWeb1.csproj.CoreCompileInputs.cache
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\ASPNET\BlagAppWeb1\BlagAppWeb1\obj\Debug\BlagAppWeb1.dll
+D:\Prasad_D\SFJ\Mphasis_Chennai_Apr_2025\DemoCode\DotNet\ASPNET\BlagAppWeb1\BlagAppWeb1\obj\Debug\BlagAppWeb1.pdb
