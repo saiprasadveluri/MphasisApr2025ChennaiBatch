@@ -1,0 +1,7 @@
+C:\Users\nallavolu.sowmika\Documents\Asp.net\BlogWebApp\BlogAppWeb1\BlogAppWeb1\bin\BlogAppWeb1.dll.config
+C:\Users\nallavolu.sowmika\Documents\Asp.net\BlogWebApp\BlogAppWeb1\BlogAppWeb1\bin\BlogAppWeb1.dll
+C:\Users\nallavolu.sowmika\Documents\Asp.net\BlogWebApp\BlogAppWeb1\BlogAppWeb1\bin\BlogAppWeb1.pdb
+C:\Users\nallavolu.sowmika\Documents\Asp.net\BlogWebApp\BlogAppWeb1\BlogAppWeb1\obj\Debug\BlogAppWeb1.csproj.AssemblyReference.cache
+C:\Users\nallavolu.sowmika\Documents\Asp.net\BlogWebApp\BlogAppWeb1\BlogAppWeb1\obj\Debug\BlogAppWeb1.csproj.CoreCompileInputs.cache
+C:\Users\nallavolu.sowmika\Documents\Asp.net\BlogWebApp\BlogAppWeb1\BlogAppWeb1\obj\Debug\BlogAppWeb1.dll
+C:\Users\nallavolu.sowmika\Documents\Asp.net\BlogWebApp\BlogAppWeb1\BlogAppWeb1\obj\Debug\BlogAppWeb1.pdb
