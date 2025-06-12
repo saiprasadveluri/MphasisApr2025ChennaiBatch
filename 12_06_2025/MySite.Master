@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MySite.master.cs" Inherits="WebApplication12.MySite" %>
+
+</asp:Content>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: underline;
+            }
+    </style>
+    <%--<style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            height: 393px;
+            margin-bottom: 159px;
+        }
+    </style>--%>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="display:flex;flex-direction:column">
+            <div style="width:100%;height:100px;background-color:blueviolet">
+                <span style="font-size: 24px; font-weight: bold">My Site Header</span>"
+                <ul>
+                    <li style="display: inline; margin-right: 20px;"><a href="Home.aspx" >Home</a></li>
+                    <li style="display: inline; margin-right: 20px;"><a href="About.aspx" >About</a></li>
+                    <li style="display: inline; margin-right: 20px;"><a href="Contact.aspx" >Contact</a></li>
+                </ul>
+            </div>
+            </div>
+        <%--<div style="display: flex; flex-direction: row; width: 100%; height: 500px;">
+<div style="display: flex; background-color: blanchedalmond; flex: 1; justify-content: center; align-items: center; width: 10%; height: 500px;">
+    <span style="font-size: 18px; font-weight: bold; background-color: chartreuse">Navigation Bar</span>
+    </div>
+<div style="display: flex; background-color: lightblue; flex: 4; justify-content: center; align-items: center; width: 80%; height: 500px;">
+    <span style="font-size: 18px; font-weight: bold">Main Content Area</span>
+    </div>
+</div>--%>
+        <div style="display: flex; flex-direction: row; width: 100%; height: 600px;">
+    <div style="flex: 1; background-color: gray; width: 20%;">
+        <table>
+            <tr><td><a href="ViewBlogPost.aspx">View BlogPosts</a></td></tr>
+            <tr><td><a href="AddBlogPost.aspx">Add BlogPosts</a></td></tr>
+            <tr><td><a href="ViewComment.aspx">View Comments</a></td></tr>
+            <tr><td><a href="AddComment.aspx">Add Comments</a></td></tr>
+        </table>
+    &nbsp;</div>
+    <div style="flex: 4; background-color: magenta; width: 80%;">
+        <%--<asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>--%>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+        
+            <asp:ContentPlaceHolder ClientIDMode="Static" ID="MainContent2" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ClientIDMode="Static" ID="MainContent4" runat="server"></asp:ContentPlaceHolder>
+    </div>
+</div>
+            
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent33" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
