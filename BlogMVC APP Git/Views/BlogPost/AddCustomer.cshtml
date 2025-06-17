@@ -1,0 +1,71 @@
+﻿@model BlogWebMVCApp.Models.CustomerModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddCustomer</title>
+</head>
+<body>
+    <div> 
+        <h2>Add New Customer</h2>
+        <form method="post">
+            <table style="width:70%">
+                <tr>
+                    <td>
+                        Cust Id:
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.CustId)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Name:
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.Name)
+                        @Html.ValidationMessageFor(m => m.Name)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Address:
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.Address)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        City:
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.City)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Department:
+                    </td>
+                    <td>
+                        @Html.DropDownListFor(m=>m.Department,Model.DepartmentList)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Save" />
+                    </td>
+                </tr>
+
+            </table>
+        </form>
+    </div>
+    @ViewBag.Msg
+</body>
+</html>

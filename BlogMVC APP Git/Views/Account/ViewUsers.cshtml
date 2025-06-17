@@ -1,0 +1,60 @@
+﻿@using BlogWebMVCApp.Models
+@model List<NewUserModel>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewUsers</title>
+</head>
+<body>
+    <a href="./AddUser">Add New User</a>
+    <div> 
+        <h2>User List:</h2>
+        <hr/>
+        <table style="width:75%">
+            <tr>
+                <td>
+                    User Id
+                </td>
+                <td>
+                    Email
+                </td>
+                <td>
+                    Password
+                </td>
+                <td>
+                    Roles
+                </td>
+                <td>
+                    Actions
+                </td>
+            </tr>
+            @foreach(var obj in Model)
+            {
+                <tr>
+                    <td>
+                        @obj.UserId
+                    </td>
+                    <td>
+                        @obj.Email
+                    </td>
+                    <td>
+                        @obj.Password
+                    </td>
+                    <td>
+                        @obj.UserRole
+                    </td>
+                    <td>
+                        <a href=".\DeleteUser?Id=@obj.UserId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

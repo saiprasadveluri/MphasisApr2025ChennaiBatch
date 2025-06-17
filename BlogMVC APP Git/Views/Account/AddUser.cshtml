@@ -1,0 +1,53 @@
+﻿@using BlogWebMVCApp.Models
+@model NewUserModel
+@{
+    
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddUser</title>
+</head>
+<body>
+    <div> 
+        <form method="post">
+            <table>
+                <tr>
+                    <td>
+                        Email:
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.Email, new { type = "email" })
+                        @Html.ValidationMessageFor(m=>m.Email)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password:
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.Password, new { type = "password" })
+                        @Html.ValidationMessageFor(m=>m.Password)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Role:
+                    </td>
+                    <td>
+                        @Html.DropDownListFor(m => m.UserRole, Model.AvailableUserRoles)
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Add" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
