@@ -1,0 +1,41 @@
+﻿@using RoomManagerMVCApp.DTO
+@model List<UserInfoDTO>
+<h2>User Info List</h2>
+<hr/>
+<a href="/UserManager/AddUser">Add New User</a>
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Display Name
+                    </th>
+                
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        User Role
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (UserInfoDTO obj in Model)
+                {
+                    <tr>
+                        <td>
+                            @obj.DisplayName
+                        </td>
+                        <td>
+                            @obj.Email
+                        </td>
+                        <td>
+                            @obj.UserRole
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

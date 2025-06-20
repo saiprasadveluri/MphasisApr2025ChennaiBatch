@@ -1,0 +1,38 @@
+﻿@using RoomManagerMVCApp.DTO
+@model MeetingRoomViewDTO
+<h3>Meeting Rooms</h3>
+<hr/>
+<a href="Addroom/Add">Add New Room</a>
+<table style="width:75%">
+    <tr>
+        <td>
+            Room Name
+        </td>
+        <td>
+            Location
+        </td>
+        <td>
+            Capacity
+        </td>
+        <td>
+            Action
+        </td>
+    </tr>
+    @foreach(var entry in Model.rooms)
+    {
+        <tr>
+            <td>
+                @entry.Name
+            </td>
+            <td>
+                @entry.Location
+            </td>
+            <td>
+                @entry.Capacity
+            </td>
+            <td>
+                <a href="/Reservation/ReserveRoom?RID=@entry.RoomId">Reserve</a>
+            </td>
+        </tr>
+    }
+</table>

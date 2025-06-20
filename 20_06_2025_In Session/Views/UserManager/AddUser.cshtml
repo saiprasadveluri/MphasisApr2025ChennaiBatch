@@ -1,0 +1,26 @@
+﻿@using RoomManagerMVCApp.DTO
+@model UserAddInfoDTO
+<h3>Add New User</h3>
+<hr />
+<div class="row">
+    <div class="col-lg-12">
+        @using(Html.BeginForm(FormMethod.Post))
+        {
+            <div>
+                @Html.TextBoxFor(m=>m.DisplayName,new {@class="form-control",placeholder="Display name"})
+            </div>
+            <div>
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control",type="email",placeholder="Email"})
+            </div>
+            <div>
+                @Html.TextBoxFor(m => m.Password, new { @class = "form-control", type = "password", placeholder = "Password" })
+            </div>
+            <div>
+                @Html.DropDownListFor(m => m.UserRole, Model.RoleData, new { @class = "form-control"})
+            </div>
+            <div>
+                <input type="submit" value="Add New User" class="btn btn-primary"/>
+            </div>
+        }
+    </div>
+</div>
