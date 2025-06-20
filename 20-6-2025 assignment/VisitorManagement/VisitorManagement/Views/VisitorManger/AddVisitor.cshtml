@@ -1,0 +1,45 @@
+﻿@using VisitorManagement.DTO
+@model VisitorDTO
+
+@using (var frm = Html.BeginForm(FormMethod.Post))
+{
+    <table style="width:75%">
+        <tr>
+            <td>
+                VisitorName
+            </td>
+            <td>
+                @Html.TextBoxFor(mbox => mbox.VisitorName)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Location
+            </td>
+            <td>
+                @Html.TextBoxFor(mbox => mbox.Location)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                HostName
+            </td>
+            <td>
+                @Html.TextBoxFor(mbox => mbox.HostName)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                VisitorDate
+            </td>
+            <td>
+                @Html.TextBoxFor(mbox => mbox.VisitDate,new{type="Date"})
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="AddVisitor" />
+            </td>
+        </tr>
+    </table>
+}

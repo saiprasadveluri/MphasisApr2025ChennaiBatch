@@ -1,0 +1,43 @@
+﻿@using VisitorManagement.DTO
+@model VistiorViewDTO
+<a href="/VisitorManger/AddVisitor">AddVisitor</a>
+<h2>Visitor List</h2>
+<table class="table">
+    <tr>
+        <td>
+            VisitorId
+        </td>
+        <td>
+            VisitorName
+        </td>
+        <td>
+            Location
+        </td>
+        <td>
+            HostName
+        </td>
+        <td>
+            Visited Date
+        </td>
+    </tr>
+@foreach (var entry in Model.visits){
+    <tr>
+        <td>
+            @entry.VisitorId
+        </td>
+        <td>
+            @entry.VisitorName
+        </td>
+        <td>
+            @entry.Location
+        </td>
+        <td>
+            @entry.HostName
+        </td>
+        <td>
+            @entry.VisitDate
+        </td>
+    </tr>
+}
+</table>
+

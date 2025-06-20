@@ -1,0 +1,31 @@
+﻿@using VisitorManagement.DTO
+@model HostViewDTO
+<a href ="/HostManager/AddHost">AddHost</a>
+<h2>Host List</h2>
+<table class="table">
+    <tr>
+        <td>
+            HostId
+        </td>
+        <td>
+            HostName
+        </td>
+        <td>
+            Location
+        </td>
+    </tr>
+    @foreach (var entry in Model.hosts)
+    {
+        <tr>
+            <td>
+                @entry.HostId
+            </td>
+            <td>
+                @entry.HostName
+            </td>
+            <td>
+                @entry.Location
+            </td>
+        </tr>
+    }
+</table>
