@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Host
+<h2> Add New Host!!</h2>
+<form asp-action="AddHost" method="post">
+    <table>
+        <tr><td>Host Name:</td>
+            <td><input asp-for="HostName"/></td>
+        </tr>
+        <tr>
+            <td>Emp. Number</td>
+            <td><input asp-for="EmpNumber" type="number"/></td>
+        </tr>
+        <tr>
+            <td>Department:</td>
+            <td><input asp-for="Department"/></td>
+        </tr>
+        <tr>
+            <td><select asp-for="LocationId" asp-items="@(new SelectList(ViewBag.Locations, "LocationId", "LocationName"))"></select></td>
+        </tr>
+        <tr>
+            <td>Phone No.:</td>
+            <td><input asp-for="Phone" /></td>
+        </tr>
+        <tr>
+            <td><button type="submit" class="btn btn-danger">Add Host</button></td>
+        </tr>
+    </table>
+</form>
