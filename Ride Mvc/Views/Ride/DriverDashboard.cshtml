@@ -6,7 +6,7 @@
     var ongoingRides = Model.Where(r => !r.IsCompleted).ToList();
 }
 
-<h2 class="mt-4">🚗 Active Rides</h2>
+<h2 class="mt-4">Active Rides</h2>
 
 @if (!ongoingRides.Any())
 {
