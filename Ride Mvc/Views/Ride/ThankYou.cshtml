@@ -1,0 +1,24 @@
+﻿@model int
+
+<div class="alert alert-success mt-4">
+    <h2>🎉 Thank you for your ride!</h2>
+    <p>We’ve received your payment. Please take a moment to rate your driver.</p>
+</div>
+
+<form asp-action="SubmitRating" method="post">
+    <input type="hidden" name="rideId" value="@Model" />
+
+    <div class="form-group">
+        <label for="rating">Rate your ride experience:</label>
+        <select name="rating" id="rating" class="form-control" required>
+            <option value="">-- Select a rating --</option>
+            <option value="5">⭐️⭐️⭐️⭐️⭐️ Excellent</option>
+            <option value="4">⭐️⭐️⭐️⭐️ Very Good</option>
+            <option value="3">⭐️⭐️⭐️ Good</option>
+            <option value="2">⭐️⭐️ Fair</option>
+            <option value="1">⭐️ Poor</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Submit Feedback</button>
+</form>
