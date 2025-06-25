@@ -1,0 +1,6 @@
+@RideAggregatorAPI_HostAddress = http://localhost:5228
+
+GET {{RideAggregatorAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

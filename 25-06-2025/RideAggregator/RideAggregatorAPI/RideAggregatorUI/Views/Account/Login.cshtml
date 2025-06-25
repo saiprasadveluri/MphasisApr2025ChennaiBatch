@@ -1,0 +1,22 @@
+﻿﻿@using RideAggregatorUI.DTO;
+
+@model UserDTO
+<h1>Login Page</h1>
+@using (Html.BeginForm(FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td>Email:</td>
+            <td>@Html.TextBoxFor(model => model.Email, new { type = "email" })</td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td>@Html.PasswordFor(model => model.Password, new { type = "password" })</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Login" />
+            </td>
+        </tr>
+    </table>
+}
