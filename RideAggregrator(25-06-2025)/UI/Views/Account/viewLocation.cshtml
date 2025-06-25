@@ -1,0 +1,22 @@
+﻿@using RideAggeratorUI.DTO;
+@model GetLocation
+<h1>list of locations</h1>
+<table class="table table-striped">
+    <thread>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            
+        </tr>
+    </thread>
+    <tbody>
+        @foreach (LocationDTO dataDTO in Model.data)
+        {
+            <tr>
+                <td>@dataDTO.Id</td>
+                <td>@dataDTO.Name</td>
+                
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,24 @@
+﻿@using RideAggeratorUI.DTO;
+@model GetUsers
+<h1>list of users</h1>
+<table class="table table-striped">
+<thread>
+    <tr>
+        <th>UserId</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>UserRole</th>
+    </tr>
+</thread>
+<tbody>
+    @foreach (UserDTO dataDTO in Model.data)
+    {
+        <tr>
+            <td>@dataDTO.UserId</td>
+            <td>@dataDTO.Email</td>
+            <td>@dataDTO.Password</td>
+            <td>@dataDTO.UserRole</td>
+        </tr>
+    }
+</tbody>
+</table>
