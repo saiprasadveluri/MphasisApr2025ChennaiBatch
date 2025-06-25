@@ -1,0 +1,33 @@
+﻿@model List<RideAggregatorMVC.Models.Driver>
+
+<h2>Drivers</h2>
+
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>Driver ID</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var driver in Model)
+        {
+            <tr>
+                <td>@driver.Id</td>
+                <td>@driver.Name</td>
+                <td>@driver.Phone</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@driver.Id" class="btn btn-sm btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@driver.Id" class="btn btn-sm btn-danger"
+                       onclick="return confirm('Are you sure you want to delete this driver?');">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-success">Create New Driver</a>

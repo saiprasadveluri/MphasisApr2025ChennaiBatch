@@ -1,0 +1,14 @@
+﻿@model RideAggregatorMVC.Models.UserAccount
+
+<h2>Login</h2>
+
+<form asp-action="Login" method="post">
+    <div>Email:<input asp-for="Email" class="form-control" /></div>
+    <div>Password:<input asp-for="Password" type="password" class="form-control" /></div>
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+
+@if(ViewBag.Error != null)
+{
+    <p class="text-danger">@ViewBag.Error</p>
+}

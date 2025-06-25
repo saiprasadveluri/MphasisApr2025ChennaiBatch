@@ -1,0 +1,43 @@
+﻿@model List<RideAggregatorMVC.Models.PickupDropRide>
+
+<h2>PickupDropRide</h2>
+
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>PDR ID</th>
+            <th>Customer Id</th>
+            <th>Driver Id</th>
+            <th>SourceLocation Id</th>
+            <th>DestinationLocation Id</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Kms Travelled</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pickupdropride in Model)
+        {
+            <tr>
+                <td>@pickupdropride.Id</td>
+                <td>@pickupdropride.CustomerId</td>
+                <td>@pickupdropride.DriverId</td>
+                <td>@pickupdropride.SourceLocationId</td>
+                <td>@pickupdropride.DestinationLocationId</td>
+                <td>@pickupdropride.StartTime</td>
+                <td>@pickupdropride.EndTime</td>
+                <td>@pickupdropride.KmsTravelled</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@pickupdropride.Id" class="btn btn-sm btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@pickupdropride.Id" class="btn btn-sm btn-danger"
+                       onclick="return confirm('Are you sure you want to delete this driver?');">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-success">Create New PickupDropRide</a>

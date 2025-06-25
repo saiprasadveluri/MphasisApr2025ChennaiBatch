@@ -1,0 +1,31 @@
+﻿@model List<RideAggregatorMVC.Models.Location>
+
+<h2>Locations</h2>
+
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>Location ID</th>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var location in Model)
+        {
+            <tr>
+                <td>@location.Id</td>
+                <td>@location.Name</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@location.Id" class="btn btn-sm btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@location.Id" class="btn btn-sm btn-danger"
+                       onclick="return confirm('Are you sure you want to delete this driver?');">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-success">Create New Location</a>
