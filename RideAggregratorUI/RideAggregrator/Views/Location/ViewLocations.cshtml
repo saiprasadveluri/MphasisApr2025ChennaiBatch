@@ -1,0 +1,20 @@
+﻿@using RideAggregrator.DTO
+@model GetLocations
+<h1>List of Locations</h1>
+<table class=" table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (LocationDTO dataDTO in Model.data)
+        {
+            <tr>
+                <td>@dataDTO.id</td>
+                <td>@dataDTO.name</td>
+            </tr>
+        }
+    </tbody>
+</table>

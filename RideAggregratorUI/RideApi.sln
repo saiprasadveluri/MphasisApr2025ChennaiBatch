@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RideApi", "RideApi\RideApi.csproj", "{76C5AD91-25DF-4D10-BCF9-7389D6737F6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RideAggregrator", "RideAggregrator\RideAggregrator.csproj", "{E71D1F6E-959A-4308-A03E-DDD027A9396E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76C5AD91-25DF-4D10-BCF9-7389D6737F6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76C5AD91-25DF-4D10-BCF9-7389D6737F6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76C5AD91-25DF-4D10-BCF9-7389D6737F6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76C5AD91-25DF-4D10-BCF9-7389D6737F6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E71D1F6E-959A-4308-A03E-DDD027A9396E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E71D1F6E-959A-4308-A03E-DDD027A9396E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E71D1F6E-959A-4308-A03E-DDD027A9396E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E71D1F6E-959A-4308-A03E-DDD027A9396E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40068E6D-A117-40FF-BC4A-B0A599369141}
+	EndGlobalSection
+EndGlobal
