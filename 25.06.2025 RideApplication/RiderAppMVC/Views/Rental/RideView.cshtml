@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<RideDTO>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Ride Id</th>
+            <th>PickUp Id</th>
+            <th>Distance</th>
+            <th>Cost Per Km</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (RideDTO pic in Model)
+        {
+            <tr>
+                <td>@pic.rideId</td>
+                <td>@pic.pId</td>
+                <td>@pic.distance</td>
+                <td>@pic.costPerKm</td>
+            </tr>
+        }
+    </tbody>
+</table>
