@@ -1,0 +1,27 @@
+﻿@using RideAggrigateUI.DTO
+@model GetAllLocationDataModel
+<h3>
+    List
+</h3>
+<table>
+    <tr>
+        <td>
+            LocationId
+        </td>
+        <td>
+            LocationName
+        </td>
+    </tr>
+    @foreach (LocationDTO locationDTO in Model.Data)
+    {
+        <tr>
+            <td>
+                @locationDTO.locationId
+            </td>
+
+            <td>
+                @locationDTO.locationName
+            </td>
+        </tr>
+    }
+</table>

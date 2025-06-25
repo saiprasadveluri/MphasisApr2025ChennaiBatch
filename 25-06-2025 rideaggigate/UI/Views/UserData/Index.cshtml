@@ -1,0 +1,40 @@
+﻿@using RideAggrigateUI.DTO
+@model GetAllUserDataModel
+<h3>
+    List 
+</h3>
+<table>
+    <tr>
+        <td>
+            Id
+        </td>
+        <td>
+            Name
+        </td>
+        <td>
+            Email
+        </td>
+        <td>
+            UserRole
+        </td>
+    </tr>
+   @foreach(UserDataDTO userDataDTO in Model.data)
+    {
+        <tr>
+            <td>
+                @userDataDTO.userid
+            </td>
+
+            <td>
+                @userDataDTO.password
+            </td>
+            <td>
+                @userDataDTO.email
+
+            </td>
+            <td>
+                @userDataDTO.userrole
+            </td>
+        </tr>        
+    }
+</table>
