@@ -1,0 +1,23 @@
+﻿@using MVC.DTO;
+@model GetLocations
+<h1>List of Location</h1>
+<table class="table  table-striped">
+    <thead>
+        <tr>
+            <th>LocationId</th>
+            <th>LocationName</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (LocationDTO dataDTO in Model.data)
+        {
+            <tr>
+                <td>@dataDTO.locationid</td>
+                <td>@dataDTO.locationname</td>
+
+            </tr>
+        }
+    </tbody>
+
+</table>
