@@ -1,0 +1,31 @@
+﻿
+@model List<DriverDTO>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>DriverId</th>
+            <th>User Id</th>
+            <th>Driver Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Rating</th>
+            <th>No. Of Rides</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (DriverDTO dri in Model)
+        {
+            <tr>
+                <td>@dri.driverId</td>
+                <td>@dri.userId</td>
+                <td>@dri.driverName</td>
+                <td>@dri.address</td>
+                <td>@dri.phone</td>
+                <td>@dri.rating</td>
+                <td>@dri.noOfRides</td>
+            </tr>
+        }
+
+    </tbody>
+</table>

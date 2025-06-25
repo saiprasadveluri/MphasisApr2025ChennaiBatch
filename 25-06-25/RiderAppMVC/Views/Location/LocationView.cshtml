@@ -1,0 +1,23 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<LocationDTO>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Location Id</th>
+            <th>Location Name</th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (LocationDTO loc in Model)
+            {
+            <tr>
+                <td>@loc.locationId</td>
+                <td>@loc.locationName</td>
+            </tr>
+            }
+        
+    </tbody>
+</table>
