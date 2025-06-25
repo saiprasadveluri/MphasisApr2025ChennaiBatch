@@ -1,0 +1,87 @@
+﻿@model IEnumerable<RideAggregatorMVC.Models.RentalsRide>
+
+
+<h2 class="mt-4">Welcome, Driver</h2>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-info">@TempData["Message"]</div>
+}
+
+@if (!Model.Any())
+{
+    <p>No rides assigned at the moment.</p>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead class="thead-light">
+            <tr>
+                <th>Customer</th>
+                <th>Pickup Time</th>
+                <th>Status</th>
+                <th>Estimated</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ride in Model)
+            {
+                <tr>
+                    <td>@ride.CustomerId</td>
+                    <td>@ride.CreatedAt.ToLocalTime().ToString("g")</td>
+                    <td>
+                        @if (ride.IsCompleted)
+                        {
+                            <span class="badge bg-success">Completed</span>
+                        }
+                        else if (ride.IsAccepted)
+                        {
+                            <span class="badge bg-info">Driver on the way</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-secondary">Waiting for driver</span>
+                        }
+                    </td>
+                    <td>
+                        @if (ride.IsAccepted && !string.IsNullOrEmpty(ride.EstimatedTime))
+                        {
+                            <div><strong>Time:</strong> @ride.EstimatedTime</div>
+                            <div><strong>Distance:</strong> @ride.EstimatedDistance</div>
+                        }
+                        else
+                        {
+                            <em>—</em>
+                        }
+                    </td>
+                    <td>
+                        @if (!ride.IsCompleted)
+                        {
+                            @if (!ride.IsAccepted)
+                            {
+                                <form asp-action="AcceptRide" method="post">
+                                    <input type="hidden" name="rideId" value="@ride.Id" />
+                                    <button class="btn btn-primary btn-sm">Accept Ride</button>
+                                </form>
+                            }
+                            else
+                            {
+                                <form asp-action="CompleteRideByDriver" method="post">
+                                    <input type="hidden" name="rideId" value="@ride.Id" />
+                                    <button class="btn btn-success btn-sm">Mark Complete</button>
+                                </form>
+                            }
+                        }
+                        else
+                        {
+                            <i class="text-muted">No action needed</i>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+ViewBag.DriverId = driverId;
+
