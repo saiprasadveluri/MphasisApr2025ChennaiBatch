@@ -1,0 +1,23 @@
+﻿@using RideAggregateMVCAPI.DTO;
+@model GetAllLocations;
+<h2>Locations</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Location Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (LocationDTOM loc in Model.data)
+        {
+            <tr>
+                <td>@loc.id</td>
+                <td>@loc.name</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Add New Location</a>

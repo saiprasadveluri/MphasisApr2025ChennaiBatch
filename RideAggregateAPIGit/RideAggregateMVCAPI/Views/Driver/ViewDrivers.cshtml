@@ -1,0 +1,31 @@
+﻿@using RideAggregateMVCAPI.DTO;
+@model GetAllDrivers;
+<h2>Drivers</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Driver Id</th>
+            <th>LogId</th>
+            <th>Phone Number</th>
+            <th>Driver Name</th>
+            <th>Vehicle Name</th>
+            <th>Vehicle Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (DriverDTOM driver in Model.data)
+        {
+            <tr>
+                <td>@driver.driverId</td>
+                <td>@driver.loginId</td>
+                <td>@driver.phoneNumber</td>
+                <td>@driver.driverName</td>
+                <td>@driver.vehicleName</td>
+                <td>@driver.vehicleNo</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Add New Driver</a>

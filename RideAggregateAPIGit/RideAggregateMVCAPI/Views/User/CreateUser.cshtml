@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    @model RideAggregateMVCAPI.DTO.UserDTOM;
+
+    <h2>Add New User</h2>
+
+    <form asp-action="Create" method="post">
+        <div class="form-group">
+            <label asp-for="userEmail"></label>
+            <input asp-for="userEmail" class="form-control" />
+            <span asp-validation-for="userEmail" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="userRole"></label>
+            <input asp-for="userRole" class="form-control" />
+            <span asp-validation-for="userRole" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success">Add User</button>
+    </form>
+
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+}

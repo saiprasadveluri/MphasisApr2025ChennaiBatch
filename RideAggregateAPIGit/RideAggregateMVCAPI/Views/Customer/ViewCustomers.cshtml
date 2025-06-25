@@ -1,0 +1,27 @@
+﻿@using RideAggregateMVCAPI.DTO;
+@model GetAllCustomers;
+<h2>Customer</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Customer Id</th>
+            <th>LogId</th>
+            <th>Phone Number</th>
+            <th>Customer Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (CustomerDTOM cust in Model.data)
+        {
+            <tr>
+                <td>@cust.custId</td>
+                <td>@cust.loginId</td>
+                <td>@cust.phoneNumber</td>
+                <td>@cust.customerName</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Add New Customer</a>
