@@ -1,0 +1,16 @@
+﻿@model int
+
+<div class="alert alert-success mt-4">
+    <h4>✅ Thank you! Your ride is complete.</h4>
+    <p>We hope you had a comfortable journey. Kindly take a moment to rate your experience and make your payment.</p>
+</div>
+
+<form asp-action="RateDriver" method="get">
+    <input type="hidden" name="rideId" value="@Model" />
+    <button class="btn btn-outline-primary">Leave a Rating</button>
+</form>
+
+<form asp-action="PayNow" method="get" class="mt-2">
+    <input type="hidden" name="rideId" value="@Model" />
+    <button class="btn btn-outline-success">Pay Now</button>
+</form>

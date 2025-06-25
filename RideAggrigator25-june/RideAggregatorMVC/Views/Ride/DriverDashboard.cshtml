@@ -1,0 +1,44 @@
+﻿
+@model IEnumerable<RideAggregatorMVC.Models.Ride>
+@using System.Linq
+
+@{
+    ViewData["Title"] = "Driver Dashboard";
+    var ongoingRides = Model.Where(r => !r.IsCompleted).ToList();
+}
+
+<h2 class="mt-4">🚗 Active Rides</h2>
+
+@if (!ongoingRides.Any())
+{
+    <div class="alert alert-info">No ongoing rides at the moment.</div>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Pickup</th>
+                <th>Drop</th>
+                <th>Ride Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ride in ongoingRides)
+            {
+                <tr>
+                    <td>@ride.PickupLocation</td>
+                    <td>@ride.DropLocation</td>
+                    <td>@ride.RideDate.ToString("dd-MMM-yyyy hh:mm tt")</td>
+                    <td>
+                        <form asp-action="CompleteRideByDriver" method="post">
+                            <input type="hidden" name="rideId" value="@ride.Id" />
+                            <button type="submit" class="btn btn-danger">End Ride</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

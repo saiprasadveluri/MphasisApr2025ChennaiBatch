@@ -1,0 +1,20 @@
+﻿@model List<RideAggregatorMVC.Models.Customer>
+
+<h2>Customer List</h2>
+<a asp-action="Create">Add New Customer</a>
+
+<table class="table">
+    <thead>
+        <tr><th>Name</th><th>Email</th><th>Phone</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>@customer.Name</td>
+                <td>@customer.Email</td>
+                <td>@customer.Phone</td>
+            </tr>
+        }
+    </tbody>
+</table>
