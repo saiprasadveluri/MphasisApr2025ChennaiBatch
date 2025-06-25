@@ -1,0 +1,20 @@
+﻿@model int
+
+<h2 class="mt-4">💳 Complete Your Payment</h2>
+<p>Your ride has ended. Please select your payment method below:</p>
+
+<form asp-action="ConfirmPayment" method="post">
+    <input type="hidden" name="rideId" value="@Model" />
+
+    <div class="form-group">
+        <label>Payment Method:</label>
+        <select name="paymentMethod" class="form-control" required>
+            <option value="UPI">UPI</option>
+            <option value="Cash">Cash</option>
+            <option value="Card">Card</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-success mt-3">Pay Now</button>
+</form>
+
