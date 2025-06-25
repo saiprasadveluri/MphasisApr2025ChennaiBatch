@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<CustomerDTO>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>customer Id</th>
+            <th>User Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (CustomerDTO cust in Model)
+        {
+            <tr>
+                <td>@cust.cust_Id</td>
+                <td>@cust.userId</td>
+                <td>@cust.name</td>
+                <td>@cust.address</td>
+                <td>@cust.phone</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
