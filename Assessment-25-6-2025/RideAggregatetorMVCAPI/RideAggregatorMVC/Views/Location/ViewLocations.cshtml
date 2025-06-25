@@ -1,0 +1,28 @@
+﻿@using RideAggregatorMVC.MVCDTO
+@model GetAllLocs
+<h2>Locations</h2>
+<table class="table">
+    <thead>
+   <tr>
+        <td>
+            LocationId
+        </td>
+        <td>
+            LocationName
+        </td>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (LocationDTO obj in Model.data)
+        {
+            <tr>
+                <td>
+                    @obj.locId
+            </td>
+            <td>
+                @obj.locName
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

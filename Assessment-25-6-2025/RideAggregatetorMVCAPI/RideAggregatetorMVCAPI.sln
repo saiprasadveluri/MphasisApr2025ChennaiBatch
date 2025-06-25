@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RideAggregatetorMVCAPI", "RideAggregatetorMVCAPI\RideAggregatetorMVCAPI.csproj", "{6A30995F-DD70-49B2-AC35-2EACBE1FDBF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RideAggregatorMVC", "RideAggregatorMVC\RideAggregatorMVC.csproj", "{6C582D28-9221-473D-A435-DCD016BA06AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A30995F-DD70-49B2-AC35-2EACBE1FDBF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A30995F-DD70-49B2-AC35-2EACBE1FDBF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A30995F-DD70-49B2-AC35-2EACBE1FDBF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A30995F-DD70-49B2-AC35-2EACBE1FDBF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C582D28-9221-473D-A435-DCD016BA06AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C582D28-9221-473D-A435-DCD016BA06AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C582D28-9221-473D-A435-DCD016BA06AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C582D28-9221-473D-A435-DCD016BA06AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85356C3D-03BD-49AD-AA60-EDA3610CE470}
+	EndGlobalSection
+EndGlobal

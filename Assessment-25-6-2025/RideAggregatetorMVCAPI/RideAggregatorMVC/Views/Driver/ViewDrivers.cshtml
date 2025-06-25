@@ -1,0 +1,36 @@
+﻿@using RideAggregatorMVC.MVCDTO
+@model GetDrivers
+<h2>
+    Drivers List
+</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <td>
+                DriverId
+            </td>
+
+            <td>
+                DriverName
+            </td>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (DriverDTO obj in Model.data)
+        {
+            <tr>
+                <td>
+                    @obj.driverId
+
+                </td>
+                <td>
+                    @obj.driverName
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+

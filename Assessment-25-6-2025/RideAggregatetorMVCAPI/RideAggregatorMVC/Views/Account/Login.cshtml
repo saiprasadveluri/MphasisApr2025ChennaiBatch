@@ -1,0 +1,23 @@
+﻿@using RideAggregatorMVC.MVCDTO
+@model Login
+<h2>
+    Login Page
+</h2>
+
+<div class>
+    <div class="col-lg-12">
+        <form method="post">
+            <div>
+                @Html.TextBoxFor(a => a.email, new { @class = "form-control", Type = "email", placeholder = "email" })
+            </div>
+            <div>
+                @Html.TextBoxFor(a => a.password, new { @class = "form-control", Type = "password", placeholder = "password" })
+            </div>
+            <br />
+            <div>
+                <input type="submit" value="Login" />
+            </div>
+        </form>
+    </div>
+</div>
+

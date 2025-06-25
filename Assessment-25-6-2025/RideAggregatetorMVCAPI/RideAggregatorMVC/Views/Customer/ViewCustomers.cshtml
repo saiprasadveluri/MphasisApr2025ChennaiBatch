@@ -1,0 +1,35 @@
+﻿@using RideAggregatorMVC.MVCDTO
+@model GetCustomers
+<h2>
+    Customers List
+</h2>
+<table class="table">
+    <thead>
+    <tr>
+        <td>
+            CustomerId
+        </td>
+        
+        <td>
+           CustomerName
+        </td>
+
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (CustomersDTO obj in Model.data)
+    {
+        <tr>
+            <td>
+                @obj.customerId
+
+            </td>
+            <td>
+                @obj.customerName
+            </td>
+           
+        </tr>
+    }
+    </tbody>
+</table>
+

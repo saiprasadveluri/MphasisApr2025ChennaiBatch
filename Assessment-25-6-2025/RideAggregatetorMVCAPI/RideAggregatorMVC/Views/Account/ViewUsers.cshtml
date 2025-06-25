@@ -1,0 +1,43 @@
+﻿@using RideAggregatorMVC.MVCDTO
+@model UserLogin
+<h2>UserList</h2>
+<table class="table">
+    <thead>
+    <tr>
+        <td>
+           UserId
+        </td>
+        <td>
+           Email
+        </td>
+        <td>
+            Password
+        </td>
+        <td>
+            UserRole
+        </td>
+        
+    </tr>
+   </thead>
+   <tbody>
+    @foreach (UserDataDTO obj in Model.data)
+    {
+        <tr>
+            <td>
+                @obj.userId
+
+            </td>
+            <td>
+                @obj.email
+            </td>
+            <td>
+                @obj.password
+            </td>
+            <td>
+                @obj.userRole
+            </td>
+        </tr>
+    }
+    </tbody>
+    
+</table>
