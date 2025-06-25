@@ -1,0 +1,21 @@
+﻿@using RideUI.DTO
+@model UserDataDTO
+<h1>Login Page</h1>
+@using (Html.BeginForm(FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td>Email:</td>
+            <td>@Html.TextBoxFor(model => model.email, new { type = "email" })</td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td>@Html.PasswordFor(model => model.password, new { type = "password" })</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Login" />
+            </td>
+        </tr>
+    </table>
+}

@@ -1,0 +1,28 @@
+﻿@using RideUI.DTO
+@model GetDriver
+<h2>Drivers List</h2>
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>DriverId</th>
+                <th>UserId</th>
+                <th>driverName</th>
+                <th>driverRating</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (DriverDTO driverDTO in Model.result)
+            {
+                <tr>
+                    <td>@driverDTO.driverId</td>
+                    <td>@driverDTO.userId</td>
+                    <td>@driverDTO.driverName</td>
+                    <td>@driverDTO.driverRating</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -1,0 +1,26 @@
+﻿@using RideUI.DTO
+@model GetRent
+<h1>List of Rental Rides</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>RentalId</th>
+            <th>distance</th>
+            <th>hiredDays</th>
+            <th>custId</th>
+            <th>driverId</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(RentalRideDTO dataDTO in Model.result)
+        {
+            <tr>
+                <td>@dataDTO.rentalId</td>
+                <td>@dataDTO.distance</td>
+                <td>@dataDTO.hiredDays</td>
+                <td>@dataDTO.custId</td>
+                <td>@dataDTO.driverId</td>
+            </tr>
+        }
+    </tbody>
+</table>

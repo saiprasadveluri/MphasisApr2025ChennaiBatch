@@ -1,0 +1,24 @@
+﻿@using RideUI.DTO
+@model GetUserData
+<h1>List of Users</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>UserId</th>
+            <th>Email </th>
+            <th>Password</th>
+            <th>UserRole</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(UserDataDTO dataDTO in Model.data)
+        {
+            <tr>
+                <td>@dataDTO.userId</td>
+                <td>@dataDTO.email</td>
+                <td>@dataDTO.password</td>
+                <td>@dataDTO.userRole</td>
+            </tr>
+        }
+    </tbody>
+</table>

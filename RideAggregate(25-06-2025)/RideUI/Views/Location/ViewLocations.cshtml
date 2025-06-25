@@ -1,0 +1,23 @@
+﻿@using RideUI.DTO
+@model GetLocation
+<h2>Locations List</h2>
+@using(Html.BeginForm(FormMethod.Post))
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Location Id</th>
+                <th>Location Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(LocationDTO locationDTO in Model.data)
+            {
+                <tr>
+                    <td>@locationDTO.locationId</td>
+                    <td>@locationDTO.locationName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

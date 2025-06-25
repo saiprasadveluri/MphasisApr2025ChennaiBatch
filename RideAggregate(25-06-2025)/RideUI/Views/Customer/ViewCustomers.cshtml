@@ -1,0 +1,27 @@
+﻿@using RideUI.DTO
+@model GetCustomer
+<h2>Customer List</h2>
+@using (Html.BeginForm(FormMethod.Post))
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Cust Id</th>
+                <th>User Id</th>
+                <th>Cust Name</th>
+                <th>Cust Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (CustomerDTO customerDTO in Model.result)
+            {
+                <tr>
+                    <td>@customerDTO.custId</td>
+                    <td>@customerDTO.userId</td>
+                    <td>@customerDTO.custName</td>
+                    <td>@customerDTO.custPhnno</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
