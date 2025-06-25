@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<LocationDTO>    
+@{
+    ViewBag.Title = "Location List";
+ 
+ }
+ 
+ <h2>Location List</h2>
+ 
+ <table class="table table-bordered table-striped">
+     <thead>
+         <tr>
+             <th>Location Id</th>
+             <th>Location Name</th>
+            
+         </tr>
+     </thead>
+     <tbody>
+         @foreach (var loc in Model)
+         {
+             <tr>
+                 <td>@loc.lId</td>
+                 <td>@loc.lName</td>  
+             </tr>
+         }
+     </tbody>
+</table>
+}

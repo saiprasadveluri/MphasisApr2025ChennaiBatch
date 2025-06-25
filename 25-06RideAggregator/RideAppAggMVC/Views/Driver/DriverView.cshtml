@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<DriverDTO>
+@{
+    ViewBag.Title = "Driver List";
+  
+}
+
+<h2>Driver List</h2>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Driver Id</th>
+            <th>User Id</th>
+            <th>Driver Name</th>
+            <th>Driver Address</th>
+            <th>Driver Phone</th>
+            <th>Driver Rating</th>
+            <th>No of  Rides</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var driver in Model)
+        {
+            <tr>
+                <td>@driver.dId</td>
+                <td>@driver.uId</td>
+                <td>@driver.dName</td>
+                <td>@driver.address</td>
+                <td>@driver.phone</td>
+                <td>@driver.rating</td>
+                <td>@driver.noOfRides</td>
+            </tr>
+        }
+    </tbody>
+</table>

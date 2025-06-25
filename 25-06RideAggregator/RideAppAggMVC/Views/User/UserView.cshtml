@@ -1,0 +1,30 @@
+﻿@model List<UserDTO>    
+
+@{
+    ViewBag.Title = "User List";
+}
+
+<h2>User List</h2>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>User Id</th>
+            <th>User Email</th>
+            <th>User Password</th>
+            <th>User Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.uId</td>
+                <td>@user.email</td>
+                <td>@user.password</td>
+                <td>@user.role</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

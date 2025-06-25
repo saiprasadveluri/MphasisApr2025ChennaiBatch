@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<RideDTO>
+@{
+    ViewBag.Title = "Ride List";
+ 
+ }
+ 
+ <h2>Ride List</h2>
+ 
+ <table class="table table-bordered table-striped">
+     <thead>
+         <tr>
+             <th>Ride Id</th>
+             <th>PickupDrop Id</th>
+             <th>Distance</th>
+             <th>CostPerKm</th>
+         </tr>
+     </thead>
+     <tbody>
+         @foreach (var ride in Model)
+         {
+             <tr>
+                 <td>@ride.rId</td>
+                 <td>@ride.pId</td>
+                 <td>@ride.distance</td>
+                 <td>@ride.costPerKm</td>
+             </tr>
+         }
+     </tbody>
+</table>
+
