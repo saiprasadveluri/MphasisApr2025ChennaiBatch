@@ -1,0 +1,29 @@
+﻿<form method="post" asp-action="Login" class="form-control">
+    <table>
+        <tr>
+            <td><label id="txt">Email:</label></td>
+            <td><input id="email" name="email" /></td>
+        </tr>
+        <tr>
+            <td><label id="txtP">Password:</label></td>
+            <td><input id="pwd" name="password" type="password" /></td>
+        </tr>
+        <tr>
+        <td><label>Role:</label></td>
+        <td>
+        <select name="role">
+        <option disabled selected>Select Role</option>
+        <option value=1>Admin</option>
+        <option value=2>User</option>
+        <option value=3>Driver</option>
+        </select>
+        </td>
+        </tr> 
+        <tr>
+            <td colspan="2">
+                <button type="submit">Login</button>
+            </td>
+        </tr>
+
+    </table>
+</form>

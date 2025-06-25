@@ -1,0 +1,22 @@
+﻿@using RideAggregatorMVC.DTO;
+@model GetAllLocations;
+<h1>Locations</h1>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Location Id</th>
+            <th>Login Id</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (LocationDTO loc in Model.data)
+        {
+            <tr>
+                <td>@loc.id</td>
+                <td>@loc.name</td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
