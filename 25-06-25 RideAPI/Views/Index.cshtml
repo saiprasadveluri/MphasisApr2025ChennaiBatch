@@ -1,0 +1,25 @@
+﻿<h2>Welcome to Ride Aggregator</h2>
+<p>Hello,@TempData["Username"]!</p>
+
+@model List<Customer>
+<h2>Customer List</h2>
+<a href="/Customer/Add">Add New</a>
+<table class="table">
+    <thead>
+        <tr><th>ID</th><th>Name</th><th>Phone</th><th>Actions</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.CustomerId</td>
+                <td>@c.CustomerName</td>
+                <td>@c.PhoneNumber</td>
+                <td>
+                    <a href="/Customer/Edit/@c.CustomerId">Edit</a> |
+                    <a href="/Customer/Delete/@c.CustomerId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
