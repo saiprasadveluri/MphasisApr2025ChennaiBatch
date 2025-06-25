@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "2VnsAAZOGP4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\shivam.kumar11\\Desktop\\PracticeProj\\RideAggregator\\RideAggregator.services\\RideAggregator.services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\shivam.kumar11\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.6\\microsoft.extensions.dependencyinjection.abstractions.9.0.6.nupkg.sha512"
+  ],
+  "logs": []
+}

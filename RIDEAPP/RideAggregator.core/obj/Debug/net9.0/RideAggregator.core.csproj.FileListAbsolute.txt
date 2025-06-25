@@ -1,0 +1,11 @@
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.core\bin\Debug\net9.0\RideAggregator.core.deps.json
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.core\bin\Debug\net9.0\RideAggregator.core.dll
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.core\bin\Debug\net9.0\RideAggregator.core.pdb
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.core\obj\Debug\net9.0\RideAggregator.core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.core\obj\Debug\net9.0\RideAggregator.core.AssemblyInfoInputs.cache
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.core\obj\Debug\net9.0\RideAggregator.core.AssemblyInfo.cs
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.core\obj\Debug\net9.0\RideAggregator.core.csproj.CoreCompileInputs.cache
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.core\obj\Debug\net9.0\RideAggregator.core.dll
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.core\obj\Debug\net9.0\refint\RideAggregator.core.dll
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.core\obj\Debug\net9.0\RideAggregator.core.pdb
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.core\obj\Debug\net9.0\ref\RideAggregator.core.dll

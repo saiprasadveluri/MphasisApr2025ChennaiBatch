@@ -1,0 +1,17 @@
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.Data\bin\Debug\net9.0\RideAggregator.Data.deps.json
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.Data\bin\Debug\net9.0\RideAggregator.Data.runtimeconfig.json
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.Data\bin\Debug\net9.0\RideAggregator.Data.dll
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.Data\bin\Debug\net9.0\RideAggregator.Data.pdb
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.Data\bin\Debug\net9.0\RideAggregator.core.dll
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.Data\bin\Debug\net9.0\RideAggregator.core.pdb
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.Data\obj\Debug\net9.0\RideAggregator.Data.csproj.AssemblyReference.cache
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.Data\obj\Debug\net9.0\RideAggregator.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.Data\obj\Debug\net9.0\RideAggregator.Data.AssemblyInfoInputs.cache
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.Data\obj\Debug\net9.0\RideAggregator.Data.AssemblyInfo.cs
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.Data\obj\Debug\net9.0\RideAggregator.Data.csproj.CoreCompileInputs.cache
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.Data\obj\Debug\net9.0\RideAggr.4473B9B0.Up2Date
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.Data\obj\Debug\net9.0\RideAggregator.Data.dll
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.Data\obj\Debug\net9.0\refint\RideAggregator.Data.dll
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.Data\obj\Debug\net9.0\RideAggregator.Data.pdb
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.Data\obj\Debug\net9.0\RideAggregator.Data.genruntimeconfig.cache
+C:\Users\shivam.kumar11\Desktop\PracticeProj\RideAggregator\RideAggregator.Data\obj\Debug\net9.0\ref\RideAggregator.Data.dll
