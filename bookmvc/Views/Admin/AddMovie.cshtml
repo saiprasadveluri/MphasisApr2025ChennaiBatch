@@ -1,0 +1,10 @@
+﻿@model BookMVC.Models.MovieModel
+
+<h3>Add Movie</h3>
+
+<form asp-action="AddMovie" method="post">
+    <input asp-for="Title" placeholder="Title" required />
+    <input asp-for="GenreId" placeholder="Genre ID" required />
+    <input asp-for="TheatreId" placeholder="Theatre ID" required />
+    <button type="submit">Save</button>
+</form>
