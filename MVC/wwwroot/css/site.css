@@ -1,0 +1,122 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+header.logo-container {
+    background-color: #283593;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+    header.logo-container h1 {
+        margin: 0;
+        font-size: 1.8rem;
+    }
+
+.navbar {
+    background-color: #3949ab;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    color: white;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    gap: 1rem;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: #5c6bc0;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    border: 1px solid #ddd;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+
+    .dropdown-content a {
+        color: #333;
+        padding: 10px 12px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .dropdown-content a:hover {
+            background-color: #f0f0f0;
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.search-bar input {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 3px;
+    width: 200px;
+}
+
+.dashboard {
+    padding: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-top: 1rem;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #e8eaf6;
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    button:hover {
+        opacity: 0.9;
+    }
+
+    button[style*="red"] {
+        background-color: #e53935;
+        color: white;
+    }
