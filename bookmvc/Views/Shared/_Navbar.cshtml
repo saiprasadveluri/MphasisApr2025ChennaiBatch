@@ -1,0 +1,15 @@
+﻿<nav>
+    <ul>
+        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+        @if (TempData["Role"]?.ToString() == "Admin")
+        {
+            <li><a asp-controller="Admin" asp-action="Index">Admin Dashboard</a></li>
+        }
+        else if (TempData["Role"]?.ToString() == "User")
+        {
+            <li><a asp-controller="User" asp-action="Index">User Dashboard</a></li>
+            <li><a asp-controller="Booking" asp-action="BookTicket">Book Tickets</a></li>
+        }
+        <li><a asp-controller="Account" asp-action="Login">Logout</a></li>
+    </ul>
+</nav>

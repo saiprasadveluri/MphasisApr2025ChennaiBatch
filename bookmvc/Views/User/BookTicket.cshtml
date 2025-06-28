@@ -1,0 +1,41 @@
+﻿@model BookMVC.Models.BookingModel
+
+<h3>Book Ticket</h3>
+
+<select id="CityId">
+    <option value="">Select City</option>
+    @foreach (var city in ViewBag.Cities)
+    {
+        <option value="@city.Id">@city.Name</option>
+    }
+</select>
+
+<select id="TheatreId"></select>
+<select id="MovieId"></select>
+<input asp-for="ShowTime" type="datetime-local" />
+
+<button id="bookNow">Book</button>
+
+@section Scripts {
+    <script>
+            $("#CityId").change(function () {
+                const cityId = $(this).val();
+                $.get("/Booking/GetTheatres?cityId=" + cityId, function (data) {
+                    let html = "<option>Select Theatre</option>";
+        data.forEach(t => html += `${t.name}</option>`);
+                    $("#TheatreId").html(html);
+                });
+            });
+
+            $("#TheatreId").change(function () {
+                const tid = $(this).val();
+                $.get("/Booking/GetMovies?theatreId=" + tid, function (data) {
+                    let html = "<option>Select Movie</option>";
+        data.forEach(m => html += `<option value="${m.id}">${m.title}</option>`);
+                    $("#MovieId").html(html);
+                });
+            });
+
+            $("#bookNow").click(() => alert("Booking flow goes here!"));
+    </script>
+}
