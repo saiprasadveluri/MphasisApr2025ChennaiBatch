@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: ghostwhite;
+  color: #333;
+}
+
+/* Logo */
+.logo-container {
+  background-color: forestgreen;
+  padding: 16px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+/* Navbar */
+.navbar {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-left a,
+.nav-right a {
+  text-decoration: none;
+  color: mediumseagreen;
+  font-weight: bold;
+  margin: 0 12px;
+}
+
+/* Search Bar */
+.search-bar input {
+  padding: 8px 16px;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  width: 200px;
+}
+
+/* Dashboard Content */
+.dashboard {
+  padding: 32px;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  color: mediumseagreen;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  min-width: 200px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: whitesmoke;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Form Styling */
+form {
+  background-color: white;
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 500px;
+  margin: auto;
+  font-size: 16px;
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: seagreen;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  transition: border 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: seagreen;
+  outline: none;
+}
+
+form input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+form button[type="submit"] {
+  background-color: seagreen;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+form button[type="submit"]:hover {
+  background-color: darkgreen;
+}
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+}
+
+.user-table th,
+.user-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+}
+
+.user-table th {
+  background-color: #f0f5f0;
+  color: seagreen;
+}
+
+.user-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.user-table button {
+  margin-right: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: mediumseagreen;
+  color: white;
+}
+
+.user-table button:hover {
+  opacity: 0.8;
+}
+.medicine-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+}
+
+.medicine-table th,
+.medicine-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+}
+
+.medicine-table th {
+  background-color: #f0f5f0;
+  color: seagreen;
+}
+
+.medicine-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.medicine-table button {
+  margin-right: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: mediumseagreen;
+  color: white;
+}
+
+.medicine-table button:hover {
+  opacity: 0.85;
+}
+.stock-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+}
+
+.stock-table th,
+.stock-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+}
+
+.stock-table th {
+  background-color: #f0f5f0;
+  color: seagreen;
+}
+
+.stock-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.stock-table button {
+  padding: 6px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  background-color: steelblue;
+  color: white;
+  cursor: pointer;
+}
+

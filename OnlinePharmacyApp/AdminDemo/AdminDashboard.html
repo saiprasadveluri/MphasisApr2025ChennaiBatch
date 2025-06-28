@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css"/>
+</head>
+<body>
+  <header class="logo-container">
+    <h1 style="cursor:pointer;" onclick="loadContent('home')">Contoso Admin</h1>
+  </header>
+
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="dropdown">
+        <button class="dropbtn">User</button>
+        <div class="dropdown-content">
+          <a href="#" onclick="loadContent('addUser')">Add User</a>
+          <a href="#" onclick="loadContent('viewUsers')">View All Users</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Medicine</button>
+        <div class="dropdown-content">
+          <a href="#" onclick="loadContent('addMedicine')">Add Medicine</a>
+          <a href="#" onclick="loadContent('viewMedicine')">View Medicine</a>
+          <a href="#" onclick="loadContent('viewStock')">View Stock</a>
+        </div>
+      </div>
+      
+    </div>
+  
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+    </div>
+  
+    <div class="nav-right">
+      <a href="#">Profile</a>
+    </div>
+  </nav>
+  
+
+  <main class="dashboard" id="content">
+    <h2>Welcome to the Admin Panel</h2>
+  </main>
+  <script>
+    async function loadContent(section) {
+      const content = document.getElementById('content');
+
+      if (section === 'home') {
+    content.innerHTML = `
+      <h2>Welcome to the Admin Panel</h2>
+      <p>Select an option from the menu to get started.</p>
+    `;
+  }
+  
+   if (section === 'viewUsers') {
+  try {
+    const response = await fetch('https://your-api-url.com/api/users');
+    if (!response.ok) throw new Error(`Status ${response.status}`);
+
+    const users = await response.json();
+
+    if (users.length === 0) {
+      content.innerHTML = `<h2>All Registered Users</h2><p>No users found.</p>`;
+      return;
+    }
+
+    let html = `
+      <h2>All Registered Users</h2>
+      <table class="user-table">
+        <thead>
+          <tr>
+            <th>UserID</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Phone Number</th>
+            <th>Address</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+    `;
+
+    users.forEach(user => {
+      html += `
+        <tr>
+          <td>${user.userId}</td>
+          <td>${user.userName}</td>
+          <td>${user.email}</td>
+          <td>${user.password}</td>
+          <td>${user.phoneNumber}</td>
+          <td>${user.address}</td>
+          <td>
+            <button onclick="editUser(${user.userId})">Edit</button>
+            <button onclick="deleteUser(${user.userId})" style="color:red;">Delete</button>
+          </td>
+        </tr>
+      `;
+    });
+
+    html += `</tbody></table>`;
+    content.innerHTML = html;
+
+  } catch (error) {
+    content.innerHTML = `<p style="color: red;">Failed to load users: ${error.message}</p>`;
+  }
+}
+
+      
+else if (section === 'viewMedicine') {
+  try {
+    const response = await fetch('https://your-api-url.com/api/medicines');
+    if (!response.ok) throw new Error(`Server error: ${response.status}`);
+
+    const medicines = await response.json();
+
+    if (!medicines.length) {
+      content.innerHTML = `<h2>Medicine Inventory</h2><p>No medicines available.</p>`;
+      return;
+    }
+
+    let html = `
+      <h2>Medicine Inventory</h2>
+      <table class="medicine-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Composition</th>
+            <th>Description</th>
+            <th>Manufacturer</th>
+            <th>Expiry Date</th>
+            <th>Price (₹)</th>
+            <th>Stock</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+    `;
+
+    medicines.forEach(med => {
+      html += `
+        <tr>
+          <td>${med.medName}</td>
+          <td>${med.composition}</td>
+          <td>${med.description}</td>
+          <td>${med.manufacturing}</td>
+          <td>${med.expDate}</td>
+          <td>${med.price}</td>
+          <td>${med.stockQty}</td>
+          <td>
+            <button onclick="editMedicine(${med.medicineId})">Edit</button>
+            <button onclick="deleteMedicine(${med.medicineId})" style="color:red;">Delete</button>
+          </td>
+        </tr>
+      `;
+    });
+
+    html += `</tbody></table>`;
+    content.innerHTML = html;
+
+  } catch (error) {
+    content.innerHTML = `<p style="color:red;">Failed to load medicines: ${error.message}</p>`;
+  }
+}
+
+else if (section === 'viewStock') {
+  try {
+    const response = await fetch('https://your-api-url.com/api/stock');
+    if (!response.ok) throw new Error(`Server error: ${response.status}`);
+
+    const stockList = await response.json();
+
+    let html = `
+      <h2>Available Stock</h2>
+      <table class="stock-table">
+        <thead>
+          <tr>
+            <th>Medicine ID</th>
+            <th>Medicine Name</th>
+            <th>Replenishment ID</th>
+            <th>Replenishment Date</th>
+            <th>Available Quantity</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+    `;
+
+    stockList.forEach(item => {
+      html += `
+        <tr>
+          <td>${item.medicineId}</td>
+          <td>${item.medicineName}</td>
+          <td>${item.replenishmentId}</td>
+          <td>${item.replenishmentDate}</td>
+          <td>${item.availableQuantity}</td>
+          <td><button onclick="showReplenishForm(${item.medicineId}, '${item.medicineName}')">Add</button></td>
+        </tr>
+      `;
+    });
+
+    html += `</tbody></table><div id="replenish-form-container"></div>`;
+    content.innerHTML = html;
+
+  } catch (err) {
+    content.innerHTML = `<p style="color:red;">Failed to load stock: ${err.message}</p>`;
+  }
+}
+      else if (section === 'addUser') {
+  content.innerHTML = `
+    <h2>Add New User</h2>
+    <form id="addUserForm" onsubmit="submitUser(event)">
+      <label for="userName">Username:</label><br>
+      <input type="text" id="userName" name="userName" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password" required><br><br>
+
+      <label for="phoneNumber">Phone Number:</label><br>
+      <input type="tel" id="phoneNumber" name="phoneNumber" required><br><br>
+
+      <label for="address">Address:</label><br>
+      <textarea id="address" name="address" rows="3" required></textarea><br><br>
+
+      <label>
+        <input type="checkbox" id="isAdmin" name="isAdmin"> Is Admin
+      </label><br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  `;
+}
+else if (section === 'addMedicine') {
+  content.innerHTML = `
+    <h2>Add New Medicine</h2>
+    <form id="addMedicineForm" onsubmit="submitMedicine(event)">
+      <label for="medName">Medicine Name:</label><br>
+      <input type="text" id="medName" name="medName" required><br><br>
+
+      <label for="composition">Composition:</label><br>
+      <input type="text" id="composition" name="composition" required><br><br>
+
+      <label for="description">Description:</label><br>
+      <textarea id="description" name="description" rows="3" required></textarea><br><br>
+
+      <label for="manufacturing">Manufacturing Company:</label><br>
+      <input type="text" id="manufacturing" name="manufacturing" required><br><br>
+
+      <label for="expDate">Expiry Date:</label><br>
+      <input type="date" id="expDate" name="expDate" required><br><br>
+
+      <label for="price">Price:</label><br>
+      <input type="number" id="price" name="price" step="0.01" required><br><br>
+
+      <label for="stockQty">Stock Quantity:</label><br>
+      <input type="number" id="stockQty" name="stockQty" required><br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  `;
+}
+    }
+  
+    async function submitUser(event) {
+  event.preventDefault();
+  const form = event.target;
+
+  const user = {
+    userName: form.userName.value.trim(),
+    email: form.email.value.trim(),
+    password: form.password.value,
+    phoneNumber: form.phoneNumber.value.trim(),
+    address: form.address.value.trim(),
+    isAdmin: form.isAdmin.checked
+  };
+
+  try {
+    const response = await fetch('https://your-api-url.com/api/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(user)
+    });
+
+    if (!response.ok) {
+      throw new Error(`Server error: ${response.status}`);
+    }
+
+    const result = await response.json();
+    alert("User added successfully!");
+  } catch (error) {
+    alert("Failed to add user. " + error.message);
+    console.error("Add User Error:", error);
+  } finally {
+    form.reset();
+  }
+}
+function editUser(userId) {
+  alert(`Editing user with ID: ${userId}`);
+  // You can replace this with a modal or navigate to a pre-filled form
+}
+
+async function deleteUser(userId) {
+  if (!confirm("Are you sure you want to delete this user?")) return;
+
+  try {
+    const res = await fetch(`https://your-api-url.com/api/users/${userId}`, {
+      method: 'DELETE'
+    });
+
+    if (!res.ok) throw new Error(`Failed to delete user: ${res.status}`);
+    alert("User deleted successfully!");
+    loadContent('viewUsers'); // Refresh the list
+  } catch (err) {
+    alert("Error deleting user: " + err.message);
+  }
+}
+
+
+async function submitMedicine(event) {
+  event.preventDefault();
+  const form = event.target;
+
+  const medicine = {
+    medName: form.medName.value.trim(),
+    composition: form.composition.value.trim(),
+    description: form.description.value.trim(),
+    manufacturing: form.manufacturing.value.trim(),
+    expDate: form.expDate.value, // should be in YYYY-MM-DD
+    price: parseFloat(form.price.value),
+    stockQty: parseInt(form.stockQty.value)
+  };
+
+  // Optional: simple validation
+  if (
+    !medicine.medName || !medicine.composition || !medicine.description ||
+    !medicine.manufacturing || !medicine.expDate || isNaN(medicine.price) || isNaN(medicine.stockQty)
+  ) {
+    alert("Please fill in all required fields correctly.");
+    return;
+  }
+
+  try {
+    const response = await fetch('https://your-api-url.com/api/medicines', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(medicine)
+    });
+
+    if (!response.ok) {
+      throw new Error(`Server error: ${response.status}`);
+    }
+
+    const result = await response.json();
+    alert("Medicine added successfully!");
+  } catch (error) {
+    alert("Failed to add medicine. " + error.message);
+    console.error("Add Medicine Error:", error);
+  } finally {
+    form.reset();
+  }
+}
+function editMedicine(medicineId) {
+  alert(`Editing medicine with ID: ${medicineId}`);
+  // Future: open modal or pre-fill edit form
+}
+
+async function deleteMedicine(medicineId) {
+  if (!confirm("Are you sure you want to delete this medicine?")) return;
+
+  try {
+    const res = await fetch(`https://your-api-url.com/api/medicines/${medicineId}`, {
+      method: 'DELETE'
+    });
+
+    if (!res.ok) throw new Error(`Failed to delete: ${res.status}`);
+    alert("Medicine deleted successfully!");
+    loadContent('viewMedicine');
+  } catch (err) {
+    alert("Delete failed: " + err.message);
+  }
+}
+function showReplenishForm(medicineId, medicineName) {
+  const container = document.getElementById('replenish-form-container');
+  const adminUserId = 1; // ⚙️ Replace with actual logic if needed
+
+  container.innerHTML = `
+    <h3>Replenish Stock for "${medicineName}"</h3>
+    <form onsubmit="submitReplenishment(event, ${medicineId}, ${adminUserId})">
+      <label for="quantityAdded">Quantity Added:</label><br>
+      <input type="number" id="quantityAdded" name="quantityAdded" required><br><br>
+
+      <button type="submit">Submit Replenishment</button>
+    </form>
+  `;
+}
+
+async function submitReplenishment(event, medicineId, adminUserId) {
+  event.preventDefault();
+  const form = event.target;
+  const quantity = parseInt(form.quantityAdded.value);
+
+  const replenishment = {
+    medicineId: medicineId,
+    quantityAdded: quantity,
+    replenishmentDate: new Date().toISOString(),
+    adminUserId: adminUserId
+  };
+
+  try {
+    const response = await fetch('https://your-api-url.com/api/replenishments', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(replenishment)
+    });
+
+    if (!response.ok) throw new Error(`Server error: ${response.status}`);
+    alert("Stock replenished successfully!");
+    loadContent('viewStock'); // refresh stock table
+  } catch (err) {
+    alert("Failed to replenish stock: " + err.message);
+  }
+}
+
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customer Dashboard</title>
+  <link rel="stylesheet" href="User.css" />
+</head>
+<body>
+  <header class="logo-container">
+    <h1 onclick="loadCustomerContent('home')">Contoso Health</h1>
+  </header>
+
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="#" onclick="loadCustomerContent('cart')">Cart</a>
+      <a href="#" onclick="loadCustomerContent('orders')">My Orders</a>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search medicines..." oninput="searchMedicines()" />
+    </div>
+
+    <div class="nav-right">
+      <a href="#" onclick="loadCustomerContent('profile')">Profile</a>
+    </div>
+  </nav>
+
+  <main class="dashboard" id="customer-content">
+    <h2>Welcome to Contoso Pharmacy</h2>
+    <p>Start by searching for a medicine or exploring your dashboard.</p>
+  </main>
+
+  <script>
+    const api = "https://your-api-url.com/api"; // 🔁 Replace with your real base URL
+
+    function loadCustomerContent(section) {
+      const content = document.getElementById('customer-content');
+
+      if (section === 'home') {
+        content.innerHTML = `
+          <h2>Welcome to Contoso Pharmacy</h2>
+          <p>Start by searching for a medicine or exploring your dashboard.</p>`;
+      }
+
+      if (section === 'cart') {
+        fetch(`${api}/cart`)
+          .then(res => res.json())
+          .then(cart => {
+            if (!cart.length) {
+              content.innerHTML = `<h2>Your Cart</h2><p>Your cart is currently empty.</p>`;
+              return;
+            }
+            let html = `<h2>Your Cart</h2><ul>`;
+            cart.forEach(item => {
+              html += `<li>${item.medName} — ${item.quantity} pcs — ₹${item.totalPrice}</li>`;
+            });
+            html += `</ul>`;
+            content.innerHTML = html;
+          })
+          .catch(err => {
+            content.innerHTML = `<p style="color:red;">Failed to load cart: ${err.message}</p>`;
+          });
+      }
+
+      if (section === 'orders') {
+        fetch(`${api}/orders`)
+          .then(res => res.json())
+          .then(orders => {
+            if (!orders.length) {
+              content.innerHTML = `<h2>My Orders</h2><p>No past orders found.</p>`;
+              return;
+            }
+            let html = `<h2>My Orders</h2><ul>`;
+            orders.forEach(order => {
+              html += `<li>Order #${order.orderId} — ₹${order.totalAmount} — ${order.orderDate} — ${order.status}</li>`;
+            });
+            html += `</ul>`;
+            content.innerHTML = html;
+          })
+          .catch(err => {
+            content.innerHTML = `<p style="color:red;">Failed to load orders: ${err.message}</p>`;
+          });
+      }
+
+      if (section === 'profile') {
+        fetch(`${api}/customer`)
+          .then(res => res.json())
+          .then(user => {
+            content.innerHTML = `
+              <h2>My Profile</h2>
+              <p><strong>Name:</strong> ${user.name}</p>
+              <p><strong>Email:</strong> ${user.email}</p>
+              <p><strong>Phone:</strong> ${user.phoneNumber}</p>
+              <p><strong>Address:</strong> ${user.address}</p>`;
+          })
+          .catch(err => {
+            content.innerHTML = `<p style="color:red;">Failed to load profile: ${err.message}</p>`;
+          });
+      }
+    }
+
+    async function searchMedicines() {
+      const input = document.getElementById('searchInput').value.trim().toLowerCase();
+      const content = document.getElementById('customer-content');
+
+      if (input.length < 2) {
+        loadCustomerContent('home');
+        return;
+      }
+
+      try {
+        const response = await fetch(`${api}/medicines/search?query=${encodeURIComponent(input)}`);
+        if (!response.ok) throw new Error(`Status ${response.status}`);
+
+        const results = await response.json();
+        if (!results.length) {
+          content.innerHTML = `<h2>No medicines found for "${input}"</h2>`;
+          return;
+        }
+
+        let html = `<h2>Search Results for "${input}"</h2><ul>`;
+        results.forEach(med => {
+          html += `<li><strong>${med.medName}</strong> — ${med.composition} — ₹${med.price}</li>`;
+        });
+        html += `</ul>`;
+        content.innerHTML = html;
+      } catch (err) {
+        content.innerHTML = `<p style="color:red;">Search failed: ${err.message}</p>`;
+      }
+    }
+  </script>
+</body>
+</html>
