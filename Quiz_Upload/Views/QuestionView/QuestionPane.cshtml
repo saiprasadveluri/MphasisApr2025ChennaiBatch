@@ -1,0 +1,35 @@
+﻿@model QuestionInfoModel
+<form method="post" action="QuestionView/UpdateUserAnswers">
+    <div class="row">
+        <div class="col-lg-12">
+            <span>
+                @Model.QText
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            Options:
+        </div>
+    </div>
+    @foreach(var opt in Model.Options)
+    {
+    <div class="row" style="margin:20px">
+        <div class="col-lg-12">
+                <span style="padding:10px;">
+                    @Html.RadioButtonFor(mbox => mbox.UserAnswer, new { name = "opts" })
+                </span>
+                <span style="padding:10px;">
+                    @opt.OptionText
+                </span>
+        </div>
+    </div>
+    }
+    <div class="row">
+        <div class="col-lg-12">
+            <button class="btn btn-primary form-control">
+                Submit
+            </button>
+        </div>
+    </div>
+</form>
