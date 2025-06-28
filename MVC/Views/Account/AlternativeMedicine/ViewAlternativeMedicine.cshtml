@@ -1,0 +1,24 @@
+﻿@using OnlinePharmacyApp.DTO
+@model GetAlternativeMedicine
+<h1>List of Medicine</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>AlternativeId</th>
+            <th>OriginalMedicineId</th>
+            <th>SubstituteMedicineId</th>
+           
+    </thead>
+    <tbody>
+        @foreach (AlternativeMedicineDTO medicine in Model.data)
+        {
+            <tr>
+                <td>@medicine.alternativeId</td>
+                <td>@medicine.originalMedicineId</td>
+                <td>@medicine.substituteMedicineId</td>
+                
+            </tr>
+        }
+
+    </tbody>
+</table>

@@ -1,0 +1,25 @@
+﻿@using OnlinePharmacyApp.DTO
+@model GetProfile
+<h1>List of profile</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>UserId</th>
+            <th>PhoneNumber</th>
+            <th>Address</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (ProfileDTO Profile in Model.data)
+        {
+            <tr>
+                <td>@user.userId</td>
+                <td>@user.phoneNumber</td>
+                <td>@user.address</td>
+                
+
+            </tr>
+        }
+    </tbody>
+</table>

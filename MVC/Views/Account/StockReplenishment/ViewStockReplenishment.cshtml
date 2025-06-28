@@ -1,0 +1,29 @@
+﻿@using OnlinePharmacyApp.DTO
+@model GetStockReplenishment
+<h1>List of Users</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ReplenishmentId</th>
+            <th>MedicineId</th>
+            <th>QuantityAdded</th>
+            <th>ReplenishmentDate</th>
+            <th>adminUserId</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (StockReplenishmentDTO StockReplenishment in Model.data)
+        {
+            <tr>
+                <td>@StockReplenishment.replenishmentId</td>
+                <td>@StockReplenishment.medicineId</td>
+                <td>@StockReplenishment.quantityAdded</td>
+                <td>@StockReplenishment.replenishmentDate</td>
+                <td>@StockReplenishment.address</td>
+                <td>@StockReplenishment.AdminUserId</td>
+
+            </tr>
+        }
+    </tbody>
+</table>

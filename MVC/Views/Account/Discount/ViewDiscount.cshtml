@@ -1,0 +1,34 @@
+﻿@using OnlinePharmacyApp.DTO
+@model GetDiscount
+<h1>List of Discount</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>DiscountId</th>
+            <th>DiscountCode</th>
+            <th>DiscountType</th>
+            <th>Value</th>
+            <th>IsPercentage</th>
+            <th>StartDate</th>
+            <th>EndDate</th>
+            <th>Order</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (DiscountDTO Discount in Model.data)
+        {
+            <tr>
+                <td>@Discount.discountId</td>
+                <td>@Discount.discountCode</td>
+                <td>@Discount.discountType</td>
+                <td>@Discount.value</td>
+                <td>@Discount.isPercentage</td>
+                <td>@Discount.startDate</td>
+                <td>@Discount.endDate</td>
+                <td>@Discount.order</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+

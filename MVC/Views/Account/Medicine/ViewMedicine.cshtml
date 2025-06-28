@@ -1,0 +1,33 @@
+﻿@using OnlinePharmacyApp.DTO
+@model GetMedicine
+<h1>List of Medicine</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>MedicineId</th>
+            <th>MedName</th>
+            <th>Composition</th>
+            <th>Description</th>
+            <th>Manufacturing</th>
+            <th>ExpDate</th>
+            <th>Price</th>
+            <th>StockQty</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (MedicineDTO medicine in Model.data)
+        {
+            <tr>
+                <td>@medicine.medicineId</td>
+                <td>@medicine.medName</td>
+                <td>@medicine.composition</td>
+                <td>@medicine.description</td>
+                <td>@medicine.manufacturing</td>
+                <td>@medicine.expDate</td>
+                <td>@medicine.price</td>
+                <td>@medicine.stockQty</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
