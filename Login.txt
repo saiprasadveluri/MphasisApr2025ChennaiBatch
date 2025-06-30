@@ -1,0 +1,174 @@
+1. API Model (if not already existing)
+public class User
+{
+    public int UserId { get; set; }
+    public string UserName { get; set; }
+    public string Email { get; set; }
+    public string Password { get; set; }
+    public string PhoneNumber { get; set; }
+    public string Address { get; set; }
+    public bool IsAdmin { get; set; }
+}
+
+
+
+
+
+
+2. Authentication DTO
+public class LoginRequest
+{
+    public string Email { get; set; }
+    public string Password { get; set; }
+}
+
+public class LoginResponse
+{
+    public bool IsValid { get; set; }
+    public bool IsAdmin { get; set; }
+    public string UserName { get; set; }
+    public int UserId { get; set; }
+}
+
+
+
+
+ 3. WebAPI Controllery
+[Route("api/[controller]")]
+public class AuthController : ControllerBase
+{
+    private readonly YourDbContext _context;
+
+    public AuthController(YourDbContext context)
+    {
+        _context = context;
+    }
+
+    [HttpPost("login")]
+    public ActionResult<LoginResponse> Login([FromBody] LoginRequest request)
+    {
+        var user = _context.Users
+            .FirstOrDefault(u => u.Email == request.Email && u.Password == request.Password);
+
+        if (user == null)
+        {
+            return Unauthorized(new LoginResponse { IsValid = false });
+        }
+
+        return Ok(new LoginResponse
+        {
+            IsValid = true,
+            IsAdmin = user.IsAdmin,
+            UserName = user.UserName,
+            UserId = user.UserId
+        });
+    }
+}
+
+
+
+
+
+--------------------------------------------MVC----------------------
+
+
+
+1. Create the LoginViewModel
+public class LoginViewModel
+{
+    [Required]
+    [EmailAddress]
+    public string Email { get; set; }
+
+    [Required]
+    [DataType(DataType.Password)]
+    public string Password { get; set; }
+}
+
+
+
+
+Create Controller - AccountController
+public class AccountController : Controller
+{
+    private readonly string apiBaseUrl = "http://your-api-base-url/";
+
+    public ActionResult Login()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public async Task<ActionResult> Login(LoginViewModel model)
+    {
+        if (!ModelState.IsValid)
+            return View(model);
+
+        using (var client = new HttpClient())
+        {
+            client.BaseAddress = new Uri(apiBaseUrl);
+            var response = await client.PostAsJsonAsync("api/auth/login", model);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadAsAsync<LoginResponse>();
+
+                if (result.IsValid)
+                {
+                    TempData["UserName"] = result.UserName;
+
+                    if (result.IsAdmin)
+                        return RedirectToAction("Dashboard", "Admin"); // already created
+                    else
+                        return RedirectToAction("Dashboard", "Customer"); // create this
+                }
+            }
+
+            ModelState.AddModelError("", "Invalid credentials");
+            return View(model);
+        }
+    }
+}
+
+
+3.Create the Login View 
+@model YourNamespace.Models.LoginViewModel
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        <label>Email</label>
+        @Html.TextBoxFor(m => m.Email)
+        @Html.ValidationMessageFor(m => m.Email)
+    </div>
+
+    <div>
+        <label>Password</label>
+        @Html.PasswordFor(m => m.Password)
+        @Html.ValidationMessageFor(m => m.Password)
+    </div>
+
+    <button type="submit">Login</button>
+}
+
+
+------------------------------------CUstomer--------------------------------------
+
+1. customer cs
+public class CustomerController : Controller
+{
+    public ActionResult Dashboard()
+    {
+        ViewBag.UserName = TempData["UserName"];
+        return View();
+    }
+}
+
+
+2. customer view
+<h2>Welcome @ViewBag.UserName!</h2>
+<p>This is your customer dashboard.</p>
+
+
