@@ -1,0 +1,16 @@
+﻿@using OnlineQuiZMVC.DTO
+@model UserDTO
+
+
+
+@Html.ValidationSummary(true)
+
+<div class="form-group">
+    <label>Name</label>
+    @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    <label>Email</label>
+    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+</div>
