@@ -1,0 +1,43 @@
+﻿@using OnlineQuiZMVC.DTO
+@model AccountUserDTO
+
+<div class="d-flex" style="min-height: 100vh;">
+
+    <!-- 🧭 Sidebar -->
+    <aside class="bg-light p-3 border-end" style="width: 240px;">
+        <h5 class="mb-4">Navigation</h5>
+        <ul class="nav flex-column">
+            <a class="nav-link" asp-controller="User" asp-action="TrackProgress">📈 Track Progress</a>
+
+            <a class="nav-link" asp-controller="User" asp-action="TakeQuiz">📝 Take Quiz</a>
+            <a class="nav-link" asp-controller="User" asp-action="ViewScores">📊 View Scores</a>
+
+        </ul>
+
+    </aside>
+
+    <!-- 💻 Main Content -->
+    <main class="flex-fill p-4">
+        <!-- 👤 Top-right User Profile -->
+        <div class="d-flex justify-content-end mb-4">
+            <div class="dropdown">
+                <button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                    @Model.UserName
+                </button>
+                <div class="dropdown-menu dropdown-menu-end p-3" style="min-width: 300px;">
+                    <p><strong>Email:</strong> @Model.Email</p>
+                    <p><strong>Contact:</strong> @Model.ContactNo</p>
+                    <p><strong>Password:</strong> ******</p>
+                    <div class="d-flex justify-content-between">
+                        <a href="/User/Edit" class="btn btn-sm btn-primary">Edit</a>
+                        <a href="/Account/Logout" class="btn btn-sm btn-danger">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 🏡 Welcome Section -->
+        <h2>Welcome, @Model.UserName!</h2>
+        <p>Select an option on the left to get started.</p>
+    </main>
+</div>
