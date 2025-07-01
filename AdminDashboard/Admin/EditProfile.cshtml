@@ -1,0 +1,47 @@
+﻿@using OnlineQuizApp.DTO
+@model AccountAdminDTO
+@{
+    Layout = "~/Views/Shared/AdminDashboard.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow rounded">
+                <div class="card-body">
+                    <h3 class="text-center mb-4 text-primary">Edit Admin Profile</h3>
+
+                    <form asp-action="EditProfile" method="post">
+                        <div class="mb-3">
+                            <label asp-for="AdminName" class="form-label">Name</label>
+                            <input asp-for="AdminName" class="form-control" />
+                            <span asp-validation-for="AdminName" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Email" class="form-label">Email</label>
+                            <input asp-for="Email" class="form-control" type="email" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Password" class="form-label">Password</label>
+                            <input asp-for="Password" class="form-control" type="password" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="ContactNo" class="form-label">Contact No</label>
+                            <input asp-for="ContactNo" class="form-control" />
+                            <span asp-validation-for="ContactNo" class="text-danger"></span>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary px-5">Update</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
