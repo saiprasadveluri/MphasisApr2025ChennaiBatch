@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - Customer Dashboard</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header class="logo-container">
+        <h1><a asp-controller="Home" asp-action="CustomerDashboard" style="text-decoration:none; color:inherit;">Contoso Health</a></h1>
+    </header>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="dropdown">
+                <button class="btn">My Cart</button>
+                <div class="dropdown-content">
+                    <a asp-controller="Medicine" asp-action="ViewMedicine">View Medicine</a>
+                    <a asp-controller="Cart" asp-action="ViewCart">View Cart</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="btn">My Orders</button>
+                <div class="dropdown-content">
+                    <a asp-controller="Order" asp-action="OrderHistory">Order History</a>
+                    <a asp-controller="Order" asp-action="TrackOrder">Track Order</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search products..." />
+        </div>
+
+        <div class="nav-right">
+            <button class="btn" onclick="location.href='@Url.Action("Profile", "Home")'">Profile</button>
+            <button class="btn" onclick="location.href='@Url.Action("Profile", "Home")'">Logout</button>
+        </div>
+    </nav>
+
+    <main class="dashboard">
+        @RenderBody()
+    </main>
+</body>
+</html>
+

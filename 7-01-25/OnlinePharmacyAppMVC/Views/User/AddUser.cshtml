@@ -1,0 +1,40 @@
+﻿@model OnlinePharmacyAppMVC.DTO.UserDTO
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    ViewData["Title"] = "Add User";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@* @if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+} *@
+
+<form asp-action="AddUser" method="post">
+    <label asp-for="userName">Username:</label><br />
+    <input asp-for="userName" required /><br /><br />
+
+    <label asp-for="email">Email:</label><br />
+    <input asp-for="email" type="email" required /><br /><br />
+
+    <label asp-for="password">Password:</label><br />
+    <input asp-for="password" type="password" required /><br /><br />
+
+    <label asp-for="phoneNumber">Phone Number:</label><br />
+    <input asp-for="phoneNumber" required /><br /><br />
+
+    <label asp-for="address">Address:</label><br />
+    <textarea asp-for="address" required></textarea><br /><br />
+
+    <label><input asp-for="isAdmin" /> Is Admin</label><br /><br />
+
+    <button type="submit">Submit</button>
+</form>
+

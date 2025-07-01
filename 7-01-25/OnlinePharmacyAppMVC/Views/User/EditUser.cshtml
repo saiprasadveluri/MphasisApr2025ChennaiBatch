@@ -1,0 +1,33 @@
+﻿@model OnlinePharmacyAppMVC.DTO.UserDTO
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    ViewData["Title"] = "Edit User";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="EditUser" method="post">
+    <input type="hidden" asp-for="userId" />
+
+    <label asp-for="userName">Username:</label><br />
+    <input asp-for="userName" required /><br /><br />
+
+    <label asp-for="email">Email:</label><br />
+    <input asp-for="email" type="email" required /><br /><br />
+
+    <label asp-for="password">Password:</label><br />
+    <input asp-for="password" type="password" required /><br /><br />
+
+    <label asp-for="phoneNumber">Phone:</label><br />
+    <input asp-for="phoneNumber" required /><br /><br />
+
+    <label asp-for="address">Address:</label><br />
+    <textarea asp-for="address"></textarea><br /><br />
+
+    <label><input asp-for="isAdmin" /> Is Admin</label><br /><br />
+
+    <button type="submit">Update</button>
+</form>
+

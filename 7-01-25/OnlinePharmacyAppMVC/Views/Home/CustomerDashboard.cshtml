@@ -1,0 +1,53 @@
+﻿
+@model OnlinePharmacyAppMVC.DTO.GetMedicine
+@{
+    Layout = "~/Views/Shared/_LayoutCustomer.cshtml";
+}
+
+@{
+    ViewData["Title"] = "Customer Dashboard";
+}
+
+<h2>Welcome to Contoso Health</h2>
+<p>Select medicines and add them to your cart.</p>
+
+@if (Model?.data != null && Model.data.Any())
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Composition</th>
+                <th>Description</th>
+                <th>Manufacturing</th>
+                <th>Expiry Date</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Add</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var med in Model.data)
+            {
+                <tr>
+                    <td>@med.medName</td>
+                    <td>@med.composition</td>
+                    <td>@med.description</td>
+                    <td>@med.manufacturing</td>
+                    <td>@med.expDate.ToString("dd/MM/yyyy")</td>
+                    <td>@med.price.ToString("F2")</td>
+                    <td>
+                        <input type="number" id="qty_@med.medicineId" value="1" min="1" max="@med.stockQty" />
+                    </td>
+                    <td>
+                        <button onclick="addToCart(@med.medicineId)">Add</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No medicines available at this time.</p>
+}
