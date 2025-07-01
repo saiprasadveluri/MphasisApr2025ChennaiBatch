@@ -1,0 +1,149 @@
+﻿@model List<BookMyShow.Models.Ticket>
+@{
+    ViewData["Title"] = "Book Seats";
+    var availableSeats = ViewBag.AvailableSeats as string[];
+    var bookedSeats = ViewBag.BookedSeats as string[];
+}
+
+<style>
+    .screen {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .seating-layout {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .seat-container {
+        margin: 5px;
+    }
+
+    .seat-label {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+        .seat-label img {
+            width: 40px;
+            height: 40px;
+        }
+
+    .disabled-seat img {
+        content: url("@Url.Content("~/images/seat-booked.png")");
+        cursor: not-allowed;
+    }
+
+    .button-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+</style>
+
+<h2>Book Your Seats</h2>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div style="color:red; margin-bottom:15px;">
+        <ul>
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+}
+
+<form method="post" asp-action="Book">
+    <input type="hidden" name="showId" value="@ViewBag.ShowId" />
+    <input type="hidden" name="theaterId" value="@ViewBag.TheaterId" />
+    <input type="hidden" name="date" value="@ViewBag.Date" />
+    <label><strong>Select Seats:</strong></label><br />
+    <div class="seating-layout">
+        @if (availableSeats != null && availableSeats.Length > 0)
+        {
+
+            var normalizedBookedSeats = (bookedSeats ?? Array.Empty<string>())
+            .Select(s => s.Trim().ToLowerInvariant())
+            .ToArray();
+
+            @foreach (var seat in availableSeats)
+            {
+                var normalizedSeat = seat.Trim().ToLowerInvariant();
+                var isBooked = normalizedBookedSeats.Contains(normalizedSeat);
+                <div class="seat-container">
+                    <input type="hidden" id="seatPrice" value="@ViewBag.SeatPrice" />
+                    <input type="checkbox" name="selectedSeats" value="@seat" id="@seat" @(isBooked ? "disabled" : "") class="seat-checkbox" style="display:none;" />
+                    <label class="seat-label @(isBooked ? "disabled-seat" : "")" for="@seat" title="@seat">
+                    <img src="~/images/@(isBooked ? "seat-booked.png" : "seat-available.png")" alt="Seat" /> 
+                       
+                    </label>
+                </div>
+            }
+
+
+        }
+        else
+        {
+            <p>No seats available at the moment.</p>
+        }
+    </div>
+    <div class="screen">
+        <img src="~/images/screen.png" alt="Screen" />
+    </div>
+    <br /><br />
+
+    <div class="button-container">
+        <button type="submit" style="padding:10px 20px;">Book Seats</button>
+    </div>
+</form>
+
+
+<h2 >List of Seat Book</h2>
+@if (TempData["Message"] != null)
+{
+    <div style="color:green; font-weight:bold; margin-bottom:15px;">
+        @TempData["Message"]
+    </div>
+
+    <div style="margin-top:10px;">
+        <strong>Seats Booked:</strong> @TempData["SeatCount"] <br />
+        <strong>Total Amount:</strong> ₹@TempData["TotalAmount"]
+    </div>
+}
+<form method="get" asp-action="Payment" onsubmit="handleClick(event)">
+    <button type="submit" style="background-color: #ff3c58;">Proceed To Payment</button>
+</form>
+
+
+
+<script>
+    document.querySelectorAll('.seat-checkbox').forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+            var label = checkbox.nextElementSibling;
+            var img = label.querySelector('img');
+            if (checkbox.checked) {
+                img.src = '@Url.Content("~/images/seat-selected.png")';
+            } else {
+                img.src = '@Url.Content("~/images/seat-available.png")';
+            }
+        });
+    });
+
+
+    function handleClick(e) {
+          e.preventDefault(); // ✅ Prevents the form from submitting immediately
+          console.log("Button clicked!"); // ✅ Corrected from Console.Write to console.log
+
+          // You can add any custom logic here before submitting
+          // For example, validation or confirmation
+
+          // ✅ Submit the form manually if needed
+          e.target.closest("form").submit();
+
+           const seatPrice = @ViewBag.SeatPrice;
+           console.log("Seat" , seatPrice);
+      } 
+</script>

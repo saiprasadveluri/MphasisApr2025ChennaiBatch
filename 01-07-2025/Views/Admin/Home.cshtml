@@ -1,0 +1,310 @@
+﻿@{
+    Layout = "/Views/Shared/AdminLayout.cshtml";
+
+}
+@{
+    ViewData["Title"] = "Admin Dashboard";
+    var adminstatus = Context.Session.GetString("enable"); 
+}
+@if (adminstatus == "Enable")
+{
+    <h2 class="mb-4 text-center mt-4">Admin Dashboard</h2>
+
+
+    <div class="container mt-5">
+        <div class="admin-dashboard-category">
+        <div class="row row-cols-1 row-cols-md-4 g-4 justify-content-center">
+            <div class="col ">
+                    <div class="card dashboard-card h-100 text-center p-3" style="background-color:#ff3c58">
+
+
+                    <div class="card-body ">
+                        <h5 class="card-title mb-3">No. of Movies <br /> @ViewBag.movies</h5>
+                    </div>
+                </div>
+            </div>
+
+            @* <div class="col"> *@
+            @*     <div class="card dashboard-card h-100 text-center p-3 bg-primary"> *@
+            @*         <div class="card-body "> *@
+            @*             <h5 class="card-title mb-3">No. of Users <br /> @ViewBag.users</h5> *@
+            @*         </div> *@
+            @*     </div> *@
+            @* </div> *@
+
+            <div class="col">
+                    <div class="card dashboard-card h-100 text-center p-3 " style="background-color:#ff3c58">
+                    <div class="card-body ">
+                        <h5 class="card-title mb-3 text-white">No. of Theaters <br /> @ViewBag.theaters</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card dashboard-card h-100 text-center p-3 " style="background-color:#948ED1">
+                    <div class="card-body ">
+                        <h5 class="card-title mb-3">No. of Cities <br /> @ViewBag.cities</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+
+
+        <div class="row row-cols-1 row-cols-md-4 g-4 justify-content-center">
+            <div class="col">
+                <div class="card dashboard-card h-100 text-center p-3">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Add Movie</h5>
+                        @* <a href= "/Admin/AddMovie" class="btn btn-outline-primary">Go</a> *@
+
+                      
+                        <a href="@Url.Action("AddMovie", "Admin")" class="btn btn-outline-primary">Go</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card dashboard-card h-100 text-center p-3">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Add Movie To Theater</h5>
+                        <a href="@Url.Action("AddMovieToTheater", "Admin")" class="btn btn-outline-success">Go</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card dashboard-card h-100 text-center p-3">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Update Movie</h5>
+                        <a href="@Url.Action("UpdateMovie", "Admin")" class="btn btn-outline-warning">Go</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card dashboard-card h-100 text-center p-3">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Delete Movie</h5>
+                        <a href="@Url.Action("DeleteMovie", "Admin")" class="btn btn-outline-danger">Go</a>
+                    </div>
+                </div>
+            </div>
+
+
+            @* =============================================================================================================*@
+            <div class="col">
+                <div class="card dashboard-card h-100 text-center p-3">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Add Genre</h5>
+                        <a href="@Url.Action("Genre", "Others")" class="btn btn-outline-danger">Go</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card dashboard-card h-100 text-center p-3">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Add City</h5>
+                        <a href="@Url.Action("City", "Others")" class="btn btn-outline-warning">Go</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card dashboard-card h-100 text-center p-3">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Add Theater</h5>
+                        <a href="@Url.Action("AddTheater", "Others")" class="btn btn-outline-success">Go</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card dashboard-card h-100 text-center p-3">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Add Language</h5>
+                        <a href="@Url.Action("AddLanguage", "Others")" class="btn btn-outline-primary">Go</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card dashboard-card h-100 text-center p-3">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Delete Comments</h5>
+                        <a href="@Url.Action("Comments", "Admin")" class="btn btn-outline-danger">Go</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+}
+else
+{
+    <h2 class="mb-4 text-center">Admin Dashboard <span class="text-danger">You Don't Have Access to Edit</span></h2>
+
+    <div class="admin-container">
+    <div class="container mt-5">
+
+        <div class="row row-cols-1 row-cols-md-4 g-4 justify-content-center">
+            <div class="col ">
+                    <div class="card dashboard-card h-100 text-center p-3 " style="background-color:#ff3c58">
+                    <div class="card-body ">
+                            <h5 class="card-title mb-3 text-white">No. of Movies <br /> @ViewBag.movies</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                    <div class="card dashboard-card h-100 text-center p-3 " style="background-color:#ff3c58">
+                    <div class="card-body ">
+                            <h5 class="card-title mb-3 text-white">No. of Users <br /> @ViewBag.users</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                    <div class="card dashboard-card h-100 text-center p-3" style="background-color:#ff3c58">
+                    <div class="card-body ">
+                        <h5 class="card-title mb-3 text-white">No. of Theaters <br /> @ViewBag.theaters</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                    <div class="card dashboard-card h-100 text-center p-3" style="background-color:#ff3c58">
+                    <div class="card-body ">
+                            <h5 class="card-title mb-3 text-white">No. of Cities <br /> @ViewBag.cities</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+
+
+        <div class="row row-cols-1 row-cols-md-4 g-4 justify-content-center">
+            <div class="col">
+                    <div class="card dashboard-card h-100 text-center p-3">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Add Movie</h5>
+                            <a href="@Url.Action("AddMovie", "Admin")" class="btn btn-outline-primary">Go</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card dashboard-card h-100 text-center p-3 ">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Add Movie To Theater</h5>
+                        <a href="@Url.Action("AddMovieToTheater", "Admin")" class="btn btn-outline-success ">Go</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card dashboard-card h-100 text-center p-3 ">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Update Movie</h5>
+                        <a href="@Url.Action("UpdateMovie", "Admin")" class="btn btn-outline-warning">Go</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card dashboard-card h-100 text-center p-3 ">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Delete Movie</h5>
+                        <a href="@Url.Action("DeleteMovie", "Admin")" class="btn btn-outline-danger ">Go</a>
+                    </div>
+                </div>
+            </div>
+
+
+            @* =============================================================================================================*@
+            <div class="col">
+                <div class="card dashboard-card h-100 text-center p-3 ">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Add Genre</h5>
+                        <a href="@Url.Action("Genre", "Others")" class="btn btn-outline-danger ">Go</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card dashboard-card h-100 text-center p-3 ">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Add City</h5>
+                        <a href="@Url.Action("City", "Others")" class="btn btn-outline-warning ">Go</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card dashboard-card h-100 text-center p-3 ">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Add Theater</h5>
+                        <a href="@Url.Action("AddTheater", "Others")" class="btn btn-outline-success ">Go</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card dashboard-card h-100 text-center p-3 ">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Add Language</h5>
+                        <a href="@Url.Action("AddLanguage", "Others")" class="btn btn-outline-primary ">Go</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card dashboard-card h-100 text-center p-3 ">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Delete Comments</h5>
+                        <a href="@Url.Action("Comments", "Admin")" class="btn btn-outline-danger ">Go</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+}
+
+<style>
+    body {
+        background-color : black;
+        color : white;
+    }
+    .dashboard-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .dashboard-card .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .dashboard-card .btn {
+            padding: 8px 20px;
+            font-weight: 500;
+        }
+</style>

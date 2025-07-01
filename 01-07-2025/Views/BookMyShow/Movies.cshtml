@@ -1,0 +1,98 @@
+﻿@model List<BookMyShow.Models.Movie>
+
+@{
+    Layout = "~/Views/Shared/WithSearch.cshtml";
+}
+
+<style>
+    body {
+        background: white;
+    }
+
+    .poster-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+        justify-content: flex-start;
+        padding: 40px 0;
+    }
+
+    .poster-card {
+        background: #232323;
+        border-radius: 12px;
+        box-shadow: 4px 16px rgba(0,0,0,0.2);
+        width: 220px;
+        transition: transform 0.2s;
+        position: relative;
+    }
+
+        .poster-card:hover {
+            transform: scale(1.08);
+            box-shadow: none;
+            cursor: pointer;
+        }
+
+    .poster-img {
+        width: 100%;
+        height: 330px;
+        object-fit: cover;
+        display: block;
+        background: #333;
+    }
+
+    .poster-title {
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin: 16px 12px 8px 12px;
+        text-align: center;
+    }
+</style>
+
+<div class="d-flex">
+    <div class="card" style="width: 250px; margin: 40px 20px 0 30px; align-self: flex-start;">
+        <div class="card-body">
+            <form method="post">
+                <label class="form-label">Filter by Genre</label>
+                <select id="genreSelect" class="form-select mb-3" name="Option">
+                    <option value="All">All</option>
+                    @foreach (Genre g in ViewBag.genre)
+                    {
+                        <option value="@g.GenreId">@g.Name</option>
+                    }
+                </select>
+                <label class="form-label">Filter by Language</label>
+                <select id="genreSelect" class="form-select mb-3" name="Lang">
+                    <option value="All">All</option>
+                    @foreach (Language lan in ViewBag.language)
+                    {
+                        <option value="@lan.LanguageId">@lan.Name</option>
+                    }
+                </select>
+                <input type="submit" value="Filter" style="background-color: #ff3c58; color: floralwhite; padding: 6px 16px; border: none; border-radius: 6px; text-align:center" />
+
+            </form>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="border-inline-start:1px solid black;margin-inline-start:50px;padding-inline-start:50px">
+        <div class="poster-grid">
+            @foreach (var movie in Model)
+            {
+                <div class="poster-card">
+                    <a href="/BookMyShow/MovieDetail?id=@movie.MovieId&name=@movie.MovieName&duration=@movie.Duration&desc=@movie.Description&release=@movie.ReleaseDate">
+                        @if (movie.MoviePoster != null)
+                        {
+                            <img class="poster-img" src="data:image/jpeg;base64,@Convert.ToBase64String(movie.MoviePoster)" alt="@movie.MovieName Poster" />
+                        }
+                        else
+                        {
+                            <img class="poster-img" src="~/images/default-poster.jpg" alt="No poster available" />
+                        }
+                    </a>
+                    <div class="poster-title">@movie.MovieName</div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,146 @@
+﻿@model  List<BookMyShow.Models.Booking> 
+
+<div class="container mt-5">
+
+
+            <div class="card">
+                <div class="card-header"   style="background-color: #ff3c58;" >
+                    My Ticket History
+                </div>
+                <div class="card-body">
+                    @if (ViewBag.error != null)
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            @ViewBag.error
+                        </div>
+                    }
+                    else
+                    {
+                        <ul class="list-group list-group-flush mb-4">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <strong>Ticket ID:</strong><span>@ViewBag.ticketId</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <strong>Movie:</strong> <span>@ViewBag.movieName</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <strong>Language:</strong> <span>@ViewBag.movielang</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <strong>Theater:</strong> <span>@ViewBag.theater</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <strong>City:</strong> <span>@ViewBag.city</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content=" space-between align-items-center">
+                                <strong>Price:</strong> <span>₹ @ViewBag.price</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <strong>Seat Numbers:</strong> <span>@ViewBag.seatnumber</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <strong>Show Time:</strong> <span>@ViewBag.showtime</span>
+                            </li>
+                        </ul>
+                     
+
+                        <div class="d-flex justify-content-center flex-wrap gap-3">
+                            @* @{ *@
+                            @*     // Determine if the ticket date is in the past for button visibility *@
+                            @*     // You need to pass ViewBag.IsTicketPast from your C# controller *@
+                            @*     // Example C# logic for ViewBag.IsTicketPast: *@
+                            @*     DateTime showTime; *@
+                            @* bool parseSuccess = DateTime.TryParse(ViewBag.ticketDate, out showTime); *@
+                            @*     ViewBag.IsTicketPast = parseSuccess && DateTime.Today < showTime.Date; *@
+                            @* } *@
+
+                            @* @if (!(ViewBag.IsTicketPast ?? false)) *@ @* Ensures buttons are only shown if IsTicketPast is false or null (default to show) *@
+                            @* { *@
+                    <a class="btn btn-danger btn-custom" type="button" onclick="alert('Are you sure about Canceling Ticket.')" href="/BookMyShow/Cancellation?Bookid=@ViewBag.bookid&TicketId=ViewBag.ticketId">Cancel Ticket</a>
+                                <a class="btn btn-primary btn-custom" type="button" onclick="alert('Are you sure about Rescheduling Ticket.')" href="/BookMyShow/Reschedule?Bookid=@ViewBag.bookid">Reschedule Ticket</a>
+                            @* } *@
+                        </div>
+                    }
+                </div>
+            </div>
+        
+
+    @* } *@
+    </div>
+
+    <style>
+        /* Custom styles for this specific component */
+        .container {
+            max-width: 600px;
+        }
+        .card {
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        .card-header {
+            background-color: #007bff;
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-align: center;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            padding: 20px;
+        }
+        .list-group-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            border: none;
+            border-bottom: 1px solid #eee;
+        }
+        .list-group-item:last-child {
+            border-bottom: none;
+        }
+        .list-group-item strong {
+            color: #333;
+            flex-basis: 35%; /* Adjust width for labels */
+        }
+        .list-group-item span {
+            color: #555;
+            flex-basis: 60%; /* Adjust width for values */
+            text-align: right;
+            font-weight: 500;
+        }
+        .btn-custom {
+            padding: 10px 25px;
+            font-size: 1rem;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        .btn-danger { /* For Cancel */
+            background-color: #dc3545;
+            border-color: #dc3545;
+            color: white;
+        }
+        .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+        }
+        .btn-primary { /* For Reschedule */
+            background-color: #007bff;
+            border-color: #007bff;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .alert-danger { /* For error message */
+            color: #dc3545;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>

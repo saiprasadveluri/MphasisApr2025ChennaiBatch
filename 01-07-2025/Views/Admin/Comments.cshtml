@@ -1,0 +1,40 @@
+﻿@model List<BookMyShow.Models.Review>
+@{
+    var currentPage = (int)ViewBag.CurrentPage;
+    var totalPages = (int)ViewBag.TotalPages;
+    Layout = "/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">User Comments</h2>
+
+    @foreach (var comment in Model)
+    {
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">@comment.Movie.MovieName</h5>
+                <h6 class="card-subtitle text-muted">By @comment.UidNavigation.Username</h6>
+                <p class="card-text mt-2">@comment.CommentText</p>
+
+                <form method="post" asp-action="DeleteComments">
+                    <input type="hidden" name="id" value="@comment.ReviewId" />
+                    <input type="hidden" name="page" value="@currentPage" />
+                    <button type="submit" class="btn btn-sm btn-danger mt-2">Delete</button>
+                </form>
+            </div>
+        </div>
+    }
+
+    <!-- Pagination -->
+    <nav>
+        <ul class="pagination justify-content-center">
+            @for (int i = 1; i <= totalPages; i++)
+            {
+                <li class="page-item @(i == currentPage ? "active" : "")">
+                    <a class="page-link" href="@Url.Action("Comments", new { page = i })">@i</a>
+                </li>
+            }
+        </ul>
+    </nav>
+    <a href="@Url.Action("Home", "Admin")" class="btn btn-danger text-decoration-none">Back to home page</a>
+</div>

@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<div class="container mx-auto shadow-lg py-4 px-5" style="margin-top:300px;max-width:600px;">
+    <h1 class="text-center">Add Language</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="text" name="lang" class="form-control mt-3" placeholder="Enter New Language" />
+        <input type="submit" value="Add Language" style="background-color: #ff3c58;" class="btn  w-100 mt-3" />
+    </form>
+    <a href="@Url.Action("Home", "Admin")" class="btn btn-danger text-decoration-none mt-3 w-100">Back to home page</a>
+</div>
+@if (ViewBag.Languagesucess != null)
+{
+    <div class="alert alert-success alert-dismissible mx-auto" style="margin-top:20px;max-width:600px">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>@ViewBag.Languagesucess</strong>
+    </div>
+}
+@if (ViewBag.Languagefail != null)
+{
+    <div class="alert alert-danger alert-dismissible mx-auto" style="margin-top:20px;max-width:600px">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>@ViewBag.Languagefail</strong>
+    </div>
+}
+

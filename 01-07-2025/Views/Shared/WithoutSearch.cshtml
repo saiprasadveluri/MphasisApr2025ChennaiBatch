@@ -1,0 +1,92 @@
+﻿@{
+    // Add your logo image path here, e.g., ~/images/logo.png
+    var logoPath = Url.Content("~/images/logo.png");
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <style>
+        nav {
+            background-color: #ff3c58;
+            padding: 20px;
+            font-size: large;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+            nav a.dark {
+                color: azure;
+                text-decoration: none;
+                margin-right: 4px;
+                font-weight: 600;
+                padding: 15px;
+                border-radius: 6px;
+                transition: background-color 0.2s ease, text-decoration 0.2s ease;
+            }
+
+                nav a.dark:hover, nav a.dark:focus {
+                    text-decoration: underline;
+                    text-decoration-thickness: 5px;
+                    text-decoration-color: #ff3c58;
+                    ;
+                }
+    </style>
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+    <div>
+        <header>
+            <nav class="shadow-sm">
+                @{
+                    <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+                        <div style="display:flex; align-items:center;">
+                            <img src="/logo.png" alt="Logo" style="height:50px; width:auto; border-radius:4px  background-color: #ff3c58;" />
+                            <div style="display:flex; align-items:center; margin-inline-start:500px">
+                                <a href="@Url.Action("Movies", "BookMyShow")" class="dark">Movies</a>
+                                <a href="@Url.Action("UpdateProfile", "BookMyShow")" class="dark">Update Profile</a>
+                                <a href="@Url.Action("MyTickets", "BookMyShow")" class="dark" >My Ticket</a>
+                            </div>
+                         
+                        </div> 
+                        @{
+                            string d;
+                            if (Context.Session.GetString("Username") == null)
+                            {
+                                d = "none";
+                            }
+                            else
+                            {
+                                d = "block";
+                            }
+                        }
+                        <div style="display:flex; align-items:center;">
+                            <form method="post" action="@Url.Action("Movies","BookMyShow")">
+                                <div style="display:flex ; gap:2px ">
+                                    <a href="@Url.Action("Movies", "BookMyShow")" class="btn btn-outline-light logout-btn" style="display:@d">Home</a>
+                                    <a href="@Url.Action("LogOut", "BookMyShow")"
+                                       class="btn"
+                                       style="background-color: #ff3c58; color: #fff; display:@d; border:2px solid #fff ; padding: 6px 16px; border-radius: 6px; text-decoration: none;">
+                                        Log Out
+                                    </a>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                }
+            </nav>
+        </header>
+        @RenderBody()
+        <footer>
+        </footer>
+    </div>
+
+    @RenderSection("Scripts", required: false)
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

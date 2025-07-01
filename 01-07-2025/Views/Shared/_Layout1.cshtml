@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+        }
+
+        .navbar {
+            background-color: #000 !important;
+            padding: 1rem 2rem;
+        }
+
+        .navbar-brand img {
+            max-height: 50px;
+        }
+
+        .nav-link {
+            color: #fff !important;
+            font-size: 1.1rem;
+            margin-right: 1.25rem;
+            transition: color 0.3s ease;
+        }
+
+            .nav-link:hover {
+                color: #ff3c58 !important;
+            }
+
+        .logout {
+            background-color: #ff3c58 !important;
+            color: #fff !important;
+            border: none;
+            padding: 8px 18px;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+            .logout:hover {
+                background-color: #e2334d !important;
+            }
+
+        .navbar-toggler {
+            border-color: #ff3c58;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,60,88, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+        .welcome-text {
+            color: #ccc;
+            font-weight: 500;
+            margin-right: 1rem;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+
+</head>
+<body>
+    @* navbar code *@
+    <nav class="navbar navbar-expand-sm fixed-top shadow-lg py-3">
+        <div class="container-fluid align-items-center">
+            <a class="navbar-brand d-flex align-items-center" href="@Url.Action("Index", "Home")">
+            
+                <img src="/images/logo.png" class="img-fluid" width="200" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse ms-5" id="mynavbar">
+                <ul class="navbar-nav me-auto d-flex align-items-center gap-3">
+                   
+                    <li><a href="@Url.Action("Index", "Admin")" class="nav-link">Home</a></li>
+                    <li><a href="@Url.Action("AddMovie", "Admin")" class="nav-link">Add Movie</a></li>
+                    <li><a href="@Url.Action("UpdateMovie", "Admin")" class="nav-link">Update Movie</a></li>
+                    <li><a href="@Url.Action("DeleteMovie", "Admin")" class="nav-link">Delete Movie</a></li>
+
+                </ul>
+                @* <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                    <button class="btn btn-primary" type="button">Search</button>
+                </form> *@
+
+                <div class="d-flex align-items-center">
+                 
+                    <h6 class="me-4 mb-0">Welcome Admin</h6> 
+                </div>
+
+                @{
+                    string d = Context.Session.GetString("uname") == null ? "none" : "block";
+                }
+                <div><a href="@Url.Action("Logout", "Admin")" class="nav-link btn btn-sm logout" style="background-color: #ff3c58; color: white; border: none; padding: 6px 16px; border-radius: 6px; text-decoration: none;" >Logout</a></div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+﻿
+
+@model BookMyShow.Models.AllPayments;
+
+@{
+    ViewData["Title"] = "Choose Payment Method";
+}
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+    /* General styling */
+    .payment-container {
+        padding: 30px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        background-color: #fff;
+    }
+
+    .payment-method-section {
+        display: none;
+        margin-top: 15px;
+        padding: 15px;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+    }
+
+    .card-icon-group {
+        font-size: 24px;
+        margin-left: 10px;
+        color: #6c757d;
+    }
+</style>
+
+<div class="container my-5">
+    <div class="row g-4">
+        <div class="col-md-7">
+            <div class="payment-container">
+                <div class="payment-header">
+                    <h2>Choose Your Payment Method</h2>
+                </div>
+
+                <form method="post" asp-action="Payment">
+                    <div class="form-group mb-4">
+                        <label for="SelectedPaymentType">Payment Method</label>
+                        <select class="form-control" id="SelectedPaymentType" name="SelectedPaymentType"
+                                onchange="togglePaymentMethod()">
+                            <option value="UPI">UPI</option>
+                            <option value="Card">Credit/Debit Card</option>
+                        </select>
+                    </div>
+
+                    <!-- UPI Payment Section -->
+                    <div id="upiSection" class="payment-method-section">
+                        <div class="form-group mb-3">
+                            <label for="Upi_UpiId">UPI ID</label>
+                            <input type="text" class="form-control" id="Upi_UpiId" name="Upi.UpiId"
+                                   placeholder="e.g., yourname@bankname">
+                            <span asp-validation-for="Upi.UpiId" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <!-- Card Payment Section -->
+                    <div id="cardSection" class="payment-method-section">
+                        <div class="form-group mb-3">
+                            <label for="Card_CardNumberMasked">Card Number</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="Card_CardNumberMasked"
+                                       name="Card.CardNumberMasked" placeholder="xxxx xxxx xxxx xxxx">
+                                <span class="input-group-text card-icon-group">
+                                    <i class="fab fa-cc-visa"></i>
+                                    <i class="fab fa-cc-mastercard"></i>
+                                    <i class="fab fa-cc-amex"></i>
+                                </span>
+                            </div>
+                            <span asp-validation-for="Card.CardNumberMasked" class="text-danger"></span>
+                        </div>
+
+                        <!-- Other card fields -->
+                        <div class="form-group mb-3">
+                            <label for="Card_CardHolderName">Card Holder Name</label>
+                            <input type="text" class="form-control" id="Card_CardHolderName"
+                                   name="Card.CardHolderName" placeholder="Full Name">
+                            <span asp-validation-for="Card.CardHolderName" class="text-danger"></span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="Card_ExpiryMonth">Expiry Month</label>
+                                <select class="form-control" id="Card_ExpiryMonth" name="Card.ExpiryMonth">
+                                    <option value="">Month</option>
+                                    @for (int i = 1; i <= 12; i++)
+                                    {
+                                        <option value="@i.ToString("00")">@i.ToString("00")</option>
+                                    }
+                                </select>
+                                <span asp-validation-for="Card.ExpiryMonth" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="Card_ExpiryYear">Expiry Year</label>
+                                <select class="form-control" id="Card_ExpiryYear" name="Card.ExpiryYear">
+                                    <option value="">Year</option>
+                                    @for (int i = DateTime.Now.Year; i <= DateTime.Now.Year + 10; i++)
+                                    {
+                                        <option value="@i">@i</option>
+                                    }
+                                </select>
+                                <span asp-validation-for="Card.ExpiryYear" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label for="Card_CardCvv">CVV</label>
+                            <input type="text" class="form-control" id="Card_CardCvv"
+                                   name="Card.CardCvv" placeholder="123" maxlength="4">
+                            <span asp-validation-for="Card.CardCvv" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <!-- Hidden fields -->
+                    <input type="hidden" asp-for="Payment.Ticketid" value="@ViewBag.Ticketid" />
+                    <input type="hidden" asp-for="Payment.ShowId" value="@ViewBag.ShowId" />
+                    <input type="hidden" asp-for="Payment.TotalAmount" value="@ViewBag.TotalAmount" />
+                    <input type="hidden" asp-for="Payment.SeatNumber" value="@ViewBag.SeatNumbers" />
+                    <input type="hidden" asp-for="Payment.MovieId" value="@ViewBag.MovieId " />
+                    <input type="hidden" asp-for="Payment.TheaterId" value="@ViewBag.TheaterId" />
+
+                    <button type="submit" class="btn btn-primary btn-pay">Pay Now</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="card" style="background-color:antiquewhite">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">ORDER SUMMARY</h5>
+                </div>
+                <div class="card-body">
+                    <p><small>@ViewBag.Timings</small></p>
+                    <hr>
+
+                    <div class="d-flex justify-content-between fw-bold fs-5 mb-3">
+                        <span>Amount Payable</span>
+                        <span>Rs. @ViewBag.TotalAmount</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Show/hide payment method sections based on dropdown selection
+    function togglePaymentMethod() {
+        const paymentMethod = document.getElementById('SelectedPaymentType').value;
+
+        document.getElementById('upiSection').style.display = 'none';
+        document.getElementById('cardSection').style.display = 'none';
+
+        if (paymentMethod === 'UPI') {
+            document.getElementById('upiSection').style.display = 'block';
+        } else if (paymentMethod === 'Card') {
+            document.getElementById('cardSection').style.display = 'block';
+        }
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        togglePaymentMethod();
+    });
+</script>

@@ -1,0 +1,153 @@
+﻿@{
+    var logoPath = Url.Content("~/images/logo.png");
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <style>
+
+        nav {
+            background-color: #ff3c58;
+            ; 
+            padding: 1rem 2rem;
+            font-size: 1rem; 
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); 
+        }
+
+            nav a.dark {
+                color: azure;
+                text-decoration: none;
+                margin-right: 1rem; 
+                font-weight: 500;
+                padding: 0.5rem 1rem; 
+                border-radius: 0.375rem;
+                transition: background-color 0.2s ease, text-decoration 0.2s ease;
+            }
+
+                nav a.dark:hover,
+                nav a.dark:focus {
+                    text-decoration: underline;
+                    text-decoration-thickness: 2px;
+                    text-decoration-color: white;
+                    background-color: rgba(0, 0, 0, 0.03);
+                }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-left: auto;
+        }
+
+        .search-bar input[type="text"] {
+            border: 1.5px solid #ced4da;
+            border-radius: 0.5rem;
+            padding: 0.4rem 0.8rem;
+            font-size: 0.9rem;
+            outline: none;
+            color: #212529;
+        }
+
+        .search-bar input[type="submit"] {
+            border-radius: 0.5rem;
+            margin-left: 0.5rem;
+        }
+
+        .logout-btn {
+            margin-left: 0.5rem;
+            border-radius: 0.5rem;
+        }
+        .search-form {
+            background-color: #ff3c58;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+        }
+
+        .search-input {
+            background-color: #fff;
+            color: #212529;
+            border: none;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            font-size: 0.95rem;
+            width: 200px;
+            transition: box-shadow 0.2s ease;
+        }
+
+            .search-input:focus {
+                outline: none;
+                box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.4);
+            }
+
+        .search-btn {
+            font-weight: 500;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .logout-btn {
+            font-weight: 500;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.2s ease;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <header>
+            <nav class="shadow-sm">
+                @{
+                    <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+                        <div style="display:flex; align-items:center;">
+                            <img src="/logo.png" alt="Logo" style="height:50px; width:auto;" />
+                                <div class="nav-left">
+                            <div style="display:flex; align-items:center; margin-inline-start:500px">
+                                <a href="@Url.Action("Movies", "BookMyShow")" class="dark">Movies</a>
+                                <a href="@Url.Action("UpdateProfile", "BookMyShow")" class="dark">Update Profile</a>
+                            </div>
+                            </div>
+                            <a href="@Url.Action("MyTickets", "BookMyShow")" class="dark">My Ticket</a>
+                        </div>
+                        @{
+                            string d;
+                            if (Context.Session.GetString("Username") == null)
+                            {
+                                d = "none";
+                            }
+                            else
+                            {
+                                d = "block";
+                            }
+                        }
+                        <div style="display:flex; align-items:center;">
+                            <form method="post" action="@Url.Action("Movies","BookMyShow")" class="search-form d-flex align-items-center gap-2">
+                                <input type="text" placeholder="Search" name="SearchText" class="form-control search-input" />
+                                 <input type="submit" value="Search" class="btn btn-light search-btn" />
+                                <a href="@Url.Action("LogOut", "BookMyShow")" class="btn btn-outline-light logout-btn" style="display:@d">Log Out</a>
+                            </form>
+
+                        </div>
+                    </div>
+                }
+            </nav>
+        </header>
+        @RenderBody()
+        <footer>
+        </footer>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>
