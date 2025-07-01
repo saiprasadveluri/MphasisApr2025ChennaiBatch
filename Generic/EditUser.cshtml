@@ -1,0 +1,59 @@
+﻿@model JobSearchMVC.DataDTO.UserDTO
+
+@{
+    ViewData["Title"] = "Edit User";
+}
+
+<h2>Edit User</h2>
+
+<form asp-action="EditUser" method="post">
+    <input type="hidden" asp-for="userId" />
+
+    <div class="mb-3">
+        <label asp-for="userName" class="form-label"></label>
+        <input asp-for="userName" class="form-control" />
+        <span asp-validation-for="userName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="email" class="form-label"></label>
+        <input asp-for="email" class="form-control" type="email" />
+        <span asp-validation-for="email" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="password" class="form-label"></label>
+        <input asp-for="password" class="form-control" type="password" />
+        <span asp-validation-for="password" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="phoneNumber" class="form-label">Phone Number:</label>
+        <input asp-for="phoneNumber" class="form-control" />
+        <span asp-validation-for="phoneNumber" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="isActive" class="form-label">Is Active:</label>
+        <select asp-for="isActive" class="form-select">
+            <option value="true">Active</option>
+            <option value="false">Inactive</option>
+        </select>
+        <span asp-validation-for="isActive" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="userRole" class="form-label">User Role:</label>
+        <input asp-for="userRole" class="form-control" />
+        <span asp-validation-for="userRole" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+    <a asp-action="UserView" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
