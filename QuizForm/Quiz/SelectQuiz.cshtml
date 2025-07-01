@@ -1,0 +1,27 @@
+﻿@model OnlineQuiZMVC.Models.QuizViewModel
+@{
+    ViewBag.Title = "Take Quiz";
+}
+
+<h3>Select Quiz Options</h3>
+<form asp-action="SelectQuiz" method="post">
+    <div class="form-group">
+        <label>Category:</label>
+        <select asp-for="SelectedCategoryId" class="form-control" asp-items="@(new SelectList(Model.Categories, "Id", "Name"))">
+            <option value="">-- Select Category --</option>
+        </select>
+    </div>
+
+    <div class="form-group mt-3">
+        <label>Topic:</label>
+        <select asp-for="SelectedTopicId" class="form-control">
+            <option value="">-- Select Topic --</option>
+            @foreach (var topic in Model.Topics)
+            {
+                <option value="@topic.Id">@topic.Name</option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-success mt-3">Start Quiz</button>
+</form>
