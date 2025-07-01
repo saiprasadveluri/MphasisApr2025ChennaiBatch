@@ -1,0 +1,62 @@
+﻿<div id="States">
+
+</div>
+<div id="Cities">
+
+</div>
+<div id="Locations">
+
+</div>
+<script type="text/javascript">
+    let levelNames=['States','Cities','Locations'];
+    let index=0;
+    Pupulate('@ViewBag.Url')
+    function Pupulate(url)
+    {      
+        fetch(url).then((response)=>{
+            if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+           response.json().then(res=>{               
+               CreateDropdown(`${levelNames[index]}`,res)
+           })
+        })
+    }
+    
+    function CreateDropdown(divid,inp)
+    {
+        let root=document.getElementById(divid); 
+        
+        let pdiv=document.createElement('DIV');
+        pdiv.setAttribute('class','dropdown')        
+        btn=document.createElement('button');
+        var btnTitle=document.createTextNode(levelNames[index]);
+        btn.append(btnTitle);
+        btn.setAttribute('class','btn btn-secondary dropdown-toggle form-control');
+        btn.setAttribute('id','dropdownMenuButton');
+        btn.setAttribute("aria-haspopup","true");
+        btn.setAttribute('data-bs-toggle','dropdown');
+        pdiv.append(btn)
+        let menuDiv=document.createElement("DIV");
+        menuDiv.setAttribute('class','dropdown-menu');
+        menuDiv.setAttribute("aria-labelledby","dropdownMenuButton");
+
+        for(let itm of inp.data)
+        {       
+        let anchor=document.createElement('a');
+        
+        let txt=document.createTextNode(itm);
+        anchor.append(txt);
+        anchor.setAttribute("class","dropdown-item");
+        anchor.setAttribute("onclick",`Pupulate('${inp.url}')`)
+        menuDiv.appendChild(anchor);
+        }
+        
+        pdiv.append(menuDiv)
+        root.append(pdiv);
+        
+        ++index;
+    }
+   </script>
+
+    
