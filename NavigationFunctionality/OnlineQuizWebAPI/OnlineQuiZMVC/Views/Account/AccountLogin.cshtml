@@ -1,0 +1,57 @@
+﻿@using OnlineQuiZMVC.DTO
+@model RegisterViewModeldto
+
+<div class="d-flex justify-content-center align-items-center" style="min-height:90%">
+    <div class="bg-white p-4 box-shadow" style="width:350px;">
+        <h3 class="text-center mb-4">Sign In</h3>
+        <form method="post">
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label">Email ID</label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span><br />
+                <label asp-for="Password" class="form-label">Password</label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Enter Captcha</label>
+                <div class="d-flex align-items-center">
+                    <strong style="font-family:monospace;font-size:20px;background:#f1f1f1;padding:5px 10px;border:1px solid #ccc;">
+                        @Model.CaptchaOutput
+                    </strong>
+                </div>
+                <input asp-for="CaptchaInput" name="CaptchaInput" class="form-control mt-2" value="" />
+                <span asp-validation-for="CaptchaInput" class="text-danger"></span>
+            </div>
+            <div class="form-check mb-3">
+                <input asp-for="NotRobot" class="form-check-input" type="checkbox" value="true" />
+                <label asp-for="NotRobot" class="form-check-label">I am not a Robot</label><br />
+                <span asp-validation-for="NotRobot" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn-primary w-100">Sign In</button>
+            <div class="text-center mt-3">
+                <small>
+                    Don't have an account?
+                    <a asp-controller="Register" asp-action="RegisterLogin">Register here</a>
+                </small>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript">
+    // Prevent back navigation after logout
+    function preventBack() {
+        window.history.forward();
+    }
+    setTimeout("preventBack()", 0);
+    window.onload = function() {
+        preventBack();
+    };
+    window.onpageshow = function(evt) {
+        if (evt.persisted) preventBack();
+    };
+    window.onunload = function() {
+        null;
+    };
+</script>
