@@ -1,0 +1,72 @@
+﻿@model JobSearchDatabase.Data.Education
+
+@{
+    ViewData["Title"] = "Edit Education";
+}
+
+<h3>Edit Education</h3>
+
+<form asp-action="Edit" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="EducationId" />
+
+    <div class="form-row" style="display: flex;">
+        <div class="form-group col-md-6">
+        <label asp-for="CandidateId" class="control-label"></label>
+        <input asp-for="CandidateId" class="form-control" />
+        <span asp-validation-for="CandidateId" class="text-danger"></span>
+    </div>
+
+        <div class="form-group col-md-6">
+        <label asp-for="Institution" class="control-label"></label>
+        <input asp-for="Institution" class="form-control" />
+        <span asp-validation-for="Institution" class="text-danger"></span>
+    </div>
+    </div>
+
+    <div class="form-row" style="display: flex;">
+        <div class="form-group col-md-6">
+        <label asp-for="Degree" class="control-label"></label>
+        <select asp-for="Degree" class="form-control" asp-items="Html.GetEnumSelectList<JobSearchDatabase.EnumsJob.Degree>()">
+            <option value="">-- Select Degree --</option>
+        </select>
+        <span asp-validation-for="Degree" class="text-danger"></span>
+    </div>
+
+        <div class="form-group col-md-6">
+        <label asp-for="FieldOfStudy" class="control-label"></label>
+        <select asp-for="FieldOfStudy" class="form-control" asp-items="Html.GetEnumSelectList<JobSearchDatabase.EnumsJob.FieldOfStudy>()">
+            <option value="">-- Select Field Of Study --</option>
+        </select>
+        <span asp-validation-for="FieldOfStudy" class="text-danger"></span>
+    </div>
+    </div>
+
+    <div class="form-row" style="display: flex;">
+        <div class="form-group col-md-6">
+        <label asp-for="StartDate" class="control-label"></label>
+        <input asp-for="StartDate" class="form-control" type="date" />
+        <span asp-validation-for="StartDate" class="text-danger"></span>
+    </div>
+
+        <div class="form-group col-md-6">
+        <label asp-for="EndDate" class="control-label"></label>
+        <input asp-for="EndDate" class="form-control" type="date" />
+        <span asp-validation-for="EndDate" class="text-danger"></span>
+    </div>
+    </div>
+
+    <div class="form-group form-check">
+        <input asp-for="IsCurrent" class="form-check-input" />
+        <label asp-for="IsCurrent" class="form-check-label"></label>
+    </div>
+
+    <button type="submit" class="btn btn-primary editbtns">Save Changes</button>
+    <a asp-action="Index" class="btn btn-secondary dltbtn">Back to List</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

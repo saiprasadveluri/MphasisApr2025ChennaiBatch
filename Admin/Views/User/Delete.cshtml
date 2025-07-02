@@ -1,0 +1,38 @@
+﻿@model JobSearchDatabase.Data.User
+
+@{
+    ViewData["Title"] = "Delete User";
+}
+
+<h3>Delete User</h3>
+
+<h6>Are you sure you want to delete this user?</h6>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">UserName :</dt>
+        <dd class="col-sm-10">@Model.UserName</dd>
+
+        <dt class="col-sm-2">Email :</dt>
+        <dd class="col-sm-10">@Model.Email</dd>
+
+        <dt class="col-sm-2">PhoneNumber :</dt>
+        <dd class="col-sm-10">@Model.PhoneNumber</dd>
+
+        <dt class="col-sm-2">RegistrationDate :</dt>
+        <dd class="col-sm-10">@Model.RegistrationDate.ToString("yyyy-MM-dd")</dd>
+
+        <dt class="col-sm-2">IsActive :</dt>
+        <dd class="col-sm-10">@Model.IsActive</dd>
+
+        <dt class="col-sm-2">UserRole :</dt>
+        <dd class="col-sm-10">@Model.UserRole</dd>
+    </dl>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="UserId" />
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </form>
+</div>

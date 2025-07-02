@@ -1,0 +1,41 @@
+﻿@model IEnumerable<JobSearchDatabase.Data.Employer>
+
+@{
+    ViewData["Title"] = "Employers";
+}
+
+<div class="candhead">
+    <div>
+        <h3>Employer</h3>
+    </div>
+    <div>
+        <a asp-action="Create" class="btn btn-success">Create New Employer</a>
+    </div>
+</div>
+
+<table class="table table-hover table-bordered" style="background-color:white;">
+    <thead class="table-active">
+        <tr>
+            <th>Company Name</th>
+            <th>Employer Name</th>
+            <th>Designation</th>
+            <th>Website</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employer in Model)
+        {
+            <tr>
+                <td>@employer.CompanyName</td>
+                <td>@employer.EmployerName</td>
+                <td>@employer.Designation</td>
+                <td><a href="@employer.WebsiteUrl" target="_blank">@employer.WebsiteUrl</a></td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@employer.EmployerId" class="btn btn-primary btn-sm">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@employer.EmployerId" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

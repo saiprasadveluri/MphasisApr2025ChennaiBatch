@@ -1,0 +1,37 @@
+﻿@model JobSearchDatabase.Data.CandidateSkills
+
+@{
+    ViewData["Title"] = "Create Candidate Skill";
+}
+
+<h3>Create Candidate Skill</h3>
+
+<form asp-action="Create">
+
+    <div class="form-row" style="display: flex;">
+        <div class="form-group col-md-6">
+        <label asp-for="CandidateId" class="control-label"></label>
+        <input asp-for="CandidateId" class="form-control" />
+    </div>
+        <div class="form-group col-md-6">
+        <label asp-for="SkillId" class="control-label"></label>
+        <input asp-for="SkillId" class="form-control" />
+    </div>
+    </div>
+
+    <div class="form-row" style="display: flex;">
+        <div class="form-group col-md-6">
+        <label asp-for="SkillLevel" class="control-label"></label>
+        <select asp-for="SkillLevel" class="form-control"
+                asp-items="Html.GetEnumSelectList<JobSearchDatabase.EnumsJob.SkillLevel>()"></select>
+    </div>
+        <div class="form-group mt-3">
+            <label asp-for="IsPrimary"></label>
+            <input asp-for="IsPrimary" type="checkbox" class="form-check-input" />
+            <span asp-validation-for="IsPrimary" class="text-danger"></span>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary crtbtn">Create</button>
+    <a asp-action="Index" class="btn btn-secondary crtbkbtn">Back to List</a>
+</form>

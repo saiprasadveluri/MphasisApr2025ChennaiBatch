@@ -1,0 +1,24 @@
+﻿@model JobSearchDatabase.Data.JobCategory
+
+<h3>Create Job Category</h3>
+
+<form asp-action="Create" method="post">
+
+    <div class="form-group col-md-6">
+        <label asp-for="CategoryName" class="control-label"></label>
+        <select asp-for="CategoryName" class="form-control"
+                asp-items="Html.GetEnumSelectList<JobSearchDatabase.EnumsJob.JobCategoryName>()">
+            <option value="">-- Select Category --</option>
+        </select>
+        <span asp-validation-for="CategoryName" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary crtbtn">Create</button>
+    <a asp-action="Index" class="btn btn-secondary crtbkbtn">Back to List</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

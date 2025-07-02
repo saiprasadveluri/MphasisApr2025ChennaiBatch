@@ -1,0 +1,90 @@
+﻿@model JobSearchDatabase.Data.Candidate
+
+@{
+    ViewData["Title"] = "Create Candidate";
+}
+
+<h3>Create Candidate</h3>
+
+<form asp-action="Create" method="post">
+    <div class="form-row" style="display: flex;">
+        <div class="form-group col-md-6">
+        <label asp-for="UserId" class="control-label"></label>
+        <input asp-for="UserId" class="form-control" />
+        <span asp-validation-for="UserId" class="text-danger"></span>
+    </div>
+
+        <div class="form-group col-md-6">
+        <label asp-for="FirstName" class="control-label"></label>
+        <input asp-for="FirstName" class="form-control" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+    </div>
+
+    <div class="form-row" style="display: flex;">
+        <div class="form-group col-md-6">
+        <label asp-for="LastName" class="control-label"></label>
+        <input asp-for="LastName" class="form-control" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+
+        <div class="form-group col-md-6">
+        <label asp-for="DateOfBirth" class="control-label"></label>
+        <input asp-for="DateOfBirth" class="form-control" type="date" />
+        <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+    </div>
+    </div>
+
+    <div class="form-row" style="display: flex;">
+        <div class="form-group col-md-6">
+        <label asp-for="Gender" class="control-label"></label>
+        <select asp-for="Gender" class="form-control">
+            <option value="">-- Select Gender --</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
+        </select>
+        <span asp-validation-for="Gender" class="text-danger"></span>
+    </div>
+
+        <div class="form-group col-md-6">
+        <label asp-for="Address" class="control-label"></label>
+        <input asp-for="Address" class="form-control" />
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+    </div>
+
+    <div class="form-row" style="display: flex;">
+        <div class="form-group col-md-6">
+        <label asp-for="ResumeFilePath" class="control-label"></label>
+        <input asp-for="ResumeFilePath" class="form-control" />
+        <span asp-validation-for="ResumeFilePath" class="text-danger"></span>
+    </div>
+
+        <div class="form-group col-md-6">
+        <label asp-for="ProfileSummary" class="control-label"></label>
+        <textarea asp-for="ProfileSummary" class="form-control scrollable-textarea"></textarea>
+        <span asp-validation-for="ProfileSummary" class="text-danger"></span>
+    </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary crtbtn">Create</button>
+    <a asp-action="Index" class="btn btn-secondary crtbkbtn">Back to List</a>
+</form>
+
+@section Styles {
+    <style>
+        /* Make profile summary textarea scrollable with fixed height */
+        .scrollable-textarea {
+            height: 150px;       /* fixed height */
+            overflow-y: auto;    /* vertical scroll if content overflows */
+            resize: vertical;    /* allow vertical resize if user wants */
+            white-space: pre-wrap; /* preserve line breaks */
+        }
+    </style>
+}
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+

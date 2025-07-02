@@ -1,0 +1,39 @@
+﻿@model JobSearchDatabase.Data.LoginView
+
+<div class="d-flex vh-100 justify-content-center align-items-center bg-light">
+    <div class="card p-4 shadow" style="min-width: 320px; max-width: 400px; width: 100%;">
+        <h2 class="text-center mb-4">Login</h2>
+
+        <form asp-action="Login" method="post" novalidate>
+            <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label"></label>
+                <input asp-for="Password" type="password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="CaptchaCode" class="form-label">Enter the captcha code shown below</label>
+                <div class="mb-2 p-2 bg-white border text-center fw-bold fs-4 cb" 
+                     style="letter-spacing: 5px; user-select:none;">
+                    @ViewBag.CaptchaCode
+                </div>
+                <input asp-for="CaptchaCode" class="form-control" autocomplete="off" />
+                <span asp-validation-for="CaptchaCode" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

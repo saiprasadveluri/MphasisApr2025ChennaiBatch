@@ -1,0 +1,31 @@
+﻿@model JobSearchDatabase.Data.Skill
+
+@{
+    ViewData["Title"] = "Edit Skill";
+}
+
+<h3>Edit Skill</h3>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="SkillId" />
+
+    <div class="form-row" style="display: flex;">
+    <div class="form-group col-md-6">
+        <label asp-for="SkillName"></label>
+        <input asp-for="SkillName" class="form-control" />
+        <span asp-validation-for="SkillName" class="text-danger"></span>
+    </div>
+        <div class="form-group col-md-6">
+        <label asp-for="SkillCategory"></label>
+        <input asp-for="SkillCategory" class="form-control" />
+        <span asp-validation-for="SkillCategory" class="text-danger"></span>
+    </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary editbtns">Save Changes</button>
+    <a asp-action="Index" class="btn btn-secondary dltbtn">Back to List</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

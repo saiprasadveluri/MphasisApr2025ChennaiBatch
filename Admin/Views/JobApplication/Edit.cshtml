@@ -1,0 +1,38 @@
+﻿@model JobSearchDatabase.Data.JobApplicationDTO
+
+@{
+    ViewData["Title"] = "Edit Job Application";
+}
+
+<h1>Edit Job Application</h1>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="ApplicationId" />
+
+    <div class="form-group">
+        <label asp-for="JobPostingId"></label>
+        <select asp-for="JobPostingId" class="form-control" asp-items='ViewData["JobPostingId"] as SelectList'></select>
+        <span asp-validation-for="JobPostingId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CandidateId"></label>
+        <select asp-for="CandidateId" class="form-control" asp-items='ViewData["CandidateId"] as SelectList'></select>
+        <span asp-validation-for="CandidateId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Status"></label>
+        <select asp-for="Status" class="form-control" asp-items="Html.GetEnumSelectList<JobSearchDatabase.EnumsJob.JobStatus>()"></select>
+        <span asp-validation-for="Status" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

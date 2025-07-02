@@ -1,0 +1,37 @@
+﻿@model IEnumerable<JobSearchDatabase.Data.JobCategory>
+
+@{
+    ViewData["Title"] = "Job Category";
+}
+
+<div class="candhead">
+    <div>
+        <h3>Job Category</h3>
+    </div>
+    <div>
+        <a asp-action="Create" class="btn btn-success">Create New JobCategory</a>
+    </div>
+</div>
+
+<table class="table table-hover table-bordered" style="background-color:white;">
+    <thead class="table-active">
+        <tr>
+            <th>Category Id</th>
+            <th>Category Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CategoryId</td>
+                <td>@item.CategoryName</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.CategoryId" class="btn btn-primary btn-sm">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@item.CategoryId" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

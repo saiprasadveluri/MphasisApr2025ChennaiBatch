@@ -1,0 +1,55 @@
+﻿@using JobSearchDatabase
+@using static JobSearchDatabase.EnumsJob
+@model JobSearchDatabase.Data.JobApplicationDTO
+
+@{
+    ViewData["Title"] = "Create Job Application";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Create" method="post" class="w-50 mx-auto">
+
+
+    <select asp-for="CandidateId" class="form-select"
+            asp-items="@(ViewData["CandidateId"] as IEnumerable<SelectListItem>)">
+    </select>
+    <div class="mb-3">
+        <label asp-for="CandidateId" class="form-label">Applied Date</label>
+        <select asp-for="CandidateId" class="form-select"
+                 asp-items="@(ViewData["CandidateId"] as IEnumerable<SelectListItem>)">
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="JobPostingId" class="form-label">Applied Date</label>
+        <select asp-for="JobPostingId" class="form-select"
+                asp-items="@(ViewData["JobPostingId"] as IEnumerable<SelectListItem>)">
+        </select>
+    </div>
+        @* AppliedDate is usually set automatically, so you can hide or disable it *@
+        <div class="mb-3">
+            <label asp-for="AppliedDate" class="form-label">Applied Date</label>
+            <input asp-for="AppliedDate" class="form-control" type="date" value="@DateTime.Now.ToString("yyyy-MM-dd")" disabled />
+            <span asp-validation-for="AppliedDate" class="text-danger"></span>
+        </div>
+
+
+
+    <div class="mb-3">
+        <label asp-for="Status" class="form-label">Status</label>
+        <select asp-for="Status" class="form-select"
+                asp-items="Html.GetEnumSelectList<EnumsJob.JobStatus>()">
+            <option value="">-- Select Status --</option>
+        </select>
+        <span asp-validation-for="Status" class="text-danger"></span>
+    </div>
+
+
+        <button type="submit" class="btn btn-primary">Submit Application</button>
+    </form>
+
+
+@section Scripts {
+   <partial name="_ValidationScriptsPartial" />
+    }

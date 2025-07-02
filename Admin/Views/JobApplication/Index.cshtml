@@ -1,0 +1,39 @@
+﻿@model IEnumerable<JobSearchDatabase.Data.JobApplicationDTO>
+
+@{
+    ViewData["Title"] = "Job Applications";
+}
+
+<h1>Job Applications</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Job Posting</th>
+            <th>Candidate</th>
+            <th>Applied Date</th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.JobPosting?.JobTitle</td>
+                <td>@item.Candidate?.FirstName @item.Candidate?.LastName</td>
+                <td>@item.AppliedDate.ToString("yyyy-MM-dd")</td>
+                <td>@item.Status</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.ApplicationId">Details</a> |
+                    <a asp-action="Edit" asp-route-id="@item.ApplicationId">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ApplicationId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

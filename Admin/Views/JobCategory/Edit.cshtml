@@ -1,0 +1,18 @@
+﻿@model JobSearchDatabase.Data.JobCategory
+
+@{
+    ViewData["Title"] = "Edit Category";
+}
+
+<h3>Edit Job Category</h3>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="CategoryId" />
+    <div class="form-group col-md-6">
+        <label asp-for="CategoryName" class="control-label"></label>
+        <select asp-for="CategoryName" class="form-control"
+                asp-items="Html.GetEnumSelectList<JobSearchDatabase.EnumsJob.JobCategoryName>()"></select>
+    </div>
+    <button type="submit" class="btn btn-primary editbtns">Save Changes</button>
+    <a asp-action="Index" class="btn btn-secondary dltbtn">Back to List</a>
+</form>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<JobSearchDatabase.Data.Education>
+
+@{
+    ViewData["Title"] = "Education List";
+}
+
+<div class="candhead">
+    <div>
+        <h3>Education</h3>
+    </div>
+    <div>
+        <a asp-action="Create" class="btn btn-success">Create New Education</a>
+    </div>
+</div>
+
+<table class="table table-hover table-bordered" style="background-color:white;">
+    <thead class="table-active">
+        <tr>
+            <th>Institution</th>
+            <th>Degree</th>
+            <th>Field Of Study</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Is Current</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Institution</td>
+                <td>@item.Degree</td>
+                <td>@item.FieldOfStudy</td>
+                <td>@item.StartDate.ToShortDateString()</td>
+                <td>@item.EndDate.ToShortDateString()</td>
+                <td>@item.IsCurrent</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.EducationId" class="btn btn-primary btn-sm">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@item.EducationId" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

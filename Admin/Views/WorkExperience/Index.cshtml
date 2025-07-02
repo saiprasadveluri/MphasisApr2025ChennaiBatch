@@ -1,0 +1,44 @@
+﻿@model IEnumerable<JobSearchDatabase.Data.WorkExperience>
+
+@{
+    ViewData["Title"] = "Work Experiences";
+}
+
+<div class="candhead">
+    <div>
+        <h3>Work Experience</h3>
+    </div>
+    <div>
+        <a asp-action="Create" class="btn btn-success">Create New WorkExperience</a>
+    </div>
+</div>
+
+<table class="table table-bordered table-hover" style="background-color:white;">
+    <thead class="table-active">
+        <tr>
+            <th>Candidate ID</th>
+            <th>Company Name</th>
+            <th>Job Title</th>
+            <th>Job Description</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CandidateId</td>
+                <td>@item.CompanyName</td>
+                <td>@item.JobTitle</td>
+                <td>@item.JobDescription</td>
+                <td>@item.StartDate</td>
+                <td>@item.EndDate</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.WorkExperienceId" class="btn btn-sm btn-primary">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@item.WorkExperienceId" class="btn btn-danger btn-sm">Delete</a>
+            </tr>
+        }
+    </tbody>
+</table>
