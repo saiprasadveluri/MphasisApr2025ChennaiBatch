@@ -1,0 +1,101 @@
+public class OrderDTO
+{
+    public int OrderId { get; set; }
+    public int UserId { get; set; }
+    public string UserName { get; set; }-------inculde 
+    public DateOnly OrderDate { get; set; }
+    public bool IsFirstOrder { get; set; }
+    public decimal DiscountApplied { get; set; }
+    public string DiscountCode { get; set; }----------include
+    public decimal TotalAmount { get; set; }
+    public string Status { get; set; }
+    public List<OrderItemDTO> OrderItems { get; set; }
+}
+
+public class OrderItemDTO
+{
+    public string MedicineName { get; set; }
+    public int Quantity { get; set; }
+    public decimal UnitPrice { get; set; }
+    public decimal LineTotal => Quantity * UnitPrice;
+}
+-------------orderdto----------------------------------------------------
+public List<OrderDTO> GenerateOrderReport()
+{
+    return _context.Orders
+        .Include(o => o.User)
+        .Include(o => o.Discount)
+        .Include(o => o.OrderItems)
+            .ThenInclude(oi => oi.Medicine)
+        .Select(o => new OrderDTO
+        {
+            OrderId = o.OrderId,
+            UserId = o.UserId,
+            UserName = o.User.FullName,
+            OrderDate = o.OrderDate,
+            IsFirstOrder = o.IsFirstOrder,
+            DiscountApplied = o.DiscountApplied,
+            DiscountCode = o.Discount.Code,
+            Status = o.Status,
+            TotalAmount = o.OrderItems.Sum(i => i.UnitPrice * i.Quantity),
+            OrderItems = o.OrderItems.Select(i => new OrderItemDTO
+            {
+                MedicineName = i.Medicine.MedicineName,
+                Quantity = i.Quantity,
+                UnitPrice = i.UnitPrice
+            }).ToList()
+        }).ToList();
+}
+--------------orderservice---------------------------------------------
+[HttpGet("report")]
+public ActionResult GetOrderReport()
+{
+    var report = _unity.OrderService.GenerateOrderReport();
+    return Ok(new { Data = report });
+}
+--------------ordercontroller api--------------------------------------
+public async Task<IActionResult> Summary()
+{
+    var response = await _client.GetAsync("Order/report");
+    var json = await response.Content.ReadAsStringAsync();
+    var wrapper = JsonSerializer.Deserialize<ApiResponse<List<OrderDTO>>>(json);
+    return View(wrapper.Data);
+}
+--------------ordercontroller mvc----------------------------------------------
+@model List<OrderDTO>
+<h2>🧾 Order Summary Report</h2>
+<button onclick="window.print()">🖨️ Print</button>
+
+@foreach (var order in Model)
+{
+    <div class="order-block">
+        <h4>Order ID: @order.OrderId | User: @order.UserName | Status: @order.Status</h4>
+        <p>Date: @order.OrderDate | First Order: @(order.IsFirstOrder ? "Yes" : "No")</p>
+        <p>Discount: ₹@order.DiscountApplied (@order.DiscountCode)</p>
+        <table class="table">
+            <thead><tr><th>Medicine</th><th>Qty</th><th>Unit Price</th><th>Line Total</th></tr></thead>
+            <tbody>
+            @foreach (var item in order.OrderItems)
+            {
+                <tr>
+                    <td>@item.MedicineName</td>
+                    <td>@item.Quantity</td>
+                    <td>₹@item.UnitPrice</td>
+                    <td>₹@item.LineTotal</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+        <h5>Total: ₹@order.TotalAmount</h5>
+        <hr />
+    </div>
+}
+--------------summary.cshtml--------------------------------------------------------
+<style>
+@media print {
+    button { display: none; }
+    .order-block { page-break-after: always; }
+    table { width: 100%; font-size: 12px; }
+}
+</style>
+--------optional css for print-friendly layout-------------------------------------
