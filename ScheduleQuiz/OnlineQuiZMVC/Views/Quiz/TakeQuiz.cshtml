@@ -1,0 +1,50 @@
+﻿@model List<OnlineQuiZMVC.Models.QuizSchedule>
+ 
+@functions {
+
+    bool IsQuizActive(DateTime startTime, DateTime endTime)
+
+    {
+
+        var now = DateTime.Now;
+
+        return now >= startTime && now <= endTime;
+
+    }
+
+}
+ 
+<h2 class="text-center mb-4">📚 Available Quizzes</h2>
+ 
+@foreach (var quiz in Model)
+
+{
+
+    var isActive = IsQuizActive(quiz.StartTime, quiz.EndTime);
+ 
+    <div class="card mb-4 shadow-sm">
+<div class="card-body">
+<h4 class="card-title">@quiz.Title</h4>
+<p class="card-text">
+
+                📁 <strong>Category:</strong> @quiz.Category<br />
+
+                🧠 <strong>Topic:</strong> @quiz.Topic<br />
+
+                🕓 <strong>Start Time:</strong> @quiz.StartTime.ToString("dd MMM yyyy hh:mm tt")<br />
+
+                ⏰ <strong>End Time:</strong> @quiz.EndTime.ToString("dd MMM yyyy hh:mm tt")
+</p>
+ 
+            <form method="post" action="/Quiz/StartQuiz">
+<input type="hidden" name="quizId" value="@quiz.QuizId" />
+<button type="submit" class="btn btn-success" @(isActive ? "" : "disabled")>
+
+                    @(isActive ? "Start Quiz" : "Unavailable")
+</button>
+</form>
+</div>
+</div>
+
+}
+ 

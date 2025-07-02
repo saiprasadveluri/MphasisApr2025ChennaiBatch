@@ -1,0 +1,56 @@
+﻿@model OnlineQuiZMVC.Models.QuizSessionViewModel
+
+@{
+    var currentQuestion = Model.Questions[Model.CurrentIndex];
+    int nextIndex = (Model.CurrentIndex + 1 < Model.Questions.Count) ? Model.CurrentIndex + 1 : Model.CurrentIndex;
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Left: Question panel -->
+        <div class="col-md-8 p-4 border-end">
+            <h4>Question @(Model.CurrentIndex + 1)</h4>
+            <p>@currentQuestion.Text</p>
+
+            <form method="post" asp-action="NextQuestion">
+                @for (int i = 0; i < currentQuestion.Options.Count; i++)
+                {
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="optionIndex" value="@i"
+                               @(Model.SelectedAnswers.ContainsKey(currentQuestion.Id) && Model.SelectedAnswers[currentQuestion.Id] == i ? "checked" : "") />
+                        <label class="form-check-label">@currentQuestion.Options[i]</label>
+                    </div>
+                }
+
+                <!-- Hidden inputs -->
+                <input type="hidden" name="questionId" value="@currentQuestion.Id" />
+                <input type="hidden" name="nextIndex" value="@nextIndex" />
+
+                <div class="mt-4">
+                    @if (Model.CurrentIndex > 0)
+                    {
+                        <a href="@Url.Action("StartQuiz", new { index = Model.CurrentIndex - 1 })" class="btn btn-secondary">Previous</a>
+                    }
+
+                    <button type="submit" class="btn btn-primary">Next</button>
+
+                    @if (Model.CurrentIndex == Model.Questions.Count - 1)
+                    {
+                        <a href="@Url.Action("SubmitQuiz")" class="btn btn-success float-end">Submit</a>
+                    }
+                </div>
+            </form>
+        </div>
+
+        <!-- Right: Number navigation -->
+        <div class="col-md-4 p-4 bg-light">
+            <h5>🧮 Questions</h5>
+            <div class="d-flex flex-wrap">
+                @for (int i = 0; i < Model.Questions.Count; i++)
+                {
+                    <a href="@Url.Action("StartQuiz", new { index = i })" class="btn btn-outline-dark m-1">@((i + 1).ToString())</a>
+                }
+            </div>
+        </div>
+    </div>
+</div>

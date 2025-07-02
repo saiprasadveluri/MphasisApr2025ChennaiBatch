@@ -1,0 +1,9 @@
+﻿@model Dictionary<int, int>
+
+<h3>✅ Quiz Summary</h3>
+<ul>
+    @foreach (var pair in Model)
+    {
+        <li>Question @pair.Key → Option @pair.Value</li>
+    }
+</ul>
