@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "~/Views/Shared/UserDashboard.cshtml";
+}
+@model OnlineQuiZMVC.DTO.QuizSelectionViewDTO
+
+<h4>📝 Schedule Your Quiz</h4>
+<form method="post" asp-action="StartQuiz" asp-controller="User">
+    <div class="mb-3">
+        <label asp-for="ScheduleTime">Select Date:</label>
+        <input asp-for="ScheduleTime" type="date" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="SelectedCategory">Category:</label>
+        <select asp-for="SelectedCategory" asp-items="Model.CategoryOptions" class="form-select"></select>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="SelectedTopic">Topic:</label>
+        <select asp-for="SelectedTopic" asp-items="Model.TopicOptions" class="form-select"></select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Start Quiz</button>
+</form>

@@ -1,0 +1,102 @@
+﻿@using OnlineQuiZMVC.DTO
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - OnlineQuizMVC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @RenderSection("Styles", required: false)
+
+    <style>
+        .layout-wrapper {
+            display: flex;
+            min-height: 100vh;
+            background: url('/Img/image.webp') center/cover no-repeat;
+        }
+
+        .sidebar {
+            width: 240px;
+            background-color: #343a40; /* Dark gray */
+            color: white;
+            padding: 1rem;
+        }
+
+            .sidebar a {
+                color: white;
+            }
+
+                .sidebar a:hover {
+                    background-color: #495057;
+                }
+
+        .main-area {
+            flex: 1;
+            padding: 2rem;
+        }
+
+        .user-profile {
+            width: 320px;
+            padding: 1rem;
+            border-left: 1px solid #dee2e6;
+            background-color: #ffffffcc;
+        }
+
+        .dropdown-menu p {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body style="margin: 0;">
+    <div class="layout-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h5 class="mb-4">Navigation</h5>
+            <ul class="nav flex-column">
+                <li><a class="nav-link" href="@Url.Action("TrackProgress", "User")">📈 Track Progress</a></li>
+                <li><a class="nav-link" href="@Url.Action("TakeQuiz", "User")">📝 Take Quiz</a></li>
+                <li><a class="nav-link" href="@Url.Action("ViewScores", "User")">📊 View Scores</a></li>
+            </ul>
+        </aside>
+        <div class="mt-4">
+            <h6>Welcome, @Model.UserName!</h6>
+            <p>Select an option on the left to get started.</p>
+        </div>
+
+        <!-- Main Content Area -->
+        <main class="main-area">
+            <div id="user-content">
+                @RenderBody()
+            </div>
+            
+        </main>
+
+        <!-- Profile Panel on Right Side -->
+        <div class="text-center mt-2">
+            <button class="btn btn-outline-info" id="toggle-profile">👤 View Profile</button>
+        </div>
+
+        <!-- Hidden Profile Section -->
+        <div id="profile-details" class="mt-3" style="display: none;">
+            <div class="card p-3 shadow-sm">
+                <p><strong>Username:</strong> @Model.UserName</p>
+                <p><strong>Email:</strong> @Model.Email</p>
+                <p><strong>Contact:</strong> @Model.ContactNo</p>
+                <p><strong>Password:</strong> ******</p>
+                <div class="d-flex justify-content-between">
+                    <a href="/User/Edit" class="btn btn-sm btn-primary">Edit</a>
+                    <a href="/Account/Logout" class="btn btn-sm btn-danger">Logout</a>
+                </div>
+            </div>
+            
+
+           
+        </aside>
+    </div>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
