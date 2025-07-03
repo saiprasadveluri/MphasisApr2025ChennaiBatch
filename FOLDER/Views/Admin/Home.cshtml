@@ -1,0 +1,190 @@
+﻿@{
+    Layout = "/Views/Shared/AdminLayout.cshtml";
+
+}
+@{
+    ViewData["Title"] = "Admin Dashboard";
+    var adminstatus = Context.Session.GetString("enable");
+    var isAdminEnabled = adminstatus == "Enable";
+}
+
+<h2 class="text-center mt-4 mb-5">Admin Dashboard</h2>
+
+<div class="container-fluid px-4">
+    <div class="row">
+        <!-- Left Column: Summary Cards -->
+        <div class="col-lg-4 mb-4">
+            <div class="d-flex flex-column gap-4">
+                <div class="card text-center shadow-sm border-0" style="background-color:#ff3c58">
+                    <div class="card-body text-white">
+                        <h5 class="card-title">No. of Movies</h5>
+                        <p class="display-6">@ViewBag.movies</p>
+                    </div>
+                </div>
+                <div class="card text-center shadow-sm border-0" style="background-color:#ff3c58">
+                    <div class="card-body text-white">
+                        <h5 class="card-title">No. of Screens</h5>
+                        <p class="display-6">@ViewBag.theaters</p>
+                    </div>
+                </div>
+                <div class="card text-center shadow-sm border-0" style="background-color:#ff3c58">
+                    <div class="card-body text-white">
+                        <h5 class="card-title">No. of Cities</h5>
+                        <p class="display-6">@ViewBag.cities</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Action Cards -->
+        <div class="col-lg-8">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="rounded-card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Add Movie</h5>
+                            <a href="@Url.Action("AddMovie", "Admin")" class="button">Add</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="rounded-card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Add Language</h5>
+                            <a href="@Url.Action("AddLanguage", "Others")" class="button">Add</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="rounded-card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Add Genre</h5>
+                            <a href="@Url.Action("Genre", "Others")" class="button">Add</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="rounded-card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Add City</h5>
+                            <a href="@Url.Action("City", "Others")" class="button">Add</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="rounded-card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Delete Movie</h5>
+                            <a href="@Url.Action("DeleteMovie", "Admin")" class="button">Add</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="rounded-card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Delete Comments</h5>
+                            <a href="@Url.Action("Comments", "Admin")" class="button">Add</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="rounded-card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Update Movie</h5>
+                            <a href="@Url.Action("UpdateMovie", "Admin")" class="button">Add</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="rounded-card text-center disabled">
+                        <div class="card-body">
+                            <h5 class="card-title">Add Theater</h5>
+                            <a href="@Url.Action("AddTheater", "Others")" class="btn btn-danger disabled">Add</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="rounded-card text-center disabled">
+                        <div class="card-body">
+                            <h5 class="card-title">Add Movie To Theater</h5>
+                            <a href="@Url.Action("AddMovieToTheater", "Admin")" class="button">Add</a>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div> <!-- row -->
+</div> <!-- container -->
+
+<style>
+
+    .card-title {
+        font-weight: 800;
+        font-size: 1.3rem;
+        color : #000;
+    }
+
+    .card-body p.display-6 {
+        font-size: 2rem;
+        margin-top: 0.5rem;
+    }
+
+     .dashboard-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+        border-radius: 25px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .dashboard-card .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .dashboard-card .btn {
+            padding: 8px 20px;
+            font-weight: 500;
+        } 
+    .rounded-card {
+        background-color: #ffffff;
+        border-radius: 45px;
+        padding: 50px;
+        width:400px;
+        height: 100%;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+        .rounded-card:hover {
+            transform: translateY(5px);
+            background-color: #ff8c9a;
+        }
+
+        .rounded-card .card-body {
+            padding: 0;
+        }
+
+        .rounded-card h5 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+       .button{
+        background-color: #ff3c58; 
+        padding : 10px;
+        color :#fff;
+        border-radius : 4px;
+       
+       }
+
+
+</style>

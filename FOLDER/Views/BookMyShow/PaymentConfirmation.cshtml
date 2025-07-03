@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Payment Confirmation";
+}
+
+<div class="container my-5 text-center">
+    @if (ViewBag.Status == "success")
+    {
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Payment Successful!</h4>
+            <p>Your payment has been processed successfully.</p>
+            @if (!string.IsNullOrEmpty(ViewBag.TransactionId))
+            {
+                <hr>
+                <p class="mb-0">Your Transaction ID: <strong>@ViewBag.TransactionId</strong></p>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">Payment Failed!</h4>
+            <p>There was an issue processing your payment. Please try again or contact support.</p>
+        </div>
+    }
+
+    <a href="@Url.Action("Home", "BookMyShow")" class="btn btn-primary mt-3">Back to Home</a>
+</div>

@@ -1,0 +1,99 @@
+﻿
+
+@model BookMyShow.Models.AllPayments;
+
+@{
+    ViewData["Title"] = "Choose Payment Method";
+}
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+    /* General styling */
+    .payment-container {
+        padding: 30px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        background-color: #fff;
+    }
+
+    .payment-method-section {
+        display: none;
+        margin-top: 15px;
+        padding: 15px;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+    }
+
+    .card-icon-group {
+        font-size: 24px;
+        margin-left: 10px;
+        color: #6c757d;
+    }
+</style>
+
+<div class="d-flex justify-content-center align-items-start" style="min-height: 100vh; padding-top: 60px;">
+    <div class="container" style="max-width: 720px;">
+
+        <div class="row g-4 flex-column">
+            <!-- Order Summary -->
+            <div class="col-12">
+                <div class="card border-0 shadow-sm" style="background-color: #fff8f2; border-radius: 12px;">
+                    <div class="card-header bg-white border-bottom">
+                        <h5 class="mb-0 text-dark fw-semibold">Booking Summary</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="mb-1">
+                            <small class="badge bg-danger text-light">Show Time: @ViewBag.Timings</small>
+                        </p>
+                        <hr>
+                        <div class="d-flex justify-content-between fw-bold fs-5 text-dark">
+                            <span>Total Amount</span>
+                            <span>₹@ViewBag.TotalAmount</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="col-12 d-flex flex-column gap-3">
+                <a href="@Url.Action("MyTickets", "BookMyShow")"
+                   class="btn"
+                   style="background-color: #ff3c58; color: white; font-weight: 500; padding: 12px 20px; border-radius: 10px;">
+                    Cancel Your Booking
+                </a>
+                <a href="@Url.Action("Theatre", "BookMyShow")"
+                   class="btn"
+                   style="background-color: #ff3c58; color: white; font-weight: 500; padding: 12px 20px; border-radius: 10px;">
+                    Reschedule Your Booking
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    /*
+    // Show/hide payment method sections based on dropdown selection
+    function togglePaymentMethod() {
+        const paymentMethod = document.getElementById('SelectedPaymentType').value;
+
+        document.getElementById('upiSection').style.display = 'none';
+        document.getElementById('cardSection').style.display = 'none';
+
+        if (paymentMethod === 'UPI') {
+            document.getElementById('upiSection').style.display = 'block';
+        } else if (paymentMethod === 'Card') {
+            document.getElementById('cardSection').style.display = 'block';
+        }
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        togglePaymentMethod();
+    });
+    */
+
+
+</script>

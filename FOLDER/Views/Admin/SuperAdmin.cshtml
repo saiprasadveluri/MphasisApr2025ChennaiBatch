@@ -1,0 +1,44 @@
+﻿@{
+    Layout = "/Views/Shared/AdminLayout.cshtml";
+    var admins = ViewBag.Admins as List<Admin>;
+
+    var SelectedAdmin = ViewBag.SelectedAdmin as int?;
+}
+<div class="container mt-4 shadow-lg p-4 rounded" style="max-width: 600px;">
+
+    <h2 class="text-center mt-4">Enable/Disable Admin Access Level</h2>
+    <form asp-action="SuperAdmin" method="post">
+
+        <label class="fw-bold">Select Admin</label>
+        <select name="AdminId" class="form-control">
+            <option value="">-- Select Admin --</option>
+            @foreach (var admin in admins)
+            {
+                <option value="@admin.AdminId" selected="@(SelectedAdmin == admin.AdminId ? "selected" : null)">
+                    @admin.Username
+                </option>
+            }
+        </select>
+        <label class="fw-bold">Select Access</label>
+        <select name="enableedit" class="form-control">
+            <option value="">-- Select Admin --</option>
+            <option value="Enable">Enable</option>
+            <option value="Disable">Disable</option>
+        </select>
+        <input type="submit" value="Submit" class="btn btn-warning mt-3" />
+    </form>
+    @if (ViewBag.EnableEditSucess != null)
+    {
+        <div class="alert alert-success alert-dismissible mx-auto" style="margin-top:20px;max-width:600px">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>@ViewBag.EnableEditSucess</strong>
+        </div>
+    }
+    @if (ViewBag.EnableEditFail != null)
+    {
+        <div class="alert alert-danger alert-dismissible mx-auto" style="margin-top:20px;max-width:600px">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>@ViewBag.EnableEditFail</strong>
+        </div>
+    }
+</div>

@@ -1,0 +1,222 @@
+﻿@model BookMyShow.Models.Admin
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div style="
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 100px 60px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+">
+        <h1 style="
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: #ff3c58;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    ">
+            🎬 WELCOME TO BOOKMYSHOW
+        </h1>
+
+        <p style="
+        font-size: 1.25rem;
+        color: #ccc;
+        margin-bottom: 40px;
+        max-width: 600px;
+    ">
+            Discover the latest movies, book tickets, and explore entertainment like never before.
+        </p>
+    </div>
+
+    <div class="card shadow" style="width: 450px; border: none; background: linear-gradient(145deg, #3c3c3c, #2d2d2d);">
+        <div class="card-header bg-dark text-white text-center py-3">
+            <h3 class="mb-0"><i class="bi bi-film me-2"></i>Login</h3>
+        </div>
+        <div class="card-body p-4">
+            <form method="post">
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <label class="fw-bold text-white">Login AS</label>
+                <select name="loginas" class="form-control mb-3" style="background-color:white">
+                    <option value="">-- Select Access --</option>
+                    <option value="user">user</option>
+                    <option value="admin">admin</option>
+                </select>
+
+                <div class="mb-3">
+                    <label class="form-label text-white"><i class="bi bi-person-fill me-2"></i><b>Username</b></label>
+                    <input asp-for="Username" name="username" type="text" class="form-control bg-dark text-white border-dark" placeholder="Enter your username" required />
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label text-white"><i class="bi bi-lock-fill me-2"></i><b>Password</b></label>
+                    <input asp-for="Password" name="pass" type="password" class="form-control bg-dark text-white border-dark" placeholder="Enter your password" required />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label text-white"><i class="bi bi-shield-lock me-2"></i><b>CAPTCHA Verification</b></label><br />
+                    @if (ViewBag.CaptchaImage != null)
+                    {
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="@ViewBag.CaptchaImage" alt="CAPTCHA Image" class="img-fluid rounded border border-secondary ms-2" style="height: 40px;" />
+                            <button type="button" onclick="window.location.reload()" class="btn btn-sm btn-outline-light ms-2">
+                                🔄
+                            </button>
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="text-warning">CAPTCHA not available. Please refresh.</p>
+                    }
+                    <input type="text" name="captchaText" class="form-control bg-dark text-white border-dark" placeholder="Enter CAPTCHA" required />
+                </div>
+
+                <div class="d-grid mb-3">
+                    <button type="submit" class="btn btn-success btn-lg fw-bold">
+                        <i class="bi bi-box-arrow-in-right me-2"></i>Login
+                    </button>
+                </div>
+                <div class="d-grid mb-3">
+                    <a href="@Url.Action("Register", "BookMyShow")"
+                       class="btn logout-btn"
+                       style="background-color: #ff3c58; color: white; border: none; padding: 6px 16px; border-radius: 6px; text-decoration: none;">
+                        Register
+                    </a>
+                </div>
+
+                <div class="text-center">
+                    <a href="@Url.Action("ForgotPassword", "BookMyShow")" class="text-light">Forgot Password?</a>
+                </div>
+            </form>
+
+            @if (ViewBag.err != null)
+            {
+                <div class="alert alert-warning mt-3 mb-0 d-flex align-items-center" role="alert">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                    <span>@ViewBag.err</span>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+<style>
+    body {
+        background: linear-gradient(to right, #1c1c1c, #2c2c2c);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .card {
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .card:hover {
+            transform: scale(1.01);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+
+    .card-header {
+        background: #111;
+        border-bottom: 1px solid #444;
+    }
+
+    .form-control {
+        background-color: #1f1f1f;
+        color: #fff;
+        border: 1px solid #444;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .form-control::placeholder {
+            color: #aaa;
+        }
+
+        .form-control:focus {
+            border-color: #ff3c58;
+            box-shadow: 0 0 0 0.2rem rgba(255, 60, 88, 0.25);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+
+    .btn-success {
+        background-color: #ff3c58;
+        color: #fff;
+        border: none;
+        transition: all 0.3s ease;
+    }
+
+        .btn-success:hover {
+            background-color: #e2334d;
+            transform: translateY(-2px);
+        }
+
+    .btn-outline-light {
+        border-color: #ff3c58;
+        color: #ff3c58;
+        transition: all 0.3s ease;
+    }
+
+        .btn-outline-light:hover {
+            background-color: #ff3c58;
+            color: #fff;
+        }
+
+    .badge {
+        background-color: #ff3c58;
+        color: #fff;
+        font-weight: 500;
+        padding: 0.4em 0.6em;
+        border-radius: 0.5rem;
+        margin-right: 0.3em;
+    }
+
+    .alert-warning {
+        background-color: #fff3cd;
+        color: #856404;
+        border: 1px solid #ffeeba;
+    }
+
+    a.text-light:hover {
+        color: #ff3c58;
+        text-decoration: underline;
+    }
+</style>
+@* <script>
+       function listVisits() {
+      console.log(history.getVisits)
+    }
+    listVisits(); ///added script
+</script> *@ 
+
+<script type="text/javascript">
+    // Prevent back navigation after logout
+    function preventBack() {
+    window.history.forward();
+    }
+    setTimeout("preventBack()", 0);
+    window.onload = function() {
+    preventBack();
+    };
+    window.onpageshow = function(evt) {
+    if (evt.persisted) preventBack();
+    };
+    window.onunload = function() {
+    null;
+    };
+</script>  

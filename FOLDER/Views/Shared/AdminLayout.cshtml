@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <style>
+        body {
+            background-color: #000; 
+            color: #fff; 
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #000 !important; 
+            padding: 1rem 2rem; 
+        }
+
+        .navbar-brand img {
+            max-height: 50px;
+        }
+
+        .nav-link {
+            color: #fff !important; 
+            font-size: 1.1rem;
+            margin-right: 1rem;
+            transition: color 0.3s ease;
+        }
+
+            .nav-link:hover {
+                color: #ff3c58 !important;
+            }
+
+        .logout {
+            background-color: #ff3c58 !important;
+            color: #fff !important;
+            border: none;
+            padding: 6px 16px;
+            font-weight: 500;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+            .logout:hover {
+                background-color: #e2334d !important; 
+            }
+
+        .navbar-toggler {
+            border-color: #ff3c58; 
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,60,88, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+        .welcome-text {
+            color: #ccc; 
+            font-weight: 500;
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+<body>
+    @* navbar code *@
+    <nav class="navbar navbar-expand-sm fixed-top shadow-lg">
+        <div class="container-fluid align-items-center">
+          
+         @*    <a class="navbar-brand d-flex align-items-center" href="@Url.Action("Home", "Admin")"> *@
+             
+           
+                <img src="/images/logo.png" class="img-fluid" width="200" /></a>
+            <button class="navbar-toggler bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+
+            <div class="d-flex align-items-center ms-auto">
+              
+            
+                @{
+                    string d = Context.Session.GetString("user") == null ? "none" : "inline-block";
+                }
+                <a href="@Url.Action("Logout", "BookMyShow")" class="logout btn btn-sm ms-3" style="display:@d">Logout</a> 
+            </div>
+        </div>
+      
+    </nav>
+
+    <div class="my-5 py-4">
+      
+        @RenderBody()
+    </div>
+
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"> </script>
+
+    <script type="text/javascript">
+        // Prevent back navigation after logout
+        function preventBack() {
+        window.history.forward();
+        }
+        setTimeout("preventBack()", 0);
+        window.onload = function() {
+        preventBack();
+        };
+        window.onpageshow = function(evt) {
+        if (evt.persisted) preventBack();
+        };
+        window.onunload = function() {
+        null;
+        }; //ADDED1234
+    </script>
+
+
+
+</body>
+</html>

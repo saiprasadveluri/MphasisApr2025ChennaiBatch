@@ -1,0 +1,50 @@
+﻿@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+@{
+    var cities = ViewBag.Cities as List<City>;
+    var selectedCity = ViewBag.SelectedCity as int?;
+   
+}
+<div class="container mt-4 shadow-lg p-4 rounded" style="margin-top:100px; max-width: 600px;">
+
+    <h2 class="text-center mt-4">Add New Theater</h2>
+    <form asp-action="AddTheater" method="get">
+       
+        <label class="fw-bold">Select City</label>
+        <select name="cityId" onchange="this.form.submit()" class="form-control">
+            <option value="">-- Select City --</option>
+            @foreach (var city in cities)
+            {
+                <option value="@city.CityId" selected="@(selectedCity == city.CityId ? "selected" : null)">
+                    @city.CityName
+                </option>
+            }
+        </select>
+    </form>
+    <form asp-action="AddTheater" method="post">
+        <div class="mb-3">
+            <label class="fw-bold">Enter New Theater Name</label>
+            <input type="hidden" name="cityId" value="@selectedCity" />
+            <input type="text" class="form-control mb-3" placeholder="Enter New Theater Name" name="tname" required />
+
+            <input type="submit" style="background-color: #ff3c58;" class="btn  w-100" value="Add Theater" />
+            </div>
+    </form>
+    <a href="@Url.Action("Home", "Admin")" class="btn btn-danger text-decoration-none mt-3 w-100">Back to home page</a>
+</div>
+
+@if (ViewBag.theateradded != null)
+{
+    <div class="alert alert-success alert-dismissible" style="max-width: 600px;">
+        <strong>@ViewBag.theateradded</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+@if (ViewBag.theatererr != null)
+{
+    <div class="alert alert-danger alert-dismissible" style="max-width: 600px;">
+        <strong>@ViewBag.theatererr </strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}

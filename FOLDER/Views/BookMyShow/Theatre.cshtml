@@ -1,0 +1,122 @@
+﻿@model List<BookMyShow.Models.Theater>
+@{
+    ViewData["Title"] = "Theatre";
+    var cities = ViewBag.Cities as List<BookMyShow.Models.City>;
+    var showTimes = ViewBag.ShowTimes as List<BookMyShow.Models.ShowTime>;
+    var movies = ViewBag.Movies as List<BookMyShow.Models.Movie>;
+    var selectedDate = (DateTime)ViewBag.SelectedDate;
+    var selectedCityId = ViewBag.CityId as int?;
+}
+
+<h2 style="color: #ff3c58;"  class="mb-4 text-center ">Find Theatres & Show Timings</h2>
+
+<form method="get" asp-controller="BookMyShow" asp-action="Theatre" class="mb-4">
+    <div class="row g-3 mb-3">
+        <div class="col-md-4">
+            <label style="color: #ff3c58;"  for="cityId" class="form-label">Select City</label>
+            <select id="cityId" name="cityId" class="form-select" onchange="this.form.submit()">
+                <option value="">-- Choose City --</option>
+                @foreach (var city in cities)
+                {
+                    if (selectedCityId.HasValue && selectedCityId.Value == city.CityId)
+                    {
+                        <option value="@city.CityId" selected>@city.CityName</option>
+                    }
+                    else
+                    {
+                        <option value="@city.CityId">@city.CityName</option>
+                    }
+                }
+            </select>
+        </div>
+
+        <div class="col-md-8">
+            <label style="color: #ff3c58;"  class="form-label d-block">Select Date</label>
+            <div id="customDateSelector" class="d-flex gap-3">
+                @{
+                    // Render 7 days starting from today or selectedDate
+                    var startDate = selectedDate.Date;
+                    for (int i = 0; i < 7; i++)
+                    {
+                        var date = startDate.AddDays(i);
+                        var id = date.ToString("yyyyMMdd");
+                        var dayName = date.ToString("ddd").ToUpper();
+                        var dayNum = date.ToString("dd");
+                        var monthName = date.ToString("MMM").ToUpper();
+                        var isSelected = date == selectedDate.Date;
+
+                        <div class="date-item p-2 text-center border rounded cursor-pointer"
+                             style="@(isSelected ? "background-color: #ff3c58; color: #fff;" : "background-color: #2a2a2a; color: #ccc;")"
+                             data-date='@date.ToString("yyyy-MM-dd")' onclick="selectDate(this)">
+                            <div>@dayName</div>
+                            <div class="fs-4 fw-bold">@dayNum</div>
+                            <div>@monthName</div>
+                           
+                        </div>
+
+                    }
+                }
+            </div>
+        </div>
+        <input type="hidden" name="selectedDate" id="selectedDate" value="@selectedDate.ToString("yyyy-MM-dd")" />
+    </div>
+</form>
+
+@if (Model.Any())
+{
+    <h4 style="color: #ff3c58;">Available Theatres & Timings</h4>
+    <div class="list-group">
+        @foreach (var theater in Model.Distinct())
+        {
+            <div class="list-group-item mb-3">
+                <h5 class="mb-2">@theater.Name</h5>
+                <div>
+                    <strong>Timings:</strong>
+                    @foreach (var show in showTimes.Where(s => s.MovieId != null))
+                    {
+                        var movie = movies.FirstOrDefault(m => m.MovieId == show.MovieId);
+
+                        // Make show timings clickable and pass showId, theaterId and selectedDate to ticket booking page
+                        <a href="@Url.Action("Book", "BookMyShow", new { showId = show.ShowId, theaterId = theater.Tid, date = selectedDate.ToString("yyyy-MM-dd") })"
+                           class="badge bg-secondary mx-1 text-decoration-none">
+                            @movie?.MovieName - @show.Timings
+                        </a>
+                    }
+                </div>
+                <div>
+                    <strong>Price:</strong> ₹@theater.Price &nbsp; | &nbsp;
+                    <strong>Seats:</strong> @theater.NoOfSeats
+                </div>
+            </div>
+        }
+    </div>
+}
+else if (selectedCityId != null)
+{
+    <p style="color: #ff3c58;" >No theatres found for the selected city and date.</p>
+}
+
+@* @section Scripts { *@
+<script>
+    function selectDate(elem) {
+        // Remove selected style from all
+        document.querySelectorAll('.date-item').forEach(function(d) {
+            d.classList.remove('bg-primary', 'text-white');
+            d.classList.add('bg-light');
+        });
+
+        // Add selected style to clicked
+        elem.classList.add('bg-primary', 'text-white');
+        elem.classList.remove('bg-light');
+
+        // Set hidden input value and submit the form
+        const selectedDate = elem.getAttribute('data-date');
+        document.getElementById('selectedDate').value = selectedDate;
+
+        // Submit the form
+        elem.closest('form').submit();
+    }
+   
+
+</script>
+@* } *@

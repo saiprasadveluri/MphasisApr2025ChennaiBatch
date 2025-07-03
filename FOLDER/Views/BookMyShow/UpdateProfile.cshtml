@@ -1,0 +1,70 @@
+﻿@model BookMyShow.Models.User
+@{
+    ViewData["Title"] = "User Profile";
+}
+<div class="container mt-4">
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+    }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        ViewBag.hidden = true;
+        <div class="alert alert-danger" hidden="@ViewBag.hidden">@TempData["ErrorMessage"]</div>
+    }
+    @if (Model != null)
+    {
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="card-img mb-3">
+                            @if (Model.ProfilePic != null && Model.ProfilePic.Length > 0)
+                            {
+                                var base64 = Convert.ToBase64String(Model.ProfilePic);
+                                var imgSrc = String.Format("data:image/*;base64,{0}", base64);
+                                <img src="@imgSrc" alt="Profile pic" class="img-thumbnail rounded-circle" style="width: 150px; height: 150px; object-fit: cover;" />
+                            }
+                            else
+                            {
+                                <img src="~/Blank-Profile-Picture-1.jpg" alt="Profile pic placeholder" class="img-thumbnail rounded-circle" style="width: 150px; height: 150px; object-fit: cover;" />
+                            }
+                        </div>
+                        <h5 class="card-title mb-3">@Model.FullName</h5>
+                        <div class="row mb-2">
+                            <div class="col-5 text-end fw-bold">Username:</div>
+                            <div class="col-7 text-start">@Model.Username</div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-5 text-end fw-bold">Age:</div>
+                            <div class="col-7 text-start">@Model.Age</div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-5 text-end fw-bold">Email:</div>
+                            <div class="col-7 text-start">@Model.Email</div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-5 text-end fw-bold">Gender:</div>
+                            <div class="col-7 text-start">@Model.Gender</div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-5 text-end fw-bold">Mobile No:</div>
+                            <div class="col-7 text-start">@Model.MobileNo</div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-5 text-end fw-bold">Address:</div>
+                            <div class="col-7 text-start">@Model.Address</div>
+                        </div>
+                        <div style="background-color: #ff3c58;" class=" mt-4 px-4 py-2" >
+                            <a style="color: white ;"   href="@Url.Action("EditProfile", "BookMyShow", new { _username = Model.Username })">Edit Profile</a>
+                     </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info">No profile data available.</div>
+    }
+</div>

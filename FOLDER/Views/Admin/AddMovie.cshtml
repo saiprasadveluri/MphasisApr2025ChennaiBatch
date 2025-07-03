@@ -1,0 +1,55 @@
+﻿@model BookMyShow.Models.Movie
+@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<div class="container mx-auto shadow-lg py-4 px-5" style="margin-top:70px;max-width:600px;">
+    <h1 class="text-center">Add Movie</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="text" name="MovieName" class="form-control" required placeholder="Enter Movie Name" />
+        <span asp-validation-for="MovieName" class="text-danger"></span>
+        <select name="genname" class="form-select mt-3">
+            <option value="">Select Genre</option>
+            @foreach (var gen in ViewBag.Genre)
+            {
+                <option value="@gen.GenreId">@gen.Name</option>
+            }
+        </select>
+        <input type="text" name="duration" class="form-control mt-3" required placeholder="Enter Movie Duration" />
+        <span class="text-danger"></span>
+        <input type="text" name="des" class="form-control mt-3" required placeholder="Enter Movie Description" />
+        <span class="text-danger"></span>
+        <label>Select Movie Release Date</label>
+        <input type="date" name="rdate" class="form-control mt-3" required />
+        <input type="text" name="actor" class="form-control mt-3" required placeholder="Enter Movie Actor Name" />
+        <input type="text" name="actress" class="form-control mt-3" required placeholder="Enter Movie Actress Name" />
+        <input type="text" name="director" class="form-control mt-3" required placeholder="Enter Movie Director Name" />
+        <input type="text" name="producer" class="form-control mt-3" required placeholder="Enter Movie Producer Name" />
+        <input type="text" name="musician" class="form-control mt-3" required placeholder="Enter Movie Musician Name" />
+        <input type="file" name="poster" accept="image/*" class="form-control mt-3" />
+        <input type="submit" value="Add Movie" style="background-color: #ff3c58;" class="btn  w-100 mt-3" />
+    </form>
+    <a href="@Url.Action("Home", "Admin")" class="btn btn-danger text-decoration-none mt-3 w-100">Back to home page</a>
+</div>
+
+@if (ViewBag.movie != null)
+{
+    <div class="alert alert-success alert-dismissible mx-auto" style="margin-top:20px;max-width:600px">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>@ViewBag.movie</strong>
+    </div>
+}
+@if (ViewBag.movieexist != null)
+{
+    <div class="alert alert-danger alert-dismissible mx-auto" style="margin-top:20px;max-width:600px">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>@ViewBag.movieexist</strong>
+    </div>
+}
+@if (ViewBag.validErr != null)
+{
+    <div class="alert alert-danger alert-dismissible mx-auto" style="margin-top:20px;max-width:600px">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>@ViewBag.validErr</strong>
+    </div>
+}
+}

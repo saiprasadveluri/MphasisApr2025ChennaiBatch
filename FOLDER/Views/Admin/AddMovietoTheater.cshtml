@@ -1,0 +1,82 @@
+﻿@using Microsoft.Extensions.Primitives
+@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+@{
+    var t = ViewBag.t as BookMyShow.Models.Theater;
+    var cities = ViewBag.Cities as List<City>;
+    var theaternames = ViewBag.Theaternames as List<TheaterName>;
+
+    var selectedCity = ViewBag.SelectedCity as int?;
+}
+
+<div class="container mt-4 shadow-lg p-4 rounded" style="max-width: 600px;">
+
+    <h2 class="text-center mt-4">Add Moive To Theater</h2>
+    <form asp-action="AddMovieToTheater" method="get">
+
+        <label class="fw-bold">Select City</label>
+        <select name="cityId" onchange="this.form.submit()" class="form-control">
+            <option value="">-- Select City --</option>
+            @foreach (var city in cities)
+            {
+                <option value="@city.CityId" selected="@(selectedCity == city.CityId ? "selected" : null)">
+                    @city.CityName
+                </option>
+            }
+        </select>
+    </form>
+
+    <form method="post">
+        <div class="mb-3">
+            <div class="mb-3">
+
+                <label class="mb-2 fw-bold">Select Theaters </label><br />
+                @foreach (var tn in theaternames)
+                {
+                    <div class="form-check form-check">
+                        <input class="form-check-input mb-3" type="checkbox" name="theaternames" value="@tn.Theatername1" />
+                        <label class="form-check-label">@tn.Theatername1</label><br />
+                    </div>
+                }
+            </div>
+            <label class="mb-2 fw-bold">Enter Movie Name</label><br />
+            <input type="text" class="form-control mb-3" name="mname" />
+
+            <input type="text" class="form-control mb-3" placeholder="Enter Movie Price" name="mprice" />
+            <input type="text" class="form-control mb-3" placeholder="Enter Number of Seates In Theater" name="seats" />
+        </div>
+        <div class="mb-3">
+            <label class="mb-2">Select Languages</label><br />
+            @foreach (var lang in ViewBag.Languages)
+            {
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input mb-3" type="checkbox" name="languages" value="@lang.LanguageId" />
+                    <label class="form-check-label">@lang.Name</label><br />
+                </div>
+            }
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Show Timings (e.g., 09:00 AM)</label><br />
+            <input class="form-check-input mb-3" type="checkbox" name="show" value="10:30 AM" />10:30 AM
+            <br />  <input class="form-check-input mb-3" type="checkbox" name="show" value="2:00 PM" />2:00 PM
+            <br /> <input class="form-check-input mb-3" type="checkbox" name="show" value="6:30 PM" />6:30 PM
+        </div>
+        <input type="submit" style="background-color: #ff3c58;"  class="btn w-100" value="Add Movie To Theater" />
+    </form>
+    <a href="@Url.Action("Home", "Admin")" class="btn btn-danger text-decoration-none mt-3 w-100">Back to home page</a>
+</div>
+@if (ViewBag.success != null)
+{
+    <div class="alert alert-success alert-dismissible" style="max-width: 600px;">
+        <strong>@ViewBag.success</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+@if (ViewBag.errr != null)
+{
+    <div class="alert alert-danger alert-dismissible" style="max-width: 600px;">
+        <strong>@ViewBag.errr </strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}

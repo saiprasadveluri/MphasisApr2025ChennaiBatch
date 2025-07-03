@@ -1,0 +1,22 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Cancellation";
+}
+
+
+<div class="alert alert-info">
+    <h5>Your booking has been Cancelled Successfully!!</h5>
+    <p>Amount will be refunded to your Bank A/C within 24hours.</p>
+    <p>Thank you for using the service....</p>
+    <small>You will be redirected to Home.</small>
+</div>
+
+<div>@ViewBag.error</div>
+
+<script>
+    setTimeout(function() {
+        window.location.href = '@Url.Action("Home", "BookMyShow")';
+    }, 20000);
+</script>

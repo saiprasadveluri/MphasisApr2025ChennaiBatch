@@ -1,0 +1,172 @@
+﻿@model BookMyShow.Models.User
+
+<style>
+    body {
+        background: white;
+    }
+
+    .register-container {
+        min-height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 1rem;
+    }
+
+    .register-card {
+        background: #fff;
+        padding: 3rem 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .form-title {
+        color: black;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .captcha-box {
+        font-weight: bold;
+        font-size: 1.25rem;
+        color: black;
+        background-color: #f8f9fa;
+        letter-spacing: 3px;
+        text-align: center;
+        border: 1px solid #ced4da;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        user-select: none;
+    }
+</style>
+
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var form = document.querySelector("form");
+        form.addEventListener("submit", function (event) {
+            var pass = document.querySelector("input[name='pass']").value;
+            var cpass = document.querySelector("input[name='cpass']").value;
+            if (pass !== cpass) {
+                event.preventDefault();
+                alert("Password and Confirm Password do not match.");
+            }
+        });
+    });
+
+</script>
+<div class="register-container">
+    <div class="register-card">
+        <h2 class="form-title">Create Your Account</h2>
+        <form asp-action="Register" method="post" #333; color: #FFD700; padding: 20px; border-radius: 10px; width: 50%;">
+            <div class="form-group">
+                <label>User Name</label><br />
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Password</label><br />
+                <input asp-for="Pass" name="pass" type="password" class="form-control" />
+                <span asp-validation-for="Pass" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Confirm Password</label><br />
+                <input name="cpass" type="password" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Full Name</label><br />
+                <input asp-for="FullName" class="form-control" />
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Age</label><br />
+                <input asp-for="Age" class="form-control" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label><br />
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label><br />
+                <input type="radio" asp-for="Gender" value="Male" /> Male
+                <input type="radio" asp-for="Gender" value="Female" /> Female
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Mobile No.</label><br />
+                <input asp-for="MobileNo" class="form-control" />
+                <span asp-validation-for="MobileNo" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Address</label><br />
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Security Question</label><br />
+                <select asp-for="Security_Question" asp-items="ViewBag.SecurityQuestions" class="form-control">
+                    <option value="">-- Select a security question --</option>
+                </select>
+                <span asp-validation-for="Security_Question" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Security Answer</label><br />
+                <input asp-for="Security_Answer" class="form-control" />
+                <span asp-validation-for="Security_Answer" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Enter the code shown below:</label><br />
+                <div style="font-weight:bold; font-size: 24px; color:#ff3c58 ; background-color: #555; width: 150px; text-align:center; user-select:none; letter-spacing: 3px; margin-bottom:5px;">
+                    @ViewBag.CaptchaCode
+                </div>
+                <input asp-for="Captcha" class="form-control" autocomplete="off" />
+                <span asp-validation-for="Captcha" class="text-danger"></span>
+            </div><br />
+            <button type="submit" class="btn btn-danger form-control  ">Register</button><br /><br />
+            <a href="@Url.Action("AdminRegister", "Admin")" class="text-decoration-none" style="background-color: #ff3c58;" > register As Admin</a>
+        </form>
+    </div>
+</div>
+@if (ViewBag.RecordAddedsuccess != null)
+
+{
+    <div class="alert alert-success alert-dismissible mx-auto" style="margin-top:200px;max-width:600px">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>@ViewBag.RecordAddedsuccess</strong>
+    </div>
+
+}
+
+@if (ViewBag.RecordAddedfail != null)
+
+{
+    <div class="alert alert-danger alert-dismissible mx-auto" style="margin-top:200px;max-width:600px">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>@ViewBag.RecordAddedfail</strong>
+    </div>
+
+}
+
+<script>
+    // Prevent browser back after logout
+    if (window.history && window.history.pushState) {
+        window.history.pushState(null, "", window.location.href);
+        window.onpopstate = function () {
+            window.history.pushState(null, "", window.location.href);
+        };
+    }
+</script> //ADDED1234

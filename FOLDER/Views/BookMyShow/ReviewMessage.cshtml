@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Review Status";
+    Layout = "WithoutSearch";
+}
+@if (ViewBag.count > 0)
+{
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <h3 class="mb-3">Review Already Added</h3>
+                        <p class="text-muted">You have already submitted a review for this movie. Thank you for your feedback!</p>
+                        <a href="/BookMyShow/Movies" class="btn btn-primary mt-3">Return to Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <h3 class="mb-3">Review Added Succesfully</h3>
+                        <p class="text-muted">You have submitted a review for this movie. Thank you for your feedback!</p>
+                        <a href="/BookMyShow/Movies" class="btn btn-primary mt-3">Return to Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+

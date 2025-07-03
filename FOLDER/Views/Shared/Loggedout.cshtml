@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@* @{
+}
+
+@{
+    ViewBag.Title = "Welcome";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Or null if you want a standalone page
+} 
+
+ <div style="text-align:center; padding: 50px; font-family: Arial, sans-serif;">
+ <div class="container">
+        <h1>🎬 Welcome to Book My Show</h1>
+        <p style="font-size: 18px;">Your gateway to the best movies, events, and shows!</p>
+
+        <div style="margin-top: 40px;">
+            <a href="@Url.Action("Login", "BookMyShow")"
+               style="padding: 12px 24px; margin: 10px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">
+                Login
+            </a>
+           
+        </div>
+ </div>
+</div>
+<style>
+    body{
+        background-color : #000;
+        color : #fff ;
+        font-size : 1.5rem;
+        font-weight : 300;
+       
+    }
+    .container{
+        margin-top : 5%;
+    }
+</style> *@
