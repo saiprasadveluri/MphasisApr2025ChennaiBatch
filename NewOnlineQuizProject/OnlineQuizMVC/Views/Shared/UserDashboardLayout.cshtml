@@ -1,0 +1,91 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f6f9;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #343a40;
+            color: white;
+            flex-shrink: 0;
+            padding: 30px 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .sidebar .profile {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+        .profile-pic {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background-color: #adb5bd;
+            margin: 0 auto 10px;
+        }
+
+        .sidebar h5 {
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin: 5px 0;
+            transition: background-color 0.3s ease;
+        }
+
+            .sidebar a:hover {
+                background-color: #0d6efd;
+            }
+
+        .main {
+            flex: 1;
+            background-color: white;
+            margin: 20px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="profile">
+            <div class="profile-pic"></div>
+            <h5>User</h5>
+        </div>
+        <a href="@Url.Action("Profile", "User")">User Profile</a>
+        <a href="@Url.Action("UserDashboard", "User")">Dashboard</a>
+        <a href="@Url.Action("Quiz", "User")">Quiz</a>
+        <a href="@Url.Action("TrackProgress", "User")">Track Progress</a>
+        <a href="@Url.Action("ViewHistory", "User")">View History</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+        @RenderBody()
+    </div>
+
+</body>
+</html>

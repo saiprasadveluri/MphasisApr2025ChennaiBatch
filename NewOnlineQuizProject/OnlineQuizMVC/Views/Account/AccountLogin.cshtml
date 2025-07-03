@@ -1,0 +1,57 @@
+﻿@using OnlineQuizMVC.DTO
+@model LoginUser
+
+<div class="d-flex justify-content-center align-items-center min-vh-100 bg-light">
+    <div class="card shadow-lg p-4 rounded-4" style="width: 400px;">
+        <div class="text-center mb-4">
+            <h3 class="fw-bold text-primary">Sign In</h3>
+            <p class="text-muted">Welcome back! Please login to your account.</p>
+        </div>
+        <form method="post">
+            <div class="mb-3">
+                <label asp-for="email" class="form-label">Email ID</label>
+                <input asp-for="email" class="form-control" placeholder="Enter your email" />
+                <span asp-validation-for="email" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="password" class="form-label">Password</label>
+                <input asp-for="password" class="form-control" type="password" placeholder="Enter your password" />
+                <span asp-validation-for="password" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Enter Captcha</label>
+                <div class="d-flex align-items-center gap-3">
+                    <span class="captcha-box px-3 py-2 rounded"
+                          style="font-family: monospace; font-size: 20px; background-color: #f8f9fa; border: 1px solid #ccc;">
+                        @Model.CaptchaOutput
+                    </span>
+                    @* Optionally add retry button *@
+                </div>
+                <input asp-for="CaptchaInput" name="CaptchaInput" class="form-control mt-2" placeholder="Enter captcha here" />
+                <span asp-validation-for="CaptchaInput" class="text-danger small"></span>
+            </div>
+
+            <div class="form-check mb-3">
+                <input asp-for="NotRobot" class="form-check-input" type="checkbox" value="true" id="notRobotCheck" />
+                <label asp-for="NotRobot" class="form-check-label" for="notRobotCheck">
+                    I'm not a robot
+                </label>
+                <span asp-validation-for="NotRobot" class="text-danger small d-block"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 rounded-pill fw-semibold">
+                Sign In
+            </button>
+
+            <div class="text-center mt-3">
+                <small class="text-muted">
+                    Don't have an account?
+                    <a asp-controller="User" asp-action="RegisterUser" class="text-decoration-none fw-medium">Register here</a>
+                </small>
+            </div>
+        </form>
+    </div>
+</div>
+

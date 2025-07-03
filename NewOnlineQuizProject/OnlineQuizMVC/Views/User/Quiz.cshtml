@@ -1,0 +1,95 @@
+﻿@model List<OnlineQuizMVC.DTO.GetQuizDTO>
+
+@{
+    Layout = "UserDashboardLayout";
+}
+
+<style>
+    .custom-btn-primary {
+        background-color: #0275d8;
+        border: none;
+        color: white;
+        padding: 8px 18px;
+        font-weight: 600;
+        transition: 0.3s;
+        border-radius: 6px;
+    }
+
+        .custom-btn-primary:hover {
+            background-color: #025aa5;
+            color: #fff;
+        }
+
+    .category-select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #007bff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .quiz-table th, .quiz-table td {
+        vertical-align: middle;
+        padding: 16px;
+    }
+
+    .quiz-wrapper {
+        max-width: 1000px;
+        margin: auto;
+        background: #fff;
+        padding: 30px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        border-radius: 10px;
+    }
+</style>
+
+<div class="container mt-4 quiz-wrapper">
+    <h2 class="mb-4 fw-bold text-primary text-center">Choose Quiz by Category</h2>
+
+    <form method="post" asp-action="Quiz" class="mb-4 d-flex justify-content-center">
+        <select name="catg" class="category-select" onchange="this.form.submit()">
+            <option value="">-- Select Category --</option>
+            <option value="Frontend">Frontend</option>
+            <option value="Backend">Backend</option>
+            <option value="Database">Database</option>
+        </select>
+    </form>
+
+    @if (Model != null && Model.Any())
+    {
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover shadow-sm quiz-table text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Duration</th>
+                        <th>Schedule Time</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var quiz in Model)
+                    {
+                        <tr>
+                            <td class="fw-semibold">@quiz.quizTitle</td>
+                            <td><span class="badge bg-info text-dark">@quiz.categoryName</span></td>
+                            <td><span class="badge bg-warning text-dark">@quiz.duration</span></td>
+                            <td>@quiz.scheduleTime?.ToString("g")</td>
+                            <td>
+                                <form method="post" asp-action="StartQuiz">
+                                    <input type="hidden" name="id" value="@quiz.quizId" />
+                                    <button type="submit" class="custom-btn-primary shadow-sm">Take Quiz</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <p class="text-center text-muted fs-5 mt-4">No quizzes available in this category.</p>
+    }
+</div>

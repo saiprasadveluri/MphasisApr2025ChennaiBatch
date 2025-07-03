@@ -1,0 +1,57 @@
+﻿﻿@using OnlineQuizMVC.DTO
+@model RegisterUserDTO;
+
+<div class="d-flex justify-content-center align-items-center"
+     style="min-height:60vh">
+    <div class="bg-white p-4 box-shadow"
+         style="width:350px;">
+        <h3 class="text-center mb-4">Registration </h3>
+        <form asp-action="RegisterUser" method="post">
+            <div class="mb-3">
+                <label asp-for="userName" class="form-label"> Name </label>
+                <input asp-for="userName" class="form-control" />
+                <span asp-validation-for="userName" class="text-danger"></span>
+                <br />
+                <label asp-for="contactNo" class="form-label"> Contact Number </label>
+                <input asp-for="contactNo" class="form-control" />
+                <span asp-validation-for="contactNo" class="text-danger"></span>
+                <br />
+                <label asp-for="email" class="form-label">Email</label>
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+                <br />
+                <label asp-for="password" class="form-label">Password</label>
+                <input asp-for="password" class="form-control" type="password" />
+                <span asp-validation-for="password" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Enter Captcha</label>
+                <div class="d-flex align-items-center">
+                    <strong style="font-family:monospace;font-size:20px;background:#f1f1f1;padding:5px 10px;border:1px solid #ccc;">
+                        @Model.CaptchaOutput
+                    </strong>
+                    @* <button type="submit" class="btn btn-link btn sm" formaction="/AccountLogin">retry</button> *@
+                </div>
+                <input asp-for="CaptchaInput" name="CaptchaInput" class="form-control mt-2" value="" />
+                <span asp-validation-for="CaptchaInput" class="text-danger"></span>
+                @* @Html.ValidationSummary(false) *@
+            </div>
+            @* <div class="mb-3">
+              <label class="form-label">Role</label>
+              <select class="form-select" name="role">
+                  <option value="">select role</option>
+                  <option>Admin</option>
+                  <option>User</option>
+              </select>
+          </div> *@
+            <div class="form-check mb-3">
+                <input asp-for="NotRobot" class="form-check-input" type="checkbox" value="true" />
+                <label asp-for="NotRobot" class="form-check-label">I am not a Robot</label><br />
+                <span asp-validation-for="NotRobot" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn-primary w-100">Register</button>
+
+        </form>
+
+    </div>
+</div>

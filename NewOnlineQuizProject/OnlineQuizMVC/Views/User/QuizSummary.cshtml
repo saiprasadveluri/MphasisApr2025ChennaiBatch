@@ -1,0 +1,39 @@
+﻿@{
+    Layout = "~/Views/Shared/QuizLayout.cshtml";
+    var score = ViewBag.Score ?? 0;
+    var total = ViewBag.TotalQuestions ?? 0;
+}
+
+<h2>Quiz Summary</h2>
+
+<p>You scored <strong>@score</strong> out of <strong>@total</strong>.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Question</th>
+            <th>Your Answer</th>
+            <th>Correct?</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var q in Model)
+        {
+            
+            var typedQuestion = (OnlineQuizMVC.DTO.GetQuestionWithOptionsDTO)q;
+            var userAnswerId = ViewBag.Answers.ContainsKey(typedQuestion.questionId) ? ViewBag.Answers[typedQuestion.questionId] : Guid.Empty;
+            var userOption = typedQuestion.options.FirstOrDefault(o => o.optionId == userAnswerId);
+            var isCorrect = userOption != null && userOption.answer == 1;
+
+            <tr>
+                <td>@q.questionText</td>
+                <td>@(userOption?.optionText ?? "Not answered")</td>
+                <td>@(isCorrect ? "✅" : "❌")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div style="margin-top:20px;">
+    <a href="@Url.Action("UserDashboard", "User")">Back to Dashboard</a>
+</div>

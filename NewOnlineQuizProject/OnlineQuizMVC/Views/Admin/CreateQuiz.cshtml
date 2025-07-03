@@ -1,0 +1,47 @@
+﻿@model OnlineQuizMVC.DTO.QuizQuestionsDTO
+
+@{
+    Layout = "AdminDashboardLayout";
+}
+
+
+<h2 class="text-center my-4">Create Quiz</h2>
+
+<form asp-action="CreateQuiz" method="post" class="w-50 mx-auto border p-4 shadow rounded bg-white">
+
+    <div class="form-group mb-3">
+        <label asp-for="quizTitle" class="form-label">Quiz Title</label>
+        <input asp-for="quizTitle" class="form-control" placeholder="Enter quiz title" value=""/>
+        <span asp-validation-for="quizTitle" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="categoryName" class="form-label">Category</label>
+        <select asp-for="categoryName" class="form-select">
+            <option value="">-- Select Category --</option>
+            <option>Frontend</option>
+            <option>Backend</option>
+            <option>Database</option>
+        </select>
+        <span asp-validation-for="categoryName" class="text-danger"></span>
+    </div>
+    <div class="form-group mb-3">
+        <label asp-for="duration" class="form-label">Duration (in minutes)</label>
+        <input asp-for="duration" class="form-control" type="number" min="1" placeholder="e.g., 30" value="" />
+        <span asp-validation-for="duration" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-4">
+        <label asp-for="scheduleTime" class="form-label">Scheduled Date & Time</label>
+        <input asp-for="scheduleTime" class="form-control" type="datetime-local" value="" />
+        <span asp-validation-for="scheduleTime" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">Create Quiz</button>
+
+</form>
+
+@* 
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+} *@

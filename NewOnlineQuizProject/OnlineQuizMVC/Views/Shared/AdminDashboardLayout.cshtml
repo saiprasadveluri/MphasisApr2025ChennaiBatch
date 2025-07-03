@@ -1,0 +1,83 @@
+﻿﻿﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+<!DOCTYPE
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Admin DashBoard</title>
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            margin: 0;
+            background-image: url('@Url.Content("~/images/backgroundimage.jpg")');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: darkkhaki;
+            color: white;
+            flex-shrink: 0;
+            padding-top: 30px;
+        }
+
+            .sidebar a {
+                display: block;
+                color: white;
+                text-decoration: none;
+                padding: 15px 20px;
+            }
+
+                .sidebar a:hover {
+                    background-color: #343a40;
+                }
+
+        .main {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.85); /* Light semi-transparent content box */
+            margin: 20px;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .profile-pic {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background-color: #adb5bd;
+            margin: 0 auto 10px;
+        }
+
+        .sidebar .profile {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="profile">
+            <div class="profile-pic"></div>
+            <h5 class="mt-2">Admin</h5>
+        </div>
+        <a href="@Url.Action("Profile", "Admin")">Admin Profile</a>
+        <a href="@Url.Action("AdminDashboard", "Admin")">Dashboard</a>
+        <a href="@Url.Action("CreateQuiz", "Admin")">Quiz Management</a>
+        <a href="@Url.Action("AddQuestion", "Admin")">Question Management</a>
+    </div>
+
+    <div class="main">
+        @RenderBody()
+    </div>
+
+</body>
+</html>
