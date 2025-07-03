@@ -1,0 +1,25 @@
+﻿@using QuizMVC.DTO
+
+@model GetAccountData
+<h1>List of Accounts</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>AccountId</th>
+            <th>Email </th>
+            <th>Password</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (AccountInfoDTO dataDTO in Model.data)
+        {
+            <tr>
+                <td>@dataDTO.accountId</td>
+                <td>@dataDTO.email</td>
+                <td>@dataDTO.password</td>
+                <td>@dataDTO.role</td>
+            </tr>
+        }
+    </tbody>
+</table>

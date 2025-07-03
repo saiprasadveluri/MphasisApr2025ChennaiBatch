@@ -1,0 +1,50 @@
+﻿@using QuizMVC.DTO
+@model List<GetQuizDTO>
+
+@{
+    Layout = "UserDashboardLayout";
+    // var selectedCategory = Request.Query["catg"];
+}
+
+<h2>Choose a Category</h2>
+
+<form method="post" asp-action="TakeQuiz">
+    <select name="catg" class="form-control" onchange="this.form.submit()">
+        <option value="">-- Select Category --</option>
+        <option value="Frontend">Frontend</option>
+        <option value="Backend">Backend</option>
+        <option value="Database">Database</option>
+    </select>
+</form>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table table-bordered mt-3">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Duration</th>
+                <th>Schedule Time</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var quiz in Model)
+        {
+            <tr>
+                <td>@quiz.quizTitle</td>
+                <td>@quiz.categoryName</td>
+                <td>@quiz.duration</td>
+                <td>@quiz.scheduleTime?.ToString("g")</td>
+                <td>
+                        <form method="post" asp-action="QuizDetails">
+                            <input type="hidden" name="id" value="@quiz.quizId" />
+                            <button type="submit" class="btn btn-primary">Take Quiz</button>
+                        </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
