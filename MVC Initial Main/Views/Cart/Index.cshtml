@@ -1,0 +1,141 @@
+﻿@model List<OnlinePharmacyAppMVC.Models.CartModel>
+@{
+    Layout = "~/Views/Shared/_LayoutCustomer.cshtml";
+    ViewData["Title"] = "Your Cart";
+    var userId = Context.Session.GetString("userId");
+}
+
+<h2>Your Cart</h2>
+
+@if (Model != null && Model.Any(i => i.StockQty > 0))
+{
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Medicine Name</th>
+                <th>Quantity</th>
+                <th>Price (₹)</th>
+                <th>Amount (₹)</th>
+            </tr>
+        </thead>
+        <tbody id="cartBody">
+            @foreach (var item in Model.Where(i => i.StockQty > 0))
+            {
+                <tr data-medid="@item.MedicineId">
+                    <td>@item.MedName</td>
+                    <td>
+                        <div class="input-group" style="width: 120px;">
+                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeQty(@item.MedicineId, -1)">−</button>
+                            <input type="number"
+                                   id="qty_@item.MedicineId"
+                                   value="@item.StockQty"
+                                   class="form-control text-center form-control-sm"
+                                   min="0"
+                                   data-max="@item.AvailableQty"
+                                   data-price="@item.Price" />
+                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeQty(@item.MedicineId, 1)">+</button>
+                        </div>
+                    </td>
+                    <td>@item.Price.ToString("F2")</td>
+                    <td id="amount_@item.MedicineId">@((item.StockQty * item.Price).ToString("F2"))</td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3"><strong>Subtotal</strong></td>
+                <td id="cartSubtotal">0.00</td>
+            </tr>
+            <tr>
+                <td colspan="3">Discount</td>
+                <td id="discountAmount">0.00</td>
+            </tr>
+            <tr>
+                <td colspan="3"><strong>Final Amount</strong></td>
+                <td><strong id="finalAmount">0.00</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <div class="text-end mt-3">
+        <button class="btn btn-success" onclick="checkout()">Checkout</button>
+    </div>
+}
+else
+{
+    <p>No items in your cart.</p>
+}
+
+<script>
+    const userId = parseInt('@userId');
+
+    function changeQty(medId, delta) {
+        const qtyInput = document.getElementById(`qty_${medId}`);
+        let current = parseInt(qtyInput.value);
+        const max = parseInt(qtyInput.getAttribute('data-max'));
+        let newQty = current + delta;
+
+        if (newQty < 0 || newQty > max) return;
+
+        qtyInput.value = newQty;
+        updateAmountAndPersist(medId, newQty);
+    }
+
+    function updateAmountAndPersist(medId, quantity) {
+        const qtyInput = document.getElementById(`qty_${medId}`);
+        const amountCell = document.getElementById(`amount_${medId}`);
+        const price = parseFloat(qtyInput.getAttribute('data-price'));
+        const total = (price * quantity).toFixed(2);
+        amountCell.textContent = total;
+
+        // Persist to server
+        fetch("/api/Cart/UpdateQuantity", {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ userId, medicineId: medId, stockQty: quantity })
+        })
+        .then(() => {
+            if (quantity === 0) {
+                const row = document.querySelector(`tr[data-medid='${medId}']`);
+                if (row) row.remove();
+            }
+            updateSummary();
+        });
+    }
+
+    function updateSummary() {
+        // Update subtotal manually
+        let subtotal = 0;
+        document.querySelectorAll('[id^="amount_"]').forEach(cell => {
+            subtotal += parseFloat(cell.textContent);
+        });
+        document.getElementById("cartSubtotal").textContent = subtotal.toFixed(2);
+
+        // Fetch updated discount/final amount from API
+        fetch(`/api/Cart/summary/${userId}`)
+            .then(res => res.json())
+            .then(summary => {
+                document.getElementById("discountAmount").textContent = summary.discountAmount.toFixed(2);
+                document.getElementById("finalAmount").textContent = summary.finalTotal.toFixed(2);
+            });
+    }
+
+    function checkout() {
+        fetch(`/api/Cart/checkout/${userId}`, { method: "POST" })
+            .then(async res => {
+                if (!res.ok) throw new Error("Checkout failed");
+                const text = await res.text();
+                return text ? JSON.parse(text) : {};
+            })
+            .then(data => {
+                if (data.paymentUrl) {
+                    window.location.href = data.paymentUrl;
+                } else {
+                    alert("Checkout response incomplete.");
+                }
+            })
+            .catch(err => alert("Error: " + err));
+    }
+
+    window.onload = () => updateSummary();
+</script>

@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - Admin Dashboard </title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+
+    <header class="logo-container">
+        <h1><a asp-controller="Home" asp-action="Dashboard" style="text-decoration:none; color:inherit;">Contoso Admin</a></h1>
+    </header>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="dropdown">
+                <button class="butn">User</button>
+                <div class="dropdown-content">
+                    <a asp-controller="User" asp-action="AddUser">Add User</a>
+                    <a asp-controller="User" asp-action="ViewUser">View All Users</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="butn">Medicine</button>
+                <div class="dropdown-content">
+                    <a asp-controller="Medicine" asp-action="AddMedicine">Add Medicine</a>
+                    <a asp-controller="Medicine" asp-action="ViewMedicine">View Medicine</a>
+                    <a asp-controller="Medicine" asp-action="ManageStock">View Stock</a>
+                </div>
+            </div>
+        </div>
+
+       
+
+        <div class="nav-right">
+            @*@<button class="butn" onclick="location.href='/Home/Profile'">Profile</button>*@
+            <button class="butn" onclick="location.href='@Url.Action("Logout", "Home")'">Logout</button>
+        </div>
+    </nav>
+
+    <main class="dashboard">
+        @RenderBody()
+    </main>
+</body>
+</html>

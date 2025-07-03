@@ -1,0 +1,35 @@
+﻿@model OnlinePharmacyAppMVC.DTO.UserDTO
+@{
+    Layout = "~/Views/Shared/_LayoutCustomer.cshtml"; // or _Layout.cshtml for admin
+}
+@{
+    ViewData["Title"] = "Edit Profile";
+}
+
+<h2>Edit Your Profile</h2>
+
+<form asp-action="EditProfile" method="post">
+    @Html.HiddenFor(model => model.userId)
+
+    <div>
+        <label>Name:</label>
+        <input asp-for="userName" />
+    </div>
+    <div>
+        <label>Email:</label>
+        <input asp-for="email" />
+    </div>
+    <div>
+        <label>Password:</label>
+        <input asp-for="password" />
+    </div>
+    <div>
+        <label>Phone:</label>
+        <input asp-for="phoneNumber" />
+    </div>
+    <div>
+        <label>Address:</label>
+        <input asp-for="address" />
+    </div>
+    <button type="submit">Save Changes</button>
+</form>

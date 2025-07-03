@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutCustomer.cshtml"; // or _Layout.cshtml for admin
+}
+@if (TempData["Success"] != null)
+{
+    <div class="success-msg">@TempData["Success"]</div>
+}
+
+@{
+    ViewData["Title"] = "Profile";
+    var userName = Context.Session.GetString("userName") ?? "Guest";
+    var email = Context.Session.GetString("email");
+    var userId = Context.Session.GetString("userId");
+}
+
+<h2>User Profile</h2>
+<p><strong>Name:</strong> @userName</p>
+<p><strong>Email:</strong> @email</p>
+<p><strong>User ID:</strong> @userId</p>
+<br />
+<a class="btn" href="/Home/EditProfile">Edit Profile</a>
+
+

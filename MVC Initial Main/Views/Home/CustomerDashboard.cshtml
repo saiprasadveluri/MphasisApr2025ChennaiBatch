@@ -1,0 +1,94 @@
+﻿@model OnlinePharmacyAppMVC.DTO.GetMedicine
+@{
+    Layout = "~/Views/Shared/_LayoutCustomer.cshtml";
+    ViewData["Title"] = "Customer Dashboard";
+    var userId = Context.Session.GetString("userId");
+}
+
+<h2 class="mb-2">Welcome to Contoso Health</h2>
+<p class="text-muted mb-4">Click “Add” to instantly place a unit in your cart.</p>
+
+<script>
+    const userId = '@userId';
+
+    function addToCart(medicineId, medName, unitPrice) {
+        fetch('https://localhost:7269/api/Cart', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                userId: parseInt(userId),
+                medicineId: medicineId,
+                stockQty: 1,
+                medName: medName,
+                unitPrice: unitPrice
+            })
+        })
+        .catch(error => console.error("Error adding to cart:", error));
+        // ✅ No alert popup — silent success
+    }
+</script>
+
+<form method="get" asp-action="CustomerDashboard" class="mb-4 d-flex justify-content-end">
+    <input type="text"
+           name="search"
+           value="@Context.Request.Query["search"]"
+           class="form-control w-25 me-2"
+           placeholder="Search by medicine name..." />
+    <button type="submit" class="btn btn-outline-primary">Search</button>
+</form>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+@if (Model?.data != null && Model.data.Any())
+{
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Name</th>
+                <th>Composition</th>
+                <th>Description</th>
+                <th>Manufacturing</th>
+                <th>Expiry</th>
+                <th>Price (₹)</th>
+                <th>Add to Cart</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var med in Model.data)
+            {
+                <tr>
+                    <td>@med.medName</td>
+                    <td>@med.composition</td>
+                    <td>@med.description</td>
+                    <td>@med.manufacturing</td>
+                    <td>@med.expDate.ToString("dd/MM/yyyy")</td>
+                    <td>@med.price.ToString("F2")</td>
+                    <td>
+                        <button type="button"
+                                class="btn btn-sm btn-success"
+                                onclick="addToCart(@med.medicineId, '@med.medName', @med.price)">
+                            Add
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No medicines available at this time.</p>
+}
+
+<div class="mt-4 text-end">
+    <form method="get" asp-controller="Cart" asp-action="Index">
+        <button type="submit" class="btn btn-primary">Go to Cart</button>
+    </form>
+</div>

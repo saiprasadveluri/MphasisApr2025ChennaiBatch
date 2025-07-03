@@ -1,0 +1,41 @@
+﻿@model OnlinePharmacyAppMVC.DTO.GetMedicine
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    ViewData["Title"] = "Manage Stock";
+}
+
+<h2>Manage Medicine Stock</h2>
+
+<form method="post" asp-action="UpdateStock">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Medicine ID</th>
+                <th>Name</th>
+                <th>Manufacturing</th>
+                <th>Current Stock</th>
+                <th>Added Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var med in Model.data)
+            {
+                <tr>
+                    <td>
+                        @med.medicineId
+                        <input type="hidden" name="stockUpdates[@med.medicineId].medicineId" value="@med.medicineId" />
+                    </td>
+                    <td>@med.medName</td>
+                    <td>@med.manufacturing</td>
+                    <td>@med.stockQty</td>
+                    <td>
+                        <input type="number" name="stockUpdates[@med.medicineId].addedQty" class="form-control" min="0" />
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <button type="submit" class="btn btn-primary">Update Stock</button>
+</form>

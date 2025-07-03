@@ -1,0 +1,60 @@
+﻿@model OnlinePharmacyAppMVC.DTO.UserDTO
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Add User";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">@ViewData["Title"]</h2>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">@TempData["Success"]</div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Error"]</div>
+    }
+
+    <form asp-action="AddUser" method="post" class="shadow p-4 bg-light rounded">
+        <div class="mb-3">
+            <label asp-for="userName" class="form-label">Username</label>
+            <input asp-for="userName" class="form-control" required />
+            <span asp-validation-for="userName" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="email" class="form-label">Email</label>
+            <input asp-for="email" type="email" class="form-control" required />
+            <span asp-validation-for="email" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="password" class="form-label">Password</label>
+            <input asp-for="password" type="password" class="form-control" required />
+            <span asp-validation-for="password" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="phoneNumber" class="form-label">Phone Number</label>
+            <input asp-for="phoneNumber" class="form-control" required />
+            <span asp-validation-for="phoneNumber" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="address" class="form-label">Address</label>
+            <textarea asp-for="address" class="form-control" rows="3" required></textarea>
+            <span asp-validation-for="address" class="text-danger"></span>
+        </div>
+
+        <div class="form-check mb-4">
+            <input asp-for="isAdmin" class="form-check-input" />
+            <label asp-for="isAdmin" class="form-check-label">Is Admin</label>
+        </div>
+
+        <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-success me-2">Submit</button>
+            <a asp-action="ViewUser" class="btn btn-outline-secondary">Cancel</a>
+        </div>
+    </form>
+</div>

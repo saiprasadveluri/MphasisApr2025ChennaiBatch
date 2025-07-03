@@ -1,0 +1,56 @@
+﻿@model OnlinePharmacyAppMVC.DTO.MedicineDTO
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    ViewData["Title"] = "Edit Medicine";
+}
+
+<h2>Edit Medicine</h2>
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+<form asp-action="EditMedicine" method="post">
+    <input type="hidden" asp-for="medicineId" />
+
+    <div class="form-group">
+        <label asp-for="medName">Name</label>
+        <input asp-for="medName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="composition">Composition</label>
+        <input asp-for="composition" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="description">Description</label>
+        <textarea asp-for="description" class="form-control"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="manufacturing">Manufacturing</label>
+        <input asp-for="manufacturing" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="expDate">Expiry Date</label>
+        <input asp-for="expDate" type="date" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="price">Price (₹)</label>
+        <input asp-for="price" type="number" step="0.01" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="stockQty">Stock Quantity</label>
+        <input asp-for="stockQty" type="number" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Update</button>
+    <a asp-action="ViewMedicine" class="btn btn-secondary">Cancel</a>
+</form>

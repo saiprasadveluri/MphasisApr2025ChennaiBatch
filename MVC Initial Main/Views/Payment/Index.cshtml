@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutCustomer.cshtml";
+    ViewData["Title"] = "Payment";
+    var amount = ViewBag.AmountToPay;
+}
+
+<h2>Complete Your Payment</h2>
+
+<form method="post" action="/Payment/ProcessPayment">
+    <div class="form-group mb-3">
+        <label for="amount">Amount to Pay</label>
+        <input type="text" class="form-control" id="amount" name="amount" readonly value="@amount" />
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="paymentMethod">Select Payment Method</label>
+        <select class="form-select" name="paymentMethod" id="paymentMethod" required>
+            <option value="Credit Card">Credit Card</option>
+            <option value="UPI">UPI</option>
+            <option value="Net Banking">Net Banking</option>
+            <option value="Cash on Delivery">Cash on Delivery</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Pay Now</button>
+</form>
