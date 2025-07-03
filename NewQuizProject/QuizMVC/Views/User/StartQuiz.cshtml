@@ -1,0 +1,43 @@
+﻿@model List<QuizMVC.DTO.GetQuestionWithOptionsDTO>
+
+<h2 class="mb-4">🧠 Quiz</h2>
+
+<form method="post" asp-action="SubmitAnswers">
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        var question = Model[i];
+
+        <div class="card mb-4 shadow">
+            <div class="card-header">
+                <strong>Question @(i + 1):</strong> @question.questionText
+            </div>
+            <div class="card-body">
+                @for (int j = 0; j < question.options.Count; j++)
+                {
+                    var option = question.options[j];
+                    <div class="form-check">
+                        <input class="form-check-input"
+                               type="radio"
+                               name="Answers[@(i)].SelectedOptionId"
+                               value="@option.optionId"
+                               id="opt_@(i)_@(j)" />
+
+                        <label class="form-check-label" for="opt_@(i)_@(j)">
+                            @option.optionText
+                        </label>
+
+                    </div>
+                }
+
+                <input type="hidden"
+                       name="Answers[@i].QuestionId"
+                       value="@question.questionId" />
+            </div>
+        </div>
+    }
+
+    <button type="submit" class="btn btn-success w-100">Submit Answers</button>
+</form>
+
+
+

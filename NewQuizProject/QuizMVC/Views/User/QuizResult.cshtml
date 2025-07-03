@@ -1,0 +1,11 @@
+﻿@{
+    Layout = "UserDashboardLayout";
+    var score = ViewBag.Score ?? 0;
+    var total = ViewBag.Total ?? 0;
+}
+
+<h2 class="mt-4 mb-3 text-center">🎉 Quiz Completed!</h2>
+
+<div class="alert alert-success text-center fs-5">
+    You got <strong>@score</strong> out of <strong>@total</strong> questions correct!
+</div>

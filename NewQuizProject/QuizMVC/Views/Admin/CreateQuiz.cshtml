@@ -1,0 +1,105 @@
+﻿@model QuizMVC.DTO.QuizQuestionsDTO
+
+@{
+    Layout = "AdminDashboardLayout";
+}
+
+@section Scripts {
+    <script>
+        function toggleSchedule() {
+            const checkbox = document.getElementById('IsScheduled');
+            const scheduleDiv = document.getElementById('scheduleTimeDiv');
+            scheduleDiv.style.display = checkbox.checked ? 'block' : 'none';
+        }
+
+        document.addEventListener("DOMContentLoaded", toggleSchedule);
+    </script>
+}
+
+<style>
+    .form-label {
+        font-weight: 600;
+    }
+
+    .text-danger {
+        font-size: 0.9rem;
+    }
+
+    .btn-green {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 30px;
+        font-size: 1.05rem;
+        font-weight: 600;
+        border: none;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-green:hover {
+            background-color: #218838;
+        }
+
+    #scheduleTimeDiv {
+        display: none;
+    }
+
+    .form-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .form-card {
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding: 2rem;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+<div class="container py-5">
+    <div class="form-container">
+        <div class="form-card">
+            <h2 class="text-center text-success mb-4 fw-bold">Create Quiz</h2>
+
+            <form asp-action="CreateQuiz" method="post">
+
+                <div class="mb-3">
+                    <label asp-for="quizTitle" class="form-label">Quiz Title</label>
+                    <input asp-for="quizTitle" class="form-control" placeholder="Enter quiz title" />
+                    <span asp-validation-for="quizTitle" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="categoryName" class="form-label">Category</label>
+                    <select asp-for="categoryName" class="form-select">
+                        <option value="">-- Select Category --</option>
+                        <option>Frontend</option>
+                        <option>Backend</option>
+                        <option>Database</option>
+                    </select>
+                    <span asp-validation-for="categoryName" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="duration" class="form-label">Duration (in minutes)</label>
+                    <input asp-for="duration" class="form-control" type="number" min="1" placeholder="e.g., 30" />
+                    <span asp-validation-for="duration" class="text-danger"></span>
+                </div>
+
+                <div class="form-check form-switch mb-3">
+                    <input asp-for="isScheduled" class="form-check-input" type="checkbox" id="IsScheduled" onchange="toggleSchedule()" />
+                    <label class="form-check-label" for="IsScheduled">Schedule?</label>
+                </div>
+
+                <div id="scheduleTimeDiv" class="mb-3">
+                    <label asp-for="scheduledTime" class="form-label">Scheduled Date & Time</label>
+                    <input asp-for="scheduledTime" class="form-control" type="datetime-local" />
+                    <span asp-validation-for="scheduledTime" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-green w-100">Create Quiz</button>
+
+            </form>
+        </div>
+    </div>
+</div>

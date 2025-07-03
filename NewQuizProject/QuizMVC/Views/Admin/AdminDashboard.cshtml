@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "AdminDashboardLayout";
+}
+<h2>Admin Dashboard</h2>
+<div class="alert alert-info text-center mt-2">
+    <strong>Welcome, @ViewBag.AdminName 👋</strong>
+    <p>Use the sidebar to manage your quizzes and questions.</p>
+</div>
+<div class="row text-center">
+    <!-- Total Users -->
+    <div class="row text-center mt-4">
+        <div class="col-md-4">
+            <div class="card border border-primary shadow-lg mb-4 rounded-4" style="background-color: #f8f9fa;">
+                <div class="card-header bg-primary text-white fw-bold fs-5 rounded-top-4">
+                    Total Users
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title text-primary">@ViewBag.UserCount</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
