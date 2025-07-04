@@ -1,0 +1,8 @@
+ [Authorize] 
+        [ResponseCache(NoStore = true, Location = ResponseCacheLocation.None)]//added1234
+        public IActionResult LogOut()
+        {
+            HttpContext.Session.Clear();
+            HttpContext.SignOutAsync();//add
+            return RedirectToAction("Login", "BookMyShow");//ADDED
+        }
