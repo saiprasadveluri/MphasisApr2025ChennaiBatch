@@ -1,0 +1,55 @@
+﻿@using OnlineQuizMVC.DTO
+
+@model GetAccountAdminDTO
+
+@{
+    Layout = "AdminDashboardLayout";
+}
+
+<h2 class="text-center my-4 text-primary">Edit Admin Profile</h2>
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow rounded">
+                <div class="card-body">
+
+                    <form asp-action="EditProfile" method="post">
+                        @* Hidden fields for ID values *@
+                        <input asp-for="accountId" type="hidden" />
+                        <input asp-for="adminId" type="hidden" />
+
+                        <div class="mb-3">
+                            <label asp-for="adminName" class="form-label">Name</label>
+                            <input asp-for="adminName" class="form-control" />
+                            <span asp-validation-for="adminName" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="email" class="form-label">Email</label>
+                            <input asp-for="email" class="form-control" type="email" readonly />
+                            <div class="text-muted small">Email cannot be changed</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="password" class="form-label">Password</label>
+                            <input asp-for="password" class="form-control" type="password" />
+                            <span asp-validation-for="password" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="contactNo" class="form-label">Contact No</label>
+                            <input asp-for="contactNo" class="form-control" />
+                            <span asp-validation-for="contactNo" class="text-danger"></span>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary px-5">Update</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

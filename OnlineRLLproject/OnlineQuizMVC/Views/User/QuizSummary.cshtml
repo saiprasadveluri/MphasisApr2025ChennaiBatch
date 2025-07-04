@@ -1,0 +1,151 @@
+﻿@{
+    Layout = "~/Views/Shared/QuizLayout.cshtml";
+    var score = ViewBag.Score ?? 0;
+    var total = ViewBag.TotalQuestions ?? 0;
+}
+
+<style>
+    .summary-container {
+        max-width: 1000px;
+        margin: 40px auto;
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .summary-title {
+        text-align: center;
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: #0d47a1;
+        margin-bottom: 20px;
+    }
+
+    .summary-score {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+    .custom-table th {
+        background-color: #263238;
+        color: #fff;
+        padding: 16px;
+        font-weight: 600;
+    }
+
+    .custom-table td {
+        padding: 16px;
+        vertical-align: middle;
+        border: 1px solid #e0e0e0;
+    }
+
+    .question-text {
+        text-align: left;
+        color: #212121;
+        font-weight: 500;
+    }
+
+    .your-answer {
+        color: #006064;
+        font-weight: 500;
+    }
+
+    .not-answered {
+        color: #757575;
+        font-style: italic;
+    }
+
+    .correct-result {
+        color: #2e7d32;
+        font-weight: 600;
+    }
+
+    .wrong-result {
+        color: #c62828;
+        font-weight: 600;
+    }
+
+    .back-link {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 12px 30px;
+        font-size: 1rem;
+        font-weight: 600;
+        background-color: #1565c0;
+        color: #fff;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+        .back-link:hover {
+            background-color: #0d47a1;
+        }
+
+    .table-container {
+        overflow-x: auto;
+    }
+</style>
+
+<div class="summary-container">
+    <h2 class="summary-title">Quiz Summary</h2>
+
+    <p class="summary-score">
+        You scored <strong>@score</strong> out of <strong>@total</strong>.
+    </p>
+
+    <div class="table-container">
+        <table class="table custom-table text-center">
+            <thead>
+                <tr>
+                    <th>Question</th>
+                    <th>Your Answer</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var q in Model)
+                {
+                    var typedQuestion = (OnlineQuizMVC.DTO.GetQuestionWithOptionsDTO)q;
+                    var userAnswerId = ViewBag.Answers.ContainsKey(typedQuestion.questionId)
+                    ? ViewBag.Answers[typedQuestion.questionId]
+                    : Guid.Empty;
+                    var userOption = typedQuestion.options.FirstOrDefault(o => o.optionId == userAnswerId);
+                    var isCorrect = userOption != null && userOption.answer == 1;
+
+                    <tr>
+                        <td class="question-text">@q.questionText</td>
+                        <td>
+                            @if (userOption == null)
+                            {
+                                <span class="not-answered">Not answered</span>
+                            }
+                            else
+                            {
+                                <span class="your-answer">@userOption.optionText</span>
+                            }
+                        </td>
+                        <td>
+                            @if (isCorrect)
+                            {
+                                <span class="correct-result">✅ Correct</span>
+                            }
+                            else
+                            {
+                                <span class="wrong-result">✖ Incorrect</span>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="text-center">
+        <a href="@Url.Action("UserDashboard", "User")" class="back-link">Back to Dashboard</a>
+    </div>
+</div>

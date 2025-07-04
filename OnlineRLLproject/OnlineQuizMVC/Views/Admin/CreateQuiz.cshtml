@@ -1,0 +1,50 @@
+﻿@model OnlineQuizMVC.DTO.QuizQuestionsDTO
+
+@{
+    Layout = "AdminDashboardLayout";
+}
+
+<div class="d-flex justify-content-center align-items-center min-vh-100 bg-gradient" style="background: linear-gradient(135deg, #f8f9fa, #e0eafc);">
+    <div class="card shadow p-5 rounded-4 bg-white" style="width: 500px;">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold text-primary">📝 Create New Quiz</h2>
+            <p class="text-muted">Fill out the details below to schedule a quiz.</p>
+            <hr class="w-50 mx-auto mb-4">
+        </div>
+
+        <form asp-action="CreateQuiz" method="post" novalidate>
+            <div class="form-floating mb-3">
+                <input asp-for="quizTitle" class="form-control" placeholder="Enter quiz title" />
+                <label asp-for="quizTitle">Quiz Title</label>
+                <span asp-validation-for="quizTitle" class="text-danger small ms-1"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <select asp-for="categoryName" class="form-select">
+                    <option value="">-- Select Category --</option>
+                    <option>Frontend</option>
+                    <option>Backend</option>
+                    <option>Database</option>
+                </select>
+                <label asp-for="categoryName">Category</label>
+                <span asp-validation-for="categoryName" class="text-danger small ms-1"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="duration" type="number" class="form-control" placeholder="e.g., 30" min="1" />
+                <label asp-for="duration">Duration (minutes)</label>
+                <span asp-validation-for="duration" class="text-danger small ms-1"></span>
+            </div>
+
+            <div class="form-floating mb-4">
+                <input asp-for="scheduleTime" type="datetime-local" class="form-control" placeholder="Select date and time" />
+                <label asp-for="scheduleTime">Schedule Date & Time</label>
+                <span asp-validation-for="scheduleTime" class="text-danger small ms-1"></span>
+            </div>
+
+            <button type="submit" class="btn btn-gradient-primary w-100 py-2 rounded-pill fw-semibold" style="background: linear-gradient(90deg, #007bff, #00c6ff); color: white;">
+                ➕ Create Quiz
+            </button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+﻿@model List<OnlineQuizMVC.DTO.GetQuizAttemptDTO>
+
+@{
+    Layout = "UserDashboardLayout";
+}
+
+<h2>Your Quiz Attempt History</h2>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Attempt ID</th>
+                <th>Quiz ID</th>
+                <th>Score</th>
+                <th>Status</th>
+                <th>Attempt Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var attempt in Model)
+            {
+                <tr>
+                    <td>@attempt.attemptId</td>
+                    <td>@attempt.quizId</td>
+                    <td>@(attempt.score.HasValue? attempt.score.Value.ToString() : "N/A")</td>
+                    <td>@attempt.status</td>
+                    <td>@attempt.attemptTime.ToString("f")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p class="text-muted">No quiz attempts found.</p>
+}

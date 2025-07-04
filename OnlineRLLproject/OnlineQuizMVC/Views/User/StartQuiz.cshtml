@@ -1,0 +1,131 @@
+﻿@using OnlineQuizMVC.DTO
+@model GetQuestionWithOptionsDTO
+
+@{
+    Layout = "~/Views/Shared/QuizLayout.cshtml";
+    var currentIndex = ViewBag.CurrentIndex ?? 0;
+    var totalQuestions = ViewBag.TotalQuestions ?? 1;
+    var answers = ViewBag.Answers as Dictionary<Guid, Guid>; // questionId → selectedOptionId
+}
+
+<style>
+    .question-wrapper {
+        max-width: 800px;
+        margin: 40px auto;
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .question-number {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #0275d8;
+        margin-bottom: 20px;
+    }
+
+    .question-text {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+
+    .option-block {
+        padding: 12px 20px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: 2px solid #e3e3e3;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        cursor: pointer;
+    }
+
+        .option-block:hover {
+            border-color: #0275d8;
+            background-color: #f2f9ff;
+        }
+
+        .option-block input[type="radio"] {
+            transform: scale(1.3);
+        }
+
+    .quiz-buttons {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+        .quiz-buttons button {
+            padding: 10px 25px;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+            min-width: 120px;
+        }
+
+    .btn-prev {
+        background-color: #f0ad4e;
+        color: white;
+    }
+
+        .btn-prev:hover {
+            background-color: #ec971f;
+        }
+
+    .btn-next {
+        background-color: #0275d8;
+        color: white;
+    }
+
+        .btn-next:hover {
+            background-color: #025aa5;
+        }
+
+    .btn-submit {
+        background-color: #5cb85c;
+        color: white;
+    }
+
+        .btn-submit:hover {
+            background-color: #449d44;
+        }
+
+    button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+</style>
+
+<div class="question-wrapper">
+    <div class="question-number">Question @(currentIndex + 1) of @totalQuestions</div>
+    <div class="question-text">@Model.questionText</div>
+
+    <form method="post" asp-controller="User" asp-action="SubmitAnswer">
+        @foreach (var option in Model.options)
+        {
+            var isChecked = answers != null &&
+            answers.ContainsKey(Model.questionId) &&
+            answers[Model.questionId] == option.optionId;
+
+            <label class="option-block">
+                <input type="radio" name="SelectedOptionId" value="@option.optionId" @(isChecked ? "checked" : "") />
+                <span>@option.optionText</span>
+            </label>
+        }
+
+        <input type="hidden" name="QuestionId" value="@Model.questionId" />
+        <input type="hidden" name="CurrentIndex" value="@currentIndex" />
+
+        <div class="quiz-buttons">
+            <button type="submit" name="actionType" value="prev" class="btn-prev" @(currentIndex == 0 ? "disabled" : "")>Previous</button>
+            <button type="submit" name="actionType" value="next" class="btn-next">Next</button>
+            <button type="submit" name="actionType" value="submit" class="btn-submit">Submit Quiz</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,146 @@
+﻿@model List<OnlineQuizMVC.DTO.GetAccountUserDTO>
+
+@{
+    ViewData["Title"] = "User List";
+    Layout = "AdminDashboardLayout";
+}
+
+<style>
+    body {
+        background-color: #f4f6f9;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+
+    .card {
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .card-header {
+        padding: 1rem 1.5rem;
+        background: linear-gradient(90deg, #007bff, #00c6ff);
+        color: white;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+        .card-header h4 {
+            margin: 0;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+
+    .card-body {
+        background-color: #ffffff;
+        padding: 2rem;
+    }
+
+    .table-responsive {
+        border-radius: 8px;
+        overflow-x: auto;
+    }
+
+    table.table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 0;
+    }
+
+    table thead {
+        background-color: #e9ecef;
+    }
+
+    table th {
+        font-weight: 600;
+        color: #495057;
+        padding: 12px;
+        text-align: center;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    table td {
+        padding: 12px;
+        text-align: center;
+        vertical-align: middle;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #f1f3f5;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    .btn-danger {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+        }
+
+    .bi-trash3-fill {
+        vertical-align: middle;
+        margin-right: 4px;
+    }
+
+    .text-muted {
+        font-style: italic;
+        color: #6c757d;
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">All Registered Users</h4>
+        </div>
+        <div class="card-body p-4">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Account ID</th>
+                            <th>User Name</th>
+                            <th>Email</th>
+                            <th>Contact No</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null && Model.Any())
+                        {
+                            foreach (var user in Model)
+                            {
+                                <tr>
+                                    <td>@user.accountId</td>
+                                    <td>@user.userName</td>
+                                    <td>@user.email</td>
+                                    <td>@user.contactNo</td>
+                                    <td>
+                                        <form asp-action="DeleteUser" method="post" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this user?');">
+                                            <input type="hidden" name="id" value="@user.accountId" />
+                                            <button type="submit" class="btn btn-danger btn-sm">
+                                                <i class="bi bi-trash3-fill"></i> Delete
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="6" class="text-center text-muted">No users found.</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

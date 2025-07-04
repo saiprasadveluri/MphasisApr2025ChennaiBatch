@@ -1,0 +1,64 @@
+﻿﻿@using OnlineQuizMVC.DTO
+@model GetAccountAdminDTO
+@{
+    Layout = "AdminDashboardLayout";
+}
+
+<style>
+    .custom-btn-warning {
+        background-color: #f0ad4e;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+        .custom-btn-warning:hover {
+            background-color: #ec971f;
+            color: #fff;
+        }
+
+    .custom-btn-success {
+        background-color: #5cb85c;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+        .custom-btn-success:hover {
+            background-color: #449d44;
+            color: #fff;
+        }
+
+    .admin-profile-wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .admin-profile-card {
+        background-color: white;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+<div class="admin-profile-wrapper mt-4">
+    <h2 class="mb-4 fw-bold text-primary">Admin Profile</h2>
+
+    <div class="admin-profile-card">
+        <p class="fs-5"><strong>Name:</strong> @Model.adminName</p>
+        <p class="fs-5"><strong>Email:</strong> @Model.email</p>
+        <p class="fs-5"><strong>Contact No:</strong> @Model.contactNo</p>
+    </div>
+
+    <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+        <a asp-action="EditProfile" asp-route-id="@Model.accountId" class="btn custom-btn-warning">Edit Profile</a>
+        <a asp-action="AddNewAdmin" class="btn custom-btn-success">Create New Admin</a>
+        <a asp-controller="Account" asp-action="LogOut" class="btn custom-btn-success">Logout</a>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+﻿@using OnlineQuizMVC.DTO
+
+@model GetQuizDTO
+
+@{
+
+    Layout = "UserDashboardLayout";
+
+}
+
+<h2 class="mt-4">Quiz Details</h2>
+
+<div class="card mt-3">
+    <div class="card-body">
+        <h4 class="card-title">@Model.quizTitle</h4>
+        <p class="card-text">
+            <strong>Category:</strong> @Model.categoryName <br />
+            <strong>Duration:</strong> @Model.duration minutes <br />
+            <strong>Scheduled Time:</strong> @Model.scheduleTime?.ToString("f")
+        </p>
+
+        <hr />
+        @* <form method="post" asp-action="StartQuiz" asp-route-id="@Model.quizId">
+            <button type="submit" class="btn btn-success mt-3">Start Quiz</button>
+        </form> *@
+        <form method="post" asp-action="StartQuiz">
+            <input type="hidden" name="id" value="@Model.quizId" />
+            <button type="submit" class="btn btn-primary">Take Quiz</button>
+        </form>
+    </div>
+</div>

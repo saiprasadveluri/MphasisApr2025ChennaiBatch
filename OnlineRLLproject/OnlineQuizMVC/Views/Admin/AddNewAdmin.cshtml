@@ -1,0 +1,39 @@
+﻿@using OnlineQuizMVC.DTO
+@model AccountAdminDTO;
+@{
+    Layout = "AdminDashboardLayout";
+}
+<div class="container py-5">
+    <div class="form-container">
+        <div class="form-card">
+            <h2 class="text-center text-success mb-4 fw-bold">Add New Admin</h2>
+
+            <form asp-action="AddNewAdmin" method="post">
+
+                <div class="mb-3">
+                    <label asp-for="adminName" class="form-label">Admin Name</label>
+                    <input asp-for="adminName" class="form-control" placeholder="Enter quiz title" />
+                    <span asp-validation-for="adminName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="email" class="form-label">Email</label>
+                    <input asp-for="email" class="form-control" placeholder="Enter quiz title" />
+                    <span asp-validation-for="email" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="password" class="form-label">Password</label>
+                    <input asp-for="password" class="form-control" placeholder="Enter quiz title" />
+                    <span asp-validation-for="password" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="contactNo" class="form-label">Contact Number</label>
+                    <input asp-for="contactNo" class="form-control" placeholder="Enter quiz title" />
+                    <span asp-validation-for="contactNo" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-green w-100">Create Admin</button>
+            </form>
+
+        </div>
+    </div>
+</div>
