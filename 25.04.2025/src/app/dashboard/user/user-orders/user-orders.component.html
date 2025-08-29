@@ -1,0 +1,24 @@
+
+
+
+
+<h2>View UserList</h2>
+<table  cellSpacing = '10' cellPadding = '10'  border="1" >
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Email</th>
+      <th>Role</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor = "let user of userInfo">
+        <td>{{ user.id }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.role }}</td>
+       
+      </tr>
+    
+  </tbody>
+</table>

@@ -1,0 +1,16 @@
+
+<app-form-filling
+[users]="selectedUser" 
+[addFn]="AddUser"
+></app-form-filling>
+
+
+<app-user-list
+[users]="selectedUser"
+[userList]="userArray"
+ [deleteFn]="onDelete" 
+[selectedFn]="onSelected"
+
+ ></app-user-list>
+
+

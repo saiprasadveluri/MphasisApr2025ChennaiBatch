@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Request Vehicle</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+   <div class="nav-bar">
+    <h1>Request a Vehicle</h1>
+    <nav>
+      <a href="user.html">User Home</a>
+      <a href="view-places.html">View Places</a>
+    </nav>
+   </div>
+
+    <form>
+      <label for="vehicle">Choose a Vehicle Type:</label>
+      <select id="vehicle" name="vehicle">
+        <option value="">-- Select Vehicle --</option>
+        <option value="sedan">Navallur</option>
+        <option value="suv">ECR</option>
+        <option value="van">pondi</option>
+        <option value="bus">Kanchipuram</option>
+      </select>
+
+      <label for="destination">Choose a Destination:</label>
+      <select id="destination" name="destination">
+        <option value="">-- Select Destination --</option>
+        <option value="paris">Guindy</option>
+        <option value="newyork">Vadaplani</option>
+        <option value="tokyo">Ashok Nagar</option>
+        <option value="dubai">Ramapuram</option>
+      </select>
+
+      <button type="submit">Request Now</button>
+    </form>
+  </div>
+</body>
+</html>

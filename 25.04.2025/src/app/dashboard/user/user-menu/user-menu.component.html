@@ -1,0 +1,27 @@
+<p>user-menu works!</p>
+
+
+
+
+<h2>View User's MenuList</h2>
+<table >
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Dishname</th>
+      <th>Dishtype</th>
+      <th>Price</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor = "let menu of menuList">
+        <td>{{ menu.id }}</td>
+        <td>{{ menu.dishname }}</td>
+        <td>{{ menu.dishtype }}</td>
+        <td>{{ menu.price }}</td>
+       
+      </tr>
+    
+  </tbody>
+</table>

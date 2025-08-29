@@ -1,0 +1,10 @@
+<h2>Edit User</h2>
+<input [(ngModel)]="user.email" />
+<input [(ngModel)]="user.password" />
+<select [(ngModel)]="user.role">
+  <option>Admin</option>
+  <option>Owner</option>
+  <option>User</option>
+</select>
+<button (click)="saveUser()">Save</button>
+

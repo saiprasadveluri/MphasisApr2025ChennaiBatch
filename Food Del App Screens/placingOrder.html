@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Indian Food Order</title>
+</head>
+<body>
+
+    <h2>Place Your  Food Order</h2>
+   
+
+    <form method="GET" action="order-confirmation.html">
+        <label for="restaurant">Select a Restaurant:</label>
+        <select name="restaurant" id="restaurant" required>
+            <option value="geetham">geetham</option>
+            <option value="A2B">A2B</option>
+            <option value="Murugan Idli">Murugan Idli </option>
+            <option value="Sangeetha">Sangeetha</option>
+        </select>
+        
+        <br><br>
+
+    
+        <a href="filterFavFood.html">Checkout our Famous Food</a>
+        <br><br>
+        <label for="food">Choose Your Dish:</label>
+     
+        <input list="foodList" name="food" id="food" required>
+        
+        <datalist id="foodList">
+            <option value="Dosa">
+            <option value="Idli">
+            <option value="Vada">
+           
+        </datalist>
+
+        <br><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required>
+
+        <br><br>
+
+        <label for="address">Delivery Address:</label><br>
+        <textarea id="address" name="address" rows="3" cols="30" required></textarea>
+
+        <br><br>
+        <a href="orderConfirmation.html">Order Status</a>
+       
+    </form>
+
+</body>
+</html>

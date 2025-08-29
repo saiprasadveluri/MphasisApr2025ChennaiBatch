@@ -1,0 +1,23 @@
+
+
+<h2>View For Owner's RestaurantInfo</h2>
+<table border="1"  cellSpacing="4" cellPadding ="10" >
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Owner</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor = "let rest of ownerRestro">
+        <td>{{ rest.id }}</td>
+        <td>{{ rest.name }}</td>
+        <td>{{ rest.location }}</td>
+        <td>{{ rest.owner }}</td>
+      </tr>
+    
+  </tbody>
+</table>
+

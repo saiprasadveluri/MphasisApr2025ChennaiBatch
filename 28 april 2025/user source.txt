@@ -1,0 +1,56 @@
+SNo                   Epic                               Users Story                          Acceptance Criteria
+
+4.             restuarant owner adds menu to his       1.restaurant owner list his own        1.owner can be able to view his 
+               restuarant so that users can select     restaurant so that he can manage        own restaurants.
+               it ordering.                            restaurant .                           2. able to filter the restaurant based   
+                                                                                                 name 
+                                                                                              3. should able to select restuarnt to add
+                                                       2.restaurant owner adds a new menu        menu items
+                                                        items so that user cam select the    
+                                                        same while ordering . 
+
+
+                                                                                               2.1 owner should able to enter menu details.
+                                                                                               2.2 the intial quality must be more than 0 
+                                                                                               2.3 check for duplicate menu items name .
+                                                                                               2.4 onwer is able to upload dish imageif he wants , 
+                                                                                                   otherwise,default image should be displayed .  
+
+
+                                                                                                2.5 the upload image size must be less than 1 mb . 
+
+
+
+
+
+
+
+
+5.           User searching for restuarant based      1. Dashboard witha search bar                 5.1 Should bar should suggest restuarant based 
+             on location .                                                                              on location . 
+                                                                                                    5.2 when user type for location , resturant which
+                                                                                                        are open must be suggested . 
+                                                                                                    5.3 google map must be integrated for navigation . 
+                                                                                                    5.4 based on the suggestion , user can navigate to 
+                                                                                                          the suggested restuarant . 
+
+
+
+
+6.       Food Filteration based on user's preference       1.suggestion of restaurant              6.1 A button must be to switch between  veg / non-veg 
+                                                                                                   so user get suggestion  based on it. 
+                                                                                                   6.2 a filteration bar for suggesting food based on user's input . 
+                                                                                                   6.3 a bar where various cuisine listed  , so user can choose 
+                                                                                                     what cuisisne to be suggested . 
+
+
+7.       User Ordering restuarant                                                                  7.1 a cart to add the selected food from restauarant 
+                                                                                                   7.2 cart  must have details regarding the food ,quantity
+                                                                                                       and prices . 
+                                                                                                   7.3 different payament mode open for user to pay the amount 
+                                                                                                   7.4 And coupon allowance and diacount open for regular Users . 
+
+8.      Order Staus Updation .                                                                     8.1 Keeping the track of orders pathway
+                                                                                                   8.2 and details of delivary person  for early contact.
+                                                                                                   8.3 after order successfully deliver , updation of delivery status . 
+

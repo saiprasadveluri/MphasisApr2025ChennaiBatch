@@ -1,0 +1,14 @@
+
+<h3>Add User from parent Component </h3>
+
+<div>
+  <form #formdata="ngForm" (ngSubmit)="addFn(formdata.value)">
+    <input type="text" name="username" [ngModel] = 'users?.username'> <br><br>
+    <input type="text" name="email" [ngModel] = 'users?.email'><br><br>
+    <input type="text" name="password" [ngModel] = 'users?.password'><br><br>
+    <br><br>
+    <button type="submit">Add</button> &nbsp;
+    
+    
+    </form>
+</div>

@@ -1,0 +1,14 @@
+
+<h2>List of User From Child Component </h2>
+<div>
+  @for(user of  userList  ; track user.id){
+    <ul>
+      <li>{{user.username}}</li>
+      <li>{{user.email}}</li>
+      <li>{{user.password}}</li>
+      <button type="click" (click)="deleteFn(user)">Delete</button> &nbsp;
+<button type="click" (click)="selectedFn(user)">Update</button>
+    </ul>
+
+  }
+</div>

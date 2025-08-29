@@ -1,0 +1,25 @@
+
+
+
+<h2>View For OrderList</h2>
+<table cellSpacing="5" cellPadding ="4">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Dishname</th>
+      <th>DishType</th>
+      <th>Price</th>
+      <th>Quantity</th>
+
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor = "let order of orderList">
+        <td>{{order.id}}</td>
+        <td>{{order.dishname }}</td>
+        <td>{{ order.price }}</td>
+        <td>{{ order.quantity}}</td>
+      </tr>
+    
+  </tbody>
+</table>

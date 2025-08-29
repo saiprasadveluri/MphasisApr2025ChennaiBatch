@@ -1,0 +1,71 @@
+﻿@* @model List<RideDTO>
+
+<form asp-action="BookRide" method="post">
+    <table>
+        <tr>
+            <td><label>Driver Id:</label></td>
+            <td><input id="did" name="did" type="number" /></td>
+        </tr>
+        <tr>
+            <td><label>Customer Id:</label></td>
+            <td><input id="cid" name="cid" type="number" /></td>
+        </tr>
+        <tr>
+            <td><label>Pick Location:</label></td>
+            <td><input id="pl" name="pl" type="number" /></td>
+        </tr>
+        <tr>
+            <td><label>Drop Location:</label></td>
+            <td><input id="dl" name="dl" type="number" /></td>
+        </tr>
+        <tr>
+            <td><button type="submit">Book</button></td>
+        </tr>
+    </table>
+</form> *@
+
+
+@model PickUpDropDTO
+
+@using (Html.BeginForm("BookRide", "PickUpDrop", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <label asp-for="driverId"></label>
+        <input asp-for="driverId" class="form-control" />
+        <span asp-validation-for="driverId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="custId"></label>
+        <input asp-for="custId" class="form-control" />
+        <span asp-validation-for="custId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="pickLocId"></label>
+        <input asp-for="pickLocId" class="form-control" />
+        <span asp-validation-for="pickLocId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="dropLocId"></label>
+        <input asp-for="dropLocId" class="form-control" />
+        <span asp-validation-for="dropLocId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="pickUpTime"></label>
+        <input asp-for="pickUpTime" type="datetime-local" class="form-control" />
+        <span asp-validation-for="pickUpTime" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="dropTime"></label>
+        <input asp-for="dropTime" type="datetime-local" class="form-control" />
+        <span asp-validation-for="dropTime" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Book</button>
+}

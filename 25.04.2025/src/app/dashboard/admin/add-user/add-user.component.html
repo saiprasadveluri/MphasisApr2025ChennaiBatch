@@ -1,0 +1,12 @@
+<h2>Add New User</h2>
+<input placeholder="Name" [(ngModel)]="name" />
+<input placeholder="Email" [(ngModel)]="email" />
+<input placeholder="Password" [(ngModel)]="password" />
+<input placeholder="Location" [(ngModel)]="location" />
+<select [(ngModel)]="role">
+  <option>Admin</option>
+  <option>Owner</option>
+  <option>User</option>
+</select>
+<button (click)="addNewUser()">Add</button>
+

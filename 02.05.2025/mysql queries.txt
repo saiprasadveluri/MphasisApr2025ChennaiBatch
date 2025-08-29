@@ -1,0 +1,168 @@
+CREATE DATABASE VisitorManagement;
+USE VisitorManagement;
+
+CREATE TABLE Location (
+    LocationID BIGINT NOT NULL PRIMARY KEY,
+    LocationName NVARCHAR(20) UNIQUE
+);
+
+CREATE TABLE UserInfo (
+    UserID BIGINT NOT NULL PRIMARY KEY,
+    UserName NVARCHAR(30) NOT NULL,
+    UserRole NVARCHAR(10) NOT NULL CHECK (UserRole IN ('host', 'manager')),
+    Department NVARCHAR(30) NOT NULL,
+    Email NVARCHAR(40) NOT NULL,
+    UserPassword NVARCHAR(10) NOT NULL,
+    UserLocation BIGINT NOT NULL,
+    HostID BIGINT NOT NULL,
+    FOREIGN KEY (UserLocation) REFERENCES Location(LocationID)
+);
+
+CREATE TABLE VisitorInfo (
+    VisitorID BIGINT NOT NULL PRIMARY KEY,
+    VisitorName NVARCHAR(30) NOT NULL,
+    VisitorLocation BIGINT NOT NULL,
+    VisitingDate DATE NOT NULL,
+    MobileNumber BIGINT NOT NULL,
+    ParentCompany NVARCHAR(20) NOT NULL,
+    Purpose NVARCHAR(30) NOT NULL,
+    HostID BIGINT NOT NULL,
+    UNIQUE (VisitorName, VisitorLocation),
+    FOREIGN KEY (HostID) REFERENCES UserInfo(UserID)
+);
+
+
+INSERT INTO Location VALUES 
+(1, 'HYDERABAD'), (2, 'BENGALURU'), (3, 'CHENNAI'), (4, 'PUNE'),
+(5, 'MUMBAI'), (6, 'MLG'), (7, 'SRPT'), (8, 'PARIS'), (9, 'GOA'), (10, 'TEXAS');
+
+
+
+INSERT INTO UserInfo VALUES 
+(201, 'SRAVS', 'host', 'Tech', 'srav@srav.com', '123456', 1, 0),
+(202, 'CHITTI', 'host', 'HR', 'chit@chi.com', '67856', 2, 0),
+(203, 'MANU', 'manager', 'Tech', 'manu@manu.com', 'manuss', 3, 0),
+(204, 'TRINAY', 'manager', 'HR', 'tri@tri.com', 'tri123', 3, 0);
+
+
+
+
+INSERT INTO VisitorInfo VALUES 
+(101, 'SRAVS', 1, '2025-05-12', 9856734512, 'GOOGLE', 'PROJECT', 201),
+(102, 'CHITTI', 1, '2025-05-12', 9845623123, 'MPHASIS', 'MEETING', 202),
+(103, 'NIVAS', 1, '2025-05-13', 8978733452, 'WIPRO', 'MEETING', 202),
+(104, 'MANU', 2, '2025-05-13', 8934578231, 'CAPGEMINI', 'BUSINESS', 203),
+(105, 'AADHYA', 2, '2025-05-14', 9542249814, 'QUALCOMM', 'MEETING', 201),
+(106, 'ANAISHA', 3, '2025-05-15', 7856239843, 'MPHASIS', 'PROJECT', 204);
+
+-- 1
+SELECT * FROM Location;
+
+-- 2
+SELECT VisitorName, LocationName 
+FROM VisitorInfo V
+INNER JOIN Location L ON V.VisitorLocation = L.LocationID;
+
+-- 3
+SELECT LocationName 
+FROM Location 
+WHERE LocationName LIKE 'M%';
+
+-- 4
+SELECT COUNT(UserName) 
+FROM UserInfo 
+WHERE UserRole = 'host';
+
+-- 5
+SELECT COUNT(UserName) 
+FROM UserInfo 
+WHERE UserRole = 'host' AND UserLocation = 1;
+
+-- 6
+SELECT HostID, VisitorName 
+FROM VisitorInfo 
+WHERE HostID = 201;
+
+-- 7
+SELECT * 
+FROM VisitorInfo 
+WHERE VisitingDate = '2025-05-12';
+
+-- 8
+SELECT * 
+FROM VisitorInfo 
+ORDER BY VisitingDate DESC;
+
+-- 9
+SELECT V.* 
+FROM VisitorInfo V 
+JOIN UserInfo U ON V.HostID = U.UserID 
+WHERE U.UserRole <> 'host';
+
+-- 10
+SELECT VisitorName 
+FROM VisitorInfo V 
+JOIN UserInfo U ON V.HostID = U.UserID 
+WHERE U.Department = 'HR';
+
+-- 11
+SELECT V.* 
+FROM VisitorInfo V 
+JOIN UserInfo U ON V.HostID = U.UserID 
+WHERE U.UserName = 'TRINAY';
+
+-- 12
+SELECT * 
+FROM VisitorInfo 
+WHERE HostID = 201 AND VisitingDate = '2025-05-12';
+
+-- 13
+SELECT * 
+FROM VisitorInfo 
+WHERE HostID = 201 AND VisitingDate = '2000-10-27';
+
+-- 14 (host with least visitors)
+SELECT U.* 
+FROM UserInfo U 
+WHERE U.UserID = (
+  SELECT TOP 1 V.HostID 
+  FROM VisitorInfo V 
+  WHERE V.HostID IS NOT NULL 
+  GROUP BY V.HostID 
+  ORDER BY COUNT(*) ASC
+);
+
+-- 15 (hosts who were never visited)
+SELECT U.* 
+FROM UserInfo U 
+LEFT JOIN VisitorInfo V ON U.UserID = V.HostID 
+WHERE V.HostID IS NULL;
+
+-- 16 (visitor count per date)
+SELECT VisitingDate, COUNT(*) AS VisitorCount 
+FROM VisitorInfo 
+GROUP BY VisitingDate 
+ORDER BY VisitingDate;
+
+-- 17
+SELECT VisitingDate, COUNT(*) AS VisitorCount 
+FROM VisitorInfo 
+GROUP BY VisitingDate 
+ORDER BY VisitingDate;
+
+-- 18 (no table called VISITOR in schema, assuming VisitorInfo)
+SELECT * 
+FROM VisitorInfo 
+WHERE HostID = 201 AND VisitingDate BETWEEN '2000-10-27' AND '2025-12-05';
+
+-- 19 (users not in Manager dept)
+SELECT * 
+FROM UserInfo 
+WHERE Department != 'Manager';
+
+-- 20 (joining on mobile numbers – assuming a separate table, which doesn’t exist here)
+-- Skipping unless a 'MobileNumber' table is defined
+
+-- If MobileNumber is part of VisitorInfo, then:
+SELECT V.*, V.MobileNumber 
+FROM VisitorInfo V;

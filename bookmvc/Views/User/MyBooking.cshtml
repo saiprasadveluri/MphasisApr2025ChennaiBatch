@@ -1,0 +1,16 @@
+﻿@model List<BookingDTO>
+
+<h3>My Bookings</h3>
+<table>
+    <thead><tr><th>Movie</th><th>Theatre</th><th>Date</th></tr></thead>
+    <tbody>
+        @foreach (var b in Model)
+        {
+            <tr>
+                <td>@b.MovieName</td>
+                <td>@b.TheatreName</td>
+                <td>@b.ShowTime</td>
+            </tr>
+        }
+    </tbody>
+</table>

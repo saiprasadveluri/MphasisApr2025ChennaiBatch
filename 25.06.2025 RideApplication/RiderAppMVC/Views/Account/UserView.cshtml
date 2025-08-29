@@ -1,0 +1,28 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<UserDTO>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>User Id</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (UserDTO user in Model)
+        {
+            <tr>
+                <td>@user.userId</td>
+                <td>@user.email</td>
+                <td>@user.password</td>
+                <td>@user.role</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+

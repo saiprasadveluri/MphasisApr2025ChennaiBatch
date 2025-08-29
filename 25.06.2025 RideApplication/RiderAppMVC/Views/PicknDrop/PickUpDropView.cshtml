@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<PickUpDropDTO>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>PickUp Id</th>
+            <th>Driver Id</th>
+            <th>Customer Id</th>
+            <th>Pick Location</th>
+            <th>Drop Location</th>
+            <th>PickUp Time</th>
+            <th>Drop Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (PickUpDropDTO pic in Model)
+        {
+            <tr>
+                <td>@pic.pId</td>
+                <td>@pic.driverId</td>
+                <td>@pic.custId</td>
+                <td>@pic.pickLocId</td>
+                <td>@pic.dropLocId</td>
+                <td>@pic.pickUpTime</td>
+                <td>@pic.dropTime</td>
+            </tr>
+        }
+    </tbody>
+</table>

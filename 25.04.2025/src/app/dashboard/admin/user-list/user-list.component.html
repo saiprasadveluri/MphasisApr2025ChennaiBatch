@@ -1,0 +1,25 @@
+<h2>User List</h2>
+<table border="1" cellSpacing="5" cellPadding="8">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th>Location</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.role }}</td>
+      <td>{{ user.location }}</td>
+      <td>
+        <button (click)="editUser(user)">Edit</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+

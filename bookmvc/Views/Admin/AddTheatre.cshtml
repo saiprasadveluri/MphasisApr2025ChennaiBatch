@@ -1,0 +1,9 @@
+﻿@model BookMVC.Models.TheatreModel
+
+<h3>Add Theatre</h3>
+
+<form asp-action="AddTheatre" method="post">
+    <input asp-for="Name" placeholder="Theatre Name" required />
+    <input asp-for="CityId" placeholder="City ID" required />
+    <button type="submit">Save</button>
+</form>

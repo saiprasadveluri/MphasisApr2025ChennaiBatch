@@ -1,0 +1,29 @@
+<p>user-profile works!</p>
+
+<div >
+    <div >
+      <h2>User Profile</h2>
+   
+    </div>
+  
+    <div>
+      <div >
+        <div >
+          <strong>Name:</strong> <span>{{ user.name }}</span>
+        </div>
+        <div >
+          <strong>Email:</strong> <span>{{ user.email }}</span>
+        </div>
+        <div >
+            <strong>Address:</strong> <span>{{ user.address }}</span>
+          </div>
+          <div >
+            <strong>role:</strong> <span>{{ user.role }}</span>
+          </div>
+       
+       
+      </div>
+    </div>
+    <button (click)="editProfile()">Edit</button>
+  </div>
+  
